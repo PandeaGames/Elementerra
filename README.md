@@ -1,1 +1,2 @@
-# Elementerra
+# Elementia
+RPG Simulation Game
