@@ -15,5 +15,13 @@ namespace Terra.SerializedData.GameData
         private string _entityId;
         public string EntityID => _entityId;
         
+        [SerializeField]
+        private Sprite _debugImage;
+        public Sprite DebugImage => _debugImage;
+
+        public override string ToString()
+        {
+            return _entityId;
+        }
     }
 }

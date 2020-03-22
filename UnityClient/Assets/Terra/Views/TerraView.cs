@@ -81,7 +81,12 @@ namespace Terra.Views
         public override void Show()
         {
             _view = new GameObject("TerraView",
-            new []{typeof(TerraEntitiesMonoView),typeof(TerraTerrainMonoView)}
+            new []
+            {
+                typeof(TerraEntitiesMonoView),
+                typeof(TerraTerrainMonoView),
+                typeof(TerraDebugMonoView)
+            }
             );
             
             TaskProvider.Instance.DelayedAction(() => _dataStreamers.Start());

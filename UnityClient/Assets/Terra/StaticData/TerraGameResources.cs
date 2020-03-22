@@ -31,6 +31,19 @@ namespace PandeaGames.Data
             get => _terrainMaterial;
         }
         
+        [SerializeField] private GameObject _terraDebugWindow;
+        public GameObject TerraDebugWindow
+        {
+            get => _terraDebugWindow;
+        }
+        
+        [SerializeField] 
+        private string _layerForTerrain;
+        public string LayerForTerrain
+        {
+            get => _layerForTerrain;
+        }
+        
         public void LoadAsync(LoadSuccess onLoadSuccess, LoadError onLoadFailed)
         {
             LoaderGroup loaderGroup = new LoaderGroup();

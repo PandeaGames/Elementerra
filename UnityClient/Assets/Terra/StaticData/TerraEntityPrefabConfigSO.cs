@@ -20,7 +20,7 @@ namespace Terra.StaticData
         public List<TerraEntityTypeSO> DataConfig;
         
         public List<GameObject> _config;
-        public GameObject GetGameObject(ITerraEntity entity)
+        public GameObject GetGameObject(ITerraEntityType entity)
         {
             return GetGameObject(entity.EntityID);
         }

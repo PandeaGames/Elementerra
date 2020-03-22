@@ -85,8 +85,9 @@ namespace Terra.MonoViews
     {
         if(_renderingPlane == null)
         {
-            _renderingPlane = Instantiate(new GameObject(string.IsNullOrEmpty(_generatedGameObjectName) ? "FogOfWar":_generatedGameObjectName), transform);
+            _renderingPlane = Instantiate(new GameObject(string.IsNullOrEmpty(_generatedGameObjectName) ? "Terra Terrain":_generatedGameObjectName), transform);
             _renderingPlane.transform.position = _planeOffset;
+            _renderingPlane.layer =LayerMask.NameToLayer(TerraGameResources.Instance.LayerForTerrain);
             _renderingPlane.AddComponent<MeshRenderer>();
             _renderingPlane.AddComponent<MeshFilter>();
             MeshCollider = _renderingPlane.AddComponent<MeshCollider>();

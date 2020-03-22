@@ -13,7 +13,8 @@ public abstract class StateMachine<T> : MonoBehaviour where T:IConvertible
         SetState(default(T), true);
     }
 
-    private void SetState(T state, bool isInitialState)
+    
+    public void SetState(T state, bool isInitialState)
     {
         if (_canChangeState && (!state.Equals(_currentState) || isInitialState))
         {
@@ -23,7 +24,7 @@ public abstract class StateMachine<T> : MonoBehaviour where T:IConvertible
         }
     }
 
-    protected void SetState(T state)
+    public void SetState(T state)
     {
         SetState(state, false);
     }

@@ -27,9 +27,8 @@ namespace PandeaGames.ViewModels
             SetState(default(T), true);
         }
 
-        private void SetState(T state, bool isInitialState)
+        protected void SetState(T state, bool isInitialState)
         {
-            
             if (_canChangeState && (!state.Equals(_currentState) || isInitialState))
             {
                 T oldState = _currentState;

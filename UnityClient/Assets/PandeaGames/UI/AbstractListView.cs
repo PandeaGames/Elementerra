@@ -16,7 +16,7 @@ public abstract class AbstractListView<TItemData, TListItemView> : MonoBehaviour
     private int _selectedIndex;
     public event Action<TItemData> OnItemSelected;
 
-    private void Start()
+    protected virtual void Start()
     {
         _listItemViewGO.SetActive(false);
     }
@@ -58,7 +58,7 @@ public abstract class AbstractListView<TItemData, TListItemView> : MonoBehaviour
        
     }
 
-    private void OnItemSelect(IListItem<TItemData> listItem)
+    protected virtual void OnItemSelect(IListItem<TItemData> listItem)
     {
         OnItemSelected?.Invoke(listItem.GetData());
     }

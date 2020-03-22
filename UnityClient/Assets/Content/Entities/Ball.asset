@@ -15,3 +15,4 @@ MonoBehaviour:
   _data:
     component: 2
     _entityId: Ball
+    _debugImage: {fileID: 21300000, guid: 5024b68ad28160d4ca9b6116f932431a, type: 3}
