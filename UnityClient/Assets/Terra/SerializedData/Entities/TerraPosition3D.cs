@@ -22,7 +22,10 @@ namespace Terra.SerializedData.Entities
                     new IDBColumn() {ColumnName = TerraEntitySerializer.COLUMN_INSTNACE_ID, DataType = DBDataType.INTEGER},
                     new IDBColumn() {ColumnName = "x", DataType = DBDataType.NUMERIC},
                     new IDBColumn() {ColumnName = "y", DataType = DBDataType.NUMERIC},
-                    new IDBColumn() {ColumnName = "z", DataType = DBDataType.NUMERIC}
+                    new IDBColumn() {ColumnName = "z", DataType = DBDataType.NUMERIC},
+                    new IDBColumn() {ColumnName = "rx", DataType = DBDataType.NUMERIC},
+                    new IDBColumn() {ColumnName = "ry", DataType = DBDataType.NUMERIC},
+                    new IDBColumn() {ColumnName = "rz", DataType = DBDataType.NUMERIC}
                 };
             }
         }
@@ -79,6 +82,21 @@ namespace Terra.SerializedData.Entities
                     serializable.z = value;
                     break;
                 }
+                case 4:
+                {
+                    serializable.rx = value;
+                    break;
+                }
+                case 5:
+                {
+                    serializable.ry = value;
+                    break;
+                }
+                case 6:
+                {
+                    serializable.rz = value;
+                    break;
+                }
                 default:
                     throw new ArgumentException();
             }
@@ -104,6 +122,18 @@ namespace Terra.SerializedData.Entities
                 {
                     return serializable.z.ToString();
                 }
+                case 4:
+                {
+                    return serializable.rx.ToString();
+                }
+                case 5:
+                {
+                    return serializable.ry.ToString();
+                }
+                case 6:
+                {
+                    return serializable.rz.ToString();
+                }
             }
 
             throw new ArgumentException();
@@ -122,10 +152,15 @@ namespace Terra.SerializedData.Entities
         public float x { get; set; }
         public float y { get; set; }
         public float z { get; set; }
-        
+        public float rx { get; set; }
+        public float ry { get; set; }
+        public float rz { get; set; }
+
+        public Vector3 euler { get{return new Vector3(rx, ry, rz);} }
+
         public static bool operator ==(TerraPosition3D a, TerraPosition3D b)
         {
-            return a.x == b.x && a.y == b.y && a.z == b.z && a.InstanceId == b.InstanceId;
+            return a.x == b.x && a.y == b.y && a.z == b.z && a.rx == b.rx && a.ry == b.ry && a.rz == b.rz && a.InstanceId == b.InstanceId;
         }
 
         public override bool Equals(object obj)
@@ -148,6 +183,14 @@ namespace Terra.SerializedData.Entities
             x = position.x;
             y = position.y;
             z = position.z;
+            return this;
+        }
+        
+        public TerraPosition3D Set(Quaternion rotation)
+        {
+            rx = rotation.eulerAngles.x;
+            ry = rotation.eulerAngles.y;
+            rz = rotation.eulerAngles.z;
             return this;
         }
         

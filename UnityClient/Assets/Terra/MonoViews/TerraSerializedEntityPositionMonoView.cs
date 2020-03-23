@@ -10,6 +10,7 @@ namespace Terra.MonoViews
             if (Initialized)
             {
                 Entity.Position.Set(transform.position);
+                Entity.Position.Set(transform.rotation);
             }
         }
 
@@ -17,6 +18,7 @@ namespace Terra.MonoViews
         {
             base.Initialize(entity);
             transform.position = new Vector3(entity.Position.Data.x, entity.Position.Data.y + 0.1f, entity.Position.Data.z);
+            transform.rotation = Quaternion.Euler(entity.Position.Data.euler);
         }
     }
 }

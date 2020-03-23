@@ -80,14 +80,17 @@ namespace Terra.Views
 
         public override void Show()
         {
-            _view = new GameObject("TerraView",
-            new []
-            {
-                typeof(TerraEntitiesMonoView),
-                typeof(TerraTerrainMonoView),
-                typeof(TerraDebugMonoView)
-            }
-            );
+            _view = GameObject.Instantiate(TerraGameResources.Instance.TerraWorldView);
+            
+           /* _view = new GameObject("TerraView",
+                new []
+                {
+                    typeof(TerraEntitiesMonoView),
+                    typeof(TerraTerrainMonoView),
+                    typeof(TerraDebugMonoView),
+                    typeof(TerraTerrainMonoView)
+                }
+            );*/
             
             TaskProvider.Instance.DelayedAction(() => _dataStreamers.Start());
             _updateCoroutine = TaskProvider.Instance.RunTask(Update());

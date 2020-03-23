@@ -37,6 +37,12 @@ namespace PandeaGames.Data
             get => _terraDebugWindow;
         }
         
+        [SerializeField] private GameObject _terraWorldView;
+        public GameObject TerraWorldView
+        {
+            get => _terraWorldView;
+        }
+        
         [SerializeField] 
         private string _layerForTerrain;
         public string LayerForTerrain

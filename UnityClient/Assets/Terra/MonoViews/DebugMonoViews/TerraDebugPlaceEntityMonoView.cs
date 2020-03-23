@@ -225,7 +225,6 @@ namespace Terra.MonoViews.DebugMonoViews
                     _entityProxy.transform.position.x,
                     _entityProxy.transform.position.y,
                     _entityProxy.transform.position.z));
-            
 
             vm.AddEntity(entity);
         }

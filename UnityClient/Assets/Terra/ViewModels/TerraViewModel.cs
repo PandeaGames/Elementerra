@@ -13,6 +13,7 @@ namespace Terra.ViewModels
         public TerraWorldChunk Chunk { get; private set; }
         
         public TerraTerrainGeometryDataModel Geometry { get; private set; }
+        public TerraGrassViewModel Grass { get; private set; }
 
         public TerraViewModel()
         {
@@ -23,7 +24,7 @@ namespace Terra.ViewModels
         {
             Chunk = chunk;
             Geometry = new TerraTerrainGeometryDataModel(chunk);
-            
+            Grass =  new TerraGrassViewModel(Geometry);
             OnGeometryUpdate?.Invoke(Geometry);
         }
         

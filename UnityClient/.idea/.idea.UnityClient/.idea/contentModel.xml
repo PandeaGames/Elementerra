@@ -604,6 +604,8 @@
             <e p="TerraEntitiesMonoView.cs" t="Include" />
             <e p="TerraEntityMonoView.cs" t="Include" />
             <e p="TerraEntityStreamerMonoView.cs" t="Include" />
+            <e p="TerraGrassMonoView.cs" t="Include" />
+            <e p="TerraGrassWorldMonoView.cs" t="Include" />
             <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
             <e p="TerraTerrainMonoView.cs" t="Include" />
           </e>
@@ -652,6 +654,7 @@
             <e p="ITerraEntityViewModel.cs" t="Include" />
             <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />
+            <e p="TerraGrassViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
             <e p="TerraWorldViewModel.cs" t="Include" />

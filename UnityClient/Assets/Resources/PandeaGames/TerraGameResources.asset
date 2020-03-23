@@ -17,4 +17,6 @@ MonoBehaviour:
   _terrainMaterial: {fileID: 2100000, guid: f7db954636704b64eb2cdb537d30a508, type: 2}
   _terraDebugWindow: {fileID: 9123109270193996398, guid: a29f454824e26394e8749bbcafdaa144,
     type: 3}
+  _terraWorldView: {fileID: 4663039414491324413, guid: 389d6e2968556a34cb9079399bbeeea5,
+    type: 3}
   _layerForTerrain: Terra

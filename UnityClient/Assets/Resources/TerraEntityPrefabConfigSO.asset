@@ -17,6 +17,10 @@ MonoBehaviour:
     DataConfig:
     - {fileID: 11400000, guid: 893e713498b26c544ae9d96201b5911e, type: 2}
     - {fileID: 11400000, guid: 005a60a877b30474a9d53c80e2121063, type: 2}
+    - {fileID: 11400000, guid: 2fde5c2cd98a65e459570b06465b7410, type: 2}
+    - {fileID: 11400000, guid: 6d3510c481da6d449b0bce0f6e20456e, type: 2}
     _config:
     - {fileID: 4425428723088313499, guid: fc9b148a2950aaf4cba8422632222c5d, type: 3}
     - {fileID: 667237715774126071, guid: 85177871b75509d499fd9d5fab4593bc, type: 3}
+    - {fileID: 2023694627982530721, guid: 7d863edb83ee2ad4cb3502f4af01f99b, type: 3}
+    - {fileID: 2023694627982530721, guid: 3d5ee420ee2a29c48bd44493fbf70aa2, type: 3}
