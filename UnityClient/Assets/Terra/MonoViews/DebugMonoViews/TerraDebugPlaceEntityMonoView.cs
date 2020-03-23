@@ -1,7 +1,11 @@
 using System;
+using System.Collections.Generic;
 using PandeaGames;
 using PandeaGames.Data;
+using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
+using Terra.Services;
+using Terra.ViewModels;
 using UnityEngine;
 
 namespace Terra.MonoViews.DebugMonoViews
@@ -10,6 +14,9 @@ namespace Terra.MonoViews.DebugMonoViews
     {
         [SerializeField] 
         private LayerMask _layerMaskForMousePosition;
+        
+        [SerializeField] 
+        private LayerMask _generalClickMask;
         
         private Vector3 _mousePosition;
         public Vector3 MousePosition => _mousePosition;
@@ -39,6 +46,7 @@ namespace Terra.MonoViews.DebugMonoViews
                     {
                         Destroy(_entityProxy);
                     }
+                    
                     break;
                 }
                 case TerraDebugControlViewModel.States.PlaceEntity:
@@ -47,7 +55,7 @@ namespace Terra.MonoViews.DebugMonoViews
                     {
                         Destroy(_entityProxy);
                     }
-                    
+
                     _entityProxy = CreateProxyEntity(_vm.entityData);
                     break;
                 }
@@ -63,9 +71,14 @@ namespace Terra.MonoViews.DebugMonoViews
             GameObject instance =
                 Instantiate(TerraGameResources.Instance.TerraEntityPrefabConfig.GetGameObject(entityData), transform);
             instance.name = $"{entityData.EntityID} Proxy";
-            foreach (Component comp in instance.GetComponents<Component>())
+            
+            List<Component> components = new List<Component>();
+            instance.GetComponents<Component>(components);
+            instance.GetComponentsInChildren<Component>(components);
+            
+            foreach (Component comp in components)
             {
-                if (comp is Renderer || comp is Transform)
+                if (comp is Renderer || comp is Transform || comp is MeshFilter || comp is LODGroup)
                 {
                     continue;
                 }
@@ -85,18 +98,99 @@ namespace Terra.MonoViews.DebugMonoViews
 
         private void Update()
         {
-            if (_currentState == TerraDebugWindowMonoView.EditorStates.Locked)
+            switch (_currentState)
             {
-                if (_vm.CurrentState == TerraDebugControlViewModel.States.PlaceEntity && _entityProxy != null)
+                case TerraDebugWindowMonoView.EditorStates.Locked:
                 {
-                    _entityProxy.SetActive(true);
-                    UpdateProxy(_entityProxy);
+                    switch (_vm.CurrentState)
+                    {
+                        case TerraDebugControlViewModel.States.PlaceEntity:
+                        {
+                            if (_entityProxy != null)
+                            {
+                                _entityProxy.SetActive(true);
+                                UpdateProxy(_entityProxy);
+                                if (Input.GetMouseButtonDown(0))
+                                {
+                                    AddEntity();
+                                } 
+                            }
+                            
+                            break;
+                        }
+                        case TerraDebugControlViewModel.States.None:
+                        {
+                            if (Input.GetMouseButtonDown(0))
+                            {
+                                ProcessGeneralClick();
+                            }
+
+                            break;
+                        }
+                        case TerraDebugControlViewModel.States.MoveEntity:
+                        {
+                            if (Input.GetMouseButtonUp(0))
+                            {
+                                _vm.SetState(TerraDebugControlViewModel.States.None);
+                            }
+                            else
+                            {
+                                ProcessMovingEntity();
+                            }
+
+                            break;
+                        }
+                    }
+                    break;
+                }
+                case TerraDebugWindowMonoView.EditorStates.FreeFly:
+                case TerraDebugWindowMonoView.EditorStates.Off:
+                {
+                    if (_entityProxy != null)
+                    {
+                        _entityProxy.SetActive(false);
+                    }
+                    break;
                 }
             }
-            else if(_entityProxy != null)
+        }
+
+        private void ProcessGeneralClick()
+        {
+            Ray ray = _vm.DebugCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, 100f, _generalClickMask,
+                QueryTriggerInteraction.Collide))
             {
-                _entityProxy.SetActive(false);
+                TerraSerializedEntityPositionMonoView positionMonoView = hit.transform.GetComponent<TerraSerializedEntityPositionMonoView>();
+
+                if (positionMonoView)
+                {
+                    _vm.MoveEntity(positionMonoView);
+                }
             }
+        }
+
+        private void ProcessMovingEntity()
+        {
+            Ray ray = _vm.DebugCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, 100f, _layerMaskForMousePosition,
+                QueryTriggerInteraction.Collide))
+            {
+                _mousePosition = hit.point;
+                _mousePositionOnGrid = new Vector2(MathUtils.Round(_mousePosition.x, 1),
+                    MathUtils.Round(_mousePosition.z, 1));
+                int x = (int) Math.Round(_mousePositionOnGrid.x);
+                int y = (int) Math.Round(_mousePositionOnGrid.y);
+                _mousePositionOnTerra = new TerraVector() {x = x, y = y};
+                /*TerraVector mousePositionOnToken = new TerraVector()
+                    {x = x - _currentToken.Request.left, y = y - _currentToken.Request.top};
+                _mousePosition3OnGrid = GetVertice(_currentToken, mousePositionOnToken.x, mousePositionOnToken.y);*/
+                // Do something with the object that was hit by the raycast.
+            }
+                
+            _vm.movingEntity.transform.position = new Vector3(_mousePosition.x, _mousePosition.y + 1, _mousePosition.z);
         }
 
         private void UpdateProxy(GameObject proxy)
@@ -118,7 +212,22 @@ namespace Terra.MonoViews.DebugMonoViews
                 // Do something with the object that was hit by the raycast.
             }
                 
-            proxy.transform.position = _mousePosition;
+            proxy.transform.position = new Vector3(_mousePosition.x, _mousePosition.y + 1, _mousePosition.z);
+        }
+
+        private void AddEntity()
+        {
+            RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(_vm.entityData);
+            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+
+            entity.Position.Set(
+                new Vector3(
+                    _entityProxy.transform.position.x,
+                    _entityProxy.transform.position.y,
+                    _entityProxy.transform.position.z));
+            
+
+            vm.AddEntity(entity);
         }
     }
 }

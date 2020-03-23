@@ -1398,3 +1398,6 @@ MonoBehaviour:
   _layerMaskForMousePosition:
     serializedVersion: 2
     m_Bits: 256
+  _generalClickMask:
+    serializedVersion: 2
+    m_Bits: 4294967295

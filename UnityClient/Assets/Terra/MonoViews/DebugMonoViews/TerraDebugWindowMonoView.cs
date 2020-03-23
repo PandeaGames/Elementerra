@@ -38,6 +38,11 @@ namespace Terra.MonoViews.DebugMonoViews
             {
                 SetState(EditorStates.FreeFly);
             }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                _controlViewModel.SetState(TerraDebugControlViewModel.States.None);
+            }
         }
 
         public void OnEnable()

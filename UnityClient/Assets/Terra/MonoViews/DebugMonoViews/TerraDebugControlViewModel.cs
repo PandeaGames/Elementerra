@@ -10,16 +10,24 @@ namespace Terra.MonoViews.DebugMonoViews
         {
             None,
             PlaceEntity,
-            Sculpt
+            Sculpt,
+            MoveEntity
         }
         
         public TerraEntityTypeData entityData;
+        public TerraSerializedEntityPositionMonoView movingEntity;
         public Camera DebugCamera;
         
         public void PlaceEntity(TerraEntityTypeData entityData)
         {
             this.entityData = entityData;
             SetState(States.PlaceEntity, true);
+        }
+        
+        public void MoveEntity(TerraSerializedEntityPositionMonoView movingEntity)
+        {
+            this.movingEntity = movingEntity;
+            SetState(States.MoveEntity, true);
         }
     }
 }

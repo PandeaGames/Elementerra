@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Ball.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Ball.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Player.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Controllers/Scripts/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Controllers/Scripts/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractStatefulViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractStatefulViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PandeaGames/TerraGameResources.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PandeaGames/TerraGameResources.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/Terra.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Terra.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,8 +207,8 @@
         <option value="$PROJECT_DIR$/Assets/WorldRendererLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" />
       </list>
     </option>
@@ -306,7 +294,7 @@
       <workItem from="1584503268728" duration="4865000" />
       <workItem from="1584676200326" duration="1768000" />
       <workItem from="1584850431824" duration="6960000" />
-      <workItem from="1584900178573" duration="10847000" />
+      <workItem from="1584900178573" duration="14440000" />
     </task>
     <servers />
   </component>
