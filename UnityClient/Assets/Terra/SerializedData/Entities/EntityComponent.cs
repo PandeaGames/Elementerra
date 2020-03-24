@@ -8,6 +8,7 @@ namespace Terra.SerializedData.Entities
         Nothing = 1 << 0,
         Position = 1 << 1,
         Health = 1 << 2,
-        LastPlaced = 1 << 3
+        LastPlaced = 1 << 3,
+        GridPosition = 1 << 4
     }
 }

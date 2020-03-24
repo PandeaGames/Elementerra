@@ -28,6 +28,7 @@ namespace Terra.SerializedData.Entities
         public TerraDBService DB { private set; get; }
 
         public TerraPosition3DComponent Position;
+        public TerraGridPositionComponent GridPosition;
         public TerraEntityTypeData EntityTypeData { get; private set; }
 
         public override int GetHashCode()
@@ -44,6 +45,8 @@ namespace Terra.SerializedData.Entities
         {
             entity.TerraPosition3D.InstanceId = entity.TerraEntity.InstanceId;
             Position = new TerraPosition3DComponent(db,entity.TerraPosition3D);
+            GridPosition = new TerraGridPositionComponent(db, entity.TerraGridPosition);
+            
             Entity = entity.TerraEntity;
             
             Entity.OnLabelAdded += (labelEntity, label) => OnLabelAdded?.Invoke(this, label);
@@ -77,11 +80,13 @@ namespace Terra.SerializedData.Entities
     {
         public TerraEntity TerraEntity;
         public TerraPosition3D TerraPosition3D;
+        public TerraGridPosition TerraGridPosition;
 
         public AssembledEntity(TerraEntity entity)
         {
             TerraEntity = entity;
             TerraPosition3D = new TerraPosition3D();
+            TerraGridPosition = new TerraGridPosition();
         }
     }
 
@@ -90,15 +95,17 @@ namespace Terra.SerializedData.Entities
     {
         public static TerraEntitySerializer TerraEntitySerializer = new TerraEntitySerializer();
         public static TerraPosition3DSerializer TerraPosition3DSerializer = new TerraPosition3DSerializer();
+        public static TerraGridPositionSerializer TerraGridPositionSerializer = new TerraGridPositionSerializer();
 
         private IDBSchema[] Schemas { get; } = new IDBSchema[]
         {
             TerraEntitySerializer,
-            TerraPosition3DSerializer
+            TerraPosition3DSerializer,
+            TerraGridPositionSerializer
         };
 
         public string Table => TerraEntitySerializer.Table;
-        public IDBColumn[] Columns => TerraEntitySerializer.Columns.Concat(TerraPosition3DSerializer.Columns).ToArray();
+        public IDBColumn[] Columns => TerraEntitySerializer.Columns.Concat(TerraPosition3DSerializer.Columns).Concat(TerraGridPositionSerializer.Columns).ToArray();
 
         public int PrimaryKeyColumnIndex => TerraEntitySerializer.PrimaryKeyColumnIndex;
         
@@ -106,7 +113,7 @@ namespace Terra.SerializedData.Entities
         {
             return new AssembledEntity()
             {
-                TerraEntity = new TerraEntity(), TerraPosition3D = new TerraPosition3D()
+                TerraEntity = new TerraEntity(), TerraPosition3D = new TerraPosition3D(), TerraGridPosition = new TerraGridPosition()
             };
         }
 
@@ -146,6 +153,10 @@ namespace Terra.SerializedData.Entities
             {
                 TerraPosition3DSerializer.ParseStringResult(ref serializable.TerraPosition3D, scrubber.SerializerColumnIndex, value);
             }
+            else if (scrubber.SerializerIndex == 3)
+            {
+                TerraGridPositionSerializer.ParseStringResult(ref serializable.TerraGridPosition, scrubber.SerializerColumnIndex, value);
+            }
             else
             {
                 throw new NotImplementedException();
@@ -163,6 +174,10 @@ namespace Terra.SerializedData.Entities
             else if (scrubber.SerializerIndex == 1)
             {
                 TerraPosition3DSerializer.ParseIntegerResult(ref  serializable.TerraPosition3D, scrubber.SerializerColumnIndex, value);
+            }
+            else if (scrubber.SerializerIndex == 2)
+            {
+                TerraGridPositionSerializer.ParseIntegerResult(ref  serializable.TerraGridPosition, scrubber.SerializerColumnIndex, value);
             }
             else
             {
@@ -182,6 +197,10 @@ namespace Terra.SerializedData.Entities
             {
                 TerraPosition3DSerializer.ParseNumericResult(ref serializable.TerraPosition3D, scrubber.SerializerColumnIndex, value);
             }
+            else if (scrubber.SerializerIndex == 2)
+            {
+                TerraGridPositionSerializer.ParseNumericResult(ref serializable.TerraGridPosition, scrubber.SerializerColumnIndex, value);
+            }
             else
             {
                 throw new NotImplementedException();
@@ -199,6 +218,10 @@ namespace Terra.SerializedData.Entities
             else if (scrubber.SerializerIndex == 1)
             {
                 return TerraPosition3DSerializer.GetValue(serializable.TerraPosition3D, scrubber.SerializerColumnIndex);
+            }
+            else if (scrubber.SerializerIndex == 2)
+            {
+                return TerraGridPositionSerializer.GetValue(serializable.TerraGridPosition, scrubber.SerializerColumnIndex);
             }
             else
             {
