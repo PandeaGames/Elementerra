@@ -16,7 +16,8 @@ namespace Terra.Controllers
                 {
                     TerraEntity.Serializer,
                     TerraPosition3D.Serializer,
-                    TerraPoint.Serializer
+                    TerraPoint.Serializer,
+                    TerraGridPosition.Serializer
                 }
                 );
         }

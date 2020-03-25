@@ -22,18 +22,20 @@ namespace Terra.MonoViews.DebugMonoViews
         public Vector3 MousePosition => _mousePosition;
         private TerraVector _mousePositionOnTerra;
         public TerraVector MousePositionOnTerra => _mousePositionOnTerra;
-        private Vector2 _mousePositionOnGrid;
-        public Vector2 MousePositionOnGrid => _mousePositionOnGrid;
+        private Vector3 _mousePositionOnGrid;
+        public Vector3 MousePositionOnGrid => _mousePositionOnGrid;
         private Vector3 _mousePosition3OnGrid;
         public Vector3 MousePosition3OnGrid => _mousePosition3OnGrid;
         
         private GameObject _entityProxy;
         private TerraDebugControlViewModel _vm;
+        private TerraViewModel _terraViewModel;
 
         private void Start()
         {
             _vm = Game.Instance.GetViewModel<TerraDebugControlViewModel>(0);
             _vm.OnEnterState += OnEnterState;
+            _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
         }
 
         private void OnEnterState(TerraDebugControlViewModel.States state)
@@ -162,11 +164,11 @@ namespace Terra.MonoViews.DebugMonoViews
             if (Physics.Raycast(ray.origin, ray.direction, out hit, 100f, _generalClickMask,
                 QueryTriggerInteraction.Collide))
             {
-                TerraSerializedEntityPositionMonoView positionMonoView = hit.transform.GetComponent<TerraSerializedEntityPositionMonoView>();
+                TerraEntityMonoView monoView = hit.transform.GetComponent<TerraEntityMonoView>();
 
-                if (positionMonoView)
+                if (monoView != null && monoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.Spacial))
                 {
-                    _vm.MoveEntity(positionMonoView);
+                    _vm.MoveEntity(monoView);
                 }
             }
         }
@@ -179,18 +181,25 @@ namespace Terra.MonoViews.DebugMonoViews
                 QueryTriggerInteraction.Collide))
             {
                 _mousePosition = hit.point;
-                _mousePositionOnGrid = new Vector2(MathUtils.Round(_mousePosition.x, 1),
-                    MathUtils.Round(_mousePosition.z, 1));
-                int x = (int) Math.Round(_mousePositionOnGrid.x);
-                int y = (int) Math.Round(_mousePositionOnGrid.y);
+                int x = (int) Math.Round(_mousePosition.x);
+                int y = (int) Math.Round(_mousePosition.z);
                 _mousePositionOnTerra = new TerraVector() {x = x, y = y};
+                _mousePositionOnGrid = _terraViewModel.Geometry.TryGetClosestGridPosition(_mousePosition);
+
                 /*TerraVector mousePositionOnToken = new TerraVector()
                     {x = x - _currentToken.Request.left, y = y - _currentToken.Request.top};
                 _mousePosition3OnGrid = GetVertice(_currentToken, mousePositionOnToken.x, mousePositionOnToken.y);*/
                 // Do something with the object that was hit by the raycast.
             }
-                
-            _vm.movingEntity.transform.position = new Vector3(_mousePosition.x, _mousePosition.y + 1, _mousePosition.z);
+
+            if (_vm.movingEntity.Entity.EntityTypeData.Component.HasFlag(EntityComponent.Position))
+            {
+                _vm.movingEntity.transform.position = new Vector3(_mousePosition.x, _mousePosition.y + 1, _mousePosition.z);
+            }
+            else if (_vm.movingEntity.Entity.EntityTypeData.Component.HasFlag(EntityComponent.GridPosition))
+            {
+                _vm.movingEntity.transform.position = _mousePositionOnGrid;
+            }
         }
 
         private void UpdateProxy(GameObject proxy)
@@ -201,18 +210,24 @@ namespace Terra.MonoViews.DebugMonoViews
                 QueryTriggerInteraction.Collide))
             {
                 _mousePosition = hit.point;
-                _mousePositionOnGrid = new Vector2(MathUtils.Round(_mousePosition.x, 1),
-                    MathUtils.Round(_mousePosition.z, 1));
-                int x = (int) Math.Round(_mousePositionOnGrid.x);
-                int y = (int) Math.Round(_mousePositionOnGrid.y);
+                int x = (int) Math.Round(_mousePosition.x);
+                int y = (int) Math.Round(_mousePosition.z);
                 _mousePositionOnTerra = new TerraVector() {x = x, y = y};
+                _mousePositionOnGrid = _terraViewModel.Geometry.TryGetClosestGridPosition(_mousePosition);
                 /*TerraVector mousePositionOnToken = new TerraVector()
                     {x = x - _currentToken.Request.left, y = y - _currentToken.Request.top};
                 _mousePosition3OnGrid = GetVertice(_currentToken, mousePositionOnToken.x, mousePositionOnToken.y);*/
                 // Do something with the object that was hit by the raycast.
             }
-                
-            proxy.transform.position = new Vector3(_mousePosition.x, _mousePosition.y + 1, _mousePosition.z);
+            
+            if (_vm.entityData.Component.HasFlag(EntityComponent.Position))
+            {
+                proxy.transform.position = new Vector3(_mousePosition.x, _mousePosition.y + 1, _mousePosition.z);
+            }
+            else if (_vm.entityData.Component.HasFlag(EntityComponent.GridPosition))
+            {
+                proxy.transform.position = _mousePositionOnGrid;
+            }
         }
 
         private void AddEntity()
@@ -220,12 +235,19 @@ namespace Terra.MonoViews.DebugMonoViews
             RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(_vm.entityData);
             TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
 
-            entity.Position.Set(
-                new Vector3(
-                    _entityProxy.transform.position.x,
-                    _entityProxy.transform.position.y,
-                    _entityProxy.transform.position.z));
-
+            if (_vm.entityData.Component.HasFlag(EntityComponent.Position))
+            {
+                entity.Position.Set(
+                    new Vector3(
+                        _entityProxy.transform.position.x,
+                        _entityProxy.transform.position.y,
+                        _entityProxy.transform.position.z));
+            }
+            else if (_vm.entityData.Component.HasFlag(EntityComponent.GridPosition))
+            {
+                entity.GridPosition.Set(_mousePositionOnTerra);
+            }
+            
             vm.AddEntity(entity);
         }
     }

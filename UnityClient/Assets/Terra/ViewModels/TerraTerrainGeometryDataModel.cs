@@ -86,5 +86,26 @@ namespace Terra.ViewModels
                         chunk[x - 1, y].Height) / 9f) * 0.5f,
             chunk[x, y].Position.y);
         }
+
+        public Vector3 TryGetClosestGridPosition(Vector3 worldPosition)
+        {
+            TerraVector terraVector = new TerraVector((int)worldPosition.x, (int)worldPosition.z);
+            return TryGetClosestGridPosition(terraVector);
+        }
+        
+        public Vector3 TryGetClosestGridPosition(TerraVector terraVector)
+        {
+            Vector3 position = new Vector3(terraVector.x, 0, terraVector.y);
+
+            if (terraVector.x > _chunk[0, 0].Position.x && 
+                terraVector.x < _chunk[0, 0].Position.x + Width &&
+                terraVector.y > _chunk[0, 0].Position.y && 
+                terraVector.y < _chunk[0, 0].Position.y + Height)
+            {
+                position = this[terraVector.x - _chunk[0, 0].Position.x, terraVector.y - _chunk[0, 0].Position.y];
+            }
+
+            return position;
+        }
     }
 }

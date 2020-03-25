@@ -24,6 +24,16 @@ public struct TerraVector
     {
         return new TerraVector(radius, radius);
     }
+
+    public static bool operator ==(TerraVector a, TerraVector b)
+    {
+        return a.x == b.x && a.y == b.y;
+    }
+
+    public static bool operator !=(TerraVector a, TerraVector b)
+    {
+        return !(a == b);
+    }
 }
 
 public interface ITerraShape

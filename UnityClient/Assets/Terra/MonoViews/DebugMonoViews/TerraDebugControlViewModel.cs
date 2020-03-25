@@ -1,4 +1,5 @@
 using PandeaGames.ViewModels;
+using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ namespace Terra.MonoViews.DebugMonoViews
         }
         
         public TerraEntityTypeData entityData;
-        public TerraSerializedEntityPositionMonoView movingEntity;
+        public TerraEntityMonoView movingEntity;
         public Camera DebugCamera;
         
         public void PlaceEntity(TerraEntityTypeData entityData)
@@ -24,7 +25,7 @@ namespace Terra.MonoViews.DebugMonoViews
             SetState(States.PlaceEntity, true);
         }
         
-        public void MoveEntity(TerraSerializedEntityPositionMonoView movingEntity)
+        public void MoveEntity(TerraEntityMonoView movingEntity)
         {
             this.movingEntity = movingEntity;
             SetState(States.MoveEntity, true);

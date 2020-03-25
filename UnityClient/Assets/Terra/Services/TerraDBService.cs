@@ -302,7 +302,7 @@ namespace Terra.Services
                         catch (Exception e)
                         {
                             Debug.LogError($"[{typeof(TSerializer)}][{typeof(TSerializable)}] column [{column.ColumnName}] dataType [{column.DataType}] indexInReader [{i}] rdr.FieldCount[{rdr.FieldCount}]");
-                            throw e;
+                            //throw e;
                         }
                     }
                     dataList.Add(data);

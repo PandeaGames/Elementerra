@@ -44,6 +44,7 @@ namespace Terra.SerializedData.Entities
         public RuntimeTerraEntity(AssembledEntity entity, TerraDBService db)
         {
             entity.TerraPosition3D.InstanceId = entity.TerraEntity.InstanceId;
+            entity.TerraGridPosition.InstanceId = entity.TerraEntity.InstanceId;
             Position = new TerraPosition3DComponent(db,entity.TerraPosition3D);
             GridPosition = new TerraGridPositionComponent(db, entity.TerraGridPosition);
             
@@ -153,7 +154,7 @@ namespace Terra.SerializedData.Entities
             {
                 TerraPosition3DSerializer.ParseStringResult(ref serializable.TerraPosition3D, scrubber.SerializerColumnIndex, value);
             }
-            else if (scrubber.SerializerIndex == 3)
+            else if (scrubber.SerializerIndex == 2)
             {
                 TerraGridPositionSerializer.ParseStringResult(ref serializable.TerraGridPosition, scrubber.SerializerColumnIndex, value);
             }
