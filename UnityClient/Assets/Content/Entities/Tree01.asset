@@ -15,4 +15,4 @@ MonoBehaviour:
   _data:
     component: 16
     _entityId: Tree01
-    _debugImage: {fileID: 21300000, guid: b8da474f6e09a0846823edea0416de50, type: 3}
+    _debugImage: {fileID: 21300000, guid: b90f8ef5811d4b84f803b70940a1c812, type: 3}
