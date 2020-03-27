@@ -47,7 +47,7 @@ MonoBehaviour:
   NoiseTexture: {fileID: 2800000, guid: e5055e0d246bd1047bdb28057a93753c, type: 3}
   Wiggle: 1
   Wind: 1
-  WindStrenght: 0.8
+  WindStrenght: 0.59
   WindSpeed: 0.4
   WindTurbulence: 0.1
   LeavesWiggle: 1

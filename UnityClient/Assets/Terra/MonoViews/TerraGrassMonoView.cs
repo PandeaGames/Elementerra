@@ -10,7 +10,7 @@ namespace Terra.MonoViews
         {
             gameObject.SetActive(dataNode.Grass > 0);
             transform.localScale = new Vector3(
-                1, dataNode.Grass * scaler, 1
+                1, dataNode.Scale, 1
                 );
         }
     }

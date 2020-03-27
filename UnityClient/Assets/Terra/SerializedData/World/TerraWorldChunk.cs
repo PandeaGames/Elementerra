@@ -26,10 +26,21 @@ namespace Terra.SerializedData.World
             _db = db;
             _area = area;
         }
+        
+        public TerraVector WorldToLocal(TerraVector vector)
+        {
+            return new TerraVector(FindDifference(_area.x, vector.x), FindDifference(_area.y, vector.y));
+        }
+        
+        public TerraVector LocalToWorld(TerraVector vector)
+        {
+            return new TerraVector(_area.x + vector.x, _area.y + vector.y);
+        }
 
         public TerraPoint GetFromWorld(TerraVector vector)
         {
-            return this[FindDifference(_area.x, vector.x), FindDifference(_area.y, vector.y)];
+            TerraVector localVector = WorldToLocal(vector);
+            return this[localVector.x, localVector.y];
         }
         
         public void SetFromWorld(TerraVector vector, TerraPoint point)

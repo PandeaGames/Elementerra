@@ -659,6 +659,7 @@
             <e p="ITerraEntityViewModel.cs" t="Include" />
             <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />
+            <e p="TerraGrassPotentialViewModel.cs" t="Include" />
             <e p="TerraGrassViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />

@@ -20,6 +20,7 @@ namespace Terra.Views.ViewDataStreamers
         private RuntimeTerraEntity _playerEntity;
         private float _lastSaveSeconds;
         private Vector3 _lastChunkLoadPosition;
+        private int _chunkSize = 80;
         
         public TerraWorldDataStreamer(
             TerraWorldViewModel terraWorldViewModel, 
@@ -62,7 +63,7 @@ namespace Terra.Views.ViewDataStreamers
                     _lastChunkLoadPosition = _terraEntitiesViewModel.Player.Position.Data;
                     _terraChunkService.GetChunk(new TerraArea()
                     {
-                        height = 100, width = 100, x = (int)_lastChunkLoadPosition.x - 50, y = (int)_lastChunkLoadPosition.z - 50
+                        height = _chunkSize, width = _chunkSize, x = (int)_lastChunkLoadPosition.x - _chunkSize / 2, y = (int)_lastChunkLoadPosition.z - _chunkSize / 2
                     }, chunk =>
                     {
                         OnChunkLoaded(chunk);
@@ -95,7 +96,7 @@ namespace Terra.Views.ViewDataStreamers
            _lastChunkLoadPosition = _playerEntity.Position.Data;
             _terraChunkService.GetChunk(new TerraArea()
             {
-                height = 100, width = 100, x = (int)_playerEntity.Position.Data.x - 50, y = (int)_playerEntity.Position.Data.z - 50
+                height = _chunkSize, width = _chunkSize, x = (int)_playerEntity.Position.Data.x - _chunkSize / 2, y = (int)_playerEntity.Position.Data.z - _chunkSize / 2
             }, chunk =>
             {
                 OnChunkLoaded(chunk);

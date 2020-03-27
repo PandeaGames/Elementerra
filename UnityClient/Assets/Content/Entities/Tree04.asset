@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e47e61e108654454a0d07d3026ac5a5a, type: 3}
-  m_Name: Tree01
+  m_Name: Tree04
   m_EditorClassIdentifier: 
   _data:
     component: 16
-    _entityId: Tree01
+    _entityId: Tree04
     _debugImage: {fileID: 21300000, guid: b90f8ef5811d4b84f803b70940a1c812, type: 3}
-    _grassPotentialReductionRadius: 14
+    _grassPotentialReductionRadius: 3
     _grassPotentialReductionCurve:
       serializedVersion: 2
       m_Curve:
@@ -30,22 +30,22 @@ MonoBehaviour:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.48385
-        value: 0.18617457
-        inSlope: 0.8711283
-        outSlope: 0.8711283
+        time: 0.7713561
+        value: 0.1909048
+        inSlope: 0.80787647
+        outSlope: 0.80787647
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.6948344
+        outWeight: 0.6902024
       - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 1.4490564
-        outSlope: 1.4490564
+        inSlope: 2.6729565
+        outSlope: 2.6729565
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.2721045
+        inWeight: 0.32802096
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2

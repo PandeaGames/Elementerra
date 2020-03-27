@@ -14,6 +14,7 @@ namespace Terra.ViewModels
         
         public TerraTerrainGeometryDataModel Geometry { get; private set; }
         public TerraGrassViewModel Grass { get; private set; }
+        public TerraGrassPotentialViewModel GrassPotential { get; private set; }
 
         public TerraViewModel()
         {
@@ -24,7 +25,8 @@ namespace Terra.ViewModels
         {
             Chunk = chunk;
             Geometry = new TerraTerrainGeometryDataModel(chunk);
-            Grass =  new TerraGrassViewModel(Geometry);
+            GrassPotential = new TerraGrassPotentialViewModel(Geometry, Game.Instance.GetViewModel<TerraEntitiesViewModel>(0), chunk);
+            Grass =  new TerraGrassViewModel(Geometry, GrassPotential);
             OnGeometryUpdate?.Invoke(Geometry);
         }
         

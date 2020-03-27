@@ -18,6 +18,14 @@ namespace Terra.SerializedData.GameData
         [SerializeField]
         private Sprite _debugImage;
         public Sprite DebugImage => _debugImage;
+        
+        [SerializeField]
+        private int _grassPotentialReductionRadius;
+        public int GrassPotentialReductionRadius => _grassPotentialReductionRadius;
+        
+        [SerializeField]
+        private AnimationCurve _grassPotentialReductionCurve;
+        public AnimationCurve GrassPotentialReductionCurve => _grassPotentialReductionCurve;
 
         public override string ToString()
         {
