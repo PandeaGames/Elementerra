@@ -65,15 +65,13 @@ namespace Terra.Services
                         {
                             string defaultValue = "0";
                             
-                            
-                            
                             cmd.CommandText =
                                 $"ALTER TABLE {schema.Table} ADD COLUMN {schema.Columns[i]} {schema.Columns[i].DataType.ToString()} default {defaultValue}";
                             cmd.ExecuteNonQuery();
                         }
                         catch (SQLiteException ex)
                         {
-                            //do nothing
+                            Debug.LogWarning(ex);
                         }
                     }
                     
@@ -119,6 +117,47 @@ namespace Terra.Services
                 return
                     $"WHERE {_serializer.Columns[_serializer.PrimaryKeyColumnIndex]} = {_serializer.GetValue(serializable, _serializer.PrimaryKeyColumnIndex)}";
             }
+        }
+
+        public void WriteNewRecord<TSerializer, TSerializable>(TSerializable serializable, TSerializer serializer)
+            where TSerializable:IDBSerializable
+            where TSerializer:IDBSerializer<TSerializable>
+        {
+            if (!_serializerWriteCommandTextCache.ContainsKey(serializer.Table))
+            {
+                string[] updateText = new string[serializer.Columns.Length];
+
+                for (int i = 0; i < serializer.Columns.Length; i++)
+                {
+                    updateText[i] = $"{serializer.Columns[i]} = excluded.{serializer.Columns[i]}";
+                }
+
+                _serializerWriteCommandTextCache.Add(serializer.Table,
+                    $"INSERT INTO {serializer.Table}({string.Join(",", serializer.Columns)}) " +
+                    $" Values(@{string.Join(",@", serializer.Columns)}) ");
+            }
+            
+            _serializerWriteCommandTextCache.TryGetValue(serializer.Table, out string commandText);
+
+            TerraDBParameterValue[] values = new TerraDBParameterValue[serializer.Columns.Length];
+            
+            for (int i = 0; i < serializer.Columns.Length; i++)
+            {
+                values[i] = new TerraDBParameterValue()
+                {
+                    Column = serializer.Columns[i].ToString(),
+                    Value = serializer.GetValue(serializable, i),
+                    DataType = serializer.Columns[i].DataType
+                };
+            }
+            
+            TerraDBRequest request = new TerraDBRequest()
+            {
+                CommandText = commandText,
+                Values = values
+            };
+            
+            _pendingWriteRequests.Add(serializable.GetHashCode(), request);
         }
         
         public void Write<TSerializer, TSerializable>(TSerializable serializable, TSerializer serializer, IDBWhereClause<TSerializable> where)

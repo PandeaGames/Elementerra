@@ -635,6 +635,7 @@
             <e p="World" t="Include">
               <e p="TerraWorld.cs" t="Include" />
               <e p="TerraWorldChunk.cs" t="Include" />
+              <e p="TerraWorldState.cs" t="Include" />
             </e>
           </e>
           <e p="Services" t="Include">
@@ -663,6 +664,7 @@
             <e p="TerraGrassViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
+            <e p="TerraWorldStateViewModel.cs" t="Include" />
             <e p="TerraWorldViewModel.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
@@ -670,6 +672,7 @@
             <e p="ViewDataStreamers" t="Include">
               <e p="IDataStreamer.cs" t="Include" />
               <e p="TerraWorldDataStreamer.cs" t="Include" />
+              <e p="TerraWorldStateStreamer.cs" t="Include" />
               <e p="ViewDataStreamerGroup.cs" t="Include" />
             </e>
           </e>

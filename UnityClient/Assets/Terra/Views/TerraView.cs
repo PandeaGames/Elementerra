@@ -42,7 +42,8 @@ namespace Terra.Views
                     _terraChunkService,
                     _terraEntitiesViewModel,
                     _db
-                    ) 
+                    ) ,
+                new TerraWorldStateStreamer()
             });
             
             _terraWorldViewModel.OnWorldSet += TerraWorldViewModelOnWorldSet;

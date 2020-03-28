@@ -6,16 +6,19 @@ using PandeaGames.Data;
 using PandeaGames.Services;
 using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
+using Terra.ViewModels;
 
 namespace Terra.Services
 {
     public class TerraEntitesService : IService
     {
         private TerraDBService _db;
+        private TerraWorldStateViewModel _worldState;
         
         public TerraEntitesService()
         {
             _db = Game.Instance.GetService<TerraDBService>();
+            _worldState = Game.Instance.GetViewModel<TerraWorldStateViewModel>(0);
         }
         
         public RuntimeTerraEntity CreateEntity(ITerraEntityType entityType)
@@ -23,6 +26,7 @@ namespace Terra.Services
             TerraEntity newEntity = new TerraEntity();
             AssembledEntity assembled = new AssembledEntity(newEntity);
             newEntity.EntityID = entityType.EntityID;
+            newEntity.TickCreated = _worldState.State.Tick;
             _db.Write(newEntity, TerraEntity.Serializer, TerraEntity.WherePrimaryKey);
             RuntimeTerraEntity runtimeTerraEntity = new RuntimeTerraEntity(assembled, _db);
             return runtimeTerraEntity;

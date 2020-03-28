@@ -16,6 +16,7 @@ namespace Terra.SerializedData.Entities
 
         public const string COLUMN_INSTNACE_ID = "instanceId";
         public const string COLUMN_ENTITY_ID = "entityId";
+        public const string COLUMN_TICK_CREATED = "tickCreated";
         
         public string Table
         {
@@ -29,7 +30,8 @@ namespace Terra.SerializedData.Entities
                 return new[]
                 {
                     new IDBColumn() {ColumnName = COLUMN_INSTNACE_ID, DataType = DBDataType.INTEGER},
-                    new IDBColumn() {ColumnName = COLUMN_ENTITY_ID, DataType = DBDataType.TEXT}
+                    new IDBColumn() {ColumnName = COLUMN_ENTITY_ID, DataType = DBDataType.TEXT},
+                    new IDBColumn() {ColumnName = COLUMN_TICK_CREATED, DataType = DBDataType.INTEGER}
                 };
             }
         }
@@ -50,6 +52,11 @@ namespace Terra.SerializedData.Entities
                     return terraEntity.EntityID;
                     break;
                 }
+                case 2:
+                {
+                    return terraEntity.TickCreated.ToString();
+                    break;
+                }
                 default:
                     throw new ArgumentException();
             }
@@ -62,6 +69,11 @@ namespace Terra.SerializedData.Entities
                 case 0:
                 {
                     terraEntity.InstanceId = value;
+                    break;
+                }
+                case 2:
+                {
+                    terraEntity.TickCreated = value;
                     break;
                 }
                 default:
@@ -83,10 +95,6 @@ namespace Terra.SerializedData.Entities
         {
             switch (columnIndex)
             {
-                case 0:
-                {
-                    throw new ArgumentException();
-                }
                 case 1:
                 {
                     terraEntity.EntityID = value;
@@ -116,18 +124,20 @@ namespace Terra.SerializedData.Entities
         public Dictionary<EntityComponent, IEntityComponent> Components { get; } = new Dictionary<EntityComponent, IEntityComponent>();
         
         public int InstanceId { get; set; } = System.Guid.NewGuid().GetHashCode();
+        public int TickCreated;
         public HashSet<string> Labels { get; set; } = new HashSet<string>();
         public string EntityID { get; set; } = "";
         public long RowID = 0;
 
-        public TerraEntity() : this(0, string.Empty)
+        public TerraEntity() : this(0, string.Empty, 0)
         {
         }
         
-        public TerraEntity(long rowId, string entityId)
+        public TerraEntity(long rowId, string entityId, int tickCreated)
         {
             EntityID = entityId;
             RowID = rowId;
+            TickCreated = tickCreated;
         }
 
         public IEnumerator<TerraEntity> GetEnumerator()
