@@ -606,6 +606,7 @@
               <e p="TerraPlayerControllerMonoView.cs" t="Include" />
             </e>
             <e p="TerraEntitiesMonoView.cs" t="Include" />
+            <e p="TerraEntityHarstableMonoView.cs" t="Include" />
             <e p="TerraEntityMonoView.cs" t="Include" />
             <e p="TerraEntityRandomRotateMonoView.cs" t="Include" />
             <e p="TerraEntityRandomScaleMonoView.cs" t="Include" />

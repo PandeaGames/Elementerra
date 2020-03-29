@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using PandeaGames;
 using PandeaGames.Data;
 using Terra.SerializedData.GameData;
 using Terra.Services;
+using Terra.ViewModels;
+using Terra.Views.ViewDataStreamers;
 
 namespace Terra.SerializedData.Entities
 {
@@ -30,6 +33,7 @@ namespace Terra.SerializedData.Entities
         public TerraPosition3DComponent Position;
         public TerraGridPositionComponent GridPosition;
         public TerraEntityTypeData EntityTypeData { get; private set; }
+        private TerraWorldStateViewModel _worldStateViewModel;
 
         public override int GetHashCode()
         {
@@ -55,6 +59,7 @@ namespace Terra.SerializedData.Entities
             
             EntityTypeData = TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(this);
             DB = db;
+            _worldStateViewModel = Game.Instance.GetViewModel<TerraWorldStateViewModel>(0);
         }
 
         public int InstanceId
@@ -72,6 +77,21 @@ namespace Terra.SerializedData.Entities
         {
             get => Entity.EntityID;
             set => Entity.EntityID = value;
+        }
+        
+        
+        public bool IsRipe()
+        {
+            if (EntityTypeData.Component.HasFlag(EntityComponent.Harvestable))
+            {
+                if ((_worldStateViewModel.State.Tick - Entity.TickCreated) * TerraWorldStateStreamer.TickTimeSeconds >
+                    EntityTypeData.RipeTimeSeconds)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
     
@@ -229,5 +249,6 @@ namespace Terra.SerializedData.Entities
                 throw new NotImplementedException();
             }
         }
+
     }
 }

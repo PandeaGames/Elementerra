@@ -11,6 +11,7 @@ namespace Terra.SerializedData.Entities
         LastPlaced = 1 << 3,
         GridPosition = 1 << 4,
         CanPickUp = 1 << 5,
+        Harvestable = 1 << 6,
         Spacial = Position & GridPosition
     }
 }

@@ -26,6 +26,10 @@ namespace Terra.SerializedData.GameData
         [SerializeField]
         private AnimationCurve _grassPotentialReductionCurve;
         public AnimationCurve GrassPotentialReductionCurve => _grassPotentialReductionCurve;
+        
+        [SerializeField]
+        private float _ripeTimeSeconds;
+        public float RipeTimeSeconds => _ripeTimeSeconds;
 
         public override string ToString()
         {
