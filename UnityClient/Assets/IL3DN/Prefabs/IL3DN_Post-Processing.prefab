@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7450394173825995683}
   - component: {fileID: 7450394173825995680}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: IL3DN_Post-Processing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7450394173825995681}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 3258904e1631b7d478ebe234a75a9f7a, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 03c02ead09529db479a004a5a3d13d7d, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1

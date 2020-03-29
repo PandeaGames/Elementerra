@@ -24,14 +24,19 @@ namespace Terra.StaticData
         {
             return GetGameObject(entity.EntityID);
         }
-        
+
         public TerraEntityTypeData GetEntityConfig(ITerraEntityType type)
+        {
+            return GetEntityConfig(type.EntityID);
+        }
+
+        public TerraEntityTypeData GetEntityConfig(string type)
         {
             TerraEntityTypeData config = null;
 
             foreach (TerraEntityTypeSO go in DataConfig)
             {
-                if (go.Data.EntityID == type.EntityID)
+                if (go.Data.EntityID == type)
                 {
                     config = go.Data;
                     break;

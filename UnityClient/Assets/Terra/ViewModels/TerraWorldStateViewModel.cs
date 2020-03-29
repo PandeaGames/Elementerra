@@ -1,6 +1,8 @@
 using System;
 using PandeaGames.ViewModels;
+using Terra.SerializedData.GameData;
 using Terra.SerializedData.World;
+using Terra.Views.ViewDataStreamers;
 
 namespace Terra.ViewModels
 {
@@ -14,6 +16,13 @@ namespace Terra.ViewModels
             private set => _state = value;
         }
 
+        private TimeOfDayData _timeOfDayData;
+
+        public void SetConfig(TimeOfDayData timeOfDayData)
+        {
+            _timeOfDayData = timeOfDayData;
+        }
+        
         public void SetState(TerraWorldState state)
         {
             State = state;
@@ -28,6 +37,16 @@ namespace Terra.ViewModels
         public void Reset()
         {
             
+        }
+
+        public float CurrentDayProgress
+        {
+            get
+            {
+                int ticksPerDay = (int)( _timeOfDayData.DayLengthSeconds / TerraWorldStateStreamer.TickTimeSeconds);
+                int ticksToday = State.Tick % ticksPerDay;
+                return (float) ticksToday / ticksPerDay;
+            }
         }
     }
 }

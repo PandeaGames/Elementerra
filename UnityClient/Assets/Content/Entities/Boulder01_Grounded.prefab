@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 832893611811835330}
   - component: {fileID: 8066814947532660305}
-  - component: {fileID: 4653012092406694821}
+  - component: {fileID: -5043125341338169450}
+  - component: {fileID: 2658519906540810615}
+  - component: {fileID: 3242582365900357381}
   - component: {fileID: 4728430127891748172}
   m_Layer: 0
   m_Name: Boulder01_Grounded
@@ -27,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023694627982530721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8053284, y: 4, z: -1.6621761}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1642324026277065066}
@@ -46,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebdc3884abb46d385b2f5cacddf96fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4653012092406694821
+--- !u!114 &-5043125341338169450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,10 +57,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023694627982530721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4209c4e20bf94bd5a8fdb160cc38e423, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e1b1bc5897b49ff9d8f5a137f7d00f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _entityMonoView: {fileID: 8066814947532660305}
+  _offset: {x: 0, y: -0.5, z: 0}
+  _randomOffset: {x: 0, y: 0.25, z: 0}
+--- !u!114 &2658519906540810615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023694627982530721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0784aca835014af7971c7ba4adb37f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityMonoView: {fileID: 8066814947532660305}
+  _range: {x: 360, y: 360, z: 360}
+--- !u!114 &3242582365900357381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023694627982530721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02cf0ec818d24863a409ff8d7c4263f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityMonoView: {fileID: 8066814947532660305}
+  _range: 0.33
 --- !u!54 &4728430127891748172
 Rigidbody:
   m_ObjectHideFlags: 0

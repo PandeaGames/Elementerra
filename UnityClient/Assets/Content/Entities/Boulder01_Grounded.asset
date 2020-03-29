@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Boulder01_Grounded
   m_EditorClassIdentifier: 
   _data:
-    component: 2
+    component: 48
     _entityId: Boulder01_Grounded
     _debugImage: {fileID: 21300000, guid: b8da474f6e09a0846823edea0416de50, type: 3}
+    _grassPotentialReductionRadius: 0
+    _grassPotentialReductionCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

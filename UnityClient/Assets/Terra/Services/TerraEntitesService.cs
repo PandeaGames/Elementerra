@@ -115,5 +115,12 @@ namespace Terra.Services
 
             onComplete(runtimeEntities);
         }
+
+        public void DeleteEntity(RuntimeTerraEntity entity)
+        {
+            _db.DeleteRecord(entity.Entity, TerraEntity.Serializer);
+            _db.DeleteRecord(entity.Position.Data, TerraPosition3D.Serializer);
+            _db.DeleteRecord(entity.GridPosition.Data, TerraGridPosition.Serializer);
+        }
     }
 }

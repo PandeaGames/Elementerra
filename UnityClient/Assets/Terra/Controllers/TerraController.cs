@@ -19,7 +19,8 @@ namespace Terra.Controllers
                     TerraPosition3D.Serializer,
                     TerraPoint.Serializer,
                     TerraGridPosition.Serializer,
-                    TerraWorldStateStreamer.Serializer
+                    TerraWorldStateStreamer.Serializer,
+                    TerraPlayerStateService.Serializer
                 }
                 );
         }

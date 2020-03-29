@@ -10,6 +10,7 @@ namespace Terra.SerializedData.Entities
         Health = 1 << 2,
         LastPlaced = 1 << 3,
         GridPosition = 1 << 4,
+        CanPickUp = 1 << 5,
         Spacial = Position & GridPosition
     }
 }

@@ -1,4 +1,5 @@
 using PandeaGames;
+using PandeaGames.Data;
 using Terra.SerializedData.World;
 using Terra.Services;
 using Terra.ViewModels;
@@ -7,7 +8,7 @@ namespace Terra.Views.ViewDataStreamers
 {
     public class TerraWorldStateStreamer : IDataStreamer
     {
-        public const float TickTime = 5;
+        public const float TickTimeSeconds = 1;
         
         private TerraDBService _db;
         public static TerraWorldStateSerializer Serializer { get; } = new TerraWorldStateSerializer();
@@ -22,11 +23,12 @@ namespace Terra.Views.ViewDataStreamers
             TerraWorldState[] states = _db.Get<TerraWorldStateSerializer, TerraWorldState>(Serializer, "", CommandText);
             TerraWorldState state = states.Length != 0 ? states[0] : default(TerraWorldState);
             _vm.SetState(state);
+            _vm.SetConfig(TerraGameResources.Instance.TimeOfDayConfigSO.Data);
         }
 
         public void Update(float time)
         {
-            if (time - _timeSinceLastTick > TickTime)
+            if (time - _timeSinceLastTick > TickTimeSeconds)
             {
                 _timeSinceLastTick = time;
                 _db.WriteNewRecord(_vm.Tick(), Serializer);

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using PandeaGames;
 using PandeaGames.Data;
+using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
 using Terra.Services;
@@ -70,32 +71,9 @@ namespace Terra.MonoViews.DebugMonoViews
 
         private GameObject CreateProxyEntity(TerraEntityTypeData entityData)
         {
-            GameObject instance =
-                Instantiate(TerraGameResources.Instance.TerraEntityPrefabConfig.GetGameObject(entityData), transform);
-            instance.name = $"{entityData.EntityID} Proxy";
-            
-            List<Component> components = new List<Component>();
-            instance.GetComponents<Component>(components);
-            instance.GetComponentsInChildren<Component>(components);
-            
-            foreach (Component comp in components)
-            {
-                if (comp is Renderer || comp is Transform || comp is MeshFilter || comp is LODGroup)
-                {
-                    continue;
-                }
-
-                try
-                {
-                    Destroy(comp);
-                }
-                catch (Exception e)
-                {
-                    continue;
-                }
-            }
-            
-            return instance;
+            TerraEntityProxyMonoView instance = new GameObject("Proxy", new Type[]{typeof(TerraEntityProxyMonoView)}).GetComponent<TerraEntityProxyMonoView>();
+            instance.Render(entityData);
+            return instance.gameObject;
         }
 
         private void Update()

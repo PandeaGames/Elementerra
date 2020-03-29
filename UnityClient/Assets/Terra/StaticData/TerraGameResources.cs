@@ -49,6 +49,13 @@ namespace PandeaGames.Data
         {
             get => _layerForTerrain;
         }
+
+        [SerializeField]
+        private TimeOfDayConfigSO _timeOfDayConfigSO;
+        public TimeOfDayConfigSO TimeOfDayConfigSO
+        {
+            get => _timeOfDayConfigSO;
+        }
         
         public void LoadAsync(LoadSuccess onLoadSuccess, LoadError onLoadFailed)
         {

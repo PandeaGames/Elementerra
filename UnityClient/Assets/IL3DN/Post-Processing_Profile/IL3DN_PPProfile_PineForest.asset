@@ -45,7 +45,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.4
+    value: 0.576
   smoothness:
     overrideState: 0
     value: 0.2
@@ -129,7 +129,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 5
   threshold:
     overrideState: 1
     value: 0.5
@@ -176,7 +176,7 @@ MonoBehaviour:
     value: 1
   _Density:
     overrideState: 1
-    value: 20
+    value: 80.7
   _NearColor:
     overrideState: 1
     value: {r: 0.5019608, g: 0.26666668, b: 0.16862746, a: 0}
@@ -266,7 +266,7 @@ MonoBehaviour:
     value: 20
   mixerRedOutRedIn:
     overrideState: 1
-    value: 105
+    value: 111
   mixerRedOutGreenIn:
     overrideState: 1
     value: 46
@@ -293,10 +293,10 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.63616914, y: 0.6739184, z: 1, w: -0.21712908}
+    value: {x: 0.9403217, y: 0.78514034, z: 1, w: -0.21712908}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.47142085, z: 0.39484978, w: 0.000000003754769}
+    value: {x: 1, y: 0.45447558, z: 0.30703187, w: 0.000000003754769}
   gain:
     overrideState: 1
     value: {x: 1, y: 0.6659126, z: 0.8318689, w: -5.1201265e-10}

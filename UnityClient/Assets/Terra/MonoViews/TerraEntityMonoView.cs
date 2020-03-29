@@ -9,11 +9,13 @@ namespace Terra.MonoViews
     {
         public event Action<RuntimeTerraEntity> OnInitialize;
         private TerraEntitiesViewModel _viewModel;
+        public bool IsInitialized { get; private set; }
         
         public RuntimeTerraEntity Entity { private set; get; }
         
         public void Initilize(RuntimeTerraEntity entity)
         {
+            IsInitialized = true;
             Entity = entity;
             OnInitialize?.Invoke(entity);
         }

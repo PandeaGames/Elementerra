@@ -601,6 +601,10 @@
               <e p="TerraDebugWindowMonoView.cs" t="Include" />
               <e p="TerraPlayerEntityDebugMonoView.cs" t="Include" />
             </e>
+            <e p="PlayerMonoViews" t="Include">
+              <e p="PlayerHoldingEntityMonoView.cs" t="Include" />
+              <e p="TerraPlayerControllerMonoView.cs" t="Include" />
+            </e>
             <e p="TerraEntitiesMonoView.cs" t="Include" />
             <e p="TerraEntityMonoView.cs" t="Include" />
             <e p="TerraEntityRandomRotateMonoView.cs" t="Include" />
@@ -611,6 +615,13 @@
             <e p="TerraSerializableGridPosiionMonoView.cs" t="Include" />
             <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
             <e p="TerraTerrainMonoView.cs" t="Include" />
+            <e p="TimeOfDayMonoViews" t="Include">
+              <e p="TerraTODLightColor.cs" t="Include" />
+            </e>
+            <e p="Utility" t="Include">
+              <e p="TerraEntityColliderMonoView.cs" t="Include" />
+              <e p="TerraEntityProxyMonoView.cs" t="Include" />
+            </e>
           </e>
           <e p="SerializedData" t="Include">
             <e p="Entities" t="Include">
@@ -631,11 +642,15 @@
               <e p="ITerraEntityType.cs" t="Include" />
               <e p="TerraEntityTypeData.cs" t="Include" />
               <e p="TerraEntityTypeSO.cs" t="Include" />
+              <e p="TimeOfDayData.cs" t="Include" />
+            </e>
+            <e p="GameState" t="Include">
+              <e p="TerraPlayerState.cs" t="Include" />
+              <e p="TerraWorldState.cs" t="Include" />
             </e>
             <e p="World" t="Include">
               <e p="TerraWorld.cs" t="Include" />
               <e p="TerraWorldChunk.cs" t="Include" />
-              <e p="TerraWorldState.cs" t="Include" />
             </e>
           </e>
           <e p="Services" t="Include">
@@ -643,11 +658,13 @@
             <e p="TerraChunkService.cs" t="Include" />
             <e p="TerraDBService.cs" t="Include" />
             <e p="TerraEntitesService.cs" t="Include" />
+            <e p="TerraPlayerStateService.cs" t="Include" />
             <e p="TerraWorldService.cs" t="Include" />
           </e>
           <e p="StaticData" t="Include">
             <e p="TerraEntityPrefabConfigSO.cs" t="Include" />
             <e p="TerraGameResources.cs" t="Include" />
+            <e p="TimeOfDayConfigSO.cs" t="Include" />
           </e>
           <e p="TerraArea.cs" t="Include" />
           <e p="TerraController.cs" t="Include" />
@@ -658,10 +675,12 @@
             <e p="AbstractTerraEntityViewModel.cs" t="Include" />
             <e p="ITerraEntityDataController.cs" t="Include" />
             <e p="ITerraEntityViewModel.cs" t="Include" />
+            <e p="PlayerStateViewModel.cs" t="Include" />
             <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />
             <e p="TerraGrassPotentialViewModel.cs" t="Include" />
             <e p="TerraGrassViewModel.cs" t="Include" />
+            <e p="TerraPlayerControlViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
             <e p="TerraWorldStateViewModel.cs" t="Include" />
@@ -671,10 +690,16 @@
             <e p="TerraView.cs" t="Include" />
             <e p="ViewDataStreamers" t="Include">
               <e p="IDataStreamer.cs" t="Include" />
+              <e p="TerraPlayerStateDataStreamer.cs" t="Include" />
               <e p="TerraWorldDataStreamer.cs" t="Include" />
               <e p="TerraWorldStateStreamer.cs" t="Include" />
               <e p="ViewDataStreamerGroup.cs" t="Include" />
             </e>
+          </e>
+          <e p="WorldContextUI" t="Include">
+            <e p="ContextControlUI.cs" t="Include" />
+            <e p="WorldContentUIView.cs" t="Include" />
+            <e p="WorldContextViewModel.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

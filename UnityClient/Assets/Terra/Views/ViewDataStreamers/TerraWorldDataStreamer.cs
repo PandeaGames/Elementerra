@@ -44,6 +44,12 @@ namespace Terra.Views.ViewDataStreamers
            _terraEntitiesService = Game.Instance.GetService<TerraEntitesService>();
            //_terraEntitiesService.LoadEntitesOfType(TerraGameResources.Instance.TerraEntityPrefabConfig.PlayerConfig.Data, OnPlayerLoaded, null);
            _terraEntitiesService.LoadEntites(OnPlayerLoaded, null);
+           _terraEntitiesViewModel.OnRemoveEntity += TerraEntitiesViewModelOnRemoveEntity;
+        }
+
+        private void TerraEntitiesViewModelOnRemoveEntity(RuntimeTerraEntity obj)
+        {
+            _terraEntitiesService.DeleteEntity(obj);
         }
 
         public void Update(float time)

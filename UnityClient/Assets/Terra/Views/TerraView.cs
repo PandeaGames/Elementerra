@@ -43,7 +43,8 @@ namespace Terra.Views
                     _terraEntitiesViewModel,
                     _db
                     ) ,
-                new TerraWorldStateStreamer()
+                new TerraWorldStateStreamer(),
+                new TerraPlayerStateDataStreamer()
             });
             
             _terraWorldViewModel.OnWorldSet += TerraWorldViewModelOnWorldSet;

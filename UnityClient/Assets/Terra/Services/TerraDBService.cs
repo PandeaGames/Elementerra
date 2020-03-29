@@ -18,6 +18,8 @@ namespace Terra.Services
         private HashSet<TerraDBRequest> _pendingChangeRequests { get; } = new HashSet<TerraDBRequest>();
         private HashSet<TerraDBSerializableRequest> _pendingReadRequests { get; } = new HashSet<TerraDBSerializableRequest>();
         private Dictionary<int, TerraDBRequest> _pendingWriteRequests { get; set; } = new Dictionary<int, TerraDBRequest>();
+        private List<TerraDBRequest> _pendingWriteRequestsList { get; set; } = new List<TerraDBRequest>();
+        private List<TerraDBRequest> _pendingDeleteRequestsList { get; set; } = new List<TerraDBRequest>();
 
         private Dictionary<string, string> _serializerWriteCommandTextCache { get; } = new Dictionary<string, string>();
         
@@ -119,6 +121,19 @@ namespace Terra.Services
             }
         }
 
+        public void DeleteRecord<TSerializer, TSerializable>(TSerializable serializable, TSerializer serializer)
+            where TSerializable:IDBSerializable
+            where TSerializer:IDBSerializer<TSerializable>
+        {
+            TerraDBRequest request = new TerraDBRequest()
+            {
+                CommandText = $"DELETE FROM {serializer.Table} WHERE {serializer.Columns[serializer.PrimaryKeyColumnIndex]} = '{serializer.GetValue(serializable, serializer.PrimaryKeyColumnIndex)}'",
+                Values = new TerraDBParameterValue[0]
+            };
+            
+            _pendingDeleteRequestsList.Add(request);
+        }
+
         public void WriteNewRecord<TSerializer, TSerializable>(TSerializable serializable, TSerializer serializer)
             where TSerializable:IDBSerializable
             where TSerializer:IDBSerializer<TSerializable>
@@ -156,8 +171,15 @@ namespace Terra.Services
                 CommandText = commandText,
                 Values = values
             };
-            
-            _pendingWriteRequests.Add(serializable.GetHashCode(), request);
+
+            if (serializer.PrimaryKeyColumnIndex != -1)
+            {
+                _pendingWriteRequests.Add(serializable.GetHashCode(), request);
+            }
+            else
+            {
+                _pendingWriteRequestsList.Add(request);
+            }
         }
         
         public void Write<TSerializer, TSerializable>(TSerializable serializable, TSerializer serializer, IDBWhereClause<TSerializable> where)
@@ -204,18 +226,31 @@ namespace Terra.Services
                 Values = values
             };
             
-            _pendingWriteRequests.Add(serializable.GetHashCode(), request);
+            if (serializer.PrimaryKeyColumnIndex != -1)
+            {
+                _pendingWriteRequests.Add(serializable.GetHashCode(), request);
+            }
+            else
+            {
+                _pendingWriteRequestsList.Add(request);
+            }
         }
         
         public void Save()
         {
             Debug.Log($"[{nameof(TerraDBService)}] {nameof(Save)} with {_pendingWriteRequests.Count} changes.");
             Dictionary<int, TerraDBRequest> tmpCache = _pendingWriteRequests;
+            List<TerraDBRequest> tmpDeleteList = _pendingDeleteRequestsList;
+            List<TerraDBRequest> tmpList = new List<TerraDBRequest>();
+            tmpList.AddRange(_pendingWriteRequestsList);
+            tmpList.AddRange(tmpCache.Values);
             _pendingWriteRequests = new Dictionary<int, TerraDBRequest>();
-            Write(tmpCache);
+            _pendingWriteRequestsList = new List<TerraDBRequest>();
+            _pendingDeleteRequestsList = new List<TerraDBRequest>();
+            Write(tmpList, tmpDeleteList);
         }
 
-        private void Write(Dictionary<int, TerraDBRequest> writeRequests)
+        private void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests)
         {
             using (SQLiteConnection connection = new SQLiteConnection(dbPath))
             {
@@ -224,12 +259,10 @@ namespace Terra.Services
                 SQLiteTransaction transaction = connection.BeginTransaction();
                 cmd.Transaction = transaction;
 
-                foreach (KeyValuePair<int, TerraDBRequest> kvp in writeRequests)
+                foreach (TerraDBRequest request in writeRequests)
                 {
                     try
                     {
-                        TerraDBRequest request = kvp.Value;
-                    
                         for (int i = 0; i < request.Values.Length; i++)
                         {
                             switch (request.Values[i].DataType)
@@ -258,9 +291,18 @@ namespace Terra.Services
                     }
                     catch (Exception e)
                     {
-                        throw new Exception(kvp.Value.CommandText, innerException:e);
+                        throw new Exception(request.CommandText, innerException:e);
                     }
                    
+                }
+                
+                transaction.Commit();
+                transaction = connection.BeginTransaction();
+
+                foreach (TerraDBRequest request in deleteRequests)
+                {
+                    cmd.CommandText = request.CommandText;
+                    cmd.ExecuteNonQuery();
                 }
                 
                 transaction.Commit();
