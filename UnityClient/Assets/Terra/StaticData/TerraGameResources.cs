@@ -57,6 +57,13 @@ namespace PandeaGames.Data
             get => _timeOfDayConfigSO;
         }
         
+        [SerializeField]
+        private GameObject _mainMenuView;
+        public GameObject MainMenuView
+        {
+            get => _mainMenuView;
+        }
+        
         public void LoadAsync(LoadSuccess onLoadSuccess, LoadError onLoadFailed)
         {
             LoaderGroup loaderGroup = new LoaderGroup();

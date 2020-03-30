@@ -61,9 +61,19 @@
           </e>
           <e p="ViewControllers" t="Include">
             <e p="ElementiaViewController.cs" t="Include" />
+            <e p="MainMenuViewController.cs" t="Include" />
           </e>
           <e p="ViewModels" t="Include">
+            <e p="MainMenuViewModel.cs" t="Include" />
             <e p="NewBehaviourScript.cs" t="Include" />
+          </e>
+          <e p="Views" t="Include">
+            <e p="MainMenu" t="Include">
+              <e p="MainMenuView.cs" t="Include" />
+              <e p="MonoViews" t="Include">
+                <e p="MainMenuMonoView.cs" t="Include" />
+              </e>
+            </e>
           </e>
         </e>
         <e p="ElementiaPlayer.cs" t="Include" />

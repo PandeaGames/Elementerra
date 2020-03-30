@@ -62,12 +62,20 @@ namespace Terra.Services
             _pendingChangeRequests.Add(request);
         }
 
-        public void CopyToUserDataPath()
+        public void CopyGameDataToUserDataPath()
         {
             string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(dbResourcePath);
             TextAsset textAsset = Resources.Load(fileNameWithoutExtension) as TextAsset;
             File.WriteAllBytes(dbUserDataPath, textAsset.bytes);
             Debug.Log($"[{nameof(TerraDBService)}] Copied Database to {dbUserDataPath}");
+        }
+
+        public void DeleteCurrentUserData()
+        {
+            if (File.Exists(dbUserDataPath))
+            {
+                File.Delete(dbUserDataPath);
+            }
         }
 
         public void Setup(IDBSchema[] schemas)

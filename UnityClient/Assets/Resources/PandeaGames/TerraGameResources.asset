@@ -21,3 +21,5 @@ MonoBehaviour:
     type: 3}
   _layerForTerrain: Terra
   _timeOfDayConfigSO: {fileID: 11400000, guid: 54f71f42af21b2e4bb42cef38624eee2, type: 2}
+  _mainMenuView: {fileID: 2647805715595341448, guid: 045473821a0a1ca42b68cc7ab0384c66,
+    type: 3}
