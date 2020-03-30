@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SQLite;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using PandeaGames.Services;
 using UnityEngine;
 
@@ -9,10 +11,23 @@ namespace Terra.Services
 {
     public class TerraDBService : IService
     {
-           
+        private string dbResourcePath
+        {
+            get => $@"URI=file:{Application.dataPath}\Resources\Data\Terra.bytes";
+        }
+        
+        private string dbUserDataPath
+        {
+            get => $@"URI=file:{Application.persistentDataPath}\Terra.db";
+        }
+
         private string dbPath
         {
-            get => $@"URI=file:{Application.persistentDataPath}/Terra.db";
+            #if UNITY_EDITOR
+            get => dbResourcePath;
+            #else
+            get => dbUserDataPath;
+            #endif
         }
 
         private HashSet<TerraDBRequest> _pendingChangeRequests { get; } = new HashSet<TerraDBRequest>();
@@ -43,11 +58,22 @@ namespace Terra.Services
 
         public void AddRequest(TerraDBRequest request)
         {
+            
             _pendingChangeRequests.Add(request);
+        }
+
+        public void CopyToUserDataPath()
+        {
+            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(dbResourcePath);
+            TextAsset textAsset = Resources.Load(fileNameWithoutExtension) as TextAsset;
+            File.WriteAllBytes(dbUserDataPath, textAsset.bytes);
+            Debug.Log($"[{nameof(TerraDBService)}] Copied Database to {dbUserDataPath}");
         }
 
         public void Setup(IDBSchema[] schemas)
         {
+            Debug.Log($"[{nameof(TerraDBService)}] Setup Database at {dbPath}");
+            
             using (SQLiteConnection connection = new SQLiteConnection(dbPath))
             {
                 connection.Open();

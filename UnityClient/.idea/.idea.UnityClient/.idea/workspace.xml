@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Seedling.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Seedling.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +217,6 @@
         <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIiew.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPlayerControlViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractFsm.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraPlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIView.cs" />
@@ -241,7 +235,6 @@
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TimeOfDayConfigSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" />
@@ -252,6 +245,8 @@
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityHarstableMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPlayerControlViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" />
       </list>
     </option>
   </component>
@@ -343,6 +338,7 @@
       <workItem from="1585147410700" duration="1772000" />
       <workItem from="1585197700810" duration="6581000" />
       <workItem from="1585237263070" duration="55260000" />
+      <workItem from="1585502568693" duration="4039000" />
     </task>
     <servers />
   </component>
