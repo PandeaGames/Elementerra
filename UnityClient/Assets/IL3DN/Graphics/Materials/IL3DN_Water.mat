@@ -152,17 +152,17 @@ Material:
     - _ShadowStrength: 0.5
     - _ShallowOpacity: 0.2
     - _Shininess: 0.15
-    - _Size: 0.28
+    - _Size: 0.31
     - _Smoothness: 0.23
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 0.048
+    - _Speed: 0.03
     - _SquashAmount: 1
     - _SrcBlend: 1
     - _TessValue: 16
     - _Tiling: 0.05
     - _TranslucencyViewDependency: 0
-    - _Transparency: 0.53
+    - _Transparency: 0.3
     - _UVSec: 0
     - _WaterDepth: 0
     - _WaterFalloff: -1

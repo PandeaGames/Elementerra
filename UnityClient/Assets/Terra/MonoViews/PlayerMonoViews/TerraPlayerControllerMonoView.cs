@@ -47,7 +47,10 @@ namespace Terra.MonoViews
             _currentEntityMonoView = null;
             foreach (TerraEntityMonoView entityMonoView in _collidingWith)
             {
-                if (entityMonoView == null || !entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp))
+                if (entityMonoView == null || 
+                    (!entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp) && 
+                     !(entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.Harvestable) 
+                       && entityMonoView.Entity.IsRipe())))
                 {
                     continue;
                 }
@@ -67,11 +70,18 @@ namespace Terra.MonoViews
 
             if (_currentEntityMonoView)
             {
-                _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.PickUp, _currentEntityMonoView.GetHashCode());
+                if (!_playerStateViewModel.IsHoldingItem)
+                {
+                    _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.PickUp, _currentEntityMonoView.Entity);
+                }
             }
-            else
+            else if(!_playerStateViewModel.IsHoldingItem)
             {
                 _contextUIModel.ClearContext();
+            }
+            else if(_playerStateViewModel.IsHoldingItem)
+            {
+                _contextUIModel.SetContext(_contextUIModel.CurrentTransform, WorldContextViewModel.Context.Holding, _playerStateViewModel);
             }
 
             switch (_contextUIModel.CurrentContext)
@@ -80,22 +90,39 @@ namespace Terra.MonoViews
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
                     {
-                        if (!string.IsNullOrEmpty(_playerStateViewModel.State.HoldingEntityID))
+                        if (_currentEntityMonoView.Entity.IsRipe())
                         {
-                            CreateHoldingEntity(-1.2f);
+                            HarvestEntity(1.2f);
                         }
+                        else
+                        {
+                            if (!string.IsNullOrEmpty(_playerStateViewModel.State.HoldingEntityID))
+                            {
+                                CreateHoldingEntity(-1.2f);
+                            }
                         
-                        _playerStateViewModel.SetHoldingEntityId(_currentEntityMonoView.Entity);
-                        _terraEntitiesViewModel.RemoveEntity(_currentEntityMonoView.Entity);
+                            _playerStateViewModel.SetHoldingEntityId(_currentEntityMonoView.Entity);
+                            _terraEntitiesViewModel.RemoveEntity(_currentEntityMonoView.Entity);
+                            _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.Holding, _playerStateViewModel);
+                        }
                     }
                     break;
                 }
                 case WorldContextViewModel.Context.None:
+                case WorldContextViewModel.Context.Holding:
                 {
-                    if (Input.GetKeyDown(KeyCode.Space) && !string.IsNullOrEmpty(_playerStateViewModel.State.HoldingEntityID))
+                    if (!string.IsNullOrEmpty(_playerStateViewModel.State.HoldingEntityID))
                     {
-                        CreateHoldingEntity(1.2f);
-                        _playerStateViewModel.SetHoldingEntityId(string.Empty);
+                        if (Input.GetKeyDown(KeyCode.Space))
+                        {
+                            CreateHoldingEntity(1.2f);
+                            _playerStateViewModel.SetHoldingEntityId(string.Empty);
+                        }
+                        else  if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            PlantHoldingEntity();
+                            _playerStateViewModel.SetHoldingEntityId(string.Empty);
+                        }
                     }
 
                     break;
@@ -122,6 +149,43 @@ namespace Terra.MonoViews
             
             vm.AddEntity(entity);
             
+        }
+        
+        private void HarvestEntity(float offset)
+        {
+            TerraEntityTypeData spawnableEntityType =
+                TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(_currentEntityMonoView.Entity.EntityTypeData.SpawnableEntityId);
+            
+            RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(spawnableEntityType);
+            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+
+            
+                entity.Position.Set(
+                    new Vector3(
+                        transform.position.x + transform.forward.x + offset,
+                        transform.position.y + 1,
+                        transform.position.z + transform.forward.z + offset));
+            
+            
+            vm.AddEntity(entity);
+            vm.RemoveEntity(_currentEntityMonoView.Entity);            
+        }
+
+        private void PlantHoldingEntity()
+        {
+            TerraEntityTypeData entityType =
+                TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(_playerStateViewModel
+                    .State.HoldingEntityID);
+            
+            TerraEntityTypeData plantEntity =
+                TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(entityType.PlantableEntityId);
+            RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(plantEntity);
+            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+            TerraViewModel gmViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
+            
+            entity.GridPosition.Set(new TerraVector((int)gmViewModel.PlayerPosition.x, (int)gmViewModel.PlayerPosition.z));
+            
+            vm.AddEntity(entity);
         }
     }
 }

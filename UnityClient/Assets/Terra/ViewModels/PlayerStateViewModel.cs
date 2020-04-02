@@ -5,7 +5,7 @@ using Terra.SerializedData.GameState;
 
 namespace Terra.ViewModels
 {
-    public class PlayerStateViewModel : IViewModel
+    public class PlayerStateViewModel : IViewModel, ITerraEntityType
     {
         public event Action<TerraPlayerState> OnChange;
         
@@ -14,6 +14,9 @@ namespace Terra.ViewModels
         {
             get => _terraPlayerState;
         }
+
+        public bool IsHoldingItem => !string.IsNullOrEmpty(State.HoldingEntityID);
+        
 
         public void Set(TerraPlayerState state)
         {
@@ -34,6 +37,11 @@ namespace Terra.ViewModels
         public void Reset()
         {
             throw new NotImplementedException();
+        }
+
+        public string EntityID
+        {
+            get => State.HoldingEntityID;
         }
     }
 }

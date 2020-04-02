@@ -110,6 +110,29 @@
             <e p="RandomDots.shader" t="Include" />
           </e>
         </e>
+        <e p="HeightMapGeneratorPackage" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="Demos" t="Include">
+              <e p="BoxPresentation" t="Include">
+                <e p="DisplayRenderedTexture.cs" t="Include" />
+              </e>
+              <e p="HeightMapGenerator" t="Include">
+                <e p="DisplayGeneratedTexture.cs" t="Include" />
+              </e>
+            </e>
+            <e p="HeightMap" t="Include">
+              <e p="AbstractHeightMapGenerator.cs" t="Include" />
+              <e p="HeightMapGenerator.cs" t="Include" />
+              <e p="HeightMapRenderer.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Shader" t="Include">
+            <e p="DepthNormalShader.shader" t="Include" />
+            <e p="DepthShader.shader" t="Include" />
+            <e p="DepthShaderEye.shader" t="Include" />
+          </e>
+        </e>
         <e p="I2" t="Include">
           <e p="Localization" t="Include">
             <e p="Examples" t="Include">
@@ -842,6 +865,7 @@
               <e p="TerraPlayerEntityDebugMonoView.cs" t="Include" />
             </e>
             <e p="PlayerMonoViews" t="Include">
+              <e p="PlayerEntityMonoView.cs" t="Include" />
               <e p="PlayerHoldingEntityMonoView.cs" t="Include" />
               <e p="TerraPlayerControllerMonoView.cs" t="Include" />
             </e>
@@ -939,6 +963,7 @@
           </e>
           <e p="WorldContextUI" t="Include">
             <e p="ContextControlUI.cs" t="Include" />
+            <e p="HoldingContextUI.cs" t="Include" />
             <e p="WorldContentUIView.cs" t="Include" />
             <e p="WorldContextViewModel.cs" t="Include" />
           </e>
@@ -1199,6 +1224,94 @@
           </e>
           <e p="SnowshadeExample" t="Include">
             <e p="Readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="WaterShaderPackage" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="BaseWaterScript.cs" t="Include" />
+            <e p="ConnectHeightMap.cs" t="Include" />
+            <e p="Demo" t="Include">
+              <e p="App" t="Include">
+                <e p="AppControls.cs" t="Include" />
+              </e>
+              <e p="Code" t="Include">
+                <e p="CodeDemo1.cs" t="Include" />
+                <e p="CodeDemo10.cs" t="Include" />
+                <e p="CodeDemo11.cs" t="Include" />
+                <e p="CodeDemo12.cs" t="Include" />
+                <e p="CodeDemo13.cs" t="Include" />
+                <e p="CodeDemo14.cs" t="Include" />
+                <e p="CodeDemo15.cs" t="Include" />
+                <e p="CodeDemo16.cs" t="Include" />
+                <e p="CodeDemo17.cs" t="Include" />
+                <e p="CodeDemo18.cs" t="Include" />
+                <e p="CodeDemo19.cs" t="Include" />
+                <e p="CodeDemo2.cs" t="Include" />
+                <e p="CodeDemo20.cs" t="Include" />
+                <e p="CodeDemo21.cs" t="Include" />
+                <e p="CodeDemo3.cs" t="Include" />
+                <e p="CodeDemo4.cs" t="Include" />
+                <e p="CodeDemo5.cs" t="Include" />
+                <e p="CodeDemo6.cs" t="Include" />
+                <e p="CodeDemo7.cs" t="Include" />
+                <e p="CodeDemo8.cs" t="Include" />
+                <e p="CodeDemo9.cs" t="Include" />
+                <e p="CodeDemoHelper.cs" t="Include" />
+              </e>
+              <e p="Custom" t="Include">
+                <e p="CustomSettingsDemo.cs" t="Include" />
+                <e p="OrthoDemo.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Editor" t="Include">
+              <e p="BaseWaterScriptEditor.cs" t="Include" />
+              <e p="MultiCameraWaterScriptEditor.cs" t="Include" />
+              <e p="WaterScriptEditor.cs" t="Include" />
+            </e>
+            <e p="MultiCameraWaterScript.cs" t="Include" />
+            <e p="Utils" t="Include">
+              <e p="FPSCounter.cs" t="Include" />
+              <e p="LoadRenderTexture.cs" t="Include" />
+              <e p="LookAt.cs" t="Include" />
+              <e p="MoveBetween.cs" t="Include" />
+              <e p="Rotate.cs" t="Include" />
+            </e>
+            <e p="WaterScript.cs" t="Include" />
+          </e>
+          <e p="Shader" t="Include">
+            <e p="WaterLWRP.shader" t="Include" />
+            <e p="WaterShader" t="Include">
+              <e p="Debug" t="Include">
+                <e p="Water-Debug_Depth.shader" t="Include" />
+                <e p="Water-Debug_DepthAlpha.shader" t="Include" />
+                <e p="Water-Debug_HeightMap.shader" t="Include" />
+                <e p="Water-Debug_NormalDir.shader" t="Include" />
+                <e p="Water-Debug_Reflection.shader" t="Include" />
+                <e p="Water-Debug_Refraction.shader" t="Include" />
+                <e p="Water-Debug_ScreenPos.shader" t="Include" />
+                <e p="Water-Debug_SinglePassTest.shader" t="Include" />
+                <e p="Water-Debug_SinglePassTestFails.shader" t="Include" />
+                <e p="Water-Debug_Specular.shader" t="Include" />
+                <e p="Water-Debug_ViewDir.shader" t="Include" />
+                <e p="Water-DebugLit_Specular.shader" t="Include" />
+                <e p="WaterShaderHelper.cginc" t="Include" />
+              </e>
+              <e p="DirectionalLitFog" t="Include">
+                <e p="CustomShader" t="Include">
+                  <e p="WaterProDoubleFoamLine.shader" t="Include" />
+                  <e p="WaterProDoubleFoamTexture.shader" t="Include" />
+                  <e p="WaterShaderHelper.cginc" t="Include" />
+                </e>
+                <e p="WaterLite.shader" t="Include" />
+                <e p="WaterPro.shader" t="Include" />
+                <e p="WaterPro_Heightmap.shader" t="Include" />
+                <e p="WaterPro_Heightmap_Iso.shader" t="Include" />
+                <e p="WaterPro_Iso.shader" t="Include" />
+                <e p="WaterShaderHelper.cginc" t="Include" />
+              </e>
+            </e>
+            <e p="WaterShaderHelper.cginc" t="Include" />
           </e>
         </e>
         <e p="WorldRendererLoader.cs" t="Include" />

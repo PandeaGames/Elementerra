@@ -23,6 +23,7 @@ namespace Terra.WorldContextUI
             switch (_contextUIModel.CurrentContext)
             {
                 case WorldContextViewModel.Context.None:
+                case WorldContextViewModel.Context.Holding:
                 {
                     _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 0, ref yVelocity, smoothTime);
                     break;

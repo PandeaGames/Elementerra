@@ -15,6 +15,7 @@ MonoBehaviour:
   _data:
     component: 34
     _entityId: Seedling
+    _plantableEntityId: SeedlingPlanted
     _debugImage: {fileID: 21300000, guid: 03b0c4d0af36e2d468af2d68c4e4cc60, type: 3}
     _grassPotentialReductionRadius: 0
     _grassPotentialReductionCurve:
@@ -23,3 +24,4 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    _ripeTimeSeconds: 0

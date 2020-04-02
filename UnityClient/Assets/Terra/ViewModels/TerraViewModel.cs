@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using PandeaGames;
 using PandeaGames.ViewModels;
 using Terra.SerializedData.World;
@@ -15,6 +16,7 @@ namespace Terra.ViewModels
         public TerraTerrainGeometryDataModel Geometry { get; private set; }
         public TerraGrassViewModel Grass { get; private set; }
         public TerraGrassPotentialViewModel GrassPotential { get; private set; }
+        public UnityEngine.Vector3 PlayerPosition { get; set; }
 
         public TerraViewModel()
         {

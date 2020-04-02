@@ -1,5 +1,6 @@
 using System;
 using PandeaGames;
+using Terra.SerializedData.GameData;
 using UnityEngine;
 
 namespace Terra.WorldContextUI
@@ -17,7 +18,7 @@ namespace Terra.WorldContextUI
             _contextUIModel.OnChange += ContextUiModelOnChange;
         }
 
-        private void ContextUiModelOnChange(Vector3 vector3, WorldContextViewModel.Context context, int data)
+        private void ContextUiModelOnChange(Vector3 vector3, WorldContextViewModel.Context context, ITerraEntityType data)
         {
             
         }
