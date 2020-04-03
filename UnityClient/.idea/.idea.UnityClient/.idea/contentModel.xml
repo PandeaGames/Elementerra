@@ -74,6 +74,10 @@
                 <e p="MainMenuMonoView.cs" t="Include" />
               </e>
             </e>
+            <e p="PauseMenu" t="Include">
+              <e p="PauseMenuMonoView.cs" t="Include" />
+              <e p="PauseMenuViewModel.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="ElementiaPlayer.cs" t="Include" />

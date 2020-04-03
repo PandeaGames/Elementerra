@@ -3,6 +3,11 @@ using PandeaGames.Data;
 using PandeaGames.Views.ViewControllers;
 using Terra.Services;
 using Terra.ViewModels;
+using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+using Views.PauseMenu;
 using TerraController = Terra.Controllers.TerraController;
 
 namespace ViewControllers
@@ -11,11 +16,17 @@ namespace ViewControllers
     {
         Preloading,
         MainMenu,
-        Terra
+        Terra,
+        ResetGame
     }
     
     public class ElementiaViewController : AbstractViewControllerFsm<ElementiaViewControllerStates>
     {
+        private class ResetGameState : AbstractViewControllerState<ElementiaViewControllerStates>
+        {
+            
+        }
+
         private class MainMenuState : AbstractViewControllerState<ElementiaViewControllerStates>
         {
             protected override IViewController GetViewController()
@@ -26,6 +37,7 @@ namespace ViewControllers
             public override void EnterState(ElementiaViewControllerStates @from)
             {
                 base.EnterState(@from);
+                Game.Instance.Reset();
                 Game.Instance.GetViewModel<MainMenuViewModel>(0).OnButtonPressed += OnButtonPressed;
             }
 
@@ -62,6 +74,35 @@ namespace ViewControllers
                 base.EnterState(@from);
                 Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).TerraEntityPrefabConfig =
                     ElementiaGameResources.Instance.TerraEntityPrefabConfig;
+                
+                Game.Instance.GetViewModel<PauseMenuViewModel>(0).OnButtonPress += OnButtonPress;
+            }
+
+            private void OnButtonPress(PauseMenuViewModel.PauseMenuButtonIds buttonId)
+            {
+                switch (buttonId)
+                {
+                    case PauseMenuViewModel.PauseMenuButtonIds.ExitGameButton:
+                    {
+#if UNITY_EDITOR
+                        EditorApplication.isPlaying = false;
+#else
+ Application.Quit();    
+#endif
+                        break;
+                    }
+                    case PauseMenuViewModel.PauseMenuButtonIds.MainMenuButton:
+                    {
+                        _fsm.SetState(ElementiaViewControllerStates.MainMenu);
+                        break;
+                    }
+                }
+            }
+
+            public override void LeaveState(ElementiaViewControllerStates to)
+            {
+                base.LeaveState(to);
+                Game.Instance.GetViewModel<PauseMenuViewModel>(0).OnButtonPress -= OnButtonPress;
             }
 
             protected override IViewController GetViewController()
@@ -74,6 +115,7 @@ namespace ViewControllers
         {
             SetViewStateController<TerraState>(ElementiaViewControllerStates.Terra);
             SetViewStateController<MainMenuState>(ElementiaViewControllerStates.MainMenu);
+            SetViewStateController<ResetGameState>(ElementiaViewControllerStates.ResetGame);
             SetInitialState(ElementiaViewControllerStates.MainMenu);
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.IO;
+using System.Security.Cryptography;
 using PandeaGames;
 using PandeaGames.Data;
 using PandeaGames.Views;
@@ -102,6 +103,7 @@ namespace Terra.Views
         {
             base.Destroy();
             _dataStreamers.Stop();
+            GameObject.Destroy(_view);
             TaskProvider.Instance.EndTask(_updateCoroutine);
         }
 

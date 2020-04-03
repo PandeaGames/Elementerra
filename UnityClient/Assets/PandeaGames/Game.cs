@@ -20,6 +20,13 @@ namespace PandeaGames
         private readonly TViewModels _viewModels = new TViewModels();
         private readonly TStaticDataProviders _staticDataProviders = new TStaticDataProviders();
 
+        public void Reset()
+        {
+            _services.Clear();
+            _viewModels.Clear();
+            _staticDataProviders.Clear();
+        }
+        
         private T GetDependancy<T, TInterface>(uint instanceId, Dictionary<Type, Dictionary<uint, TInterface>> lookup)
             where T : class, TInterface, new()
         {

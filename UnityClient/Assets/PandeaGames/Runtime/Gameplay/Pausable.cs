@@ -21,10 +21,17 @@ public class Pausable : MonoBehaviour, IPausable {
     private Dictionary<Rigidbody2D, bool> _rigidBodyKinematic2DStates = new Dictionary<Rigidbody2D, bool>();
     private Dictionary<Rigidbody2D, bool> _rigidBodySimulated2DStates = new Dictionary<Rigidbody2D, bool>();
     private Dictionary<Animator, bool> _animationStates = new Dictionary<Animator, bool>();
+    private Dictionary<Component, bool> _componentStates = new Dictionary<Component, bool>();
+
+    [SerializeField] 
+    private List<MonoBehaviour> _components;
+    
+    private List<Component> _componentsToPause;
 
     // Use this for initialization
     private void Start ()
     {
+        _componentsToPause = new List<Component>();
         _pauseService = Game.Instance.GetService<PauseService>();
         _pauseService.RegisterPausable(this);
 
@@ -36,6 +43,11 @@ public class Pausable : MonoBehaviour, IPausable {
 
         GetComponentsInChildren<Animator>(true, _animations);
         GetComponents<Animator>(_animations);
+        
+        _componentsToPause.AddRange(_components);
+        _componentsToPause.AddRange(_rigidbodies);
+        _componentsToPause.AddRange(_rigidbodies2D);
+        _componentsToPause.AddRange(_animations);
     }
 
     private void OnDestroy()
@@ -65,6 +77,12 @@ public class Pausable : MonoBehaviour, IPausable {
         {
             _animationStates.Add(animator, animator.enabled);
             animator.enabled = false;
+        }
+        
+        foreach (MonoBehaviour component in _components)
+        {
+            _componentStates.Add(component, component.enabled);
+            component.enabled = false;
         }
 
         if (OnPause != null)
@@ -99,12 +117,19 @@ public class Pausable : MonoBehaviour, IPausable {
             _animationStates.TryGetValue(animator, out enabled);
             animator.enabled = enabled;
         }
+        
+        foreach (MonoBehaviour component in _components)
+        {
+            _componentStates.TryGetValue(component, out bool enabled);
+            component.enabled = enabled;
+        }
 
         _rigidBodyKinematicStates.Clear();
         _rigidBodyCollisionStates.Clear();
         _rigidBodyKinematic2DStates.Clear();
         _rigidBodySimulated2DStates.Clear();
         _animationStates.Clear();
+        _componentStates.Clear();
 
         if (OnResume != null)
             OnResume();

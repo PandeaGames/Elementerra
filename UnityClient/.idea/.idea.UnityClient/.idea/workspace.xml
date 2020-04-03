@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/EntityPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/EntityPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Seedling.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Seedling.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/SeedlingPlanted.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/SeedlingPlanted.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +152,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializableGridPosiionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPosition.cs" root0="FORCE_HIGHLIGHTING" />
@@ -171,9 +185,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/c1/76353709/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/Camera/vThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
@@ -189,6 +205,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Elementia.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -202,15 +219,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/PlayerState.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Services/PlayerStateService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraPlayerStateService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIiew.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractFsm.cs" />
@@ -241,7 +252,6 @@
         <option value="$PROJECT_DIR$/Assets/Elementia/Views/MainMenuView.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContentUI.cs" />
@@ -253,6 +263,13 @@
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" />
       </list>
     </option>
   </component>
@@ -346,7 +363,7 @@
       <workItem from="1585237263070" duration="55260000" />
       <workItem from="1585502568693" duration="4039000" />
       <workItem from="1585540409621" duration="2351000" />
-      <workItem from="1585793572457" duration="6613000" />
+      <workItem from="1585793572457" duration="9835000" />
     </task>
     <servers />
   </component>

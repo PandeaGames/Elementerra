@@ -14,6 +14,11 @@ public class PauseService : AbstractService<PauseService>
     private readonly List<IPausable> _pausables = new List<IPausable>();
     private bool _isPaused;
 
+    public bool IsPaused
+    {
+        get => _isPaused;
+    }
+
     public void RegisterPausable(IPausable pausable)
     {
         _pausables.Add(pausable);
@@ -34,7 +39,7 @@ public class PauseService : AbstractService<PauseService>
 
     public void Pause()
     {
-        foreach(Pausable pausable in _pausables)
+        foreach(IPausable pausable in _pausables)
         {
             pausable.Pause();
         }
@@ -42,9 +47,9 @@ public class PauseService : AbstractService<PauseService>
         _isPaused = true;
     }
 
-    public void Pause(Pausable pausableFocus)
+    public void Pause(IPausable pausableFocus)
     {
-        foreach (Pausable pausable in _pausables)
+        foreach (IPausable pausable in _pausables)
         {
             if(pausableFocus != pausable)
                 pausable.Pause();
@@ -53,9 +58,9 @@ public class PauseService : AbstractService<PauseService>
         _isPaused = true;
     }
 
-    public void Pause(List<Pausable> pausableFocus)
+    public void Pause(List<IPausable> pausableFocus)
     {
-        foreach (Pausable pausable in _pausables)
+        foreach (IPausable pausable in _pausables)
         {
             if (!pausableFocus.Contains(pausable))
                 pausable.Pause();
@@ -66,7 +71,7 @@ public class PauseService : AbstractService<PauseService>
 
     public void Resume()
     {
-        foreach (Pausable pausable in _pausables)
+        foreach (IPausable pausable in _pausables)
         {
             pausable.Resume();
         }

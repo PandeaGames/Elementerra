@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4653012092406694821}
   - component: {fileID: 4728430127891748172}
   - component: {fileID: -8968110613611331695}
+  - component: {fileID: 7872429910711125334}
   m_Layer: 0
   m_Name: Boulder01
   m_TagString: Untagged
@@ -90,6 +91,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _entityMonoView: {fileID: 8066814947532660305}
   _range: 0.81
+--- !u!114 &7872429910711125334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023694627982530721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b76c2cd3f695349a71f0a895d1e9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4750481260811121814
 PrefabInstance:
   m_ObjectHideFlags: 0
