@@ -10,7 +10,8 @@ public class MainMenuViewModel : IViewModel
     {
         Continue,
         NewGame, 
-        NewSandboxGame
+        NewSandboxGame,
+        ExitGame
     }
 
     public event Action<ButtonId> OnButtonPressed;

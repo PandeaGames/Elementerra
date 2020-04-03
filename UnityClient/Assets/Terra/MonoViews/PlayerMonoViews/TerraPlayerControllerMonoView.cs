@@ -158,14 +158,12 @@ namespace Terra.MonoViews
             
             RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(spawnableEntityType);
             TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
-
             
-                entity.Position.Set(
-                    new Vector3(
-                        transform.position.x + transform.forward.x + offset,
-                        transform.position.y + 1,
-                        transform.position.z + transform.forward.z + offset));
-            
+            entity.Position.Set(
+                new Vector3(
+                    transform.position.x + transform.forward.x + offset,
+                    transform.position.y + 1,
+                    transform.position.z + transform.forward.z + offset));
             
             vm.AddEntity(entity);
             vm.RemoveEntity(_currentEntityMonoView.Entity);            

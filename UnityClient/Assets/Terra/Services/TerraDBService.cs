@@ -11,14 +11,24 @@ namespace Terra.Services
 {
     public class TerraDBService : IService
     {
+        private string dbResourceAssetPath
+        {
+            get => "Data/Terra";
+        }
+        
         private string dbResourcePath
         {
-            get => $@"URI=file:{Application.dataPath}\Resources\Data\Terra.bytes";
+            get => $@"URI=file:{Application.dataPath}\Resources\{dbResourceAssetPath}.bytes";
+        }
+        
+        private string dbUserFileDataPath
+        {
+            get => $@"{Application.persistentDataPath}\Terra.db";
         }
         
         private string dbUserDataPath
         {
-            get => $@"URI=file:{Application.persistentDataPath}\Terra.db";
+            get => $@"URI=file:{dbUserFileDataPath}";
         }
 
         private string dbPath
@@ -58,16 +68,20 @@ namespace Terra.Services
 
         public void AddRequest(TerraDBRequest request)
         {
-            
             _pendingChangeRequests.Add(request);
         }
 
         public void CopyGameDataToUserDataPath()
         {
-            string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(dbResourcePath);
-            TextAsset textAsset = Resources.Load(fileNameWithoutExtension) as TextAsset;
-            File.WriteAllBytes(dbUserDataPath, textAsset.bytes);
-            Debug.Log($"[{nameof(TerraDBService)}] Copied Database to {dbUserDataPath}");
+            TextAsset textAsset = Resources.Load(dbResourceAssetPath) as TextAsset;
+
+            if (textAsset == null)
+            {
+                throw new Exception($"[{nameof(TerraDBService)}] Cannot copy database. Database Resource '{dbResourceAssetPath}' at path '{dbResourcePath}' could not be loaded.");
+            }
+            
+            File.WriteAllBytes(dbUserFileDataPath, textAsset.bytes);
+            Debug.Log($"[{nameof(TerraDBService)}] Copied Database to {dbUserFileDataPath}");
         }
 
         public void DeleteCurrentUserData()

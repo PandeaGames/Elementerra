@@ -61,6 +61,15 @@ namespace ViewControllers
                         Game.Instance.GetService<TerraDBService>().DeleteCurrentUserData();
                         break;
                     }
+                    case MainMenuViewModel.ButtonId.ExitGame:
+                    {
+#if UNITY_EDITOR
+                        EditorApplication.isPlaying = false;
+#else
+ Application.Quit();    
+#endif
+                        break;
+                    }
                 }
                 
                 _fsm.SetState(ElementiaViewControllerStates.Terra);

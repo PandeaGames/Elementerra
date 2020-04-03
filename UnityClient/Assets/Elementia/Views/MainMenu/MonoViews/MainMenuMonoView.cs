@@ -12,6 +12,8 @@ namespace Views.MonoViews
         public Button _newGame;
         [SerializeField] 
         public Button _newSandboxGame;
+        [SerializeField] 
+        public Button _exitGameButton;
 
         private void Start()
         {
@@ -29,6 +31,11 @@ namespace Views.MonoViews
             _newSandboxGame.onClick.AddListener(() =>
             {
                 vm.TriggerButtonPress(MainMenuViewModel.ButtonId.NewSandboxGame);
+            });
+            
+            _exitGameButton.onClick.AddListener(() =>
+            {
+                vm.TriggerButtonPress(MainMenuViewModel.ButtonId.ExitGame);
             });
         }
     }
