@@ -23,12 +23,12 @@ namespace Views.MonoViews
             
             _newGame.onClick.AddListener(() =>
             {
-                vm.TriggerButtonPress(MainMenuViewModel.ButtonId.Continue);
+                vm.TriggerButtonPress(MainMenuViewModel.ButtonId.NewGame);
             });
             
             _newSandboxGame.onClick.AddListener(() =>
             {
-                vm.TriggerButtonPress(MainMenuViewModel.ButtonId.Continue);
+                vm.TriggerButtonPress(MainMenuViewModel.ButtonId.NewSandboxGame);
             });
         }
     }
