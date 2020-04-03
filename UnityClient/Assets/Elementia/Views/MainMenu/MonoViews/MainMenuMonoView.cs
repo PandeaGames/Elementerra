@@ -1,4 +1,5 @@
 using PandeaGames;
+using Terra.Services;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,6 +38,8 @@ namespace Views.MonoViews
             {
                 vm.TriggerButtonPress(MainMenuViewModel.ButtonId.ExitGame);
             });
+
+            _continueButton.interactable = Game.Instance.GetService<TerraDBService>().HasUserSaveFile;
         }
     }
 }
