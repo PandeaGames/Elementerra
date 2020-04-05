@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6148888271791477003}
   - component: {fileID: 288574462590263378}
   - component: {fileID: 5904188325209134846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EntityPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,3 +56,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b76c2cd3f695349a71f0a895d1e9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _components: []

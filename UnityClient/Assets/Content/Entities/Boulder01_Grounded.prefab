@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2658519906540810615}
   - component: {fileID: 3242582365900357381}
   - component: {fileID: 4728430127891748172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boulder01_Grounded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,10 +114,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 832893611811835330}
     m_Modifications:
+    - target: {fileID: 4537405646829486334, guid: ae95750e4caabeb47993e78d5c6ba9f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5800906375986613077, guid: ae95750e4caabeb47993e78d5c6ba9f4,
         type: 3}
       propertyPath: m_Name
       value: IL3DN_Rock_Boulder_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800906375986613077, guid: ae95750e4caabeb47993e78d5c6ba9f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6280177913000003068, guid: ae95750e4caabeb47993e78d5c6ba9f4,
         type: 3}

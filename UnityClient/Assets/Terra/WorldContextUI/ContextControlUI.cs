@@ -1,5 +1,6 @@
 using PandeaGames;
 using UnityEngine;
+using TMPro;
 
 namespace Terra.WorldContextUI
 {
@@ -9,6 +10,9 @@ namespace Terra.WorldContextUI
 
         [SerializeField]
         private CanvasGroup _canvasGroup;
+        
+        [SerializeField]
+        private TextMeshProUGUI _text;
         
         public float smoothTime = 0.3f;
         float yVelocity = 0.0f;
@@ -22,14 +26,26 @@ namespace Terra.WorldContextUI
         {
             switch (_contextUIModel.CurrentContext)
             {
+                case WorldContextViewModel.Context.PutInInventory:
+                {
+                    _text.text = "E";
+                    _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
+                    break;
+                }
                 case WorldContextViewModel.Context.None:
-                case WorldContextViewModel.Context.Holding:
                 {
                     _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 0, ref yVelocity, smoothTime);
                     break;
                 }
+                case WorldContextViewModel.Context.Holding:
+                {
+                    _text.text = "Space";
+                   
+                    break;
+                }
                 case WorldContextViewModel.Context.PickUp:
                 {
+                    _text.text = "Space";
                     _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
                     break;
                 }

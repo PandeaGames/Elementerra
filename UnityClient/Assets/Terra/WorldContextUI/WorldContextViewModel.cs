@@ -15,6 +15,7 @@ namespace Terra.WorldContextUI
         {
             None,
             PickUp,
+            PutInInventory,
             Holding
         }
         

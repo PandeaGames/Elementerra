@@ -52,7 +52,10 @@ public class Pausable : MonoBehaviour, IPausable {
 
     private void OnDestroy()
     {
-        _pauseService.UnregisterPausable(this);
+        if (_pauseService != null)
+        {
+            _pauseService.UnregisterPausable(this);
+        }
     }
 
     public void Pause()

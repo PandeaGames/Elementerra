@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4728430127891748172}
   - component: {fileID: -8968110613611331695}
   - component: {fileID: 7872429910711125334}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boulder01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b76c2cd3f695349a71f0a895d1e9a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _components: []
 --- !u!1001 &4750481260811121814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,10 +111,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 832893611811835330}
     m_Modifications:
+    - target: {fileID: 4537405646829486334, guid: ae95750e4caabeb47993e78d5c6ba9f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5800906375986613077, guid: ae95750e4caabeb47993e78d5c6ba9f4,
         type: 3}
       propertyPath: m_Name
       value: IL3DN_Rock_Boulder_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800906375986613077, guid: ae95750e4caabeb47993e78d5c6ba9f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6280177913000003068, guid: ae95750e4caabeb47993e78d5c6ba9f4,
         type: 3}

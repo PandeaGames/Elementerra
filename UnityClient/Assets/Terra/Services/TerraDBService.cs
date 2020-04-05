@@ -6,6 +6,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using PandeaGames.Services;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Terra.Services
 {
@@ -171,6 +172,18 @@ namespace Terra.Services
             }
         }
 
+        public void DeleteRow<TSerializable>(int rowid, IDBSerializer<TSerializable> serializer)
+            where TSerializable:IDBSerializable
+        {
+            TerraDBRequest request = new TerraDBRequest()
+            {
+                CommandText = $"DELETE FROM {serializer.Table} WHERE rowid = '{rowid}'",
+                Values = new TerraDBParameterValue[0]
+            };
+            
+            _pendingDeleteRequestsList.Add(request);
+        }
+        
         public void DeleteRecord<TSerializer, TSerializable>(TSerializable serializable, TSerializer serializer)
             where TSerializable:IDBSerializable
             where TSerializer:IDBSerializer<TSerializable>
@@ -397,14 +410,24 @@ namespace Terra.Services
                 while (rdr.Read())
                 {
                     TSerializable data = serializer.Instantiate();
-                    
+                    int columnTypeOffset = 0;
                     for (int i = 0; i < serializer.Columns.Length; i++)
                     {
-                        IDBColumn column = serializer.Columns[i];
-
                         if (rdr.IsDBNull(i))
                         {
                             continue;
+                        }
+                        
+                        IDBColumn column = default(IDBColumn);
+
+                        if (rdr.GetName(i) == "rowid")
+                        {
+                            column = new IDBColumn(){ColumnName = "rowid", DataType = DBDataType.INTEGER};
+                            columnTypeOffset++;
+                        }
+                        else
+                        {
+                            column = serializer.Columns[i - columnTypeOffset];
                         }
                         
                         try
@@ -432,7 +455,7 @@ namespace Terra.Services
                         }
                         catch (Exception e)
                         {
-                            Debug.LogError($"[{typeof(TSerializer)}][{typeof(TSerializable)}] column [{column.ColumnName}] dataType [{column.DataType}] indexInReader [{i}] rdr.FieldCount[{rdr.FieldCount}]");
+                            Debug.LogError($"[{typeof(TSerializer)}][{typeof(TSerializable)}] column [{column.ColumnName}] dataType [{column.DataType}] indexInReader [{i}] rdr.FieldCount[{rdr.FieldCount}]\n{e.ToString()}");
                             //throw e;
                         }
                     }

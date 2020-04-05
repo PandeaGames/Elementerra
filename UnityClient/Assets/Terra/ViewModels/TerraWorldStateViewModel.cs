@@ -43,6 +43,9 @@ namespace Terra.ViewModels
         {
             get
             {
+                if (_timeOfDayData == null)
+                    return 0;
+                
                 int ticksPerDay = (int)( _timeOfDayData.DayLengthSeconds / TerraWorldStateStreamer.TickTimeSeconds);
                 int ticksToday = State.Tick % ticksPerDay;
                 return (float) ticksToday / ticksPerDay;

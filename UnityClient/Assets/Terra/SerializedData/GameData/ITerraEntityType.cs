@@ -1,3 +1,4 @@
+using Terra.Inventory;
 using Terra.SerializedData.Entities;
 
 namespace Terra.SerializedData.GameData

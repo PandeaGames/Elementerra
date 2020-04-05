@@ -1,4 +1,6 @@
 using System;
+using Terra.Inventory;
+using Terra.Inventory.UnityData;
 using Terra.SerializedData.Entities;
 using UnityEngine;
 
@@ -38,10 +40,22 @@ namespace Terra.SerializedData.GameData
         [SerializeField]
         private float _ripeTimeSeconds;
         public float RipeTimeSeconds => _ripeTimeSeconds;
+        
+        [SerializeField]
+        private float _lifespanSeconds;
+        public float LifespanSeconds => _lifespanSeconds;
+        
+        [SerializeField]
+        private TerraEntityTypeSO _entityToSpawnAfterDeath;
+        public TerraEntityTypeSO EntityToSpawnAfterDeath => _entityToSpawnAfterDeath;
+        
+        [SerializeField]
+        private InventoryItemDataSO _inventoryItemDataSO;
+        public InventoryItemDataSO InventoryItemDataSO => _inventoryItemDataSO;
 
         public bool IsPlantable => !string.IsNullOrEmpty(PlantableEntityId);
         public bool IsSpawnable => !string.IsNullOrEmpty(SpawnableEntityId);
-
+        
         public override string ToString()
         {
             return _entityId;

@@ -79,7 +79,6 @@ namespace Terra.SerializedData.Entities
             set => Entity.EntityID = value;
         }
         
-        
         public bool IsRipe()
         {
             if (EntityTypeData.Component.HasFlag(EntityComponent.Harvestable))
@@ -92,6 +91,32 @@ namespace Terra.SerializedData.Entities
             }
 
             return false;
+        }
+        
+        public bool IsPastLifetime()
+        {
+            if (EntityTypeData.LifespanSeconds > 0)
+            {
+                if ((_worldStateViewModel.State.Tick - Entity.TickCreated) * TerraWorldStateStreamer.TickTimeSeconds >
+                    EntityTypeData.LifespanSeconds)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void ExpireEntity()
+        {
+            Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).RemoveEntity(this);
+
+            if (EntityTypeData.EntityToSpawnAfterDeath != null)
+            {
+                RuntimeTerraEntity newEntity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(EntityTypeData.EntityToSpawnAfterDeath.Data);
+                newEntity.Position.Set(Position.Data);
+                Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).AddEntity(newEntity);
+            }
         }
     }
     

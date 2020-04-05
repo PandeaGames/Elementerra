@@ -35,22 +35,26 @@ namespace Terra.SerializedData.Entities
         
         public TerraPosition3D Set(Quaternion rotation)
         {
-            bool didChange = !rotation.eulerAngles.Equals(Data.euler);
-            Data.Set(rotation);
+            float d = Vector3.Distance(rotation.eulerAngles, Data.euler);
 
-            if(didChange)
+            if (d > 0.001)
+            {
+                Data.Set(rotation);
                 OnChange();
+            }
             
             return Data;
         }
         
         public TerraPosition3D Set(Vector3 position)
         {
-            bool didChange = !position.Equals(Data);
-            Data.Set(position);
-
-            if(didChange)
+            Vector3 currentPosition = (Vector3) Data;
+            float d = Vector3.Distance(currentPosition, position);
+            if (d > 0.01)
+            {
+                Data.Set(position);
                 OnChange();
+            }
             
             return Data;
         }

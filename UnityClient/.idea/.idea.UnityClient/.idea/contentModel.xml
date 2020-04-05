@@ -854,6 +854,28 @@
           <e p="Editor" t="Include">
             <e p="TerraCheatWindow.cs" t="Include" />
           </e>
+          <e p="Inventory" t="Include">
+            <e p="IInventoryDataType.cs" t="Include" />
+            <e p="IInventoryItem.cs" t="Include" />
+            <e p="IInventoryItemData.cs" t="Include" />
+            <e p="InventoryDataType.cs" t="Include" />
+            <e p="InventoryItem.cs" t="Include" />
+            <e p="InventoryItemData.cs" t="Include" />
+            <e p="InventoryItemDataSerializable.cs" t="Include" />
+            <e p="InventoryItemDataSerializer.cs" t="Include" />
+            <e p="InventoryService.cs" t="Include" />
+            <e p="InventoryViewModel.cs" t="Include" />
+            <e p="MonoViews" t="Include">
+              <e p="InventoryMonoView.cs" t="Include" />
+              <e p="PlayerInventoryMonoView.cs" t="Include" />
+            </e>
+            <e p="UnityData" t="Include">
+              <e p="InventoryDataTypeSO.cs" t="Include" />
+              <e p="InventoryItemDataListSO.cs" t="Include" />
+              <e p="InventoryItemDataSO.cs" t="Include" />
+              <e p="InventoryTypesSO.cs" t="Include" />
+            </e>
+          </e>
           <e p="ITerraShape.cs" t="Include" />
           <e p="ITerraWorld.cs" t="Include" />
           <e p="MonoViews" t="Include">
@@ -875,6 +897,7 @@
             </e>
             <e p="TerraEntitiesMonoView.cs" t="Include" />
             <e p="TerraEntityHarstableMonoView.cs" t="Include" />
+            <e p="TerraEntityLifespanMonoView.cs" t="Include" />
             <e p="TerraEntityMonoView.cs" t="Include" />
             <e p="TerraEntityRandomRotateMonoView.cs" t="Include" />
             <e p="TerraEntityRandomScaleMonoView.cs" t="Include" />

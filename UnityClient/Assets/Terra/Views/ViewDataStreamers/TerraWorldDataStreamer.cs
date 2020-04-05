@@ -20,7 +20,7 @@ namespace Terra.Views.ViewDataStreamers
         private RuntimeTerraEntity _playerEntity;
         private float _lastSaveSeconds;
         private Vector3 _lastChunkLoadPosition;
-        private int _chunkSize = 80;
+        private int _chunkSize = 120;
         
         public TerraWorldDataStreamer(
             TerraWorldViewModel terraWorldViewModel, 

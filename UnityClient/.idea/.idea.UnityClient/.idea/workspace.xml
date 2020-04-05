@@ -2,16 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01_Grounded.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Boulder01_Grounded.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/EntityPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/EntityPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Seedling.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Seedling.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/SeedlingPlanted.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/SeedlingPlanted.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PandeaGames/TerraGameResources.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PandeaGames/TerraGameResources.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/TerraArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/TerraArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Terra.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Terra.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,52 +49,134 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/Inspectors/LocalizationParamsManagerInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Content/Entities/Seedling.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../JunkyardDogs/Unity/Assets/client/scripts/Runtime/Gameplay/Junkyard/JunkyardFogOfWar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/StateMachines/PandeaGamesFsm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/ec/b0632d06/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../JunkyardDogs/Unity/Assets/client/scripts/Runtime/Gameplay/Junkyard/JunkyardJunkMonoView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ResourceSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityLifespanMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/PostProcessBuild_UnloadLanguages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldStateStreamer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContextUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraWorldState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraPlayerEntityDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18B38ADE-9B85-49A5-AFF4-B379F33ECCEC/21/385fadd4/Collider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/17/f4dbce4b/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/37/81a1214f/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10736A79-3355-4570-8E4E-332FCF58A2B7/27/0b9cc4f3/CanvasGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializableGridPosiionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/LocalizeDropdown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Services/Elementia.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomScaleMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/ElementiaShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugStatefulMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/WeakReference/WeakReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/c1/76353709/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/Camera/vThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryDataType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/be/518607fe/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/AbstractDataContainerSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/ElementiaGameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/SimulationConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityHarstableMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LayerAttributeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Elementia.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WorldRendererLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ThreadJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/MainMenuViewController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/TerraGameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ElementiaGameStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/DataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/PandeaGameConfigurationData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPlayerControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/Inspectors/LocalizationParamsManagerInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/ca/f96d877e/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Content/Entities/Seedling.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomRotateMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/ScriptableObjectSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScreenSpaceFluids/Scripts/SSF_FluidRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/79/4639a6e9/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../JunkyardDogs/Unity/Assets/client/scripts/Runtime/Gameplay/Junkyard/JunkyardFogOfWar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraPlayerStateService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/StateMachines/PandeaGamesFsm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/ec/b0632d06/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/MonoBehaviourSingleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../JunkyardDogs/Unity/Assets/client/scripts/Runtime/Gameplay/Junkyard/JunkyardJunkMonoView.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ResourceSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/AbstractEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,41 +184,34 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/IEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/EntityListMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/EntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Utility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/PostProcessBuild_UnloadLanguages.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/4b/15e064f1/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataListSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryTypesSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldStateStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContextUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraTerrainGeometryDataModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/PlayerInventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryDataTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityDataController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraWorldState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IL3DN/Shaders/IL3DN_Branch.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -120,9 +221,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewControllerFsm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraPlayerEntityDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18B38ADE-9B85-49A5-AFF4-B379F33ECCEC/21/385fadd4/Collider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/17/f4dbce4b/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraWorldService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/IDBSerializable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -136,136 +234,83 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/IDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonMotor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/37/81a1214f/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraShape.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityUI_Image.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TimeOfDayMonoViews/TerraTODLightColor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10736A79-3355-4570-8E4E-332FCF58A2B7/27/0b9cc4f3/CanvasGroup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializableGridPosiionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/LocalizeDropdown.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Entities/ValueContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Terra.asmdef" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Services/Elementia.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomScaleMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraShape.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TimeOfDayConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/ElementiaShader.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Controllers/Scripts/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugStatefulMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/WeakReference/WeakReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/c1/76353709/Time.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/Camera/vThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/be/518607fe/Resources.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/AbstractDataContainerSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/ElementiaGameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/SimulationConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityHarstableMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LayerAttributeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Elementia.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WorldRendererLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ThreadJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIiew.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractFsm.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraPlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraPlayerControllerMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializableGridPosiionMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraPlayerState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TimeOfDayConfigSO.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldStateStreamer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TimeOfDayMonoViews/TerraTODLightColor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityHarstableMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPlayerControlViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Views/MainMenuView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContentUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContextUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Game.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/MainMenuViewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/TerraArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Inventory/InventoryViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Inventory/InventoryService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Inventory/InventoryData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataSerializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataTypeSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryTypesSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItemDataType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryDataType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityLifespanMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/PlayerInventoryMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryDataTypeSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryTypesSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataListSO.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" />
       </list>
     </option>
   </component>
@@ -361,6 +406,7 @@
       <workItem from="1585540409621" duration="2351000" />
       <workItem from="1585793572457" duration="10053000" />
       <workItem from="1585922384630" duration="4614000" />
+      <workItem from="1586016624407" duration="23023000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 ﻿using PandeaGames;
 using PandeaGames.Views;
 using PandeaGames.Views.ViewControllers;
+using Terra.Inventory;
 using Terra.SerializedData.Entities;
 using Terra.Services;
 using Terra.Views;
@@ -20,7 +21,8 @@ namespace Terra.Controllers
                     TerraPoint.Serializer,
                     TerraGridPosition.Serializer,
                     TerraWorldStateStreamer.Serializer,
-                    TerraPlayerStateService.Serializer
+                    TerraPlayerStateService.Serializer,
+                    InventoryItemDataSerializer.Instance
                 }
                 );
         }

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using PandeaGames;
 using PandeaGames.Data;
+using Terra.Inventory;
+using Terra.Inventory.MonoViews;
 using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
@@ -49,6 +51,7 @@ namespace Terra.MonoViews
             {
                 if (entityMonoView == null || 
                     (!entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp) && 
+                     entityMonoView.Entity.EntityTypeData.InventoryItemDataSO == null &&
                      !(entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.Harvestable) 
                        && entityMonoView.Entity.IsRipe())))
                 {
@@ -70,7 +73,11 @@ namespace Terra.MonoViews
 
             if (_currentEntityMonoView)
             {
-                if (!_playerStateViewModel.IsHoldingItem)
+                if (_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO != null)
+                {
+                    _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.PutInInventory, _currentEntityMonoView.Entity);
+                }
+                else if (!_playerStateViewModel.IsHoldingItem)
                 {
                     _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.PickUp, _currentEntityMonoView.Entity);
                 }
@@ -86,6 +93,16 @@ namespace Terra.MonoViews
 
             switch (_contextUIModel.CurrentContext)
             {
+                case WorldContextViewModel.Context.PutInInventory:
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        AddToInventory();
+                        
+                    }
+
+                    break;
+                }
                 case WorldContextViewModel.Context.PickUp:
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
@@ -148,9 +165,15 @@ namespace Terra.MonoViews
             }
             
             vm.AddEntity(entity);
-            
         }
-        
+
+        private void AddToInventory()
+        {
+            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+            vm.RemoveEntity(_currentEntityMonoView.Entity);
+            Game.Instance.GetService<InventoryService>().AddItem(TerraGameResources.PLAYER_INSTANCE_ID,_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO.Data );
+        }
+
         private void HarvestEntity(float offset)
         {
             TerraEntityTypeData spawnableEntityType =

@@ -1,4 +1,6 @@
+using System;
 using Data;
+using Terra.Inventory.UnityData;
 using Terra.StaticData;
 using UnityEditor;
 using UnityEngine;
@@ -7,6 +9,7 @@ namespace PandeaGames.Data
 {
     public class TerraGameResources : ScriptableObjectSingleton<TerraGameResources>, ILoadableObject
     {
+        public const int PLAYER_INSTANCE_ID = Int32.MaxValue;
 #if UNITY_EDITOR
         public const string AssetPath = "Assets/Resources/Terra/TerraGameResources.asset";
         
@@ -56,6 +59,21 @@ namespace PandeaGames.Data
         {
             get => _timeOfDayConfigSO;
         }
+        
+        [SerializeField]
+        private InventoryDataTypeSO _playerInventoryType;
+        public InventoryDataTypeSO PlayerInventoryType
+        {
+            get => _playerInventoryType;
+        }
+
+        [SerializeField]
+        private InventoryTypesSO _inventoryTypesSo;
+        public InventoryTypesSO InventoryTypesSO => _inventoryTypesSo;
+        
+        [SerializeField]
+        private InventoryItemDataListSO _InventoryItemDataListSO;
+        public InventoryItemDataListSO InventoryItemDataListSO => _InventoryItemDataListSO;
         
         [SerializeField]
         private GameObject _mainMenuView;

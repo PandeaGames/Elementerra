@@ -15,6 +15,8 @@ MonoBehaviour:
   _data:
     component: 6
     _entityId: PeaShooter_Green
+    _plantableEntityId: 
+    _spawnableEntityId: 
     _debugImage: {fileID: 21300000, guid: 03b0c4d0af36e2d468af2d68c4e4cc60, type: 3}
     _grassPotentialReductionRadius: 0
     _grassPotentialReductionCurve:
@@ -23,3 +25,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    _ripeTimeSeconds: 0
+    _lifespanSeconds: 20
+    _entityToSpawnAfterDeath: {fileID: 11400000, guid: 116890aa065d01c49a53329a6409a4ce,
+      type: 2}
+    _inventoryItemDataSO: {fileID: 0}

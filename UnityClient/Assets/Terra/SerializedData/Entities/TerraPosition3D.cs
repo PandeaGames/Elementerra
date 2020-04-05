@@ -156,6 +156,11 @@ namespace Terra.SerializedData.Entities
         public float ry { get; set; }
         public float rz { get; set; }
 
+        public override int GetHashCode()
+        {
+            return InstanceId + nameof(TerraPosition3D).GetHashCode();
+        }
+
         public Vector3 euler { get{return new Vector3(rx, ry, rz);} }
 
         public static bool operator ==(TerraPosition3D a, TerraPosition3D b)

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.SQLite;
+using Terra.Inventory;
 using Terra.SerializedData.GameData;
 using Terra.Services;
 using UnityEditor;
@@ -127,6 +128,7 @@ namespace Terra.SerializedData.Entities
         public int TickCreated;
         public HashSet<string> Labels { get; set; } = new HashSet<string>();
         public string EntityID { get; set; } = "";
+        public IInventoryItemData IntentoryItem { get; }
         public long RowID = 0;
 
         public TerraEntity() : this(0, string.Empty, 0)
