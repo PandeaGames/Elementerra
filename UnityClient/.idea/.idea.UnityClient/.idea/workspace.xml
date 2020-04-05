@@ -3,13 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Prefabs/MainMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Prefabs/MainMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/TerraArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/TerraArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,9 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/Services/PlayerStateService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraPlayerStateService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIiew.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractFsm.cs" />
@@ -230,7 +229,6 @@
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraPlayerState.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/StaticData/TimeOfDayConfigSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" />
@@ -259,11 +257,15 @@
         <option value="$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/MainMenuViewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/TerraArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" />
       </list>
     </option>
   </component>
@@ -358,7 +360,7 @@
       <workItem from="1585502568693" duration="4039000" />
       <workItem from="1585540409621" duration="2351000" />
       <workItem from="1585793572457" duration="10053000" />
-      <workItem from="1585922384630" duration="1384000" />
+      <workItem from="1585922384630" duration="4614000" />
     </task>
     <servers />
   </component>

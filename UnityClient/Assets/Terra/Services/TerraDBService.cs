@@ -92,6 +92,8 @@ namespace Terra.Services
             }
         }
 
+        public bool HasUserSaveFile => File.Exists(dbUserFileDataPath);
+
         public void Setup(IDBSchema[] schemas)
         {
             Debug.Log($"[{nameof(TerraDBService)}] Setup Database at {dbPath}");

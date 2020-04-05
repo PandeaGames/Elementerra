@@ -19,10 +19,12 @@ namespace Terra.ViewModels
         public event ChunkDelegate OnChunkAdded;
         public event ChunkDelegate OnChunkRemoved;
         public TerraWorldChunk CurrentChunk;
+        public TerraArea CurrentArea { get; private set; }
         private Dictionary<TerraVector, TerraWorldChunk> _chunks = new Dictionary<TerraVector, TerraWorldChunk>();
         
         public void AddChunk(TerraWorldChunk chunk)
         {
+            CurrentArea = chunk.Area;
             CurrentChunk = chunk;
             OnChunkAdded?.Invoke(chunk);
         }

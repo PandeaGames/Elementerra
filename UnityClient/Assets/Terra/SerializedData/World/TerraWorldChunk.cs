@@ -19,6 +19,7 @@ namespace Terra.SerializedData.World
     public class TerraWorldChunk : AbstractGridDataModel<TerraPoint, TerraDataPoint>
     {
         private TerraArea _area;
+        public TerraArea Area => _area;
         private TerraDBService _db;
 
         public TerraWorldChunk(TerraPoint[,] points, TerraDBService db, TerraArea area) : base(points)
