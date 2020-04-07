@@ -866,6 +866,7 @@
             <e p="InventoryService.cs" t="Include" />
             <e p="InventoryViewModel.cs" t="Include" />
             <e p="MonoViews" t="Include">
+              <e p="InventoryItemMonoView.cs" t="Include" />
               <e p="InventoryMonoView.cs" t="Include" />
               <e p="PlayerInventoryMonoView.cs" t="Include" />
             </e>

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using PandeaGames.ViewModels;
 using PandeaGames.Views;
@@ -6,7 +7,7 @@ namespace Terra.Inventory
 {
     public delegate void IntentoryItemDelegate(IInventoryItem item);
     
-    public class InventoryViewModel : IViewModel
+    public class InventoryViewModel : IViewModel, IEnumerable<IInventoryItem>
     {
         public event IntentoryItemDelegate OnAddItem;
         public event IntentoryItemDelegate OnRemoveItem;
@@ -51,6 +52,16 @@ namespace Terra.Inventory
         public void Reset()
         {
             
+        }
+
+        public IEnumerator<IInventoryItem> GetEnumerator()
+        {
+            return _items.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
