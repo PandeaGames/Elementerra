@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 1270344753026101762}
   - component: {fileID: 888318583041071364}
   - component: {fileID: 248573645994997837}
+  - component: {fileID: 8711482832283952188}
   m_Layer: 10
   m_Name: PeaShooter_Green
   m_TagString: Untagged
@@ -213,6 +214,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components: []
+--- !u!114 &8711482832283952188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384816614167284870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6549f385f7490299d90426a01d76ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entityMonoView: {fileID: 4723399767900384844}
+  _moveSpeed: 1
+  _chanceToLootAtPlayerEachFrame: 0.448
+  _distanceFromPlayer: 1
+  _randomDistanceFromPlayer: 5
+  _distanceTrench: 0.1
+  _rb: {fileID: 888318583041071364}
 --- !u!1 &1384816614167286978
 GameObject:
   m_ObjectHideFlags: 0

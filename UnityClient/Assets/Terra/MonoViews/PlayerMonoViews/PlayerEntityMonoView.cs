@@ -13,11 +13,7 @@ namespace Terra.MonoViews
         private void Start()
         {
             _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
-        }
-
-        private void Update()
-        {
-            _terraViewModel.PlayerPosition = transform.position;
+            _terraViewModel.RegisterEntity(GetComponent<TerraEntityMonoView>());
         }
     }
 }

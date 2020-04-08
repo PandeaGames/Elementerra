@@ -848,12 +848,17 @@
           </e>
         </e>
         <e p="Terra" t="Include">
+          <e p="AreaHighlighting" t="Include">
+            <e p="AreaHighlightingMonoView.cs" t="Include" />
+            <e p="AreaHighlightingViewModel.cs" t="Include" />
+          </e>
           <e p="Controllers" t="Include">
             <e p="TerraController.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
             <e p="TerraCheatWindow.cs" t="Include" />
           </e>
+          <e p="FollowPlayerAIMonoView.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="IInventoryDataType.cs" t="Include" />
             <e p="IInventoryItem.cs" t="Include" />

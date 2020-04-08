@@ -15,6 +15,7 @@ namespace Terra.Views.ViewDataStreamers
         private TerraEntitesService _terraEntitiesService;
         private TerraWorldService _terraWorldService;
         private TerraEntitiesViewModel _terraEntitiesViewModel;
+        private TerraViewModel _terraViewModel;
         private TerraChunkService _terraChunkService;
         private TerraDBService _db;
         private RuntimeTerraEntity _playerEntity;
@@ -40,7 +41,7 @@ namespace Terra.Views.ViewDataStreamers
         {
            // _terraWorldService.LoadWorld(OnWorldLoaded, OnError);
            _terraWorldViewModel.SetWorld(new TerraWorld());
-
+           _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
            _terraEntitiesService = Game.Instance.GetService<TerraEntitesService>();
            //_terraEntitiesService.LoadEntitesOfType(TerraGameResources.Instance.TerraEntityPrefabConfig.PlayerConfig.Data, OnPlayerLoaded, null);
            _terraEntitiesService.LoadEntites(OnPlayerLoaded, null);
@@ -98,7 +99,7 @@ namespace Terra.Views.ViewDataStreamers
                 tmpEntities[tmpEntities.Length - 1] = _playerEntity;
                 entities = tmpEntities;
             }
-
+           
            _lastChunkLoadPosition = _playerEntity.Position.Data;
             _terraChunkService.GetChunk(new TerraArea()
             {

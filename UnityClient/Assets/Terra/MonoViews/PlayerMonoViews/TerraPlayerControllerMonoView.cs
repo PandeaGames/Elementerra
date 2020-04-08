@@ -203,8 +203,8 @@ namespace Terra.MonoViews
             RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(plantEntity);
             TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
             TerraViewModel gmViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
-            
-            entity.GridPosition.Set(new TerraVector((int)gmViewModel.PlayerPosition.x, (int)gmViewModel.PlayerPosition.z));
+            TerraPosition3DComponent positionComponent = gmViewModel.PlayerEntity.Entity.Position;
+            entity.GridPosition.Set(new TerraVector((int)positionComponent.Data.x, (int)positionComponent.Data.z));
             
             vm.AddEntity(entity);
         }

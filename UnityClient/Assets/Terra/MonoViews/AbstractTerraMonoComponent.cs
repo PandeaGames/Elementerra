@@ -14,7 +14,7 @@ namespace Terra.MonoViews
             get { return _entityMonoView.Entity; }
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             if (!Initialized && _entityMonoView.Entity != null)
             {
@@ -32,7 +32,7 @@ namespace Terra.MonoViews
             _entityMonoView.OnInitialize -= Initialize;
         }
 
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
             _entityMonoView.OnInitialize -= Initialize;
         }

@@ -2,6 +2,8 @@
 using System.Numerics;
 using PandeaGames;
 using PandeaGames.ViewModels;
+using Terra.MonoViews;
+using Terra.SerializedData.Entities;
 using Terra.SerializedData.World;
 
 namespace Terra.ViewModels
@@ -16,7 +18,7 @@ namespace Terra.ViewModels
         public TerraTerrainGeometryDataModel Geometry { get; private set; }
         public TerraGrassViewModel Grass { get; private set; }
         public TerraGrassPotentialViewModel GrassPotential { get; private set; }
-        public UnityEngine.Vector3 PlayerPosition { get; set; }
+        public TerraEntityMonoView PlayerEntity { get; private set; }
 
         public TerraViewModel()
         {
@@ -30,6 +32,11 @@ namespace Terra.ViewModels
             GrassPotential = new TerraGrassPotentialViewModel(Geometry, Game.Instance.GetViewModel<TerraEntitiesViewModel>(0), chunk);
             Grass =  new TerraGrassViewModel(Geometry, GrassPotential);
             OnGeometryUpdate?.Invoke(Geometry);
+        }
+                
+        public void RegisterEntity(TerraEntityMonoView view)
+        {
+            PlayerEntity = view;
         }
         
         public void Reset()

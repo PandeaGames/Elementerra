@@ -1,7 +1,9 @@
 using System;
 using PandeaGames.ViewModels;
+using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
 using Terra.SerializedData.GameState;
+using UnityEngine;
 
 namespace Terra.ViewModels
 {
@@ -14,7 +16,8 @@ namespace Terra.ViewModels
         {
             get => _terraPlayerState;
         }
-
+        
+       
         public bool IsHoldingItem => !string.IsNullOrEmpty(State.HoldingEntityID);
         
 
