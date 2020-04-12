@@ -4,7 +4,7 @@ using Terra.SerializedData.Entities;
 using Terra.ViewModels;
 using UnityEngine;
 
-namespace Terra
+namespace Terra.MonoViews.AI
 {
     public class FollowPlayerAIMonoView : AbstractTerraMonoComponent
     {
@@ -20,6 +20,9 @@ namespace Terra
 
         [SerializeField]
         private float _moveSpeed = 0.1f;
+        
+        [SerializeField]
+        private Animator _animator;
         
         [SerializeField, Range(0, 1)]
         private float _chanceToLootAtPlayerEachFrame = 0.1f;
@@ -74,6 +77,11 @@ namespace Terra
 
         private void Update_Follow()
         {
+            if (_animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Idle")
+            {
+                _animator.Play("Walk WO Root Motion");
+            }
+            
             if (_terraViewModel.PlayerEntity.transform != null)
             {
                 Transform playerTransform = _terraViewModel.PlayerEntity.transform;
@@ -83,13 +91,14 @@ namespace Terra
                     transform.LookAt(playerTransform);
                 }
                 
-                _rb.AddForce(transform.forward * _moveSpeed, ForceMode.Impulse);
+                _rb.AddForce(transform.forward * _moveSpeed * Time.deltaTime, ForceMode.Impulse);
 
                 float distanceFromPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
                 if (distanceFromPlayer + _distanceTrench < _finalDistanceFromPlayer)
                 {
                     _state = State.Idle;
+                    _animator.Play("Idle");
                 }
             }
         }
@@ -105,6 +114,7 @@ namespace Terra
                 if (distanceFromPlayer - _distanceTrench > _finalDistanceFromPlayer)
                 {
                     _state = State.Follow;
+                    _animator.Play("Walk WO Root Motion");
                 }
             }
         }

@@ -26,7 +26,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     _ripeTimeSeconds: 0
-    _lifespanSeconds: 20
+    _lifespanSeconds: 400
     _entityToSpawnAfterDeath: {fileID: 11400000, guid: 116890aa065d01c49a53329a6409a4ce,
       type: 2}
     _inventoryItemDataSO: {fileID: 0}
@@ -34,3 +34,4 @@ MonoBehaviour:
     - Player
     _aggroLabel: Hostile
     _attackRange: 0
+    _attackDamage: 0

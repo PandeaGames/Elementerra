@@ -64,7 +64,11 @@ namespace Terra.SerializedData.GameData
         [SerializeField]
         private float _attackRange;
         public float AttackRange => _attackRange;
-
+        
+        [SerializeField]
+        private int _attackDamage;
+        public int AttackDamage => _attackDamage;
+        
         public bool IsPlantable => !string.IsNullOrEmpty(PlantableEntityId);
         public bool IsSpawnable => !string.IsNullOrEmpty(SpawnableEntityId);
         

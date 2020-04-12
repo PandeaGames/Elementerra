@@ -1,4 +1,5 @@
-﻿using Terra.SerializedData.Entities;
+﻿using Terra.MonoViews.AI;
+using Terra.SerializedData.Entities;
 using UnityEngine;
 
 namespace Terra.MonoViews
@@ -30,11 +31,21 @@ namespace Terra.MonoViews
         {
             Initialized = true;
             _entityMonoView.OnInitialize -= Initialize;
+            _entityMonoView.OnAttacked += OnAttacked;
         }
 
         protected virtual void OnDestroy()
         {
-            _entityMonoView.OnInitialize -= Initialize;
+            if (_entityMonoView != null)
+            {
+                _entityMonoView.OnInitialize -= Initialize;
+                _entityMonoView.OnAttacked -= OnAttacked;
+            }
+        }
+
+        protected virtual void OnAttacked(AttackDef attackDef)
+        {
+            
         }
     }
 }

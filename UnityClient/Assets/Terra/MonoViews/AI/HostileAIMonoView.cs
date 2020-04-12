@@ -6,93 +6,120 @@ using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
 using UnityEngine;
 
-public class HostileAIMonoView : AbstractTerraMonoComponent
+namespace Terra.MonoViews.AI
 {
-    private enum State
+    public class HostileAIMonoView : AbstractTerraMonoComponent
     {
-        Tracking,
-        Idle,
-        Attack
-    }
-    
-    [SerializeField]
-    private TerraEntityColliderMonoView _terraEntityColliderMonoView;
+        private enum State
+        {
+            Tracking,
+            Idle,
+            Attack
+        }
 
-    [SerializeField]
-    private Transform _attackColliderTransform;
-    
-    [SerializeField]
-    private Animator _animator;
-    
-    private State _state;
-    private TerraEntityMonoView _attacking;
-    
-    // Start is called before the first frame update
-    protected override void Initialize(RuntimeTerraEntity Entity)
-    {
-        base.Initialize(Entity);
-        
-        _attackColliderTransform.localScale = new Vector3(
-            Entity.EntityTypeData.AttackRange,
-            Entity.EntityTypeData.AttackRange,
-            Entity.EntityTypeData.AttackRange
+        [SerializeField] private TerraEntityColliderMonoView _terraEntityColliderMonoView;
+        [SerializeField] private TerraEntityColliderMonoView _attackEntityCollider;
+        [SerializeField] private Transform _attackColliderTransform;
+        [SerializeField] private float _manuelTriggerEventTime;
+        [SerializeField] private float _attackForceMagnitude = 2;
+        [SerializeField] private float _attackForceVertical = 5;
+
+        [SerializeField] private Animator _animator;
+
+        private State _state;
+        private TerraEntityMonoView _attacking;
+        private float _startOfAttackPhase;
+        private bool _hasAttacked;
+
+        // Start is called before the first frame update
+        protected override void Initialize(RuntimeTerraEntity Entity)
+        {
+            base.Initialize(Entity);
+
+            _attackColliderTransform.localScale = new Vector3(
+                Entity.EntityTypeData.AttackRange,
+                Entity.EntityTypeData.AttackRange,
+                Entity.EntityTypeData.AttackRange
             );
 
-        _state = State.Idle;
-    }
+            _state = State.Idle;
+        }
 
-    private void Update()
-    {
-        if (Initialized)
+        private void Update()
         {
-            switch (_state)
+            if (Initialized)
             {
-                case State.Tracking:
+                switch (_state)
                 {
-                    Update_Tracking();
-                    break;
-                }
-                case State.Idle:
-                {
-                    Update_Idle();
-                    break;
-                }
-                case State.Attack:
-                {
-                    Update_Attack();
-                    break;
+                    case State.Tracking:
+                    {
+                        Update_Tracking();
+                        break;
+                    }
+                    case State.Idle:
+                    {
+                        Update_Idle();
+                        break;
+                    }
+                    case State.Attack:
+                    {
+                        Update_Attack();
+                        break;
+                    }
                 }
             }
         }
-    }
 
-    private void Update_Tracking()
-    {
-        
-    }
-    
-    private void Update_Idle()
-    {
-        foreach (TerraEntityMonoView entityMonoView in _terraEntityColliderMonoView.CollidingWith)
+        private void Update_Tracking()
         {
-            if (entityMonoView.Entity.EntityTypeData.Labels.Contains(Entity.EntityTypeData.AggroLabel))
+
+        }
+
+        private void Update_Idle()
+        {
+            _startOfAttackPhase = Time.time;
+            _hasAttacked = false;
+            
+            foreach (TerraEntityMonoView entityMonoView in _terraEntityColliderMonoView.CollidingWith)
             {
-                _attacking = entityMonoView;
-                _state = State.Attack;
-                _animator.Play("Bite");
+                if (entityMonoView.Entity.EntityTypeData.Labels.Contains(Entity.EntityTypeData.AggroLabel))
+                {
+                    _attacking = entityMonoView;
+                    _state = State.Attack;
+                    _animator.Play("Bite");
+                }
             }
         }
-    }
-    
-    private void Update_Attack()
-    {
-       if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || _attacking == null)
-       {
-           _state = State.Idle;
+
+        private void Update_Attack()
+        {
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || _attacking == null)
+            {
+                _state = State.Idle;
+            }
+            else
+            {
+                transform.LookAt(_attacking.transform);
+
+                if (!_hasAttacked && Time.time > _startOfAttackPhase + _manuelTriggerEventTime)
+                {
+                    Vector3 force = (transform.rotation * Vector3.forward) * _attackForceMagnitude;
+                    force.y = _attackForceVertical;
+                    foreach (TerraEntityMonoView entityMonoView in _attackEntityCollider.CollidingWith)
+                    {
+                        if (entityMonoView.Entity.EntityTypeData.Labels.Contains(Entity.EntityTypeData.AggroLabel))
+                        {
+                            entityMonoView.Attack(new AttackDef(
+                                Entity.EntityTypeData.AttackDamage,
+                                (transform.rotation * Vector3.forward) * _attackForceMagnitude,
+                                Entity
+                                ));
+                        }
+                    }
+                    
+                    _hasAttacked = true;
+                }
+            }
         }
-       else
-       {
-           transform.LookAt(_attacking.transform);
-       }
     }
 }
