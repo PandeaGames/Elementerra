@@ -52,6 +52,18 @@ namespace Terra.SerializedData.GameData
         [SerializeField]
         private InventoryItemDataSO _inventoryItemDataSO;
         public InventoryItemDataSO InventoryItemDataSO => _inventoryItemDataSO;
+        
+        [SerializeField]
+        private string[] _labels;
+        public string[] Labels => _labels;
+        
+        [SerializeField]
+        private string _aggroLabel;
+        public string AggroLabel => _aggroLabel;
+        
+        [SerializeField]
+        private float _attackRange;
+        public float AttackRange => _attackRange;
 
         public bool IsPlantable => !string.IsNullOrEmpty(PlantableEntityId);
         public bool IsSpawnable => !string.IsNullOrEmpty(SpawnableEntityId);

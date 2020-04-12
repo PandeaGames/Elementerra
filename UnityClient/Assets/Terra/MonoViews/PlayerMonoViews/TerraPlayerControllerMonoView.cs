@@ -28,26 +28,14 @@ namespace Terra.MonoViews
         {
             _collidingWith = new List<TerraEntityMonoView>();
             _contextUIModel = Game.Instance.GetViewModel<WorldContextViewModel>(0);
-            _terraEntityColliderMonoView.OnEntityTriggerEnter += TerraEntityColliderMonoViewOnEntityTriggerEnter;
-            _terraEntityColliderMonoView.OnEntityTriggerExit += TerraEntityColliderMonoViewOnEntityTriggerExit;
             _playerStateViewModel = Game.Instance.GetViewModel<PlayerStateViewModel>(0);
             _terraEntitiesViewModel = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
-        }
-        
-        private void TerraEntityColliderMonoViewOnEntityTriggerEnter(TerraEntityMonoView obj)
-        {
-            _collidingWith.Add(obj);
-        }
-
-        private void TerraEntityColliderMonoViewOnEntityTriggerExit(TerraEntityMonoView obj)
-        {
-            _collidingWith.Remove(obj);
         }
 
         private void Update()
         {
             _currentEntityMonoView = null;
-            foreach (TerraEntityMonoView entityMonoView in _collidingWith)
+            foreach (TerraEntityMonoView entityMonoView in _terraEntityColliderMonoView.CollidingWith)
             {
                 if (entityMonoView == null || 
                     (!entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp) && 

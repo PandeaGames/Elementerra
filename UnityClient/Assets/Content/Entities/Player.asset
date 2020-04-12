@@ -15,4 +15,21 @@ MonoBehaviour:
   _data:
     component: 6
     _entityId: Player
+    _plantableEntityId: 
+    _spawnableEntityId: 
     _debugImage: {fileID: 21300000, guid: efe2951577ffd5044bf54935f5832736, type: 3}
+    _grassPotentialReductionRadius: 0
+    _grassPotentialReductionCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _ripeTimeSeconds: 0
+    _lifespanSeconds: 0
+    _entityToSpawnAfterDeath: {fileID: 0}
+    _inventoryItemDataSO: {fileID: 0}
+    _labels:
+    - Player
+    _aggroLabel: 
+    _attackRange: 0

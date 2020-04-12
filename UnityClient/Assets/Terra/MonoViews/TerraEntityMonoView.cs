@@ -7,6 +7,8 @@ namespace Terra.MonoViews
 {
     public class TerraEntityMonoView : MonoBehaviour
     {
+        public event Action<TerraEntityMonoView> OnViewDestroyed;
+        
         public event Action<RuntimeTerraEntity> OnInitialize;
         private TerraEntitiesViewModel _viewModel;
         public bool IsInitialized { get; private set; }
@@ -18,6 +20,11 @@ namespace Terra.MonoViews
             IsInitialized = true;
             Entity = entity;
             OnInitialize?.Invoke(entity);
+        }
+
+        private void OnDestroy()
+        {
+            OnViewDestroyed?.Invoke(this);
         }
     }
 }

@@ -30,3 +30,7 @@ MonoBehaviour:
     _entityToSpawnAfterDeath: {fileID: 11400000, guid: 116890aa065d01c49a53329a6409a4ce,
       type: 2}
     _inventoryItemDataSO: {fileID: 0}
+    _labels:
+    - Player
+    _aggroLabel: Hostile
+    _attackRange: 0

@@ -3,16 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/PeaShooter_Green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Entities/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Entities/Player.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/FollowPlayerAIMonoView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/FollowPlayerAIMonoView.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +34,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/FollowPlayerAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../JunkyardDogs/Unity/Assets/client/scripts/Runtime/Gameplay/Junkyard/JunkyardFogOfWar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,8 +82,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugStatefulMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FollowPlayerAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -239,10 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataSerializer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataTypeSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryTypesSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItemDataType.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryDataType.cs" />
@@ -257,7 +257,6 @@
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" />
@@ -287,9 +286,14 @@
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/FollowPlayerAIMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/TargetableMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs" />
       </list>
     </option>
   </component>
@@ -388,6 +392,7 @@
       <workItem from="1586016624407" duration="23023000" />
       <workItem from="1586269283495" duration="1989000" />
       <workItem from="1586309895278" duration="4370000" />
+      <workItem from="1586658864247" duration="4509000" />
     </task>
     <servers />
   </component>

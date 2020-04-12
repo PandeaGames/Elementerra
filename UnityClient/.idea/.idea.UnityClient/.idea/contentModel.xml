@@ -858,7 +858,6 @@
           <e p="Editor" t="Include">
             <e p="TerraCheatWindow.cs" t="Include" />
           </e>
-          <e p="FollowPlayerAIMonoView.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="IInventoryDataType.cs" t="Include" />
             <e p="IInventoryItem.cs" t="Include" />
@@ -886,6 +885,10 @@
           <e p="ITerraWorld.cs" t="Include" />
           <e p="MonoViews" t="Include">
             <e p="AbstractTerraMonoComponent.cs" t="Include" />
+            <e p="AI" t="Include">
+              <e p="FollowPlayerAIMonoView.cs" t="Include" />
+              <e p="HostileAIMonoView.cs" t="Include" />
+            </e>
             <e p="DebugMonoViews" t="Include">
               <e p="EntityListMonoView.cs" t="Include" />
               <e p="EntityMonoView.cs" t="Include" />
