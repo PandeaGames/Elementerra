@@ -31,6 +31,7 @@ namespace Terra.MonoViews
 
         public void Attack(AttackDef attackDef)
         {
+            Entity.DoDamage(attackDef.Damage);
             OnAttacked?.Invoke(attackDef);
         }
     }

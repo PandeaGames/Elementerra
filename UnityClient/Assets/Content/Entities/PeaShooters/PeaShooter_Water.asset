@@ -34,3 +34,4 @@ MonoBehaviour:
     - Player
     _aggroLabel: 
     _attackRange: 0
+    _attackDamage: 0

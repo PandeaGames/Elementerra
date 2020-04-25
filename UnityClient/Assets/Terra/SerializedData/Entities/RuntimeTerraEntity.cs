@@ -34,6 +34,7 @@ namespace Terra.SerializedData.Entities
         public TerraGridPositionComponent GridPosition;
         public TerraEntityTypeData EntityTypeData { get; private set; }
         private TerraWorldStateViewModel _worldStateViewModel;
+        private AssembledEntity _assembledEntity;
 
         public override int GetHashCode()
         {
@@ -47,6 +48,7 @@ namespace Terra.SerializedData.Entities
 
         public RuntimeTerraEntity(AssembledEntity entity, TerraDBService db)
         {
+            _assembledEntity = entity;
             entity.TerraPosition3D.InstanceId = entity.TerraEntity.InstanceId;
             entity.TerraGridPosition.InstanceId = entity.TerraEntity.InstanceId;
             Position = new TerraPosition3DComponent(db,entity.TerraPosition3D);
@@ -117,6 +119,16 @@ namespace Terra.SerializedData.Entities
                 newEntity.Position.Set(Position.Data);
                 Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).AddEntity(newEntity);
             }
+        }
+
+        public bool IsDead()
+        {
+            return _assembledEntity.TerraLivingEntity.HP > EntityTypeData.TotalHealth;
+        }
+
+        public void DoDamage(int doDamage)
+        {
+            _assembledEntity.TerraLivingEntity.HP += doDamage;
         }
     }
     

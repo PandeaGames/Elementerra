@@ -33,5 +33,5 @@ MonoBehaviour:
     _labels:
     - Player
     _aggroLabel: Hostile
-    _attackRange: 0
-    _attackDamage: 0
+    _attackRange: 4
+    _attackDamage: 10

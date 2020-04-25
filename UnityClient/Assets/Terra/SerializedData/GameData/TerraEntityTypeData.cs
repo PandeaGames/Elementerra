@@ -18,6 +18,10 @@ namespace Terra.SerializedData.GameData
         public string EntityID => _entityId;
         
         [SerializeField]
+        private int _totalHealth;
+        public int TotalHealth => _totalHealth;
+        
+        [SerializeField]
         private string _plantableEntityId;
         public string PlantableEntityId => _plantableEntityId;
         

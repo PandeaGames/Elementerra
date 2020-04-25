@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Terra.MonoViews;
+﻿using System.Linq;
 using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
 using UnityEngine;
@@ -14,12 +11,12 @@ namespace Terra.MonoViews.AI
         {
             Tracking,
             Idle,
-            Attack
+            Attack,
+            Death
         }
 
         [SerializeField] private TerraEntityColliderMonoView _terraEntityColliderMonoView;
         [SerializeField] private TerraEntityColliderMonoView _attackEntityCollider;
-        [SerializeField] private Transform _attackColliderTransform;
         [SerializeField] private float _manuelTriggerEventTime;
         [SerializeField] private float _attackForceMagnitude = 2;
         [SerializeField] private float _attackForceVertical = 5;
@@ -35,18 +32,17 @@ namespace Terra.MonoViews.AI
         protected override void Initialize(RuntimeTerraEntity Entity)
         {
             base.Initialize(Entity);
-
-            _attackColliderTransform.localScale = new Vector3(
-                Entity.EntityTypeData.AttackRange,
-                Entity.EntityTypeData.AttackRange,
-                Entity.EntityTypeData.AttackRange
-            );
-
             _state = State.Idle;
         }
 
         private void Update()
         {
+            if (_state != State.Death && Entity.IsDead())
+            {
+                _state = State.Death;
+                _animator.Play("Bite");
+            }
+            
             if (Initialized)
             {
                 switch (_state)
@@ -66,10 +62,20 @@ namespace Terra.MonoViews.AI
                         Update_Attack();
                         break;
                     }
+                    case State.Death:
+                    {
+                        Update_Death();
+                        break;
+                    }
                 }
             }
         }
 
+        private void Update_Death()
+        {
+
+        }
+        
         private void Update_Tracking()
         {
 
