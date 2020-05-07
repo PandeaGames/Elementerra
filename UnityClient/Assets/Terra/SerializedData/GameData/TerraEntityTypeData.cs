@@ -58,7 +58,7 @@ namespace Terra.SerializedData.GameData
         public InventoryItemDataSO InventoryItemDataSO => _inventoryItemDataSO;
         
         [SerializeField]
-        private string[] _labels;
+        private string[] _labels = new string[]{};
         public string[] Labels => _labels;
         
         [SerializeField]
@@ -72,6 +72,10 @@ namespace Terra.SerializedData.GameData
         [SerializeField]
         private int _attackDamage;
         public int AttackDamage => _attackDamage;
+        
+        [SerializeField]
+        private bool _isSlavable;
+        public bool IsSlavable => _isSlavable;
         
         public bool IsPlantable => !string.IsNullOrEmpty(PlantableEntityId);
         public bool IsSpawnable => !string.IsNullOrEmpty(SpawnableEntityId);

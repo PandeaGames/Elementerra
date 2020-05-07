@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using PandeaGames;
 using PandeaGames.Data;
+using Terra.MonoViews.AI;
 using Terra.SerializedData.GameData;
 using Terra.Services;
 using Terra.ViewModels;
 using Terra.Views.ViewDataStreamers;
+using UnityEngine;
 
 namespace Terra.SerializedData.Entities
 {
@@ -32,8 +34,10 @@ namespace Terra.SerializedData.Entities
 
         public TerraPosition3DComponent Position;
         public TerraGridPositionComponent GridPosition;
+        public TerraLivingEntityComponent TerraLivingEntity;
         public TerraEntityTypeData EntityTypeData { get; private set; }
         private TerraWorldStateViewModel _worldStateViewModel;
+        private PlayerEntitySlaveViewModel _slaveViewModel;
         private AssembledEntity _assembledEntity;
 
         public override int GetHashCode()
@@ -53,6 +57,9 @@ namespace Terra.SerializedData.Entities
             entity.TerraGridPosition.InstanceId = entity.TerraEntity.InstanceId;
             Position = new TerraPosition3DComponent(db,entity.TerraPosition3D);
             GridPosition = new TerraGridPositionComponent(db, entity.TerraGridPosition);
+            TerraLivingEntity = new TerraLivingEntityComponent(db, entity.TerraLivingEntity);
+
+            TerraLivingEntity.Data.InstanceId = entity.TerraEntity.InstanceId;
             
             Entity = entity.TerraEntity;
             
@@ -62,6 +69,7 @@ namespace Terra.SerializedData.Entities
             EntityTypeData = TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(this);
             DB = db;
             _worldStateViewModel = Game.Instance.GetViewModel<TerraWorldStateViewModel>(0);
+            _slaveViewModel = Game.Instance.GetViewModel<PlayerEntitySlaveViewModel>(0);
         }
 
         public int InstanceId
@@ -111,25 +119,42 @@ namespace Terra.SerializedData.Entities
 
         public void ExpireEntity()
         {
+            if (_slaveViewModel.CurrentSlave == this)
+            {
+                _slaveViewModel.ClearSlave();
+            }
+            
             Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).RemoveEntity(this);
-
+            TerraViewModel tViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
             if (EntityTypeData.EntityToSpawnAfterDeath != null)
             {
                 RuntimeTerraEntity newEntity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(EntityTypeData.EntityToSpawnAfterDeath.Data);
-                newEntity.Position.Set(Position.Data);
+                if (EntityTypeData.Component.HasFlag(EntityComponent.GridPosition))
+                {
+                    newEntity.Position.Set(tViewModel.Geometry[
+                        tViewModel.Chunk.WorldToLocal(GridPosition.Data)
+                    ]);
+                }
+                else
+                {
+                    newEntity.Position.Set(Position.Data);
+                }
+                
                 Game.Instance.GetViewModel<TerraEntitiesViewModel>(0).AddEntity(newEntity);
             }
         }
 
         public bool IsDead()
         {
-            return _assembledEntity.TerraLivingEntity.HP > EntityTypeData.TotalHealth;
+            return TerraLivingEntity.Data.HP > EntityTypeData.TotalHealth;
         }
 
-        public void DoDamage(int doDamage)
+        public void Attack(AttackDef def)
         {
-            _assembledEntity.TerraLivingEntity.HP += doDamage;
+            TerraLivingEntity.Attack(def);
         }
+
+        public bool IsSlavable => EntityTypeData.IsSlavable;
     }
     
     
@@ -167,7 +192,10 @@ namespace Terra.SerializedData.Entities
         };
 
         public string Table => TerraEntitySerializer.Table;
-        public IDBColumn[] Columns => TerraEntitySerializer.Columns.Concat(TerraPosition3DSerializer.Columns).Concat(TerraGridPositionSerializer.Columns).ToArray();
+        public IDBColumn[] Columns => 
+            TerraEntitySerializer.Columns.Concat(TerraPosition3DSerializer.Columns).
+                Concat(TerraGridPositionSerializer.Columns).
+                Concat(TerraLivingEntitySerializer.Columns).ToArray();
 
         public int PrimaryKeyColumnIndex => TerraEntitySerializer.PrimaryKeyColumnIndex;
         
@@ -175,7 +203,7 @@ namespace Terra.SerializedData.Entities
         {
             return new AssembledEntity()
             {
-                TerraEntity = new TerraEntity(), TerraPosition3D = new TerraPosition3D(), TerraGridPosition = new TerraGridPosition()
+                TerraEntity = new TerraEntity(), TerraPosition3D = new TerraPosition3D(), TerraGridPosition = new TerraGridPosition(), TerraLivingEntity = new TerraLivingEntity()
             };
         }
 

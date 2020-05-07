@@ -26,9 +26,15 @@ namespace Terra.WorldContextUI
         {
             switch (_contextUIModel.CurrentContext)
             {
+                case WorldContextViewModel.Context.Enslave:
+                {
+                    _text.text = "[E] Enslave";
+                    _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
+                    break;
+                }
                 case WorldContextViewModel.Context.PutInInventory:
                 {
-                    _text.text = "E";
+                    _text.text = "[E] Pickup";
                     _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
                     break;
                 }
@@ -39,13 +45,12 @@ namespace Terra.WorldContextUI
                 }
                 case WorldContextViewModel.Context.Holding:
                 {
-                    _text.text = "Space";
-                   
+                    _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 0, ref yVelocity, smoothTime);
                     break;
                 }
                 case WorldContextViewModel.Context.PickUp:
                 {
-                    _text.text = "Space";
+                    _text.text = "[Space] Pickup";
                     _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
                     break;
                 }

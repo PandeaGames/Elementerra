@@ -11,7 +11,19 @@ namespace Terra.MonoViews.Utility
         public event Action<TerraEntityMonoView> OnEntityTriggerExit;
         
         private List<TerraEntityMonoView> _collidingWith;
-        public IEnumerable<TerraEntityMonoView> CollidingWith => _collidingWith;
+        public IEnumerable<TerraEntityMonoView> CollidingWith
+        {
+            get
+            {
+                foreach (TerraEntityMonoView mv in _collidingWith)
+                {
+                    if (mv != null)
+                    {
+                        yield return mv;
+                    }
+                }
+            }
+        }
 
         private void Start()
         {

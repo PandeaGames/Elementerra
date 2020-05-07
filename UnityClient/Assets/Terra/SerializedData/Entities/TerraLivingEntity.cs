@@ -7,9 +7,15 @@ namespace Terra.SerializedData.Entities
     [Serializable]
     public class TerraLivingEntity : IDBSerializable
     {
+        public static TerraDBService.DBPrimaryKeyWhereClause<TerraLivingEntity, TerraLivingEntitySerializer> WherePrimaryKey
+        {
+            get;
+        } = new TerraDBService.DBPrimaryKeyWhereClause<TerraLivingEntity, TerraLivingEntitySerializer>(TerraLivingEntitySerializer.Instance);
+        
         public int InstanceId;
         public int HP;
         public int State;
+        
     }
 
     public class TerraLivingEntitySerializer : Singleton<TerraLivingEntitySerializer>, IDBSerializer<TerraLivingEntity>

@@ -944,6 +944,7 @@
               <e p="TerraGridPosition.cs" t="Include" />
               <e p="TerraGridPositionComponent.cs" t="Include" />
               <e p="TerraLivingEntity.cs" t="Include" />
+              <e p="TerraLivingEntityComponent.cs" t="Include" />
               <e p="TerraPosition3D.cs" t="Include" />
               <e p="TerraPosition3DComponent.cs" t="Include" />
             </e>
@@ -984,6 +985,8 @@
             <e p="AbstractTerraEntityViewModel.cs" t="Include" />
             <e p="ITerraEntityDataController.cs" t="Include" />
             <e p="ITerraEntityViewModel.cs" t="Include" />
+            <e p="PlayerAttackTargetViewModel.cs" t="Include" />
+            <e p="PlayerEntitySlaveViewModel.cs" t="Include" />
             <e p="PlayerStateViewModel.cs" t="Include" />
             <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />

@@ -50,12 +50,14 @@ namespace Terra.Services
             AssembledEntity[] entities = _db.Get<AssembledEntitySerializer, AssembledEntity>(
                 serializer,
                 "", 
-                $"SELECT {GetColumnSelectors(AssembledEntitySerializer.TerraEntitySerializer)},{GetColumnSelectors(AssembledEntitySerializer.TerraPosition3DSerializer)},{GetColumnSelectors(AssembledEntitySerializer.TerraGridPositionSerializer)} " +
+                $"SELECT {GetColumnSelectors(AssembledEntitySerializer.TerraEntitySerializer)},{GetColumnSelectors(AssembledEntitySerializer.TerraPosition3DSerializer)},{GetColumnSelectors(AssembledEntitySerializer.TerraGridPositionSerializer)},{GetColumnSelectors(AssembledEntitySerializer.TerraLivingEntitySerializer)} " +
                 $"FROM {AssembledEntitySerializer.TerraEntitySerializer.Table} "+
                 $"LEFT OUTER JOIN {AssembledEntitySerializer.TerraPosition3DSerializer.Table} " +
                 $"ON {AssembledEntitySerializer.TerraEntitySerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID} = {AssembledEntitySerializer.TerraPosition3DSerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID} " +
                 $"LEFT OUTER JOIN {AssembledEntitySerializer.TerraGridPositionSerializer.Table} " +
-                $"ON {AssembledEntitySerializer.TerraEntitySerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID} = {AssembledEntitySerializer.TerraGridPositionSerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID}");
+                $"ON {AssembledEntitySerializer.TerraEntitySerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID} = {AssembledEntitySerializer.TerraGridPositionSerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID} " +
+                $"LEFT OUTER JOIN {AssembledEntitySerializer.TerraLivingEntitySerializer.Table} " +
+                $"ON {AssembledEntitySerializer.TerraEntitySerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID} = {AssembledEntitySerializer.TerraLivingEntitySerializer.Table}.{TerraEntitySerializer.COLUMN_INSTNACE_ID}");
             
             RuntimeTerraEntity[] runtimeEntities = new RuntimeTerraEntity[entities.Length];
 

@@ -1,6 +1,8 @@
 ﻿using System.Linq;
+using PandeaGames;
 using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
+using Terra.ViewModels;
 using UnityEngine;
 
 namespace Terra.MonoViews.AI
@@ -18,6 +20,7 @@ namespace Terra.MonoViews.AI
         [SerializeField] private TerraEntityColliderMonoView _terraEntityColliderMonoView;
         [SerializeField] private TerraEntityColliderMonoView _attackEntityCollider;
         [SerializeField] private float _manuelTriggerEventTime;
+        [SerializeField] private float _manuelDeathTriggerEventTimeSeconds;
         [SerializeField] private float _attackForceMagnitude = 2;
         [SerializeField] private float _attackForceVertical = 5;
 
@@ -27,6 +30,7 @@ namespace Terra.MonoViews.AI
         private TerraEntityMonoView _attacking;
         private float _startOfAttackPhase;
         private bool _hasAttacked;
+        private float _deathStartTime;
 
         // Start is called before the first frame update
         protected override void Initialize(RuntimeTerraEntity Entity)
@@ -39,8 +43,9 @@ namespace Terra.MonoViews.AI
         {
             if (_state != State.Death && Entity.IsDead())
             {
+                _deathStartTime = Time.time;
                 _state = State.Death;
-                _animator.Play("Bite");
+                _animator.Play("Die");
             }
             
             if (Initialized)
@@ -73,7 +78,10 @@ namespace Terra.MonoViews.AI
 
         private void Update_Death()
         {
-
+            if (Time.time > _manuelDeathTriggerEventTimeSeconds + _deathStartTime)
+            {
+                Entity.ExpireEntity();
+            }
         }
         
         private void Update_Tracking()

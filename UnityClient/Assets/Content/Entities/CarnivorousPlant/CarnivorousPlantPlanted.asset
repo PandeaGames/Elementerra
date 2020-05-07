@@ -15,6 +15,7 @@ MonoBehaviour:
   _data:
     component: 16
     _entityId: CarnivorousPlantPlanted
+    _totalHealth: 40
     _plantableEntityId: 
     _spawnableEntityId: 
     _debugImage: {fileID: 21300000, guid: 03b0c4d0af36e2d468af2d68c4e4cc60, type: 3}
@@ -27,9 +28,11 @@ MonoBehaviour:
       m_RotationOrder: 4
     _ripeTimeSeconds: 0
     _lifespanSeconds: 0
-    _entityToSpawnAfterDeath: {fileID: 0}
+    _entityToSpawnAfterDeath: {fileID: 11400000, guid: 116890aa065d01c49a53329a6409a4ce,
+      type: 2}
     _inventoryItemDataSO: {fileID: 0}
     _labels:
     - Hostile
     _aggroLabel: Player
     _attackRange: 4
+    _attackDamage: 0

@@ -23,9 +23,11 @@ namespace Terra.MonoViews
         private TerraEntityMonoView _currentEntityMonoView;
         private PlayerStateViewModel _playerStateViewModel;
         private TerraEntitiesViewModel _terraEntitiesViewModel;
+        private PlayerEntitySlaveViewModel _playerEntitySlaveViewModel;
         
         private void Start()
         {
+            _playerEntitySlaveViewModel = Game.Instance.GetViewModel<PlayerEntitySlaveViewModel>(0);
             _collidingWith = new List<TerraEntityMonoView>();
             _contextUIModel = Game.Instance.GetViewModel<WorldContextViewModel>(0);
             _playerStateViewModel = Game.Instance.GetViewModel<PlayerStateViewModel>(0);
@@ -37,11 +39,14 @@ namespace Terra.MonoViews
             _currentEntityMonoView = null;
             foreach (TerraEntityMonoView entityMonoView in _terraEntityColliderMonoView.CollidingWith)
             {
+                RuntimeTerraEntity entity = entityMonoView.Entity;
                 if (entityMonoView == null || 
-                    (!entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp) && 
-                     entityMonoView.Entity.EntityTypeData.InventoryItemDataSO == null &&
-                     !(entityMonoView.Entity.EntityTypeData.Component.HasFlag(EntityComponent.Harvestable) 
-                       && entityMonoView.Entity.IsRipe())))
+                    (entity.IsSlavable && _playerEntitySlaveViewModel.CurrentSlave == entity) ||
+                    (!entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp) && 
+                     entity.EntityTypeData.InventoryItemDataSO == null &&
+                     !entity.IsSlavable &&
+                     !(entity.EntityTypeData.Component.HasFlag(EntityComponent.Harvestable)
+                       && entity.IsRipe())))
                 {
                     continue;
                 }
@@ -61,7 +66,11 @@ namespace Terra.MonoViews
 
             if (_currentEntityMonoView)
             {
-                if (_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO != null)
+                if (_currentEntityMonoView.Entity.IsSlavable)
+                {
+                    _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.Enslave, _currentEntityMonoView.Entity);
+                }
+                else if (_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO != null)
                 {
                     _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.PutInInventory, _currentEntityMonoView.Entity);
                 }
@@ -81,12 +90,20 @@ namespace Terra.MonoViews
 
             switch (_contextUIModel.CurrentContext)
             {
+                case WorldContextViewModel.Context.Enslave:
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Game.Instance.GetViewModel<PlayerEntitySlaveViewModel>(0).SetSlave(_currentEntityMonoView.Entity);
+                    }
+                    
+                    break;
+                }
                 case WorldContextViewModel.Context.PutInInventory:
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         AddToInventory();
-                        
                     }
 
                     break;

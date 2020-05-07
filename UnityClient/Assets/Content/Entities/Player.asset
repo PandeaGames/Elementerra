@@ -15,6 +15,7 @@ MonoBehaviour:
   _data:
     component: 6
     _entityId: Player
+    _totalHealth: 50
     _plantableEntityId: 
     _spawnableEntityId: 
     _debugImage: {fileID: 21300000, guid: efe2951577ffd5044bf54935f5832736, type: 3}
@@ -33,3 +34,4 @@ MonoBehaviour:
     - Player
     _aggroLabel: 
     _attackRange: 0
+    _attackDamage: 0

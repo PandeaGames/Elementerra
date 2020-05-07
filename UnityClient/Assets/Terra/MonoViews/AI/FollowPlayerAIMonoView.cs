@@ -1,24 +1,29 @@
+using System;
 using PandeaGames;
-using Terra.MonoViews;
 using System.Linq;
 using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
 using Terra.ViewModels;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Terra.MonoViews.AI
 {
     public class FollowPlayerAIMonoView : AbstractTerraMonoComponent
     {
+        [Flags]
         private enum State
         {
-            Follow,
-            Idle, 
-            ProjectileAttack
+            Roaming = 0,
+            Follow = 1,
+            Idle = 2, 
+            ProjectileAttack = 3,
+            RoamingProjectileAttack = 4
         }
 
         private State _state;
         private PlayerStateViewModel _playerStateViewModel;
+        private PlayerEntitySlaveViewModel _playerEntitySlaveViewModel;
         private TerraViewModel _terraViewModel;
         private TerraEntityMonoView _attacking;
         private float _projectileStateStart;
@@ -65,9 +70,29 @@ namespace Terra.MonoViews.AI
         protected override void Initialize(RuntimeTerraEntity Entity)
         {
             base.Initialize(Entity);
+            _playerEntitySlaveViewModel = Game.Instance.GetViewModel<PlayerEntitySlaveViewModel>(0);
+            _playerEntitySlaveViewModel.OnSlaveChange += SlaveChange;
             Random.InitState(Entity.InstanceId);
             _finalDistanceFromPlayer =
                 Random.Range(_distanceFromPlayer, _distanceFromPlayer + _randomDistanceFromPlayer);
+            _state = (State) Entity.TerraLivingEntity.State;
+
+            if (_state == State.Idle || _state == State.ProjectileAttack || _state == State.Follow)
+            {
+                _playerEntitySlaveViewModel.SetSlave(Entity);
+            }
+        }
+
+        private void SlaveChange(RuntimeTerraEntity current, RuntimeTerraEntity updated)
+        {
+            if (current == Entity)
+            {
+                _state = State.Roaming;
+            }
+            else if(updated == Entity)
+            {
+                _state = State.Idle;
+            }
         }
 
         private void Update()
@@ -91,7 +116,19 @@ namespace Terra.MonoViews.AI
                         Update_ProjectileAttack();
                         break;
                     }
+                    case State.Roaming:
+                    {
+                        Update_Roaming();
+                        break;
+                    }
+                    case State.RoamingProjectileAttack:
+                    {
+                        Update_RoamingProjectileAttack();
+                        break;
+                    }
                 }
+                
+                Entity.TerraLivingEntity.State = (int) _state;
             }
         }
 
@@ -126,27 +163,48 @@ namespace Terra.MonoViews.AI
             }
         }
 
-        private void Update_Idle()
+        private void Update_Roaming()
         {
             if (!CheckForAttackStateTransition())
             {
-                if (_terraViewModel.PlayerEntity.transform != null)
-                {
-                    Transform playerTransform = _terraViewModel.PlayerEntity.transform;
-                    transform.LookAt(playerTransform);
-                    float distanceFromPlayer = Vector3.Distance(transform.position, playerTransform.position);
+                
+            }
+        }
 
-                    if (distanceFromPlayer - _distanceTrench > _finalDistanceFromPlayer)
-                    {
-                        _state = State.Follow;
-                        _animator.Play("Walk WO Root Motion");
-                    }
+        private void Update_Idle()
+        {
+            if (_terraViewModel.PlayerEntity.transform != null)
+            {
+                Transform playerTransform = _terraViewModel.PlayerEntity.transform;
+                transform.LookAt(playerTransform);
+                float distanceFromPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+                if (distanceFromPlayer - _distanceTrench > _finalDistanceFromPlayer)
+                {
+                    _state = State.Follow;
+                    _animator.Play("Walk WO Root Motion");
                 }
             }
         }
 
+        private void Update_RoamingProjectileAttack()
+        {
+            UpdateAttacking(State.Roaming);
+        }
+
         private void Update_ProjectileAttack()
         {
+            UpdateAttacking(State.Idle);
+        }
+
+        private void UpdateAttacking(State stateAfterAttackComplete)
+        {
+            if (_attacking == null)
+            {
+                _state = stateAfterAttackComplete;
+                return;
+            }
+            
             transform.LookAt(_attacking.transform);
             if (!_hasShotProjectile && _projectileStateStart + _attackAnimationTriggerSeconds < Time.time)
             {
@@ -163,7 +221,7 @@ namespace Terra.MonoViews.AI
 
             if (_projectileStateStart + _attackAnimationCompleteTriggerSeconds < Time.time)
             {
-                _state = State.Idle;
+                _state = stateAfterAttackComplete;
                 _animator.Play("Idle");
             }
         }
@@ -172,18 +230,28 @@ namespace Terra.MonoViews.AI
         {
             foreach (TerraEntityMonoView entityMonoView in _terraEntityColliderMonoView.CollidingWith)
             {
+                if (string.IsNullOrEmpty(Entity.EntityTypeData.AggroLabel))
+                {
+                    continue;
+                }
+                
                 if (entityMonoView.Entity.EntityTypeData.Labels.Contains(Entity.EntityTypeData.AggroLabel))
                 {
-                    _projectileStateStart = Time.time;
-                    _hasShotProjectile = false;
-                    _attacking = entityMonoView;
-                    _state = State.ProjectileAttack;
-                    _animator.Play("Projectile Attack");
+                    Attack(entityMonoView, State.ProjectileAttack);
                     return true;
                 }
             }
 
             return false;
+        }
+
+        private void Attack(TerraEntityMonoView entityMonoView, State attackState)
+        {
+            _projectileStateStart = Time.time;
+            _hasShotProjectile = false;
+            _attacking = entityMonoView;
+            _state = attackState;
+            _animator.Play("Projectile Attack");
         }
     }
 }

@@ -15,6 +15,7 @@ MonoBehaviour:
   _data:
     component: 6
     _entityId: PeaShooter_Green
+    _totalHealth: 0
     _plantableEntityId: 
     _spawnableEntityId: 
     _debugImage: {fileID: 21300000, guid: 03b0c4d0af36e2d468af2d68c4e4cc60, type: 3}
@@ -35,3 +36,4 @@ MonoBehaviour:
     _aggroLabel: Hostile
     _attackRange: 4
     _attackDamage: 10
+    _isSlavable: 1
