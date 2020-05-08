@@ -105,6 +105,10 @@ namespace Terra.MonoViews
                     {
                         AddToInventory();
                     }
+                    else if (Input.GetKeyDown(KeyCode.Q))
+                    {
+                        HoldInHand();
+                    }
 
                     break;
                 }
@@ -138,12 +142,21 @@ namespace Terra.MonoViews
                         if (Input.GetKeyDown(KeyCode.Space))
                         {
                             CreateHoldingEntity(1.2f);
-                            _playerStateViewModel.SetHoldingEntityId(string.Empty);
+                            _playerStateViewModel.ClearHoldingEntityId();
                         }
                         else  if (Input.GetKeyDown(KeyCode.E))
                         {
                             PlantHoldingEntity();
-                            _playerStateViewModel.SetHoldingEntityId(string.Empty);
+                            _playerStateViewModel.ClearHoldingEntityId();
+                        }
+                    }
+                    
+                    if (_playerStateViewModel.IsHoldingItemInHand)
+                    {
+                        if (Input.GetKeyDown(KeyCode.Q))
+                        {
+                            PlantHoldingEntity();
+                            _playerStateViewModel.ClearHoldingEntityId();
                         }
                     }
 
@@ -152,31 +165,32 @@ namespace Terra.MonoViews
             }
         }
 
-        private void CreateHoldingEntity(float offset)
-        {
-            TerraEntityTypeData entityType =
-                TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(_playerStateViewModel
-                    .State.HoldingEntityID);
-            RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(entityType);
-            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
-
-            if (entityType.Component.HasFlag(EntityComponent.Position))
-            {
-                entity.Position.Set(
-                    new Vector3(
-                        transform.position.x + transform.forward.x * offset,
-                        transform.position.y + 1,
-                        transform.position.z + transform.forward.z * offset));
-            }
-            
-            vm.AddEntity(entity);
-        }
-
         private void AddToInventory()
         {
             TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
             vm.RemoveEntity(_currentEntityMonoView.Entity);
             Game.Instance.GetService<InventoryService>().AddItem(TerraGameResources.PLAYER_INSTANCE_ID,_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO.Data );
+        }
+        
+        private void HoldInHand()
+        {
+            PlayerStateViewModel playerViewModel = Game.Instance.GetViewModel<PlayerStateViewModel>(0);
+            
+            if (playerViewModel.IsHoldingItemInHand)
+            {
+                CreateEntity(1.2f, playerViewModel.State.HoldingInHandEntityId, playerViewModel.State.HoldingInHandEntityInstanceId);
+            }
+            
+            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+            vm.RemoveEntity(_currentEntityMonoView.Entity);
+            Game.Instance.GetViewModel<PlayerStateViewModel>(0).SetHoldingInHandEntityId(_currentEntityMonoView.Entity);
+        }
+
+        private void DropItemInHand()
+        {
+            PlayerStateViewModel playerViewModel = Game.Instance.GetViewModel<PlayerStateViewModel>(0);
+            CreateEntity(1.2f, playerViewModel.State.HoldingInHandEntityId, playerViewModel.State.HoldingInHandEntityInstanceId);
+            playerViewModel.ClearHoldingInHandEntityId();
         }
 
         private void HarvestEntity(float offset)
@@ -210,6 +224,34 @@ namespace Terra.MonoViews
             TerraViewModel gmViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
             TerraPosition3DComponent positionComponent = gmViewModel.PlayerEntity.Entity.Position;
             entity.GridPosition.Set(new TerraVector((int)positionComponent.Data.x, (int)positionComponent.Data.z));
+            
+            vm.AddEntity(entity);
+        }
+
+        private void CreateHoldingEntity(float offset)
+        {
+            CreateEntity(
+                offset, 
+                _playerStateViewModel.State.HoldingEntityID, 
+                _playerStateViewModel.State.HoldingInstanceID);
+        }
+        
+        private void CreateEntity(float offset, string entityTypeString, int instanceId)
+        {
+            TerraEntityTypeData entityType =
+                TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(entityTypeString);
+            RuntimeTerraEntity entity = Game.Instance.GetService<TerraEntitesService>().CreateEntity(entityType);
+            entity.InstanceId = instanceId;
+            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+
+            if (entityType.Component.HasFlag(EntityComponent.Position))
+            {
+                entity.Position.Set(
+                    new Vector3(
+                        transform.position.x + transform.forward.x * offset,
+                        transform.position.y + 1,
+                        transform.position.z + transform.forward.z * offset));
+            }
             
             vm.AddEntity(entity);
         }

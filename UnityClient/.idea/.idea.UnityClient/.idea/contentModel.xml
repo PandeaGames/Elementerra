@@ -93,6 +93,12 @@
             <e p="FreeFlyCamera.cs" t="Include" />
           </e>
         </e>
+        <e p="FX_Simple_Shining_Pack1" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="script" t="Include">
+            <e p="DemoController.cs" t="Include" />
+          </e>
+        </e>
         <e p="Grass.cs" t="Include" />
         <e p="GrassShader" t="Include">
           <e p="Editor" t="Include">
@@ -744,7 +750,6 @@
             <e p="ObjectResetter.cs" t="Include" />
             <e p="ParticleSystemDestroyer.cs" t="Include" />
             <e p="PlatformSpecificContent.cs" t="Include" />
-            <e p="SimpleActivatorMenu.cs" t="Include" />
             <e p="SimpleMouseRotator.cs" t="Include" />
             <e p="SmoothFollow.cs" t="Include" />
             <e p="TimedObjectActivator.cs" t="Include" />
@@ -1054,6 +1059,8 @@
               <e p="TerraDebugWindowMonoView.cs" t="Include" />
               <e p="TerraPlayerEntityDebugMonoView.cs" t="Include" />
             </e>
+            <e p="InventoryWorldRendererMonoView.cs" t="Include" />
+            <e p="PlayerHoldingItemMonoView.cs" t="Include" />
             <e p="PlayerMonoViews" t="Include">
               <e p="PlayerEntityMonoView.cs" t="Include" />
               <e p="PlayerHoldingEntityMonoView.cs" t="Include" />
@@ -1159,6 +1166,7 @@
           <e p="WorldContextUI" t="Include">
             <e p="ContextControlUI.cs" t="Include" />
             <e p="HoldingContextUI.cs" t="Include" />
+            <e p="HoldItemInHandContentUI.cs" t="Include" />
             <e p="WorldContentUIView.cs" t="Include" />
             <e p="WorldContextViewModel.cs" t="Include" />
           </e>

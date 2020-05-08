@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f465091f55af4c1a9cd76eb710c227fa, type: 3}
-  m_Name: InventoryTypes
+  m_Script: {fileID: 11500000, guid: 2894498340164e619ec9851ac5a38fe9, type: 3}
+  m_Name: AxInventoryItem
   m_EditorClassIdentifier: 
   _data:
-  - {fileID: 11400000, guid: c87bef83e614b8e47a92ae807be6b256, type: 2}
-  - {fileID: 11400000, guid: 80763c49c767bc240a2e5df1f0c1ad2a, type: 2}
+    _isStackable: 0
+    _id: Ax
