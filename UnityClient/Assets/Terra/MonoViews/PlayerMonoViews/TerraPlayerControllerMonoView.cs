@@ -6,6 +6,7 @@ using Terra.Inventory.MonoViews;
 using Terra.MonoViews.Utility;
 using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
+using Terra.SerializedData.GameState;
 using Terra.Services;
 using Terra.ViewModels;
 using Terra.WorldContextUI;
@@ -24,7 +25,11 @@ namespace Terra.MonoViews
         private PlayerStateViewModel _playerStateViewModel;
         private TerraEntitiesViewModel _terraEntitiesViewModel;
         private PlayerEntitySlaveViewModel _playerEntitySlaveViewModel;
-        
+        private InventoryService _inventoryService;
+
+        private InventoryViewModel _playerInventoryViewModel;
+        private InventoryViewModel _holdingInventoryViewModel;
+
         private void Start()
         {
             _playerEntitySlaveViewModel = Game.Instance.GetViewModel<PlayerEntitySlaveViewModel>(0);
@@ -32,6 +37,37 @@ namespace Terra.MonoViews
             _contextUIModel = Game.Instance.GetViewModel<WorldContextViewModel>(0);
             _playerStateViewModel = Game.Instance.GetViewModel<PlayerStateViewModel>(0);
             _terraEntitiesViewModel = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+            
+            _inventoryService = Game.Instance.GetService<InventoryService>();
+            
+            _inventoryService.GetInventory(
+                TerraGameResources.PLAYER_INSTANCE_ID,
+                TerraGameResources.Instance.PlayerInventoryType.Data,
+                playerInventory => _playerInventoryViewModel = playerInventory,
+                null
+            );
+
+            _playerStateViewModel.OnChange += UpdateHoldingItem;
+            UpdateHoldingItem(_playerStateViewModel.State);
+        }
+
+        private void UpdateHoldingItem(TerraPlayerState state)
+        {
+            if (_playerStateViewModel.IsHoldingItem)
+            {
+                TerraEntityTypeData entityData =
+                    TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(state.HoldingEntityID);
+
+                if (entityData.Inventory != null)
+                {
+                    _inventoryService.GetInventory(
+                        state.HoldingInstanceID,
+                        entityData.Inventory,
+                        inventory => _holdingInventoryViewModel = inventory,
+                        null
+                    );
+                }
+            }
         }
 
         private void Update()
@@ -165,11 +201,36 @@ namespace Terra.MonoViews
             }
         }
 
+        private void OnDestroy()
+        {
+            if (_playerStateViewModel != null)
+            {
+                _playerStateViewModel.OnChange -= UpdateHoldingItem;
+            }
+        }
+
         private void AddToInventory()
         {
-            TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
-            vm.RemoveEntity(_currentEntityMonoView.Entity);
-            Game.Instance.GetService<InventoryService>().AddItem(TerraGameResources.PLAYER_INSTANCE_ID,_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO.Data );
+            bool wasAddedToInventory = false;
+            if (_playerInventoryViewModel.IsFull)
+            {
+                if (_holdingInventoryViewModel != null && !_holdingInventoryViewModel.IsFull)
+                {
+                    wasAddedToInventory = true;
+                    _holdingInventoryViewModel.AddItem(_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO.Data);
+                }
+            }
+            else
+            {
+                wasAddedToInventory = true;
+                _playerInventoryViewModel.AddItem(_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO.Data);
+            }
+
+            if (wasAddedToInventory)
+            {
+                TerraEntitiesViewModel vm = Game.Instance.GetViewModel<TerraEntitiesViewModel>(0);
+                vm.RemoveEntity(_currentEntityMonoView.Entity);
+            }
         }
         
         private void HoldInHand()

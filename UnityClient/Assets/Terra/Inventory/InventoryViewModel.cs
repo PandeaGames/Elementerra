@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using PandeaGames;
 using PandeaGames.ViewModels;
 using PandeaGames.Views;
+using Terra.ViewModels;
 
 namespace Terra.Inventory
 {
@@ -13,6 +15,7 @@ namespace Terra.Inventory
         public event IntentoryItemDelegate OnRemoveItem;
 
         public IInventoryDataType InventoryDataType;
+        public int InventoryId;
         private Dictionary<string, IInventoryItem> _stackableItems = new Dictionary<string, IInventoryItem>();
         
         private List<IInventoryItem> _items = new List<IInventoryItem>();
@@ -29,6 +32,18 @@ namespace Terra.Inventory
             }
         }
 
+        public void AddItem(IInventoryItemData inventoryItemData)
+        {
+            InventoryItemDataSerializable serializable = new InventoryItemDataSerializable();
+
+            serializable.Id = inventoryItemData.Id;
+            serializable.InventoryId = InventoryId;
+            serializable.TickAdded = Game.Instance.GetViewModel<TerraWorldStateViewModel>(0).State.Tick;
+            
+            InventoryItem inventoryItem = new InventoryItem(inventoryItemData, serializable);
+            AddItem(inventoryItem);
+        }
+        
         public void AddItem(IInventoryItem item)
         {
             if (!_items.Contains(item))
@@ -53,6 +68,8 @@ namespace Terra.Inventory
         {
             
         }
+
+        public bool IsFull => _items.Count > InventoryDataType.MaxInventorySize;
 
         public IEnumerator<IInventoryItem> GetEnumerator()
         {

@@ -27,6 +27,7 @@ namespace Terra.Inventory
 
                 model = Game.Instance.GetViewModel<InventoryViewModel>((uint)inventoryId);
                 model.InventoryDataType = type;
+                model.InventoryId = inventoryId;
 
                 foreach (InventoryItemDataSerializable serializableItem in items)
                 {
@@ -60,14 +61,7 @@ namespace Terra.Inventory
 
         public void AddItem(int inventoryId, IInventoryItemData inventoryItemData)
         {
-            InventoryItemDataSerializable serializable = new InventoryItemDataSerializable();
-
-            serializable.Id = inventoryItemData.Id;
-            serializable.InventoryId = inventoryId;
-            serializable.TickAdded = Game.Instance.GetViewModel<TerraWorldStateViewModel>(0).State.Tick;
-            
-            InventoryItem inventoryItem = new InventoryItem(inventoryItemData, serializable);
-            _models[inventoryId].AddItem(inventoryItem);
+            _models[inventoryId].AddItem(inventoryItemData);
         }
     }
 }

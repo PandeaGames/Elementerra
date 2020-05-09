@@ -16,6 +16,14 @@ namespace Terra.Inventory.MonoViews
         
         public void Render(InventoryViewModel inventory)
         {
+            if (_views != null)
+            {
+                foreach (KeyValuePair<IInventoryItem, InventoryItemMonoView> kvp in _views)
+                {
+                    Destroy(kvp.Value.gameObject);
+                }
+            }
+            
             _views = new Dictionary<IInventoryItem, InventoryItemMonoView>();
             inventory.OnAddItem += InventoryOnAddItem;
             inventory.OnRemoveItem -= InventoryOnRemoveItem;
@@ -46,6 +54,7 @@ namespace Terra.Inventory.MonoViews
                 worldPositionStays: false).GetComponent<InventoryItemMonoView>();
             inventoryItemMonoView.gameObject.SetActive(true);
             inventoryItemMonoView.Render(inventoryItem);
+            _views.Add(inventoryItem, inventoryItemMonoView);
         }
     }
 }

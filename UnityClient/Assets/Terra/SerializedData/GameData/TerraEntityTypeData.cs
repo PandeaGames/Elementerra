@@ -77,6 +77,10 @@ namespace Terra.SerializedData.GameData
         private bool _isSlavable;
         public bool IsSlavable => _isSlavable;
         
+        [SerializeField]
+        private InventoryDataTypeSO _inventory;
+        public IInventoryDataType Inventory => _inventory == null ? null:_inventory.Data;
+        
         public bool IsPlantable => !string.IsNullOrEmpty(PlantableEntityId);
         public bool IsSpawnable => !string.IsNullOrEmpty(SpawnableEntityId);
         
