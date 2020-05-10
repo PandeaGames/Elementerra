@@ -15,6 +15,8 @@ namespace Views.PauseMenu
         
         [SerializeField]
         private Button _returnButton;
+        [SerializeField]
+        private Button _controlsButton;
 
         [SerializeField] 
         private GameObject _menuContainer;
@@ -34,6 +36,11 @@ namespace Views.PauseMenu
             _toMainMenuButton.onClick.AddListener(() =>
             {
                 vm.InvokeOnButtonPress(PauseMenuViewModel.PauseMenuButtonIds.MainMenuButton);
+            });
+            
+            _controlsButton.onClick.AddListener(() =>
+            {
+                vm.InvokeOnButtonPress(PauseMenuViewModel.PauseMenuButtonIds.Controls);
             });
             _returnButton.onClick.AddListener(() =>
             {

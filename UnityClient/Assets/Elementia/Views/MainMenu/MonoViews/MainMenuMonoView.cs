@@ -14,6 +14,8 @@ namespace Views.MonoViews
         [SerializeField] 
         public Button _newSandboxGame;
         [SerializeField] 
+        public Button _controlsButton;
+        [SerializeField] 
         public Button _exitGameButton;
 
         private void Start()
@@ -37,6 +39,11 @@ namespace Views.MonoViews
             _exitGameButton.onClick.AddListener(() =>
             {
                 vm.TriggerButtonPress(MainMenuViewModel.ButtonId.ExitGame);
+            });
+            
+            _controlsButton.onClick.AddListener(() =>
+            {
+                vm.TriggerButtonPress(MainMenuViewModel.ButtonId.Controls);
             });
 
             _continueButton.interactable = Game.Instance.GetService<TerraDBService>().HasUserSaveFile;

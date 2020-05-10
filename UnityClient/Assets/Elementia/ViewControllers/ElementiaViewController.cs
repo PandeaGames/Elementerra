@@ -1,5 +1,6 @@
 using PandeaGames;
 using PandeaGames.Data;
+using PandeaGames.Views;
 using PandeaGames.Views.ViewControllers;
 using Terra.Services;
 using Terra.ViewModels;
@@ -61,6 +62,12 @@ namespace ViewControllers
                         Game.Instance.GetService<TerraDBService>().DeleteCurrentUserData();
                         break;
                     }
+                    case MainMenuViewModel.ButtonId.Controls:
+                    {
+                        ControlsDialogViewModel vm = Game.Instance.GetViewModel<ControlsDialogViewModel>();
+                        DialogService.Instance.DisplayDialog<ControlsDialog>(vm);
+                        break;
+                    }
                     case MainMenuViewModel.ButtonId.ExitGame:
                     {
 #if UNITY_EDITOR
@@ -71,8 +78,17 @@ namespace ViewControllers
                         break;
                     }
                 }
-                
-                _fsm.SetState(ElementiaViewControllerStates.Terra);
+
+                switch (buttonId)
+                {
+                    case MainMenuViewModel.ButtonId.Continue:
+                    case MainMenuViewModel.ButtonId.NewSandboxGame:
+                    case MainMenuViewModel.ButtonId.NewGame:
+                    {
+                        _fsm.SetState(ElementiaViewControllerStates.Terra);
+                        break;
+                    }
+                }
             }
         }
         
@@ -105,6 +121,12 @@ namespace ViewControllers
                         _fsm.SetState(ElementiaViewControllerStates.MainMenu);
                         break;
                     }
+                    case PauseMenuViewModel.PauseMenuButtonIds.Controls:
+                    {
+                        ControlsDialogViewModel vm = Game.Instance.GetViewModel<ControlsDialogViewModel>();
+                        DialogService.Instance.DisplayDialog<ControlsDialog>(vm);
+                        break;
+                    }
                 }
             }
 
@@ -119,7 +141,12 @@ namespace ViewControllers
                 return new Terra.Controllers.TerraController();
             }
         }
-        
+
+        protected override IView CreateView()
+        {
+            return new GameContainer();
+        }
+
         public ElementiaViewController()
         {
             SetViewStateController<TerraState>(ElementiaViewControllerStates.Terra);

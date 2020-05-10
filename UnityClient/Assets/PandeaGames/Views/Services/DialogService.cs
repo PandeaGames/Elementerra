@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using PandeaGames;
+using PandeaGames.Data;
 using PandeaGames.Data.Static;
 using PandeaGames.ViewModels;
 
 public class DialogService : Service
 {
+    public static DialogService Instance { get; private set; }
+    
     private DialogConfig _config;
     
     [Header("Required")]
@@ -23,9 +26,9 @@ public class DialogService : Service
 
     public override void StartService(ServiceManager serviceManager)
     {
+        Instance = this;
         _dialogLookup = new Dictionary<Type, GameObject>();
-        _config = Game.Instance.GetStaticDataPovider<PandeaGameDataProvider>().PandeaGameConfigurationData
-            .DialogConfigurationData;
+        _config = GameResources.Instance.DialogConfig;
 
         foreach (GameObject dialogPrefab in _config)
         {

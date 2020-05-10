@@ -57,8 +57,7 @@ public class InputService : MonoBehaviourSingleton<InputService>
     {
         _touchDown = new Dictionary<int, Vector3>();
 
-        InputConfig config = Game.Instance.GetStaticDataPovider<PandeaGameDataProvider>().PandeaGameConfigurationData.InputConfig;
-
+        InputConfig config = GameResources.Instance.InputConfig;
         _touchEnabled = config.TouchEnabled;
         _providePonterRaycast = config.ProvidePonterRaycast;
         _useTriggersInRaycast = config.UseTriggersInRaycast;
@@ -126,6 +125,11 @@ public class InputService : MonoBehaviourSingleton<InputService>
 
     private void HandleTouches()
     {
+        Camera camera = Camera.main;
+        if (Camera.main == null)
+        {
+            camera = FindObjectOfType<Camera>();
+        }
         Touch touch;
 
         for (int i = Input.touchCount; i < _touchCount; i++)
@@ -143,8 +147,6 @@ public class InputService : MonoBehaviourSingleton<InputService>
 
             Vector3 cameraPosition = touch.position;
 
-            Vector3 target = Camera.main.ScreenToWorldPoint(touch.position);
-
             if (!_touchDown.ContainsKey(i))
             {
                 _touchDown.Add(i, cameraPosition);
@@ -161,10 +163,15 @@ public class InputService : MonoBehaviourSingleton<InputService>
 
     private void HandlePointerAction(Vector3 cameraPosition, OnPointer eventToNotify)
     {
+        Camera camera = Camera.main;
+        if (Camera.main == null)
+        {
+            camera = FindObjectOfType<Camera>();
+        }
         cameraPosition.z = 10;
         //TODO: always the same value. needs z value. is it not valuable at all? 
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(cameraPosition);
-        Ray ray = Camera.main.ScreenPointToRay(cameraPosition);
+        Vector3 worldPosition = camera.ScreenToWorldPoint(cameraPosition);
+        Ray ray = camera.ScreenPointToRay(cameraPosition);
 
         _ray = ray;
 
@@ -182,13 +189,16 @@ public class InputService : MonoBehaviourSingleton<InputService>
 
     private void HandleMultiPointerAction(Vector2 cameraPosition, int index, OnMultiPointer eventToNotify, OnPointer pointerEventToNotify)
     {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(cameraPosition);
-
+        Camera camera = Camera.main;
+        if (Camera.main == null)
+        {
+            camera = FindObjectOfType<Camera>();
+        }
         RaycastHit results = default(RaycastHit);
 
         if (_providePonterRaycast)
         {
-            Physics.Raycast(cameraPosition, Camera.main.transform.forward, out results);
+            Physics.Raycast(cameraPosition, camera.transform.forward, out results);
         }
 
         if (eventToNotify != null)

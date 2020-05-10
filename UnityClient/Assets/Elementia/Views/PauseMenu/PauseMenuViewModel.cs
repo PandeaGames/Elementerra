@@ -9,7 +9,8 @@ namespace Views.PauseMenu
         {
             ContinueButton,
             MainMenuButton,
-            ExitGameButton
+            ExitGameButton,
+            Controls
         }
 
         public event Action<PauseMenuButtonIds> OnButtonPress;

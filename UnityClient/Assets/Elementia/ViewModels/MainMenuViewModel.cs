@@ -11,6 +11,7 @@ public class MainMenuViewModel : IViewModel
         Continue,
         NewGame, 
         NewSandboxGame,
+        Controls,
         ExitGame
     }
 

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9eeb11c5be486aadf92763f9df6e63, type: 3}
   m_Name: GameResources
   m_EditorClassIdentifier: 
+  GameView: {fileID: 1153448692237556534, guid: f9064ff1484061c4e88f10320c218bed,
+    type: 3}
+  DialogConfig: {fileID: 11400000, guid: 562f464e2e333c24cbafd6160f19fc6f, type: 2}
+  InputConfig: {fileID: 11400000, guid: 93f19e8699bfa004a9cdf14b12a6f3cd, type: 2}
   _synchronousStaticData:
     _guid: 
     _path: 
