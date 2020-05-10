@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: MutantEntity
   m_EditorClassIdentifier: 
   _data:
-    component: 0
-    _entityId: 
-    _totalHealth: 0
+    component: 6
+    _entityId: Mutant
+    _totalHealth: 100
     _plantableEntityId: 
     _spawnableEntityId: 
     _debugImage: {fileID: 0}

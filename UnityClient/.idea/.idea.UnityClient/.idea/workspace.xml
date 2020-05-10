@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/IL3DN/Install - IL3DN (LWRP) - 2019.1.x.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IL3DN/Install - IL3DN (LWRP) - 2019.2.x.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IL3DN/Install - IL3DN (URP) - 2019.3.x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/MutantEntity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/MutantEntity.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Base mesh/Materials/Mat_Mutant7_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mutant monster/Base mesh/Materials/Mat_Mutant7_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Materials/Mat_Mutant6_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mutant monster/Materials/Mat_Mutant6_Body.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Terra.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRDebugger/PlaymakerIntegration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,23 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InventoryItemDataListSO.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataListSO.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding>
-                <marker date="1586069764022" expanded="false" signature="6:83" ph="..." />
-                <marker date="1586069764022" expanded="true" signature="120:749" ph="{...}" />
-                <marker date="1586069764022" expanded="true" signature="292:747" ph="{...}" />
-                <marker date="1586069764022" expanded="true" signature="382:741" ph="{...}" />
-                <marker date="1586069764022" expanded="true" signature="487:692" ph="{...}" />
-                <marker date="1586069764022" expanded="true" signature="556:678" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlayerHoldingItemMonoView.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerHoldingItemMonoView.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,13 +66,47 @@
       <file leaf-file-name="TerraPlayerControllerMonoView.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
-                <marker date="1589067208870" expanded="false" signature="6:253" ph="..." />
-                <marker date="1589067208870" expanded="true" signature="9602:9612" ph="{...}" />
-                <marker date="1589067208870" expanded="true" signature="9602:13734" ph="{...}" />
-                <marker date="1589067208870" expanded="true" signature="9602:13736" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="6:368" ph="..." />
+                <marker date="1589067208870" expanded="true" signature="395:13736" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="460:13734" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="1151:2115" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="2179:2804" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="2242:2794" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="2468:2780" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="2835:8486" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="2991:4132" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="3563:3629" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="3698:3825" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="4021:4118" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="4173:5022" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="4249:4446" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="4545:4749" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="4812:5008" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="5080:5156" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="5213:5381" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="5434:8476" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="5579:5746" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="5950:6036" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="6094:6176" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="6356:7254" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="6446:6547" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="6576:7232" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="6702:6822" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="7526:8051" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="7609:7790" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="7853:8029" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8139:8416" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8218:8394" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8520:8684" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8577:8674" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8723:9612" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8829:9162" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="8937:9148" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="9179:9373" ph="{...}" />
+                <marker date="1589067208870" expanded="true" signature="9411:9602" ph="{...}" />
                 <marker date="1589067208870" expanded="true" signature="9655:10296" ph="{...}" />
                 <marker date="1589067208870" expanded="true" signature="9835:9997" ph="{...}" />
                 <marker date="1589067208870" expanded="true" signature="10335:10647" ph="{...}" />
@@ -96,6 +115,21 @@
                 <marker date="1589067208870" expanded="true" signature="12588:12785" ph="{...}" />
                 <marker date="1589067208870" expanded="true" signature="12883:13728" ph="{...}" />
                 <marker date="1589067208870" expanded="true" signature="13367:13671" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerControllerModifierMonoView.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerControllerModifierMonoView.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding>
+                <marker date="1589073636668" expanded="false" signature="6:158" ph="..." />
+                <marker date="1589073636668" expanded="true" signature="221:1217" ph="{...}" />
+                <marker date="1589073636668" expanded="true" signature="602:809" ph="{...}" />
+                <marker date="1589073636668" expanded="true" signature="867:1215" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -126,11 +160,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TerraEntityProxyMonoView.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TerraEntityProxyMonoView.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
-              <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
               <folding>
                 <marker date="1588968469582" expanded="true" signature="6:164" ph="..." />
                 <marker date="1588968469582" expanded="true" signature="199:2261" ph="{...}" />
@@ -450,6 +484,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Google/GoogleLanguages.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerControllerModifierMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraWorldService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -492,7 +527,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryDataTypeSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryTypesSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataListSO.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItem.cs" />
@@ -543,6 +577,7 @@
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/PlayerInventoryMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerControllerModifierMonoView.cs" />
       </list>
     </option>
   </component>
@@ -756,7 +791,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3000" />
+    <option name="totallyTimeSpent" value="1252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-426" width="1096" height="1896" extended-state="6" />
@@ -1251,31 +1286,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
-          <folding>
-            <marker date="1589067208870" expanded="false" signature="6:253" ph="..." />
-            <marker date="1589067208870" expanded="true" signature="9602:9612" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="9602:13734" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="9602:13736" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="9655:10296" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="9835:9997" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="10335:10647" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="10697:11539" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="11582:12532" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="12588:12785" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="12883:13728" ph="{...}" />
-            <marker date="1589067208870" expanded="true" signature="13367:13671" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
           <folding>
             <marker date="1588968469582" expanded="true" signature="6:164" ph="..." />
             <marker date="1588968469582" expanded="true" signature="199:2261" ph="{...}" />
@@ -1292,6 +1306,74 @@
             <marker date="1588968469582" expanded="true" signature="1969:2035" ph="{...}" />
             <marker date="1588968469582" expanded="true" signature="2056:2127" ph="{...}" />
             <marker date="1588968469582" expanded="true" signature="2163:2229" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <marker date="1589067208870" expanded="true" signature="6:368" ph="..." />
+            <marker date="1589067208870" expanded="true" signature="395:13736" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="460:13734" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="1151:2115" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="2179:2804" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="2242:2794" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="2468:2780" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="2835:8486" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="2991:4132" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="3563:3629" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="3698:3825" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="4021:4118" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="4173:5022" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="4249:4446" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="4545:4749" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="4812:5008" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="5080:5156" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="5213:5381" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="5434:8476" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="5579:5746" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="5950:6036" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="6094:6176" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="6356:7254" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="6446:6547" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="6576:7232" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="6702:6822" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="7526:8051" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="7609:7790" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="7853:8029" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8139:8416" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8218:8394" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8520:8684" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8577:8674" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8723:9612" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8829:9162" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="8937:9148" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="9179:9373" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="9411:9602" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="9655:10296" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="9835:9997" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="10335:10647" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="10697:11539" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="11582:12532" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="12588:12785" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="12883:13728" ph="{...}" />
+            <marker date="1589067208870" expanded="true" signature="13367:13671" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerControllerModifierMonoView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <marker date="1589073636668" expanded="false" signature="6:158" ph="..." />
+            <marker date="1589073636668" expanded="true" signature="221:1217" ph="{...}" />
+            <marker date="1589073636668" expanded="true" signature="602:809" ph="{...}" />
+            <marker date="1589073636668" expanded="true" signature="867:1215" ph="{...}" />
           </folding>
         </state>
       </provider>

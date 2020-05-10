@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 5620709978490209225}
   - component: {fileID: 7823339716449740174}
   - component: {fileID: 8350247753513446468}
+  - component: {fileID: 2958305873222008874}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -707,6 +708,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _terraEntityProxyMonoView: {fileID: 6510934167822714583}
+--- !u!114 &2958305873222008874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425428723088313499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d7326a03ae94742a09e10c5d55e08d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _controller: {fileID: 4425428723088313503}
+  _walkSpeedModifier: 0.35
+  _runSpeedModifier: 0.65
 --- !u!1 &4425428723094576442
 GameObject:
   m_ObjectHideFlags: 0
