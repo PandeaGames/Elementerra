@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 4425428723088313503}
-  _walkSpeedModifier: 0.35
+  _walkSpeedModifier: 0.75
   _runSpeedModifier: 0.65
 --- !u!1 &4425428723094576442
 GameObject:
