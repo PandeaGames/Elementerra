@@ -17,7 +17,8 @@ namespace Terra.WorldContextUI
             PickUp,
             PutInInventory,
             Holding,
-            Enslave
+            Enslave,
+            Build
         }
         
         public Context CurrentContext { get; private set; }

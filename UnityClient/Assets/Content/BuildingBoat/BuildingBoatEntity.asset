@@ -28,12 +28,14 @@ MonoBehaviour:
       m_RotationOrder: 4
     _ripeTimeSeconds: 0
     _lifespanSeconds: 0
-    _entityToSpawnAfterDeath: {fileID: 11400000, guid: 6b10e750aa35c4e439f08440d798d8e5,
-      type: 2}
+    _entityToSpawnAfterDeath: {fileID: 0}
     _inventoryItemDataSO: {fileID: 0}
     _labels: []
     _aggroLabel: 
     _attackRange: 0
     _attackDamage: 0
     _isSlavable: 0
+    _numberOfLevels: 5
+    _entityToSpawnAfterUpgraded: {fileID: 11400000, guid: 6b10e750aa35c4e439f08440d798d8e5,
+      type: 2}
     _inventory: {fileID: 0}

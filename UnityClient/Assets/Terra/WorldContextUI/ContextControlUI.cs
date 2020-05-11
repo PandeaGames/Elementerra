@@ -54,6 +54,12 @@ namespace Terra.WorldContextUI
                     _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
                     break;
                 }
+                case WorldContextViewModel.Context.Build:
+                {
+                    _text.text = "[Space] Build";
+                    _canvasGroup.alpha = Mathf.SmoothDamp(_canvasGroup.alpha, 1, ref yVelocity, smoothTime);
+                    break;
+                }
             }
             
             transform.position = Camera.main.WorldToScreenPoint(_contextUIModel.CurrentTransform);

@@ -73,14 +73,18 @@ namespace Terra.MonoViews
         private void Update()
         {
             _currentEntityMonoView = null;
+            EntityBuildComponentMonoView buildMonoView = null;
             foreach (TerraEntityMonoView entityMonoView in _terraEntityColliderMonoView.CollidingWith)
             {
                 RuntimeTerraEntity entity = entityMonoView.Entity;
+                buildMonoView = entityMonoView.GetComponent<EntityBuildComponentMonoView>();
                 if (entityMonoView == null || 
+                    
                     (entity.IsSlavable && _playerEntitySlaveViewModel.CurrentSlave == entity) ||
                     (!entity.EntityTypeData.Component.HasFlag(EntityComponent.CanPickUp) && 
                      entity.EntityTypeData.InventoryItemDataSO == null &&
                      !entity.IsSlavable &&
+                     buildMonoView == null &&
                      !(entity.EntityTypeData.Component.HasFlag(EntityComponent.Harvestable)
                        && entity.IsRipe())))
                 {
@@ -109,6 +113,10 @@ namespace Terra.MonoViews
                 else if (_currentEntityMonoView.Entity.EntityTypeData.InventoryItemDataSO != null)
                 {
                     _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.PutInInventory, _currentEntityMonoView.Entity);
+                }
+                else if (buildMonoView != null)
+                {
+                    _contextUIModel.SetContext(_currentEntityMonoView.transform.position, WorldContextViewModel.Context.Build, _currentEntityMonoView.Entity);
                 }
                 else if (!_playerStateViewModel.IsHoldingItem)
                 {
@@ -194,6 +202,15 @@ namespace Terra.MonoViews
                             PlantHoldingEntity();
                             _playerStateViewModel.ClearHoldingEntityId();
                         }
+                    }
+
+                    break;
+                }
+                case WorldContextViewModel.Context.Build:
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        buildMonoView.LevelUp();
                     }
 
                     break;

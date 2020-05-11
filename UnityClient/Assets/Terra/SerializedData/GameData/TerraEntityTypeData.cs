@@ -78,6 +78,13 @@ namespace Terra.SerializedData.GameData
         public bool IsSlavable => _isSlavable;
         
         [SerializeField]
+        private int _numberOfLevels;
+        public int NumberOfLevels => _numberOfLevels;
+
+        [SerializeField] private TerraEntityTypeSO _entityToSpawnAfterUpgraded;
+        public TerraEntityTypeSO EntityToSpawnAfterUpgraded => _entityToSpawnAfterUpgraded;
+        
+        [SerializeField]
         private InventoryDataTypeSO _inventory;
         public IInventoryDataType Inventory => _inventory == null ? null:_inventory.Data;
         
