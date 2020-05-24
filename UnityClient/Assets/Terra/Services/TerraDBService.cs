@@ -313,7 +313,7 @@ namespace Terra.Services
             Write(tmpList, tmpDeleteList);
         }
 
-        private void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests)
+        private async void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests)
         {
             using (SQLiteConnection connection = new SQLiteConnection(dbPath))
             {
