@@ -14,21 +14,6 @@ namespace Terra.SerializedData.Entities
 {
     public partial class RuntimeTerraEntity : ITerraEntity
     {
-        public event Action<RuntimeTerraEntity, string> OnLabelAdded;
-        public event Action<RuntimeTerraEntity, string> OnLabelRemoved;
-            
-        event Action<TerraEntity, string> ITerraEntity.OnLabelRemoved
-        {
-            add { throw new NotImplementedException(); }
-            remove { throw new NotImplementedException(); }
-        }
-
-        event Action<TerraEntity, string> ITerraEntity.OnLabelAdded
-        {
-            add { throw new NotImplementedException(); }
-            remove { throw new NotImplementedException(); }
-        }
-        
         public TerraEntity Entity { private set; get; }
         public TerraDBService DB { private set; get; }
 
@@ -62,9 +47,6 @@ namespace Terra.SerializedData.Entities
             TerraLivingEntity.Data.InstanceId = entity.TerraEntity.InstanceId;
             
             Entity = entity.TerraEntity;
-            
-            Entity.OnLabelAdded += (labelEntity, label) => OnLabelAdded?.Invoke(this, label);
-            Entity.OnLabelRemoved += (labelEntity, label) => OnLabelRemoved?.Invoke(this, label);
             
             EntityTypeData = TerraGameResources.Instance.TerraEntityPrefabConfig.GetEntityConfig(this);
             DB = db;
@@ -155,6 +137,11 @@ namespace Terra.SerializedData.Entities
         }
 
         public bool IsSlavable => EntityTypeData.IsSlavable;
+
+        public bool HasLabel(string label)
+        {
+            return EntityTypeData.HasLabel(label);
+        }
     }
     
     

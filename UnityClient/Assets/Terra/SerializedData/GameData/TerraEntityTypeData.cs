@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Terra.Inventory;
 using Terra.Inventory.UnityData;
 using Terra.SerializedData.Entities;
@@ -94,6 +95,11 @@ namespace Terra.SerializedData.GameData
         public override string ToString()
         {
             return _entityId;
+        }
+        
+        public bool HasLabel(string label)
+        {
+            return _labels.Contains(label);
         }
     }
 }

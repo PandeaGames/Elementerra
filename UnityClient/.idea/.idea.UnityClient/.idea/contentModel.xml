@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ccove\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ccove\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_UnityClient.-488473857.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ccove\Documents\Elementerra\UnityClient" t="IncludeRecursive">
+    <e p="C:\Users\ccove\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_UnityClient.764501748.00" t="ExcludeRecursive" />
+    <e p="D:\Elementerra\UnityClient" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -492,6 +491,16 @@
               </e>
             </e>
             <e p="Gameplay" t="Include">
+              <e p="AI" t="Include">
+                <e p="AbstractPandeaPassiveState.cs" t="Include" />
+                <e p="AbstractPandeaState.cs" t="Include" />
+                <e p="AbstractPandeaStateCondition.cs" t="Include" />
+                <e p="PandeaConditionsGroup.cs" t="Include" />
+                <e p="PandeaFSM.cs" t="Include" />
+                <e p="PandeaPlayAnimationState.cs" t="Include" />
+                <e p="PandeaStateTransition.cs" t="Include" />
+                <e p="PandeaTimerStateCondition.cs" t="Include" />
+              </e>
               <e p="Camera" t="Include">
                 <e p="AnchoredFollowAgent.cs" t="Include" />
                 <e p="CameraAgent.cs" t="Include" />
@@ -1061,6 +1070,9 @@
               <e p="AttackDef.cs" t="Include" />
               <e p="AttackForceApplicator.cs" t="Include" />
               <e p="FollowPlayerAIMonoView.cs" t="Include" />
+              <e p="FSM" t="Include">
+                <e p="TerraEntityDistanceCondition.cs" t="Include" />
+              </e>
               <e p="HostileAIMonoView.cs" t="Include" />
               <e p="TerraAttackRangeScaler.cs" t="Include" />
               <e p="TerraProjectile.cs" t="Include" />
@@ -1427,6 +1439,7 @@
       <e p="Invector3rdPersonCharacterControllerEditor.csproj" t="IncludeRecursive" />
       <e p="Invector3rdPersonGenericEditor.csproj" t="IncludeRecursive" />
       <e p="InvectorCharacterCreatorEditor.csproj" t="IncludeRecursive" />
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="PandeaGames.csproj" t="IncludeRecursive" />
@@ -1439,7 +1452,9 @@
       <e p="StompyRobot.SRDebugger.Editor.csproj" t="IncludeRecursive" />
       <e p="StompyRobot.SRF.csproj" t="IncludeRecursive" />
       <e p="StompyRobot.SRF.Editor.csproj" t="IncludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
       <e p="Terra.csproj" t="IncludeRecursive" />
       <e p="TerraEditor.csproj" t="IncludeRecursive" />
       <e p="UnityClient.sln" t="IncludeFlat" />

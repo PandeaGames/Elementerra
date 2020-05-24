@@ -85,21 +85,13 @@ namespace Terra.ViewModels
 
         public IEnumerator<RuntimeTerraEntity> GetEntities(string label = "")
         {
-            if (string.IsNullOrEmpty(label))
+            foreach (RuntimeTerraEntity entity in _entities)
             {
-                return _entities.GetEnumerator();
-            }
-            else
-            {
-                _filteredEntities.TryGetValue(label, out HashSet<RuntimeTerraEntity> filterSet);
-            
-                if (filterSet != null)
+                if (entity.EntityTypeData.HasLabel(label))
                 {
-                    return filterSet.GetEnumerator();
+                    yield return entity;
                 }
             }
-
-            return null;
         }
 
         public void AddEntities(IEnumerable<RuntimeTerraEntity> entitiesToAdd)
@@ -129,9 +121,7 @@ namespace Terra.ViewModels
                 {
                     Player = entity;
                 }
-                
-                entity.OnLabelAdded += EntityOnLabelAdded;
-                entity.OnLabelRemoved += EntityOnLabelRemoved;
+
                 OnAddEntity?.Invoke(entity);
             }
 
@@ -160,9 +150,7 @@ namespace Terra.ViewModels
                 {
                     EntityOnLabelRemoved(entity, label);
                 }
-                
-                entity.OnLabelAdded -= EntityOnLabelAdded;
-                entity.OnLabelRemoved -= EntityOnLabelRemoved;
+
                 OnRemoveEntity?.Invoke(entity);
             }
 

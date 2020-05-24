@@ -110,20 +110,14 @@ namespace Terra.SerializedData.Entities
     }
     
     public class TerraEntity : ITerraEntity, IDBSerializable
-/*, IDBSerializableCollection<TerraEntitySerializer, TerraEntity>*/
     {
-        public event Action<TerraEntity, string> OnLabelRemoved;
-        public event Action<TerraEntity, string> OnLabelAdded;
-        
         public static TerraEntitySerializer Serializer { get; } = new TerraEntitySerializer();
 
         public static TerraDBService.DBPrimaryKeyWhereClause<TerraEntity, TerraEntitySerializer> WherePrimaryKey
         {
             get;
         } = new TerraDBService.DBPrimaryKeyWhereClause<TerraEntity, TerraEntitySerializer>(Serializer);
-        
-        public Dictionary<EntityComponent, IEntityComponent> Components { get; } = new Dictionary<EntityComponent, IEntityComponent>();
-        
+                
         public int InstanceId { get; set; } = System.Guid.NewGuid().GetHashCode();
         public int TickCreated;
         public HashSet<string> Labels { get; set; } = new HashSet<string>();
@@ -144,38 +138,12 @@ namespace Terra.SerializedData.Entities
 
         public IEnumerator<TerraEntity> GetEnumerator()
         {
-           /* foreach (KeyValuePair<EntityComponent, IEntityComponent> kvp in Components)
-            {
-                yield return kvp.Value;
-            }*/
            return null;
         }
 
         public override int GetHashCode()
         {
             return InstanceId;
-        }
-
-        /*IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }*/
-
-        public void AddLabel(string label)
-        {
-            Labels.Add(label);
-            OnLabelAdded?.Invoke(this, label);
-        }
-
-        public void RemoveLabel(string label)
-        {
-            Labels.Remove(label);
-            OnLabelRemoved?.Invoke(this, label);
-        }
-
-        public bool HasLabel(string label)
-        {
-            return Labels.Contains(label);
         }
 
 
