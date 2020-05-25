@@ -6,297 +6,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/Mutant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/Mutant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IL3DN/Install - IL3DN (LWRP) - 2019.1.x.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IL3DN/Install - IL3DN (LWRP) - 2019.2.x.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/IL3DN/Install - IL3DN (URP) - 2019.3.x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/MutantEntity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/MutantEntity.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Mutant monster Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mutant monster/Mutant monster Animator Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Terra.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRDebugger/PlaymakerIntegration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PandeaFSM.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaFSM.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="81" selection-start-line="81" selection-end-line="82" />
-              <folding>
-                <marker date="1590298704241" expanded="true" signature="6:90" ph="..." />
-                <marker date="1590298704241" expanded="true" signature="133:3696" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="270:3694" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="755:1809" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="988:1624" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="1022:1351" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="1408:1610" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="1674:1799" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="1850:2202" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2128:2192" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2270:2535" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2320:2399" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2611:2677" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2761:2827" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2931:3688" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="2957:3059" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="3112:3447" ph="{...}" />
-                <marker date="1590298704241" expanded="true" signature="3487:3678" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntityDistanceCondition.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-              <folding>
-                <marker date="1590300245785" expanded="true" signature="6:57" ph="..." />
-                <marker date="1590300245785" expanded="true" signature="91:372" ph="{...}" />
-                <marker date="1590300245785" expanded="true" signature="170:370" ph="{...}" />
-                <marker date="1590300245785" expanded="true" signature="318:364" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntitiesViewModel.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-              <folding>
-                <marker date="1590300256234" expanded="false" signature="6:297" ph="..." />
-                <marker date="1590300256234" expanded="true" signature="325:6102" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="471:6100" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="510:566" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="1360:2032" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="1813:2022" ph="/* AddEntities(_chunksViewModel.GetRuntimeEntities()); ... */" />
-                <marker date="1590300256234" expanded="true" signature="2114:2190" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="2257:2340" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="2425:2482" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="2565:2619" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="2687:2962" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="2758:2926" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="2841:2912" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3041:3286" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3112:3276" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3185:3262" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3366:3514" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3441:3504" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3572:4191" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3626:3684" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3701:4155" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="3811:3902" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4022:4095" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4269:4415" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4339:4405" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4476:4927" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4531:4589" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4606:4891" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="4735:4828" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5011:5242" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5162:5232" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5332:5677" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5483:5631" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5736:5805" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5838:5859" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="5923:5989" ph="{...}" />
-                <marker date="1590300256234" expanded="true" signature="6038:6094" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuntimeTerraEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="287" column="13" selection-start-line="287" selection-start-column="13" selection-end-line="287" selection-end-column="13" />
-              <folding>
-                <marker date="1590300227555" expanded="false" signature="6:274" ph="..." />
-                <marker date="1590300227555" expanded="true" signature="315:12464" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="376:4931" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="949:1007" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="1056:1136" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="1214:2149" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="2180:2284" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="2322:2418" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="2450:2550" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="2588:2982" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="2677:2945" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="2862:2931" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="3028:3395" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="3090:3358" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="3275:3344" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="3431:4517" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="3495:3569" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="3819:4507" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="4071:4268" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="4289:4384" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="4547:4642" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="4685:4748" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="4854:4925" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="4994:5471" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="5244:5465" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="5586:12462" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="6104:6270" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="6732:7001" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="6796:6990" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="7044:7150" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="7230:7922" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="7474:7882" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="7692:7755" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="8026:9072" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="8159:8313" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="8366:8528" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="8580:8746" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="8798:8964" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="8981:9062" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="9174:10228" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="9307:9463" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="9516:9680" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="9732:9900" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="9952:10120" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="10137:10218" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="10332:11382" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="10465:10620" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="10673:10836" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="10888:11055" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="11107:11274" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="11291:11372" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="11461:12455" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="11594:11735" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="11788:11937" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="11989:12142" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="12194:12347" ph="{...}" />
-                <marker date="1590300227555" expanded="true" signature="12364:12445" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerHoldingEntityMonoView.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-              <folding>
-                <marker date="1585935888293" expanded="false" signature="6:167" ph="..." />
-                <marker date="1585935888293" expanded="true" signature="194:1386" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="275:1384" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="512:678" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="738:1276" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="912:1266" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="995:1086" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="1156:1252" ph="{...}" />
-                <marker date="1585935888293" expanded="true" signature="1308:1378" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="122" column="52" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
-              <folding>
-                <marker date="1590300204150" expanded="false" signature="6:248" ph="..." />
-                <marker date="1590300204150" expanded="true" signature="289:4834" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="359:3119" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="643:689" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="725:1156" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="751:1146" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="811:1131" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="1297:1889" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="1340:1879" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="1986:2422" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="2029:2412" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="2521:2584" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="2626:2684" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="2783:3113" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="2826:3103" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="3185:4832" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="3400:3437" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="3936:3956" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="4038:4157" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="4214:4258" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="4301:4352" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="4414:4826" ph="{...}" />
-                <marker date="1590300204150" expanded="true" signature="4496:4816" ph="/* return new TerraDBService.TerraDBRequest() ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ITerraEntity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
-              <folding>
-                <marker date="1590300189673" expanded="false" signature="6:84" ph="..." />
-                <marker date="1590300189673" expanded="true" signature="125:292" ph="{...}" />
-                <marker date="1590300189673" expanded="true" signature="203:290" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntityTypeData.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
-              <folding>
-                <marker date="1590299995536" expanded="false" signature="6:144" ph="..." />
-                <marker date="1590299995536" expanded="true" signature="185:3453" ph="{...}" />
-                <marker date="1590299995536" expanded="true" signature="262:3451" ph="{...}" />
-                <marker date="1590299995536" expanded="true" signature="3279:3329" ph="{...}" />
-                <marker date="1590299995536" expanded="true" signature="3381:3445" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraCheatWindow.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/Editor/TerraCheatWindow.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PandeaConditionsGroup.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-              <folding>
-                <marker date="1590298568530" expanded="true" signature="61:607" ph="{...}" />
-                <marker date="1590298568530" expanded="true" signature="133:605" ph="{...}" />
-                <marker date="1590298568530" expanded="true" signature="302:599" ph="{...}" />
-                <marker date="1590298568530" expanded="true" signature="389:551" ph="{...}" />
-                <marker date="1590298568530" expanded="true" signature="467:537" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -309,253 +32,247 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/StateMachines/PandeaGamesFsm.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraWorldState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaStateTransition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPosition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/Inspectors/LocalizationParamsManagerInspector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/AbstractEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Services/Elementia.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/IEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/ElementiaShader.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ResourceSingleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/PostProcessBuild_UnloadLanguages.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/WeakReference/WeakReference.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraTerrainGeometryDataModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerHoldingItemMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/ElementiaGameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityDataController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaStateCondition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StompyRobot/SRDebugger/Scripts/UI/MobileMenuController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/LocalizeDropdown.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/SimulationConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPlayerControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ComponentLightbox.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/AbstractDataContainerSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/TerraProjectile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/LightboxManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TimeOfDayConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/LightboxCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/ScriptableObjectSingleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TimeOfDayMonoViews/TerraTODLightColor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/TerraAttackRangeScaler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/LoadableConfigurationData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/DataSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/DialogConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/AttackForceApplicator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ElementiaGameStart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/PandeaGameConfigurationData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ThreadJob.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Elementia.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerAttackTargetViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerEntitySlaveViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Screens/GameContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/TerraGameObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/MonoBehaviourSingleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/Editor/Resources/vEditorStartupPrefs.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugStatefulMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/EntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewControllerFsm.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/EntityListMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Dialogs/TouchBlocker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/Inspectors/LocalizationParamsManagerInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/TerraProjectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Content/Entities/Seedling.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/InputService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/DialogService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/ServiceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/StateMachines/PandeaGamesFsm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Content/UI/Dialogs/ControlsDialog.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraLivingEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ResourceSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/Game2DMathUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityLifespanMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/SerializableDictionary.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Editor/PostProcessBuild_UnloadLanguages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldStateStreamer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContextUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugWindowMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaStateCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraWorldState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryItemMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/LightboxManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/ComponentLightbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/LightboxCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraLivingEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraPlayerEntityDebugMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Content/UI/Dialogs/ControlsDialogViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractStatefulViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/Editor/Resources/vEditorStartupPrefs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/AttackForceApplicator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/AttackDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Content/UI/Dialogs/ControlsDialog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonMotor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FollowPlayerAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractDialogViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomScaleMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/CharacterController/vThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityStreamerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializableGridPosiionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityLifespanMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/InventoryWorldRendererMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityHarstableMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomRotateMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaPassiveState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Entities/ValueContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/Camera/vThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataListSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Controllers/Scripts/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/SharpSerializer/Serializing/PropertyFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryDataTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryTypesSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LayerAttributeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/PlayerInventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryItemMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityUI_Image.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaTimerStateCondition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraLivingEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldItemInHandContentUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItemData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WorldRendererLoader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaFSM.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraGridPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/LocalizeDropdown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Services/Elementia.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomScaleMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/ElementiaShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerAttackTargetViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Shaders/FlatColor.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugStatefulMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/SaveAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/WorldDataAccessService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Content/UI/Dialogs/ControlsDialogViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FollowPlayerAIMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldData/LoadAreaJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldSimulationStateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/ElementiaPlayerPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/WorldPersistanceService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/WeakReference/WeakReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Services/SimulationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/ForestAgentPuppet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Invector-3rdPersonController_LITE/Scripts/Camera/vThirdPersonCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerForestController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerControllerModifierMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryDataType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Grass.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MonoViews/MainMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/Resources/SynchronousStaticDataResources.GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StompyRobot/SRDebugger/Scripts/UI/MobileMenuController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/DataConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAsset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/IInventoryDataType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Dialogs/TouchBlocker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Google/GoogleLanguages.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ElementiaPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Gameplay/PlayerControllerModifierMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraWorldService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Utils/TaskProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/IDBSerializable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraPlayerStateService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Editor/TerraCheatWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/ViewDataStreamerGroup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldStateStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/IL3DN/Shaders/IL3DN_Branch.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/IDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Content/Entities/Seedling.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/TerraEntityPrefabConfigSO.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Utility.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraShape.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/AttackDef.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/InputService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/DialogService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/ElementiaViewController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/MainMenuViewController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraShape.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/ServiceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewModels/MainMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/Terra.asmdef" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/EntityBuildComponentMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ScreenSpaceFluids/Scripts/SSF_FluidRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingMonoView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WaterShaderPackage/Scripts/BaseWaterScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/AbstractDataContainerSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/ElementiaGameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/SimulationConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityHarstableMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldAssetData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldSimulationState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LayerAttributeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/AreaIndex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Elementia.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/Data/WorldArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/ContextControlUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldingContextUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ThreadJob.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WorldRendererLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/BillboardSprite.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/MainMenu/MainMenuView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/TerraPlayerControllerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/ViewControllers/MainMenuViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/TerraGameObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryItemDataSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scripts/ElementiaGameStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/Static/SynchronousStaticData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Scenes/World.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/DataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Google/GoogleLanguages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/PandeaGameConfigurationData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPlayerControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/DialogConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContextViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/WorldContentUIView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/LoadableConfigurationData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityRandomRotateMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Data/ScriptableObjectSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScreenSpaceFluids/Scripts/SSF_FluidRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/UI/AbstractListView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/TerraAttackRangeScaler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraPlayerStateService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/MonoBehaviourSingleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/AbstractEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WaterShaderPackage/Scripts/BaseWaterScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/InventoryDataType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/IEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/EntityListMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/EntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryItemDataListSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryTypesSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Controllers/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/SharpSerializer/Serializing/PropertyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraTerrainGeometryDataModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/PlayerInventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractTerraEntityViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/UnityData/InventoryDataTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/ITerraEntityDataController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IL3DN/Shaders/IL3DN_Branch.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraEntityPrefabConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TerraGameResources.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerEntitySlaveViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/EntityBuildComponentMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityStreamerMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewControllerFsm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AbstractTerraMonoComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewControllers/AbstractViewController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraWorldService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraDBService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/IDBSerializable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractDialogViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Editor/TerraCheatWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractStatefulViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/ViewDataStreamerGroup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/IDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TimeOfDayMonoViews/TerraTODLightColor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/I2/Localization/Scripts/Targets/LocalizeTarget_UnityUI_Image.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraShape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/IService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/AbstractService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PauseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraWorld.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/ServiceRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Entities/ValueContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/Terra.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/StaticData/TimeOfDayConfigSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/ITerraShape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/TerraArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Controllers/Scripts/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraLivingEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/PauseGame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Control/InputPuppet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Elementia/Views/PauseMenu/PauseMenuMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/WorldContextUI/HoldItemInHandContentUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerHoldingItemMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/InventoryWorldRendererMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/Pausable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/TerraProjectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/PlanControlViewModel.cs" />
@@ -594,7 +311,6 @@
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaPassiveState.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaStateCondition.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaTimerStateCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaFSM.cs" />
@@ -602,205 +318,18 @@
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ads@2.0.8/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.analytics@3.3.5/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.2.16/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ext.nunit@1.0.0/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.1.4/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.multiplayer-hlapi@1.0.4/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.3.0/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@2.0.6/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@7.2.1/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.2.1/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.2.1/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.11/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@2.0.1/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.10/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/com.unity.xr.legacyinputhelpers@1.3.8/package.json" />
-      <path value="$PROJECT_DIR$/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
   </component>
   <component name="ProjectId" id="1YEQCn54guQpx1Sf5RQIZC5muEH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="Scratches" />
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Runtime" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Runtime" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Gameplay" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PandeaGames" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Runtime" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Gameplay" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="AI" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="AI" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="AI" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="FSM" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="PlayerMonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -829,7 +358,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Attach Unity.Attach to Unity Editor">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -838,11 +367,15 @@
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Attach Unity.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -899,48 +432,9 @@
       <workItem from="1588872184976" duration="984000" />
       <workItem from="1588916281014" duration="13219000" />
       <workItem from="1590295453807" duration="4822000" />
+      <workItem from="1590356280397" duration="4918000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4822000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1380597" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="right" id="Database" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -953,21 +447,12 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -978,370 +463,18 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs</url>
-          <line>290</line>
+          <line>276</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" initialLine="303">
             <startOffsets>
-              <startOffset value="-1" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="-1" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaStateTransition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <marker date="1590298653849" expanded="true" signature="56:242" ph="{...}" />
-            <marker date="1590298653849" expanded="true" signature="117:240" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaPassiveState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding>
-            <marker date="1590297946808" expanded="true" signature="41:219" ph="{...}" />
-            <marker date="1590297946808" expanded="true" signature="101:217" ph="{...}" />
-            <marker date="1590297946808" expanded="true" signature="156:211" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding>
-            <marker date="1590298117810" expanded="true" signature="61:430" ph="{...}" />
-            <marker date="1590298117810" expanded="true" signature="127:428" ph="{...}" />
-            <marker date="1590298117810" expanded="true" signature="319:422" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaStateCondition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="65" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="65" />
-          <folding>
-            <marker date="1590298266802" expanded="true" signature="61:216" ph="{...}" />
-            <marker date="1590298266802" expanded="true" signature="134:214" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
-          <folding>
-            <marker date="1590298394019" expanded="false" signature="6:32" ph="..." />
-            <marker date="1590298394019" expanded="true" signature="75:1574" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="208:1572" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="488:870" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="570:804" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="658:790" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="919:952" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="1000:1059" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="1115:1174" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="1234:1566" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="1260:1333" ph="{...}" />
-            <marker date="1590298394019" expanded="true" signature="1373:1556" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaTimerStateCondition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <marker date="1590298463917" expanded="true" signature="61:392" ph="{...}" />
-            <marker date="1590298463917" expanded="true" signature="137:390" ph="{...}" />
-            <marker date="1590298463917" expanded="true" signature="294:384" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <marker date="1590298568530" expanded="true" signature="61:607" ph="{...}" />
-            <marker date="1590298568530" expanded="true" signature="133:605" ph="{...}" />
-            <marker date="1590298568530" expanded="true" signature="302:599" ph="{...}" />
-            <marker date="1590298568530" expanded="true" signature="389:551" ph="{...}" />
-            <marker date="1590298568530" expanded="true" signature="467:537" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaFSM.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="81" selection-start-line="81" selection-end-line="82" />
-          <folding>
-            <marker date="1590298704241" expanded="true" signature="6:90" ph="..." />
-            <marker date="1590298704241" expanded="true" signature="133:3696" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="270:3694" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="755:1809" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="988:1624" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="1022:1351" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="1408:1610" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="1674:1799" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="1850:2202" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2128:2192" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2270:2535" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2320:2399" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2611:2677" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2761:2827" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2931:3688" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="2957:3059" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="3112:3447" ph="{...}" />
-            <marker date="1590298704241" expanded="true" signature="3487:3678" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntityMonoView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <marker date="1588867630126" expanded="false" signature="6:119" ph="..." />
-            <marker date="1588867630126" expanded="true" signature="146:1020" ph="{...}" />
-            <marker date="1588867630126" expanded="true" signature="201:1018" ph="{...}" />
-            <marker date="1588867630126" expanded="true" signature="640:765" ph="{...}" />
-            <marker date="1588867630126" expanded="true" signature="799:862" ph="{...}" />
-            <marker date="1588867630126" expanded="true" signature="911:1012" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/Editor/TerraCheatWindow.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="89" column="47" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
-          <folding>
-            <marker date="1590299995536" expanded="false" signature="6:144" ph="..." />
-            <marker date="1590299995536" expanded="true" signature="185:3453" ph="{...}" />
-            <marker date="1590299995536" expanded="true" signature="262:3451" ph="{...}" />
-            <marker date="1590299995536" expanded="true" signature="3279:3329" ph="{...}" />
-            <marker date="1590299995536" expanded="true" signature="3381:3445" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
-          <folding>
-            <marker date="1590300189673" expanded="false" signature="6:84" ph="..." />
-            <marker date="1590300189673" expanded="true" signature="125:292" ph="{...}" />
-            <marker date="1590300189673" expanded="true" signature="203:290" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="122" column="52" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
-          <folding>
-            <marker date="1590300204150" expanded="false" signature="6:248" ph="..." />
-            <marker date="1590300204150" expanded="true" signature="289:4834" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="359:3119" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="643:689" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="725:1156" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="751:1146" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="811:1131" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="1297:1889" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="1340:1879" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="1986:2422" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="2029:2412" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="2521:2584" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="2626:2684" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="2783:3113" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="2826:3103" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="3185:4832" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="3400:3437" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="3936:3956" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="4038:4157" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="4214:4258" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="4301:4352" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="4414:4826" ph="{...}" />
-            <marker date="1590300204150" expanded="true" signature="4496:4816" ph="/* return new TerraDBService.TerraDBRequest() ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="287" column="13" selection-start-line="287" selection-start-column="13" selection-end-line="287" selection-end-column="13" />
-          <folding>
-            <marker date="1590300227555" expanded="false" signature="6:274" ph="..." />
-            <marker date="1590300227555" expanded="true" signature="315:12464" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="376:4931" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="949:1007" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="1056:1136" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="1214:2149" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="2180:2284" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="2322:2418" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="2450:2550" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="2588:2982" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="2677:2945" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="2862:2931" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="3028:3395" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="3090:3358" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="3275:3344" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="3431:4517" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="3495:3569" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="3819:4507" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="4071:4268" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="4289:4384" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="4547:4642" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="4685:4748" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="4854:4925" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="4994:5471" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="5244:5465" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="5586:12462" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="6104:6270" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="6732:7001" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="6796:6990" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="7044:7150" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="7230:7922" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="7474:7882" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="7692:7755" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="8026:9072" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="8159:8313" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="8366:8528" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="8580:8746" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="8798:8964" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="8981:9062" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="9174:10228" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="9307:9463" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="9516:9680" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="9732:9900" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="9952:10120" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="10137:10218" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="10332:11382" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="10465:10620" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="10673:10836" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="10888:11055" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="11107:11274" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="11291:11372" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="11461:12455" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="11594:11735" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="11788:11937" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="11989:12142" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="12194:12347" ph="{...}" />
-            <marker date="1590300227555" expanded="true" signature="12364:12445" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-          <folding>
-            <marker date="1585935888293" expanded="false" signature="6:167" ph="..." />
-            <marker date="1585935888293" expanded="true" signature="194:1386" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="275:1384" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="512:678" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="738:1276" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="912:1266" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="995:1086" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="1156:1252" ph="{...}" />
-            <marker date="1585935888293" expanded="true" signature="1308:1378" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <marker date="1590300245785" expanded="true" signature="6:57" ph="..." />
-            <marker date="1590300245785" expanded="true" signature="91:372" ph="{...}" />
-            <marker date="1590300245785" expanded="true" signature="170:370" ph="{...}" />
-            <marker date="1590300245785" expanded="true" signature="318:364" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-          <folding>
-            <marker date="1590300256234" expanded="false" signature="6:297" ph="..." />
-            <marker date="1590300256234" expanded="true" signature="325:6102" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="471:6100" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="510:566" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="1360:2032" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="1813:2022" ph="/* AddEntities(_chunksViewModel.GetRuntimeEntities()); ... */" />
-            <marker date="1590300256234" expanded="true" signature="2114:2190" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="2257:2340" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="2425:2482" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="2565:2619" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="2687:2962" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="2758:2926" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="2841:2912" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3041:3286" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3112:3276" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3185:3262" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3366:3514" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3441:3504" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3572:4191" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3626:3684" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3701:4155" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="3811:3902" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4022:4095" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4269:4415" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4339:4405" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4476:4927" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4531:4589" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4606:4891" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="4735:4828" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5011:5242" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5162:5232" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5332:5677" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5483:5631" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5736:5805" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5838:5859" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="5923:5989" ph="{...}" />
-            <marker date="1590300256234" expanded="true" signature="6038:6094" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

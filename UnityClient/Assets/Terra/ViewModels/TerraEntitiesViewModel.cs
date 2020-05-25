@@ -33,6 +33,9 @@ namespace Terra.ViewModels
         public TerraEntityPrefabConfig TerraEntityPrefabConfig;
 
         public RuntimeTerraEntity Player { get; private set; }
+        
+        //Lookup Tables
+        private Dictionary<string, HashSet<RuntimeTerraEntity>> _labelToEntitiesTable;
 
         public TerraEntitiesViewModel()
         {
@@ -43,6 +46,8 @@ namespace Terra.ViewModels
             
             _chunksViewModel.OnChunkAdded += ChunksViewModelOnOnChunkAdded;
             _chunksViewModel.OnChunkRemoved += ChunksViewModelOnOnChunkRemoved;
+            
+            _labelToEntitiesTable = new Dictionary<string, HashSet<RuntimeTerraEntity>>();
             
            // AddEntities(_chunksViewModel.GetRuntimeEntities());
            // AddEntities(_worldViewModel.GetRuntimeEntities());
@@ -83,15 +88,14 @@ namespace Terra.ViewModels
             return null;
         }
 
-        public IEnumerator<RuntimeTerraEntity> GetEntities(string label = "")
+        public IEnumerable<RuntimeTerraEntity> GetEntities(string label = "")
         {
-            foreach (RuntimeTerraEntity entity in _entities)
+            if (_labelToEntitiesTable.ContainsKey(label))
             {
-                if (entity.EntityTypeData.HasLabel(label))
-                {
-                    yield return entity;
-                }
+                return _labelToEntitiesTable[label];
             }
+
+            return new RuntimeTerraEntity[0];
         }
 
         public void AddEntities(IEnumerable<RuntimeTerraEntity> entitiesToAdd)
@@ -114,7 +118,12 @@ namespace Terra.ViewModels
 
                 foreach (string label in entity.Labels)
                 {
-                    EntityOnLabelAdded(entity, label);
+                    if (!_labelToEntitiesTable.ContainsKey(label))
+                    {
+                        _labelToEntitiesTable.Add(label, new HashSet<RuntimeTerraEntity>());
+                    }
+                    
+                    _labelToEntitiesTable[label].Add(entity);
                 }
 
                 if (entity.EntityID == TerraGameResources.Instance.TerraEntityPrefabConfig.PlayerConfig.Data.EntityID)
@@ -148,7 +157,7 @@ namespace Terra.ViewModels
                 
                 foreach (string label in entity.Labels)
                 {
-                    EntityOnLabelRemoved(entity, label);
+                    _labelToEntitiesTable[label].Remove(entity);
                 }
 
                 OnRemoveEntity?.Invoke(entity);
@@ -156,30 +165,6 @@ namespace Terra.ViewModels
 
             return true;
         }
-
-        private void EntityOnLabelRemoved(RuntimeTerraEntity entity, string label)
-        {
-            _filteredEntities.TryGetValue(label, out HashSet<RuntimeTerraEntity> filterSet);
-            
-            if (filterSet != null)
-            {
-                filterSet.Remove(entity);
-            }
-        }
-        
-        private void EntityOnLabelAdded(RuntimeTerraEntity entity, string label)
-        {
-            _filteredEntities.TryGetValue(label, out HashSet<RuntimeTerraEntity> filterSet);
-            
-            if (filterSet == null)
-            {
-                filterSet = new HashSet<RuntimeTerraEntity>();
-                _filteredEntities.Add(label, filterSet);
-            }
-
-            filterSet.Add(entity);
-        }
-
 
         public void SetParameters(Parameters parameters)
         {

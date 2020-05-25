@@ -59,10 +59,9 @@ namespace Terra.SerializedData.Entities
             get => Entity.InstanceId;
             set => Entity.InstanceId = value;
         }
-        public HashSet<string> Labels
+        public string[] Labels
         {
-            get => Entity.Labels;
-            set => Entity.Labels = value;
+            get => EntityTypeData.Labels;
         }
 
         public string EntityID
