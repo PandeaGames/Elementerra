@@ -3,17 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/Mutant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/Mutant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/MutantEntity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/MutantEntity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Mutant monster Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mutant monster/Mutant monster Animator Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +44,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/Services/ServiceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Views/AbstractUnityView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaTimerStateCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaFSM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FreeFlyCamera/Scripts/FreeFlyCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Utils/StateMachines/PandeaGamesFsm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityProxyMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/AreaHighlighting/AreaHighlightingMonoView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugPlaceEntityMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/DebugMonoViews/TerraDebugControlViewModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -178,15 +179,19 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraPlayerStateService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerStateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameState/TerraPlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaStateGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/MonoBehaviourSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/ITerraEntityType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityMonoViewReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/AbstractEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WaterShaderPackage/Scripts/BaseWaterScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/TransformReference.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/RigidBodyReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/EntityComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraPosition3DComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -206,6 +211,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/SharpSerializer/Serializing/PropertyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraChunksViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/AnimatorReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Inventory/MonoViews/InventoryMonoView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraTerrainGeometryDataModel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -234,6 +240,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/IDBSerializable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraChunkService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/AnimationReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractDialogViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Editor/TerraCheatWindow.cs" root0="FORCE_HIGHLIGHTING" />
@@ -241,6 +248,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/ViewDataStreamerGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/IDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/PandeaComponentReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/IParamaterizedViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/TerraView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TimeOfDayMonoViews/TerraTODLightColor.cs" root0="FORCE_HIGHLIGHTING" />
@@ -273,14 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/Utility/TerraEntityColliderMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/PlanControlViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerEntitySlaveViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraLivingEntityComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraLivingEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FollowPlayerAIMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Services/TerraEntitesService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/PlayerAttackTargetViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Inventory/InventoryService.cs" />
@@ -309,7 +309,6 @@
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPassiveState.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaState.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaPassiveState.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaStateCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaTimerStateCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" />
@@ -318,11 +317,20 @@
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/TerraEntity.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraEntitiesViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/RuntimeTerraEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaState.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaStateGroup.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaComponentReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/AnimationReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/PandeaComponentReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/AnimatorReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaPlayAnimationState.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/TransformReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityMonoViewReference.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/RigidBodyReference.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityDistanceCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" />
       </list>
     </option>
@@ -433,6 +441,7 @@
       <workItem from="1588916281014" duration="13219000" />
       <workItem from="1590295453807" duration="4822000" />
       <workItem from="1590356280397" duration="4918000" />
+      <workItem from="1590468654622" duration="2220000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 using PandeaGames;
 using PandeaGames.Runtime.Gameplay.AI;
+using Terra.MonoViews.AI.References;
 using Terra.SerializedData.Entities;
 using Terra.ViewModels;
 using UnityEngine;
@@ -10,10 +11,13 @@ namespace Terra.MonoViews.AI.FSM
     public class TerraEntityLookTowardsState : AbstractPandeaState
     {
         [SerializeField]
-        private TerraEntityMonoView m_terraEntityMonoView;
+        private TerraEntityMonoViewReference m_terraEntityMonoView;
         
         [SerializeField]
         private Vector3 m_adjustRotation;
+        
+        [SerializeField]
+        private TransformReference m_target;
 
         private TerraEntitiesViewModel m_terraEntitiesViewModel;
 
@@ -26,7 +30,7 @@ namespace Terra.MonoViews.AI.FSM
         {
             base.HandleUpdateState();
             
-            RuntimeTerraEntity thisEntity = m_terraEntityMonoView.Entity;
+            RuntimeTerraEntity thisEntity = m_terraEntityMonoView.Component.Entity;
 
             if (thisEntity != null)
             {
@@ -46,8 +50,8 @@ namespace Terra.MonoViews.AI.FSM
 
                 if (closestEntity != null)
                 {
-                    transform.LookAt(closestEntity.Position.Data);
-                    transform.Rotate(m_adjustRotation);
+                    m_target.Component.LookAt(closestEntity.Position.Data);
+                    m_target.Component.Rotate(m_adjustRotation);
                 }
             }
         }

@@ -496,10 +496,18 @@
                 <e p="AbstractPandeaPassiveState.cs" t="Include" />
                 <e p="AbstractPandeaState.cs" t="Include" />
                 <e p="AbstractPandeaStateCondition.cs" t="Include" />
+                <e p="ComponentReferences" t="Include">
+                  <e p="AnimationReference.cs" t="Include" />
+                  <e p="AnimatorReference.cs" t="Include" />
+                  <e p="PandeaComponentReference.cs" t="Include" />
+                  <e p="RigidBodyReference.cs" t="Include" />
+                  <e p="TransformReference.cs" t="Include" />
+                </e>
                 <e p="PandeaBasicMovementState.cs" t="Include" />
                 <e p="PandeaConditionsGroup.cs" t="Include" />
                 <e p="PandeaFSM.cs" t="Include" />
                 <e p="PandeaPlayAnimationState.cs" t="Include" />
+                <e p="PandeaStateGroup.cs" t="Include" />
                 <e p="PandeaStateTransition.cs" t="Include" />
                 <e p="PandeaTimerStateCondition.cs" t="Include" />
               </e>
@@ -1077,6 +1085,9 @@
                 <e p="TerraEntityLookTowardsState.cs" t="Include" />
               </e>
               <e p="HostileAIMonoView.cs" t="Include" />
+              <e p="References" t="Include">
+                <e p="TerraEntityMonoViewReference.cs" t="Include" />
+              </e>
               <e p="TerraAttackRangeScaler.cs" t="Include" />
               <e p="TerraProjectile.cs" t="Include" />
             </e>

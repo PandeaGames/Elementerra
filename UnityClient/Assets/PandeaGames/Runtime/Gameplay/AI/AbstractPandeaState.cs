@@ -13,8 +13,6 @@ namespace PandeaGames.Runtime.Gameplay.AI
         [SerializeField]
         private PandeaStateTransition[] m_transitions;
 
-        [SerializeField] private AbstractPandeaState[] m_subStates;
-
         public virtual bool Evaluate(float secondsInCurrentState, out AbstractPandeaState newState)
         {
             foreach (PandeaStateTransition transition in m_transitions)
@@ -32,29 +30,15 @@ namespace PandeaGames.Runtime.Gameplay.AI
 
         public virtual void HandleUpdateState()
         {
-            foreach (AbstractPandeaState state in m_subStates)
-            {
-                state.HandleUpdateState();
-            }
         }
 
         public virtual void HandleEnterState()
         {
-            foreach (AbstractPandeaState state in m_subStates)
-            {
-                state.HandleEnterState();
-            }
-            
             HandleState(OnEnterState);
         }
         
         public virtual void HandleLeaveState()
         {
-            foreach (AbstractPandeaState state in m_subStates)
-            {
-                state.HandleLeaveState();
-            }
-            
             HandleState(OnLeaveState);
         }
 

@@ -7,7 +7,7 @@ namespace PandeaGames.Runtime.Gameplay.AI
         [SerializeField] 
         private Vector3 m_direction;
 
-        [SerializeField] private Rigidbody m_rb;
+        [SerializeField] private RigidBodyReference m_rb;
         [SerializeField] private ForceMode m_forceMode;
         [SerializeField] private bool m_relative;
 
@@ -17,11 +17,11 @@ namespace PandeaGames.Runtime.Gameplay.AI
             
             if (m_relative)
             {
-                m_rb.AddRelativeForce(m_direction, m_forceMode);
+                m_rb.Component.AddRelativeForce(m_direction, m_forceMode);
             }
             else
             {
-                m_rb.AddForce(m_direction, m_forceMode);
+                m_rb.Component.AddForce(m_direction, m_forceMode);
             }
         }
     }

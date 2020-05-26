@@ -1,6 +1,7 @@
 ﻿using System;
 using PandeaGames;
 using PandeaGames.Runtime.Gameplay.AI;
+using Terra.MonoViews.AI.References;
 using Terra.SerializedData.Entities;
 using Terra.ViewModels;
 using UnityEngine;
@@ -23,7 +24,7 @@ namespace Terra.MonoViews.AI.FSM
         private RadiusType m_radiusType;
 
         [SerializeField]
-        private TerraEntityMonoView m_terraEntityMonoView;
+        private TerraEntityMonoViewReference m_terraEntityMonoView;
 
         private TerraEntitiesViewModel m_terraEntitiesViewModel;
 
@@ -34,7 +35,7 @@ namespace Terra.MonoViews.AI.FSM
 
         public override bool Evaluate(float secondsInCurrentState)
         {
-            RuntimeTerraEntity thisEntity = m_terraEntityMonoView.Entity;
+            RuntimeTerraEntity thisEntity = m_terraEntityMonoView.Component.Entity;
 
             if (thisEntity != null)
             {
