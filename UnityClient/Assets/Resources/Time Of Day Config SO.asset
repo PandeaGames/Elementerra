@@ -14,3 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     DayLengthSeconds: 500
+    TimesOfDay:
+    - Time: 0
+      ID: Noon
+    - Time: 0.275
+      ID: Evening
+    - Time: 0.79
+      ID: Twighlight
+    - Time: 0.82
+      ID: Night
+    - Time: 0.85
+      ID: Dawn
+    - Time: 0.87
+      ID: Morning

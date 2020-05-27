@@ -51,5 +51,18 @@ namespace Terra.ViewModels
                 return (float) ticksToday / ticksPerDay;
             }
         }
+
+        public string GetTimeOfDayID()
+        {
+            for (int i = 0; i < _timeOfDayData.TimesOfDay.Length; i++)
+            {
+                if (_timeOfDayData.TimesOfDay[i].Time > CurrentDayProgress)
+                {
+                    return _timeOfDayData.TimesOfDay[i].ID;
+                }
+            }
+
+            return string.Empty;
+        }
     }
 }

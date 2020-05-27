@@ -493,6 +493,7 @@
             </e>
             <e p="Gameplay" t="Include">
               <e p="AI" t="Include">
+                <e p="AbstractPandeaLocomotion.cs" t="Include" />
                 <e p="AbstractPandeaPassiveState.cs" t="Include" />
                 <e p="AbstractPandeaState.cs" t="Include" />
                 <e p="AbstractPandeaStateCondition.cs" t="Include" />
@@ -507,9 +508,11 @@
                 <e p="PandeaConditionsGroup.cs" t="Include" />
                 <e p="PandeaFSM.cs" t="Include" />
                 <e p="PandeaPlayAnimationState.cs" t="Include" />
+                <e p="PandeaRandomCondition.cs" t="Include" />
                 <e p="PandeaStateGroup.cs" t="Include" />
                 <e p="PandeaStateTransition.cs" t="Include" />
                 <e p="PandeaTimerStateCondition.cs" t="Include" />
+                <e p="PhysicsLocomotion.cs" t="Include" />
               </e>
               <e p="Camera" t="Include">
                 <e p="AnchoredFollowAgent.cs" t="Include" />
@@ -1083,6 +1086,7 @@
               <e p="FSM" t="Include">
                 <e p="TerraEntityDistanceCondition.cs" t="Include" />
                 <e p="TerraEntityLookTowardsState.cs" t="Include" />
+                <e p="TerraTimeOfDayCondition.cs" t="Include" />
               </e>
               <e p="HostileAIMonoView.cs" t="Include" />
               <e p="References" t="Include">
