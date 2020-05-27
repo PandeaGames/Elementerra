@@ -22,7 +22,8 @@ namespace Terra.MonoViews.AI.FSM
         
         public override bool Evaluate(float secondsInCurrentState)
         {
-            return m_negateCondition ? m_worldState.GetTimeOfDayID() != m_timeOfDayId:m_worldState.GetTimeOfDayID() == m_timeOfDayId;
+            string timeOfDay = m_worldState.GetTimeOfDayID();
+            return m_negateCondition ? timeOfDay != m_timeOfDayId:timeOfDay == m_timeOfDayId;
         }
     }
 }

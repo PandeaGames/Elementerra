@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="268f338c-f4da-44ee-9bad-41f9b094add9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/MutantAI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/MutantAI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mutant monster/Mutant monster Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mutant monster/Mutant monster Animator Controller.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraTimeOfDayCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraTimeOfDayCondition.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -334,8 +331,8 @@
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaRandomCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TimeOfDayData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraTimeOfDayCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraTimeOfDayCondition.cs" />
       </list>
     </option>
   </component>
@@ -445,7 +442,7 @@
       <workItem from="1588916281014" duration="13219000" />
       <workItem from="1590295453807" duration="4822000" />
       <workItem from="1590356280397" duration="4918000" />
-      <workItem from="1590468654622" duration="7744000" />
+      <workItem from="1590468654622" duration="9677000" />
     </task>
     <servers />
   </component>

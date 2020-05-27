@@ -22,7 +22,7 @@ namespace PandeaGames.Runtime.Gameplay.AI
                 }
             }
             
-            return true;
+            return false;
         }
     }
 }

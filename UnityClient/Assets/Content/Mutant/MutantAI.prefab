@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1201798117774972665}
   - component: {fileID: 6674790207159593954}
   - component: {fileID: 441587485539038748}
+  - component: {fileID: 3656441127086569065}
   m_Layer: 0
   m_Name: StrafeRight
   m_TagString: Untagged
@@ -50,6 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_transitions:
   - Condition: {fileID: 441587485539038748}
+    AbstractPandeaState: {fileID: 5823202000520873430}
+  - Condition: {fileID: 3656441127086569065}
     AbstractPandeaState: {fileID: 5379224131517199552}
   m_subStates:
   - {fileID: 9170107843527459830}
@@ -131,6 +134,21 @@ MonoBehaviour:
   - {fileID: 6674790207159593954}
   - {fileID: 1201798117774972665}
   m_mustBeUnanimous: 0
+--- !u!114 &3656441127086569065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749768801304687129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radiusInUnits: 5
+  m_radiusType: 1
+  m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &836287818048833549
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +385,6 @@ GameObject:
   - component: {fileID: 719117504816732657}
   - component: {fileID: 4010413924726363835}
   - component: {fileID: 7277689847195322490}
-  - component: {fileID: 2327065836030039524}
   m_Layer: 0
   m_Name: WalkAway
   m_TagString: Untagged
@@ -403,11 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_transitions:
   - Condition: {fileID: 719117504816732657}
-    AbstractPandeaState: {fileID: 6496701833532348036}
-  - Condition: {fileID: 2327065836030039524}
-    AbstractPandeaState: {fileID: 3413783507114756298}
-  - Condition: {fileID: 2327065836030039524}
-    AbstractPandeaState: {fileID: 2693505481487716248}
+    AbstractPandeaState: {fileID: 5823202000520873430}
   m_subStates:
   - {fileID: 4055919174041017543}
   - {fileID: 4010413924726363835}
@@ -460,20 +473,6 @@ MonoBehaviour:
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
---- !u!114 &2327065836030039524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2535890470467194788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96511045973c4ffea236f4d6f74fdc91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_evaluateSecondsInterval: 1
-  m_chance: 30
 --- !u!1 &2791880528520914974
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +534,7 @@ GameObject:
   - component: {fileID: 7684710416001212709}
   - component: {fileID: 641493150087300986}
   - component: {fileID: 6436116610738296442}
+  - component: {fileID: 335140854319025092}
   m_Layer: 0
   m_Name: StrafeLeft
   m_TagString: Untagged
@@ -570,6 +570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_transitions:
   - Condition: {fileID: 6436116610738296442}
+    AbstractPandeaState: {fileID: 5823202000520873430}
+  - Condition: {fileID: 335140854319025092}
     AbstractPandeaState: {fileID: 5379224131517199552}
   m_subStates:
   - {fileID: 5754633900629965855}
@@ -651,6 +653,21 @@ MonoBehaviour:
   - {fileID: 641493150087300986}
   - {fileID: 7684710416001212709}
   m_mustBeUnanimous: 0
+--- !u!114 &335140854319025092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681736951664179284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radiusInUnits: 5
+  m_radiusType: 1
+  m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &4687839530869790132
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +743,7 @@ Transform:
   - {fileID: 2692027089140451689}
   - {fileID: 3475455865464503634}
   - {fileID: 8876109620733913210}
+  - {fileID: 3301007642136602993}
   m_Father: {fileID: 5194029050550429773}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -874,6 +892,55 @@ MonoBehaviour:
   m_states:
   - {fileID: 5379224131517199552}
   - {fileID: 6496701833532348036}
+  - {fileID: 5823202000520873430}
+  - {fileID: 4182868957153935675}
+  - {fileID: 5489698948128982625}
+--- !u!1 &6563560315727478928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3301007642136602993}
+  - component: {fileID: 7963127455042729594}
+  m_Layer: 0
+  m_Name: Idle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3301007642136602993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563560315727478928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8996952034353925797}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7963127455042729594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563560315727478928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c1434a4ccb4043b7fd52ae504d542a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transitions: []
+  m_animator: {fileID: 4703265956520515891}
+  m_animationName: idle1
 --- !u!1 &6612961832355505944
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,6 +954,9 @@ GameObject:
   - component: {fileID: 6725076892437911046}
   - component: {fileID: 5353119760007855721}
   - component: {fileID: 4098593855107388249}
+  - component: {fileID: 2722126196764632269}
+  - component: {fileID: 5750706406890579059}
+  - component: {fileID: 6978117318368561742}
   m_Layer: 0
   m_Name: CrawlFarForward
   m_TagString: Untagged
@@ -922,7 +992,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_transitions:
   - Condition: {fileID: 4098593855107388249}
-    AbstractPandeaState: {fileID: 5379224131517199552}
+    AbstractPandeaState: {fileID: 4182868957153935675}
+  - Condition: {fileID: 6978117318368561742}
+    AbstractPandeaState: {fileID: 6496701833532348036}
   m_subStates:
   - {fileID: 7631078239363979132}
   - {fileID: 6725076892437911046}
@@ -972,9 +1044,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radiusInUnits: 5
+  m_radiusInUnits: 25
   m_radiusType: 1
   m_terraEntityMonoView: {fileID: 855582180167511654}
+--- !u!114 &2722126196764632269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612961832355505944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfDayId: Twighlight
+  m_negateCondition: 0
+--- !u!114 &5750706406890579059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612961832355505944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfDayId: Night
+  m_negateCondition: 0
+--- !u!114 &6978117318368561742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612961832355505944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_conditions:
+  - {fileID: 5750706406890579059}
+  - {fileID: 2722126196764632269}
+  m_mustBeUnanimous: 0
 --- !u!1 &7478268137635541164
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1101,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7453415900891962842}
   - component: {fileID: 5823202000520873430}
+  - component: {fileID: 3075328934998662316}
+  - component: {fileID: 591000515806606583}
+  - component: {fileID: 7621735778109902609}
+  - component: {fileID: 3875005673227453098}
+  - component: {fileID: 5593765029067763255}
+  - component: {fileID: 8418867287959947016}
+  - component: {fileID: 8860593251532202697}
   m_Layer: 0
   m_Name: Idle
   m_TagString: Untagged
@@ -1018,8 +1141,124 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdc1728ddc74e259594ac0ff1887d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_transitions:
+  - Condition: {fileID: 8418867287959947016}
+    AbstractPandeaState: {fileID: 4182868957153935675}
+  - Condition: {fileID: 591000515806606583}
+    AbstractPandeaState: {fileID: 5379224131517199552}
+  - Condition: {fileID: 7621735778109902609}
+    AbstractPandeaState: {fileID: 2693505481487716248}
+  - Condition: {fileID: 7621735778109902609}
+    AbstractPandeaState: {fileID: 3413783507114756298}
+  - Condition: {fileID: 8860593251532202697}
+    AbstractPandeaState: {fileID: 6496701833532348036}
+  m_subStates:
+  - {fileID: 7963127455042729594}
+  - {fileID: 3075328934998662316}
+--- !u!114 &3075328934998662316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad54be2331fa4900a28611fe775afb1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_transitions: []
-  m_subStates: []
+  m_terraEntityMonoView: {fileID: 855582180167511654}
+  m_adjustRotation: {x: 0, y: 0, z: 0}
+  m_target: {fileID: 8826021988845145390}
+--- !u!114 &591000515806606583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radiusInUnits: 5
+  m_radiusType: 1
+  m_terraEntityMonoView: {fileID: 855582180167511654}
+--- !u!114 &7621735778109902609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96511045973c4ffea236f4d6f74fdc91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_evaluateSecondsInterval: 1
+  m_chance: 20
+--- !u!114 &3875005673227453098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfDayId: Twighlight
+  m_negateCondition: 1
+--- !u!114 &5593765029067763255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfDayId: Night
+  m_negateCondition: 1
+--- !u!114 &8418867287959947016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_conditions:
+  - {fileID: 5593765029067763255}
+  - {fileID: 3875005673227453098}
+  m_mustBeUnanimous: 1
+--- !u!114 &8860593251532202697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478268137635541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_radiusInUnits: 10
+  m_radiusType: 0
+  m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &7695791822164516626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1272,9 @@ GameObject:
   - component: {fileID: 9185530365709869460}
   - component: {fileID: 551864903754655075}
   - component: {fileID: 8322135676745370228}
-  - component: {fileID: 8221650281156738627}
+  - component: {fileID: 7690059222805812801}
+  - component: {fileID: 5583521671743421657}
+  - component: {fileID: 1267808058505298016}
   m_Layer: 0
   m_Name: WalkFarAway
   m_TagString: Untagged
@@ -1069,11 +1310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_transitions:
   - Condition: {fileID: 9185530365709869460}
+    AbstractPandeaState: {fileID: 5489698948128982625}
+  - Condition: {fileID: 7690059222805812801}
     AbstractPandeaState: {fileID: 6496701833532348036}
-  - Condition: {fileID: 8221650281156738627}
-    AbstractPandeaState: {fileID: 3413783507114756298}
-  - Condition: {fileID: 8221650281156738627}
-    AbstractPandeaState: {fileID: 2693505481487716248}
   m_subStates:
   - {fileID: 4055919174041017543}
   - {fileID: 551864903754655075}
@@ -1090,7 +1329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radiusInUnits: 15
+  m_radiusInUnits: 30
   m_radiusType: 0
   m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!114 &551864903754655075
@@ -1126,7 +1365,7 @@ MonoBehaviour:
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
---- !u!114 &8221650281156738627
+--- !u!114 &7690059222805812801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1135,11 +1374,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 7695791822164516626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96511045973c4ffea236f4d6f74fdc91, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_evaluateSecondsInterval: 1
-  m_chance: 30
+  m_conditions:
+  - {fileID: 5583521671743421657}
+  - {fileID: 1267808058505298016}
+  m_mustBeUnanimous: 0
+--- !u!114 &5583521671743421657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695791822164516626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfDayId: Twighlight
+  m_negateCondition: 0
+--- !u!114 &1267808058505298016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695791822164516626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfDayId: Night
+  m_negateCondition: 0
 --- !u!1 &8659261596590116425
 GameObject:
   m_ObjectHideFlags: 0
