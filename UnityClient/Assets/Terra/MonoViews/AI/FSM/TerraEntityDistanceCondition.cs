@@ -47,15 +47,24 @@ namespace Terra.MonoViews.AI.FSM
 
                     if (m_radiusType == RadiusType.InsideRadius && d < m_radiusInUnits)
                     {
+#if UNITY_EDITOR
+                        EvaluationLog.Add($"{nameof(TerraEntityDistanceCondition)} on {gameObject.name} [m_radiusType:{m_radiusType}, d:{d},. m_radiusInUnits:{m_radiusInUnits}, entity:{entity.EntityID}]");
+#endif
                         return true;
                     }
                     else if(m_radiusType == RadiusType.OutsideRadius && d > m_radiusInUnits)
                     {
+#if UNITY_EDITOR
+                        EvaluationLog.Add($"{nameof(TerraEntityDistanceCondition)} on {gameObject.name} [m_radiusType:{m_radiusType}, d:{d},. m_radiusInUnits:{m_radiusInUnits}, entity:{entity.EntityID}]");
+#endif
                         return true;
                     }
                 }
             }
             
+#if UNITY_EDITOR
+                EvaluationLog.Add($"{nameof(TerraEntityDistanceCondition)} on {gameObject.name} [m_radiusType:{m_radiusType}, m_radiusInUnits:{m_radiusInUnits}");
+#endif
             return false;
         }
     }

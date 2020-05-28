@@ -17,7 +17,13 @@ namespace PandeaGames.Runtime.Gameplay.AI
             {
                 int roll = Random.Range(0, 100);
                 m_lastEvaluationSeconds = Time.time;
-                return roll < m_chance;
+                bool evaluation = roll < m_chance;
+                
+#if UNITY_EDITOR
+                EvaluationLog.Add($"{nameof(PandeaRandomCondition)} on {gameObject.name} [roll:{roll}, m_chance:{m_chance}, evaluation:{evaluation}]");     
+#endif
+                
+                return evaluation;
             }
 
             return false;

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_transitions: []
-  m_direction: {x: 0.6, y: 0, z: 0}
+  m_direction: {x: 10, y: 0, z: 0}
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636dd37dfb084cfbba77783abb3c7eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_secondsUntilStateChange: 7
 --- !u!114 &6674790207159593954
 MonoBehaviour:
@@ -116,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96511045973c4ffea236f4d6f74fdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_evaluateSecondsInterval: 1
   m_chance: 30
 --- !u!114 &441587485539038748
@@ -130,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_conditions:
   - {fileID: 6674790207159593954}
   - {fileID: 1201798117774972665}
@@ -146,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_radiusInUnits: 5
   m_radiusType: 1
   m_terraEntityMonoView: {fileID: 855582180167511654}
@@ -285,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_transitions:
   - Condition: {fileID: 6696745702193003873}
-    AbstractPandeaState: {fileID: 5379224131517199552}
+    AbstractPandeaState: {fileID: 5823202000520873430}
   m_subStates:
   - {fileID: 7631078239363979132}
   - {fileID: 7395338448215003997}
@@ -319,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_transitions: []
-  m_direction: {x: 0, y: 0, z: 0.7}
+  m_direction: {x: 0, y: 0, z: 8}
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
@@ -335,7 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radiusInUnits: 5
+  EvaluationLog: []
+  m_radiusInUnits: 8
   m_radiusType: 1
   m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &2249822688407676350
@@ -437,7 +442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radiusInUnits: 15
+  EvaluationLog: []
+  m_radiusInUnits: 10
   m_radiusType: 0
   m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!114 &4010413924726363835
@@ -469,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_transitions: []
-  m_direction: {x: 0, y: 0, z: 1}
+  m_direction: {x: 0, y: 0, z: 14}
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
@@ -590,7 +596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_transitions: []
-  m_direction: {x: -0.6, y: 0, z: 0}
+  m_direction: {x: -10, y: 0, z: 0}
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
@@ -622,6 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636dd37dfb084cfbba77783abb3c7eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_secondsUntilStateChange: 7
 --- !u!114 &641493150087300986
 MonoBehaviour:
@@ -635,6 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96511045973c4ffea236f4d6f74fdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_evaluateSecondsInterval: 1
   m_chance: 30
 --- !u!114 &6436116610738296442
@@ -649,6 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_conditions:
   - {fileID: 641493150087300986}
   - {fileID: 7684710416001212709}
@@ -665,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_radiusInUnits: 5
   m_radiusType: 1
   m_terraEntityMonoView: {fileID: 855582180167511654}
@@ -889,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3830a31e7d432894c38ef76d60180c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StateChangeLog: []
   m_states:
   - {fileID: 5379224131517199552}
   - {fileID: 6496701833532348036}
@@ -1028,7 +1039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_transitions: []
-  m_direction: {x: 0, y: 0, z: 0.7}
+  m_direction: {x: 0, y: 0, z: 8}
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
@@ -1044,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_radiusInUnits: 25
   m_radiusType: 1
   m_terraEntityMonoView: {fileID: 855582180167511654}
@@ -1059,6 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_timeOfDayId: Twighlight
   m_negateCondition: 0
 --- !u!114 &5750706406890579059
@@ -1073,6 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_timeOfDayId: Night
   m_negateCondition: 0
 --- !u!114 &6978117318368561742
@@ -1087,6 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_conditions:
   - {fileID: 5750706406890579059}
   - {fileID: 2722126196764632269}
@@ -1183,6 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_radiusInUnits: 5
   m_radiusType: 1
   m_terraEntityMonoView: {fileID: 855582180167511654}
@@ -1198,6 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96511045973c4ffea236f4d6f74fdc91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_evaluateSecondsInterval: 1
   m_chance: 20
 --- !u!114 &3875005673227453098
@@ -1212,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_timeOfDayId: Twighlight
   m_negateCondition: 1
 --- !u!114 &5593765029067763255
@@ -1226,6 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_timeOfDayId: Night
   m_negateCondition: 1
 --- !u!114 &8418867287959947016
@@ -1240,6 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_conditions:
   - {fileID: 5593765029067763255}
   - {fileID: 3875005673227453098}
@@ -1256,7 +1276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_radiusInUnits: 10
+  EvaluationLog: []
+  m_radiusInUnits: 15
   m_radiusType: 0
   m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &7695791822164516626
@@ -1329,6 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263e36f310024782b481ceda143f0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_radiusInUnits: 30
   m_radiusType: 0
   m_terraEntityMonoView: {fileID: 855582180167511654}
@@ -1361,7 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_transitions: []
-  m_direction: {x: 0, y: 0, z: 1}
+  m_direction: {x: 0, y: 0, z: 14}
   m_rb: {fileID: 8709336489459204705}
   m_forceMode: 1
   m_relative: 1
@@ -1377,6 +1399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e17b51172c44ec4a2c92f4f5520486b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_conditions:
   - {fileID: 5583521671743421657}
   - {fileID: 1267808058505298016}
@@ -1393,6 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_timeOfDayId: Twighlight
   m_negateCondition: 0
 --- !u!114 &1267808058505298016
@@ -1407,6 +1431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af68e453be584c2bbe030b1d6a091f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EvaluationLog: []
   m_timeOfDayId: Night
   m_negateCondition: 0
 --- !u!1 &8659261596590116425

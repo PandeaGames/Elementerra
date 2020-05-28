@@ -17,11 +17,11 @@ namespace PandeaGames.Runtime.Gameplay.AI
             
             if (m_relative)
             {
-                m_rb.Component.AddRelativeForce(m_direction, m_forceMode);
+                m_rb.Component.AddRelativeForce(m_direction * Time.deltaTime, m_forceMode);
             }
             else
             {
-                m_rb.Component.AddForce(m_direction, m_forceMode);
+                m_rb.Component.AddForce(m_direction * Time.deltaTime, m_forceMode);
             }
         }
     }

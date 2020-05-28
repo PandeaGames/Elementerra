@@ -23,7 +23,13 @@ namespace Terra.MonoViews.AI.FSM
         public override bool Evaluate(float secondsInCurrentState)
         {
             string timeOfDay = m_worldState.GetTimeOfDayID();
-            return m_negateCondition ? timeOfDay != m_timeOfDayId:timeOfDay == m_timeOfDayId;
+            bool evaluation = m_negateCondition ? timeOfDay != m_timeOfDayId : timeOfDay == m_timeOfDayId;
+            
+#if UNITY_EDITOR
+            EvaluationLog.Add($"{nameof(TerraTimeOfDayCondition)} on {gameObject.name} [m_timeOfDayId:{m_timeOfDayId}, m_negateCondition:{m_negateCondition}, timeOfDay:{timeOfDay}, evaluation{evaluation}");
+#endif
+            
+            return evaluation;
         }
     }
 }

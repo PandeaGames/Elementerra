@@ -14,15 +14,27 @@ namespace PandeaGames.Runtime.Gameplay.AI
                 bool evaluation = condition.Evaluate(secondsInCurrentState);
                 if (!evaluation && m_mustBeUnanimous)
                 {
+#if UNITY_EDITOR
+                    EvaluationLog.Add($"{nameof(PandeaConditionsGroup)} on {gameObject.name} Condition on object {condition.gameObject} of type {condition.GetType()} was not met.");
+#endif
                     return false;
                 }
                 else if(evaluation && !m_mustBeUnanimous)
                 {
+#if UNITY_EDITOR
+                    EvaluationLog.Add($"{nameof(PandeaConditionsGroup)} on {gameObject.name} Condition on object {condition.gameObject} of type {condition.GetType()} met.");
+#endif
                     return true;
                 }
             }
             
-            return false;
+            bool isUnanimous = m_conditions.Length > 0 && m_mustBeUnanimous;
+            
+#if UNITY_EDITOR
+            EvaluationLog.Add($"{nameof(PandeaConditionsGroup)} All conditions met");
+#endif
+            
+            return isUnanimous;
         }
     }
 }

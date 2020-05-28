@@ -7,6 +7,10 @@ namespace PandeaGames.Runtime.Gameplay.AI
     
     public abstract class AbstractPandeaState : MonoBehaviour
     {
+        #if UNITY_EDITOR
+        public Action<string> OnLogTransition;
+        #endif
+        
         public event StateEvent OnEnterState;
         public event StateEvent OnLeaveState;
 
@@ -20,6 +24,9 @@ namespace PandeaGames.Runtime.Gameplay.AI
                 if (transition.Condition.Evaluate(secondsInCurrentState))
                 {
                     newState = transition.AbstractPandeaState;
+                    #if UNITY_EDITOR
+                    OnLogTransition?.Invoke($"State [{newState.ToString()}] Condition [{transition.Condition}]");
+                    #endif
                     return true;
                 }
             }

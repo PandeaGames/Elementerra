@@ -9,7 +9,14 @@ namespace PandeaGames.Runtime.Gameplay.AI
         
         public override bool Evaluate(float secondsInCurrentState)
         {
-            return secondsInCurrentState > m_secondsUntilStateChange;
+            bool evaluation = secondsInCurrentState > m_secondsUntilStateChange;
+#if UNITY_EDITOR
+            if (evaluation)
+            {
+                EvaluationLog.Add($"{nameof(PandeaTimerStateCondition)} on {gameObject.name} [secondsInCurrentState:{secondsInCurrentState}, m_chance:{m_secondsUntilStateChange}]");
+            }
+#endif
+            return evaluation;
         }
     }
 }

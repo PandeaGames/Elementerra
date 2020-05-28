@@ -9,6 +9,11 @@ namespace PandeaGames.Runtime.Gameplay.AI
     
     public class PandeaFSM : MonoBehaviour
     {
+        #if UNITY_EDITOR
+        [HideInInspector]
+        public List<string> StateChangeLog = new List<string>();
+        #endif
+        
         public event StateMachineEvent OnEnterState;
         public event StateMachineEvent OnLeaveState;
         
@@ -33,6 +38,10 @@ namespace PandeaGames.Runtime.Gameplay.AI
 
                     state.OnEnterState += HandleEnterState;
                     state.OnLeaveState += HandleLeaveState;
+                    
+#if UNITY_EDITOR
+                    state.OnLogTransition += OnLogTransition; 
+#endif
 
                     m_stateToIndexTable.Add(state, i);
                     m_indexToStateTable.Add(i, state);
@@ -49,6 +58,13 @@ namespace PandeaGames.Runtime.Gameplay.AI
                 m_currentState.HandleEnterState();
             }
         }
+
+#if UNITY_EDITOR
+        private void OnLogTransition(string log)
+        {
+            StateChangeLog.Add(log);
+        }
+#endif
 
         protected virtual void Update()
         {

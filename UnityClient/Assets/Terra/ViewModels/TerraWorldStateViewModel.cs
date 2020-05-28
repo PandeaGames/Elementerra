@@ -56,7 +56,12 @@ namespace Terra.ViewModels
         {
             for (int i = 0; i < _timeOfDayData.TimesOfDay.Length; i++)
             {
-                if (_timeOfDayData.TimesOfDay[i].Time > CurrentDayProgress)
+                if (i == _timeOfDayData.TimesOfDay.Length - 1)
+                {
+                    return _timeOfDayData.TimesOfDay[i].ID;
+                }
+                
+                if (CurrentDayProgress > _timeOfDayData.TimesOfDay[i].Time && CurrentDayProgress < _timeOfDayData.TimesOfDay[i + 1].Time)
                 {
                     return _timeOfDayData.TimesOfDay[i].ID;
                 }
