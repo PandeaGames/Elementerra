@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 7395338448215003997}
   - component: {fileID: 4390324314247523362}
   - component: {fileID: 6696745702193003873}
+  - component: {fileID: 790439282977823368}
   m_Layer: 0
   m_Name: CrawlForward
   m_TagString: Untagged
@@ -294,6 +295,7 @@ MonoBehaviour:
   - {fileID: 7631078239363979132}
   - {fileID: 7395338448215003997}
   - {fileID: 4390324314247523362}
+  - {fileID: 790439282977823368}
 --- !u!114 &7395338448215003997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +344,20 @@ MonoBehaviour:
   EvaluationLog: []
   m_radiusInUnits: 8
   m_radiusType: 1
+  m_terraEntityMonoView: {fileID: 855582180167511654}
+--- !u!114 &790439282977823368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107354071608957564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a60ae0d87b461ca7dfaa0eca996d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transitions: []
   m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &2249822688407676350
 GameObject:
@@ -968,6 +984,7 @@ GameObject:
   - component: {fileID: 2722126196764632269}
   - component: {fileID: 5750706406890579059}
   - component: {fileID: 6978117318368561742}
+  - component: {fileID: 2935216723233319279}
   m_Layer: 0
   m_Name: CrawlFarForward
   m_TagString: Untagged
@@ -1010,6 +1027,7 @@ MonoBehaviour:
   - {fileID: 7631078239363979132}
   - {fileID: 6725076892437911046}
   - {fileID: 5353119760007855721}
+  - {fileID: 2935216723233319279}
 --- !u!114 &6725076892437911046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1124,20 @@ MonoBehaviour:
   - {fileID: 5750706406890579059}
   - {fileID: 2722126196764632269}
   m_mustBeUnanimous: 0
+--- !u!114 &2935216723233319279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612961832355505944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a60ae0d87b461ca7dfaa0eca996d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_transitions: []
+  m_terraEntityMonoView: {fileID: 855582180167511654}
 --- !u!1 &7478268137635541164
 GameObject:
   m_ObjectHideFlags: 0

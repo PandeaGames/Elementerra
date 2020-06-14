@@ -52,7 +52,7 @@ namespace Terra.MonoViews
             GameObject entity = Instantiate(_terraEntityPrefabConfig.GetGameObject(obj), transform);
             entity.GetComponent<TerraEntityMonoView>().Initilize(obj);
             _views.Add(obj.InstanceId, entity.GetComponent<TerraEntityMonoView>());
-            entity.SetActive(_currentArea.Contains(entity.transform.position, 4));
+            entity.SetActive(_currentArea.Contains(obj.Position.Data, 4));
         }
     }
 }
