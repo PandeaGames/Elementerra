@@ -14,7 +14,7 @@ namespace Terra.MonoViews.AI.FSM
     public class TerraLookTowardsPathState : AbstractPandeaState
     {
         [SerializeField]
-        private TerraEntityPathContainerReference m_pathContainer;
+        private TerraEntityPathContainer m_pathContainer;
         
         [SerializeField]
         private Vector3 m_adjustRotation;
@@ -27,7 +27,7 @@ namespace Terra.MonoViews.AI.FSM
         public override void HandleUpdateState()
         {
             base.HandleUpdateState();
-            m_target.Component.LookAt(m_pathContainer.Component.ClosestWorldPosition());
+            m_target.Component.LookAt(new Vector3(m_pathContainer.CurrentNodePosition.x, m_target.Component.position.y, m_pathContainer.CurrentNodePosition.z));
             m_target.Component.Rotate(m_adjustRotation);
         }
     }

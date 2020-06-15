@@ -15,12 +15,11 @@ namespace Terra.MonoViews.AI.FSM
         [SerializeField]
         private TerraEntityMonoViewReference m_terraEntityMonoView;
 
-        [SerializeField] private TerraEntityPathContainerReference m_pathReference;
+        [SerializeField] private TerraEntityPathContainer m_path;
         
         private TerraEntitiesViewModel m_terraEntitiesViewModel;
 
         private int m_indexOfPathNode;
-        private List<TerraVector> m_path;
         private TerraVector m_to;
         private TerraVector m_from;
 
@@ -68,47 +67,9 @@ namespace Terra.MonoViews.AI.FSM
 
         private void PathFound(List<TerraVector> path)
         {
-            m_pathReference.Component.Path = path;
+            m_path.Path = path;
         }
 
-        private void OnDrawGizmosSelected()
-        {
-            if (m_path != null)
-            {
-                TerraViewModel vm = Game.Instance.GetViewModel<TerraViewModel>(0);
-                
-                Gizmos.color = Color.blue;
-
-                TerraVector toWorld = vm.Chunk.LocalToWorld(m_to);
-                TerraVector fromWorld = vm.Chunk.LocalToWorld(m_from);
-                Gizmos.DrawLine(new Vector3(toWorld.x, 0 ,toWorld.y), new Vector3(fromWorld.x, 0, fromWorld.y));
-                
-                Gizmos.color = Color.red;
-                
-                Gizmos.DrawLine(vm.Geometry[m_from], vm.Geometry[m_to]);
-
-                if (TerraPlayerPrefs.TerraTerrainDebugViewType.HasFlag(TerraPlayerPrefs.TerraTerrainDebugViewTypes
-                    .WorldPositions))
-                {
-                    DebugUtils.DrawString($"({toWorld.x}:{toWorld.y})", vm.Geometry[m_to], Color.green, 10, 0, -10f);
-                    DebugUtils.DrawString($"({fromWorld.x}:{fromWorld.y})", vm.Geometry[m_from], Color.green, 10, 0, -10f);
-                } 
-                else if (TerraPlayerPrefs.TerraTerrainDebugViewType.HasFlag(TerraPlayerPrefs.TerraTerrainDebugViewTypes
-                    .LocalPositions))
-                {
-                    DebugUtils.DrawString($"({m_to.x}:{m_to.y})", vm.Geometry[m_to], Color.green, 10, 0, -10f);
-                    DebugUtils.DrawString($"({m_from.x}:{m_from.y})", vm.Geometry[m_from], Color.green, 10, 0, -10f);
-                }
-                
-                Gizmos.color = Color.green;
-               
-                for (int i = 1; i < m_path.Count; i++)
-                {
-                    toWorld = vm.Chunk.LocalToWorld(m_path[i]);
-                    fromWorld = vm.Chunk.LocalToWorld(m_path[i - 1]);
-                    Gizmos.DrawLine(vm.Geometry[m_path[i]], vm.Geometry[m_path[i - 1]]);
-                }
-            }
-        }   
+         
     }
 }

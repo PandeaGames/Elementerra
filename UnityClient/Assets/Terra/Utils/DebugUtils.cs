@@ -6,6 +6,7 @@ namespace Terra.Utils
     {   
         private static GUIStyle guiStyle = new GUIStyle(GUIStyle.none);
         static public void DrawString(string text, Vector3 worldPos, Color colour, int fontSize = 10, float offsetX = 0, float offsetY = 0 ) {
+            #if UNITY_EDITOR
             UnityEditor.Handles.BeginGUI();
             guiStyle.fontSize = fontSize;
             var restoreColor = GUI.color;
@@ -25,6 +26,7 @@ namespace Terra.Utils
             GUI.Label(new Rect(screenPos.x - (size.x / 2) + offsetX, -screenPos.y + view.position.height + offsetY, size.x, size.y), text, guiStyle);
             GUI.color = restoreColor;
             UnityEditor.Handles.EndGUI();
+            #endif
         }
     }
 }

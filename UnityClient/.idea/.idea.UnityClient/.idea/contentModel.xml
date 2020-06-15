@@ -1109,7 +1109,6 @@
               <e p="HostileAIMonoView.cs" t="Include" />
               <e p="References" t="Include">
                 <e p="TerraEntityMonoViewReference.cs" t="Include" />
-                <e p="TerraEntityPathContainerReference.cs" t="Include" />
               </e>
               <e p="TerraAttackRangeScaler.cs" t="Include" />
               <e p="TerraProjectile.cs" t="Include" />

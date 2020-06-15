@@ -29,7 +29,7 @@ namespace Terra.MonoViews
 
         private void Render(TerraViewModel vm)
         {
-            foreach (TerraGrassNodeGridPoint node in vm.Grass.AllData())
+            /*foreach (TerraGrassNodeGridPoint node in vm.Grass.AllData())
             {
                 TerraGrassMonoView monoView = null;
                 
@@ -43,7 +43,7 @@ namespace Terra.MonoViews
                 monoView.transform.rotation = Quaternion.Euler(0,rand.Next(0, 360),0);
                 monoView.transform.position = vm.Geometry[node.Vector];
                 monoView.SetData(node.Data);
-            }
+            }*/
         }
     }
 }

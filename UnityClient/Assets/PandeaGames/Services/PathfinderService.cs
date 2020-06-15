@@ -20,9 +20,9 @@ namespace PandeaGames.Services
             
             protected override void FindNeighbors(TerraVector cell)
             {
-                for(int x = Math.Max(0, cell.x - 1); x <= Math.Min(m_viewModel.Width - 1, cell.x + 1); x++)
+                for(int x = Math.Max(0, cell.x - 1); x <= Math.Min(m_viewModel.Width - 1, cell.x + 2); x++)
                 {
-                    for(int y = Math.Max(0, cell.y - 1); y <= Math.Min(m_viewModel.Height - 1, cell.y + 1); y++)
+                    for(int y = Math.Max(0, cell.y - 1); y <= Math.Min(m_viewModel.Height - 1, cell.y + 2); y++)
                     {
                         if (x != cell.x && y != cell.y)
                         {
@@ -73,7 +73,7 @@ namespace PandeaGames.Services
         {
             Debug.Log($"Request Path from {start} to {end}");
             AsyncPathFind pathfinder = new AsyncPathFind(
-                onComplete, viewModel, end, start);
+                onComplete, viewModel, start, end);
             pathfinder.Begin();
         }
     }

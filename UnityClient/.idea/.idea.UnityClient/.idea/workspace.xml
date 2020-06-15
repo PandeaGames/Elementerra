@@ -5,15 +5,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Content/Mutant/MutantAI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Mutant/MutantAI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Terra.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ITerraShape.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/ITerraShape.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ITerraShape.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/ITerraShape.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractGridDataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/AbstractGridDataModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/AbstractGridDataModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityPathContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityPathContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraLookTowardsPathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraLookTowardsPathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Utils/DebugUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Utils/DebugUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/TerraView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,25 +44,197 @@
       <file leaf-file-name="PathfinderService.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="240">
+              <caret line="34" column="17" selection-start-line="22" selection-start-column="16" selection-end-line="34" selection-end-column="17" />
               <folding>
-                <marker date="1592174802592" expanded="true" signature="6:139" ph="..." />
-                <marker date="1592174802592" expanded="true" signature="171:2655" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="245:2653" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="315:1215" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="439:508" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="589:1205" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="711:1191" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="842:1173" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="920:1151" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="997:1125" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="1252:2289" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="1646:1837" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="1876:2134" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="1980:2072" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="2185:2279" ph="{...}" />
-                <marker date="1592174802592" expanded="true" signature="2423:2647" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="6:139" ph="..." />
+                <marker date="1592194413680" expanded="true" signature="171:2655" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="245:2653" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="315:1215" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="439:508" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="589:1205" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="711:1191" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="842:1173" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="920:1151" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="997:1125" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="1252:2289" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="1646:1837" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="1876:2134" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="1980:2072" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="2185:2279" ph="{...}" />
+                <marker date="1592194413680" expanded="true" signature="2423:2647" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraPathfinderViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding>
+                <marker date="1592196654281" expanded="true" signature="6:77" ph="..." />
+                <marker date="1592196654281" expanded="true" signature="105:1449" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="171:1447" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="283:333" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="388:573" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="464:563" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="655:1237" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="798:1201" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="909:1187" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="979:1169" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="1053:1147" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="1313:1333" ph="{...}" />
+                <marker date="1592196654281" expanded="true" signature="1421:1441" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraTerrainMonoView.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="118" column="75" lean-forward="true" selection-start-line="118" selection-start-column="75" selection-end-line="118" selection-end-column="75" />
+              <folding>
+                <marker date="1585935888330" expanded="false" signature="6:133" ph="..." />
+                <marker date="1585935888330" expanded="true" signature="160:8905" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="216:8903" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="355:590" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="663:969" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="714:812" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="1228:1268" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="1406:1449" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="1600:2188" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="1797:1870" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="2296:2448" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="2555:5587" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="2597:3418" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="4097:4238" ph="/* Vector2[] triangles = new Vector2[(int)(dimensions.Area * 2)]; ... */" />
+                <marker date="1585935888330" expanded="true" signature="4387:4897" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="4448:4887" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="5033:5203" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="5094:5193" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="5629:5668" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="5798:6744" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="6776:7163" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="6806:7148" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="6968:7138" ph="{...}" />
+                <marker date="1585935888330" expanded="true" signature="7169:8077" ph="/* private void UpdateSurroundingHights(TerraVector vector, Vector3[] vertices, TerraWorldChunk chunk) ... */" />
+                <marker date="1585935888330" expanded="true" signature="8086:8342" ph="/* private void UpdateHights(TerraVector vector, Vector3[] vertices,  TerraWorldChunk chunk) ... */" />
+                <marker date="1585935888330" expanded="true" signature="8351:8897" ph="/* private Vector3 GetVertice(TerraWorldChunk chunk, int x, int y) ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraWorldDataStreamer.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="73" column="31" lean-forward="true" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+              <folding>
+                <marker date="1592197969423" expanded="false" signature="6:192" ph="..." />
+                <marker date="1592197969423" expanded="true" signature="233:5198" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="291:5196" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="1140:1404" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="1441:2055" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="2138:2211" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="2251:3204" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="2307:2404" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="2418:3194" ph="/* if (_terraEntitiesViewModel.Player != null) ... */" />
+                <marker date="1592197969423" expanded="true" signature="3272:4686" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="3336:3598" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="3503:3585" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="3637:4082" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="4228:4529" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="4539:4668" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="4745:4921" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="4949:4982" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="5036:5106" ph="{...}" />
+                <marker date="1592197969423" expanded="true" signature="5157:5190" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraGrassMonoView.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassMonoView.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <marker date="1585935888328" expanded="false" signature="6:42" ph="..." />
+                <marker date="1585935888328" expanded="true" signature="69:397" ph="{...}" />
+                <marker date="1585935888328" expanded="true" signature="123:395" ph="{...}" />
+                <marker date="1585935888328" expanded="true" signature="211:389" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraGrassWorldMonoView.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+              <folding>
+                <marker date="1592197161937" expanded="false" signature="6:95" ph="..." />
+                <marker date="1592197161937" expanded="true" signature="122:1818" ph="{...}" />
+                <marker date="1592197161937" expanded="true" signature="181:1816" ph="{...}" />
+                <marker date="1592197161937" expanded="true" signature="411:748" ph="{...}" />
+                <marker date="1592197161937" expanded="true" signature="820:907" ph="{...}" />
+                <marker date="1592197161937" expanded="true" signature="955:1810" ph="{...}" />
+                <marker date="1592197161937" expanded="true" signature="978:1800" ph="/* foreach (TerraGrassNodeGridPoint node in vm.Grass.AllData()) ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraGrassViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+              <folding>
+                <marker date="1585935888466" expanded="true" signature="41:1173" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="116:137" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="175:241" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="348:1171" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="559:1165" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="613:1155" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="676:1141" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="900:1122" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerraGrassPotentialViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+              <folding>
+                <marker date="1585935888466" expanded="false" signature="6:162" ph="..." />
+                <marker date="1585935888466" expanded="true" signature="190:3519" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="265:286" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="333:382" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="498:3517" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="751:1285" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="833:1051" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="896:1037" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="1197:1275" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="1397:1998" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="1577:1860" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="1718:1846" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="1924:1988" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="2072:2135" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="2221:3511" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="2441:3501" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="2675:3487" ph="{...}" />
+                <marker date="1585935888466" expanded="true" signature="2925:3469" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -68,8 +243,8 @@
       <file leaf-file-name="PathfinderViewModel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/PathfinderViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding>
                 <marker date="1590718983162" expanded="true" signature="32:393" ph="{...}" />
                 <marker date="1590718983162" expanded="true" signature="86:107" ph="{...}" />
@@ -81,160 +256,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TerraLookTowardsPathState.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraLookTowardsPathState.cs">
+      <file leaf-file-name="AStarPathfinder.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/AStarPathfinder.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="235">
+              <caret line="110" column="70" selection-start-line="110" selection-start-column="70" selection-end-line="110" selection-end-column="70" />
               <folding>
-                <marker date="1592176381357" expanded="false" signature="6:269" ph="..." />
-                <marker date="1592176381357" expanded="true" signature="303:925" ph="{...}" />
-                <marker date="1592176381357" expanded="true" signature="370:923" ph="{...}" />
-                <marker date="1592176381357" expanded="true" signature="713:917" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntityPathContainer.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityPathContainer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <marker date="1592176808092" expanded="true" signature="6:146" ph="..." />
-                <marker date="1592176808092" expanded="true" signature="180:1860" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="240:1858" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="429:520" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="618:665" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="731:815" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="864:1594" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="916:1514" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="1166:1500" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="1354:1482" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="1649:1724" ph="{...}" />
-                <marker date="1592176808092" expanded="true" signature="1776:1852" ph="/* public TerraVector GetNextLocalVector() ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ITerraShape.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/ITerraShape.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-              <folding>
-                <marker date="1592176119717" expanded="true" signature="7:33" ph="..." />
-                <marker date="1592176119717" expanded="true" signature="76:997" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="156:208" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="247:390" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="451:511" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="577:630" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="696:734" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="773:812" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="876:995" ph="{...}" />
-                <marker date="1592176119717" expanded="true" signature="1027:1071" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraWorldChunk.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-              <folding>
-                <marker date="1592176015007" expanded="false" signature="6:106" ph="..." />
-                <marker date="1592176015007" expanded="true" signature="163:2475" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="225:411" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="263:296" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="384:405" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="501:2473" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="720:788" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="863:968" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="1035:1140" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="1209:1335" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="1404:1500" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="1560:1695" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="1775:1891" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="1952:2012" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="2067:2467" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="2094:2188" ph="{...}" />
-                <marker date="1592176015007" expanded="true" signature="2204:2457" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraPathTargetSetter.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="67" />
-              <folding>
-                <marker date="1592175140306" expanded="true" signature="6:255" ph="..." />
-                <marker date="1592175140306" expanded="true" signature="289:4633" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="352:4631" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="811:2578" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="1073:2568" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="1374:1681" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="1530:1663" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="1725:2554" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="2634:2705" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="2750:4622" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="2792:4612" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="3504:3782" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="3941:4207" ph="{...}" />
-                <marker date="1592175140306" expanded="true" signature="4339:4598" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntityMonoViewReference.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityMonoViewReference.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="8" selection-end-column="1" />
-              <folding>
-                <marker date="1590629610300" expanded="true" signature="79:198" ph="{...}" />
-                <marker date="1590629610300" expanded="true" signature="175:196" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntityPathContainerReference.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-              <folding>
-                <marker date="1592175074043" expanded="true" signature="6:68" ph="..." />
-                <marker date="1592175074043" expanded="true" signature="109:238" ph="{...}" />
-                <marker date="1592175074043" expanded="true" signature="215:236" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TerraEntityLookTowardsState.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityLookTowardsState.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="41" />
-              <folding>
-                <marker date="1590629610298" expanded="false" signature="6:174" ph="..." />
-                <marker date="1590629610298" expanded="true" signature="208:1842" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="277:1840" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="627:741" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="799:1834" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="981:1824" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="1282:1589" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="1438:1571" ph="{...}" />
-                <marker date="1590629610298" expanded="true" signature="1633:1810" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="0:416" ph="/* Copyright 2018 Dane Zeke Liergaard All Rights Reserved. ... */" />
+                <marker date="1527626375000" expanded="false" signature="424:484" ph="..." />
+                <marker date="1527626375000" expanded="true" signature="502:9959" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="506:594" ph="/// Base implementation of an A* pathfinding algorithm. ... " />
+                <marker date="1527626375000" expanded="true" signature="655:9957" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="661:825" ph="/// Minimum range to be considered valid. Useful for ranged attacks that can't ... " />
+                <marker date="1527626375000" expanded="true" signature="857:939" ph="/// The maximum distance a valid cell can be. ... " />
+                <marker date="1527626375000" expanded="true" signature="1111:1254" ph="/// A Dictionary of reachable cells (from most recent call to FindAllInRange) to the paths to those cells. ... " />
+                <marker date="1527626375000" expanded="true" signature="1299:1397" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="1311:1391" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="1402:1580" ph="/// A re-used hash set of the neighbors of a cell. The required overridden ... " />
+                <marker date="1527626375000" expanded="true" signature="1709:2042" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="1785:1844" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="1878:1936" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="1983:2036" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="2048:2303" ph="/// Finds all the nodes in range from start node. ... " />
+                <marker date="1527626375000" expanded="true" signature="2354:3190" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="2519:2914" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="2667:2720" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="2757:2785" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="3030:3158" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="3196:3469" ph="/// Finds the most expedient path from start T to end T via A* pathfinding. ... " />
+                <marker date="1527626375000" expanded="true" signature="3514:4370" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="3777:4073" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="3967:4028" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="4112:4217" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="4267:4326" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="4415:4453" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="4459:4832" ph="/// Override to determine distance between two cells. ... " />
+                <marker date="1527626375000" expanded="true" signature="4901:4952" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="4958:5209" ph="/// Implement this to cause the pathfinder to quit early if a cell meets certain parameters. ... " />
+                <marker date="1527626375000" expanded="true" signature="5255:5282" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="5288:5480" ph="/// The only method that requires implementation. This function must call ... " />
+                <marker date="1527626375000" expanded="true" signature="5537:5732" ph="/// Implement this to do any preparation before searching for paths/ranges. ... " />
+                <marker date="1527626375000" expanded="true" signature="5770:5819" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="5825:6134" ph="/// Implement this to check if a cell is a valid path. If not valid, ... " />
+                <marker date="1527626375000" expanded="true" signature="6182:6208" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="6214:6519" ph="/// Implement this method to perform some action on each node along the path ... " />
+                <marker date="1527626375000" expanded="true" signature="6592:6599" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="6605:6785" ph="/// Implement this to perform some action on each node found in FindAllInRange. ... " />
+                <marker date="1527626375000" expanded="true" signature="6843:6850" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="6917:7214" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="6982:7007" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="7050:7183" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="7292:8759" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="7322:7347" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="7442:7467" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="7475:7590" ph="/* Calculate score based on &quot;distance&quot; between node and origin, and ... */" />
+                <marker date="1527626375000" expanded="true" signature="7683:7754" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="7871:7896" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="8040:8150" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="8312:8417" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="8568:8753" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="8765:8921" ph="/// Returns and closes the open node with the lowest score. ... " />
+                <marker date="1527626375000" expanded="true" signature="8983:9344" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9028:9081" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9148:9245" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9201:9237" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9350:9517" ph="/// Returns the open node with the shortest path from the start node. ... " />
+                <marker date="1527626375000" expanded="true" signature="9575:9953" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9620:9673" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9741:9850" ph="{...}" />
+                <marker date="1527626375000" expanded="true" signature="9805:9842" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -253,6 +343,7 @@
       <find>MaybeQueueNeighbors</find>
       <find>Open</find>
       <find>GUI.Label</find>
+      <find>GetChunk</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -492,7 +583,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/TransformReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/AnimatorReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraPlayerStateDataStreamer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ThirdParty/AssetBundleManager/Editor/ExecuteInternalMono.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldStateStreamer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IL3DN/Shaders/IL3DN_Branch.shader" root0="FORCE_HIGHLIGHTING" />
@@ -536,7 +626,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/AbstractPandeaPassiveState.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/Entities/ITerraEntity.cs" />
@@ -573,20 +662,21 @@
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/PathfinderViewModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraEntitiesMonoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/Utils/TerraPlayerPrefs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/Utils/DebugUtils.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainDebugMonoView.cs" />
-        <option value="$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/SerializedData/World/TerraWorldChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/PandeaGames/ViewModels/ITerraShape.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Utils/DebugUtils.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraLookTowardsPathState.cs" />
         <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityPathContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs" />
       </list>
     </option>
   </component>
@@ -617,11 +707,11 @@
       <path value="$PROJECT_DIR$/Library/PackageCache/nuget.mono-cecil@0.1.5-preview/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="46" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectId" id="1YEQCn54guQpx1Sf5RQIZC5muEH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -747,35 +837,6 @@
               <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="AI" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="AI" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="FSM" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MonoViews" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="AI" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="References" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="UnityClient (27 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Terra" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Utils" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -842,7 +903,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs&#10;TerraEntityType&#9;null&#9;null&#10;TerraComponent&#9;null&#9;null&#10;TerraView&#9;null&#9;null&#10;TerraSeriali&#9;null&#9;null&#10;TerraDebug&#9;null&#9;null&#10;TerraEntities&#9;null&#9;null&#10;DataStr&#9;null&#9;null&#10;TerraViewM&#9;null&#9;null&#10;TerraVector&#9;null&#9;null&#10;WorldState&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs&#10;MovementState&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs&#10;TerraEntitiesView&#9;null&#9;null&#10;TerraEntityViewM&#9;null&#9;null&#10;EntityData&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs&#10;WorldCon&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/WorldContextUI/WorldContentUIView.cs&#10;PlayerController&#9;null&#9;null&#10;TerraPosition&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs&#10;TerraEntityDa&#9;null&#9;null&#10;TerraDBSer&#9;null&#9;null&#10;Game&#9;null&#9;null&#10;IViewM&#9;null&#9;null&#10;WorldAsset&#9;null&#9;null&#10;INT&#9;null&#9;null&#10;AbstractGridM&#9;null&#9;null&#10;World&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs&#10;TerraCon&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/TerraController.cs&#10;DataConfig&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Data/DataConfig.cs&#10;SimulationSer&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Services/SimulationService.cs&#10;WorldDataAcc&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Streamer&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs&#10;TerraEntityType&#9;null&#9;null&#10;TerraComponent&#9;null&#9;null&#10;TerraView&#9;null&#9;null&#10;TerraSeriali&#9;null&#9;null&#10;TerraDebug&#9;null&#9;null&#10;TerraEntities&#9;null&#9;null&#10;DataStr&#9;null&#9;null&#10;TerraViewM&#9;null&#9;null&#10;TerraVector&#9;null&#9;null&#10;WorldState&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/ViewModels/TerraWorldStateViewModel.cs&#10;MovementState&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaBasicMovementState.cs&#10;TerraEntitiesView&#9;null&#9;null&#10;TerraEntityViewM&#9;null&#9;null&#10;EntityData&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/SerializedData/GameData/TerraEntityTypeData.cs&#10;WorldCon&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/WorldContextUI/WorldContentUIView.cs&#10;PlayerController&#9;null&#9;null&#10;TerraPosition&#9;FILE&#9;file://D:/Elementerra/UnityClient/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs&#10;TerraEntityDa&#9;null&#9;null&#10;TerraDBSer&#9;null&#9;null&#10;Game&#9;null&#9;null&#10;IViewM&#9;null&#9;null&#10;WorldAsset&#9;null&#9;null&#10;INT&#9;null&#9;null&#10;AbstractGridM&#9;null&#9;null&#10;World&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Services/WorldData/WorldDataToken.cs&#10;TerraCon&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/TerraController.cs&#10;DataConfig&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Data/DataConfig.cs&#10;SimulationSer&#9;FILE&#9;file://D:/Elementia/UnityClient/Assets/Elementia/Scripts/Services/SimulationService.cs&#10;WorldDataAcc&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/CarryTheLight/UnityClient/CarryTheLight/CarryTheLight.sln" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -939,12 +1000,12 @@
       <workItem from="1590356280397" duration="4918000" />
       <workItem from="1590468654622" duration="9677000" />
       <workItem from="1590629665456" duration="15870000" />
-      <workItem from="1592167479732" duration="8997000" />
+      <workItem from="1592167479732" duration="17399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24867000" />
+    <option name="totallyTimeSpent" value="33269000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -956,7 +1017,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="46" width="1932" height="1045" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="14" />
@@ -967,13 +1028,13 @@
       <window_info anchor="bottom" id="Run" order="10" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Terminal" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25320512" />
       <window_info anchor="bottom" id="Unity" order="2" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" weight="0.32995737" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32897604" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.39978212" />
+      <window_info anchor="bottom" id="Debug" order="11" visible="true" weight="0.40463066" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
@@ -1019,31 +1080,10 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="71" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaRandomCondition.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/PandeaConditionsGroup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Editor/PandeaConditionEditor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/AStarPathfinder/DemoScene/Scripts/Space.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1062,13 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1093,13 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/HostileAIMonoView.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1111,13 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1184,78 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/AStarPathfinder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="176" column="56" selection-start-line="176" selection-start-column="56" selection-end-line="176" selection-end-column="56" />
-          <folding>
-            <marker date="1527626375000" expanded="true" signature="0:416" ph="/* Copyright 2018 Dane Zeke Liergaard All Rights Reserved. ... */" />
-            <marker date="1527626375000" expanded="false" signature="424:484" ph="..." />
-            <marker date="1527626375000" expanded="true" signature="502:9959" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="506:594" ph="/// Base implementation of an A* pathfinding algorithm. ... " />
-            <marker date="1527626375000" expanded="true" signature="655:9957" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="661:825" ph="/// Minimum range to be considered valid. Useful for ranged attacks that can't ... " />
-            <marker date="1527626375000" expanded="true" signature="857:939" ph="/// The maximum distance a valid cell can be. ... " />
-            <marker date="1527626375000" expanded="true" signature="1111:1254" ph="/// A Dictionary of reachable cells (from most recent call to FindAllInRange) to the paths to those cells. ... " />
-            <marker date="1527626375000" expanded="true" signature="1299:1397" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="1311:1391" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="1402:1580" ph="/// A re-used hash set of the neighbors of a cell. The required overridden ... " />
-            <marker date="1527626375000" expanded="true" signature="1709:2042" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="1785:1844" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="1878:1936" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="1983:2036" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="2048:2303" ph="/// Finds all the nodes in range from start node. ... " />
-            <marker date="1527626375000" expanded="true" signature="2354:3190" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="2519:2914" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="2667:2720" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="2757:2785" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="3030:3158" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="3196:3469" ph="/// Finds the most expedient path from start T to end T via A* pathfinding. ... " />
-            <marker date="1527626375000" expanded="true" signature="3514:4370" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="3777:4073" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="3967:4028" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="4112:4217" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="4267:4326" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="4415:4453" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="4459:4832" ph="/// Override to determine distance between two cells. ... " />
-            <marker date="1527626375000" expanded="true" signature="4901:4952" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="4958:5209" ph="/// Implement this to cause the pathfinder to quit early if a cell meets certain parameters. ... " />
-            <marker date="1527626375000" expanded="true" signature="5255:5282" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="5288:5480" ph="/// The only method that requires implementation. This function must call ... " />
-            <marker date="1527626375000" expanded="true" signature="5537:5732" ph="/// Implement this to do any preparation before searching for paths/ranges. ... " />
-            <marker date="1527626375000" expanded="true" signature="5770:5819" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="5825:6134" ph="/// Implement this to check if a cell is a valid path. If not valid, ... " />
-            <marker date="1527626375000" expanded="true" signature="6182:6208" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="6214:6519" ph="/// Implement this method to perform some action on each node along the path ... " />
-            <marker date="1527626375000" expanded="true" signature="6592:6599" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="6605:6785" ph="/// Implement this to perform some action on each node found in FindAllInRange. ... " />
-            <marker date="1527626375000" expanded="true" signature="6843:6850" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="6917:7214" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="6982:7007" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="7050:7183" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="7292:8759" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="7322:7347" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="7442:7467" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="7475:7590" ph="/* Calculate score based on &quot;distance&quot; between node and origin, and ... */" />
-            <marker date="1527626375000" expanded="true" signature="7683:7754" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="7871:7896" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="8040:8150" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="8312:8417" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="8568:8753" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="8765:8921" ph="/// Returns and closes the open node with the lowest score. ... " />
-            <marker date="1527626375000" expanded="true" signature="8983:9344" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9028:9081" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9148:9245" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9201:9237" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9350:9517" ph="/// Returns the open node with the shortest path from the start node. ... " />
-            <marker date="1527626375000" expanded="true" signature="9575:9953" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9620:9673" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9741:9850" ph="{...}" />
-            <marker date="1527626375000" expanded="true" signature="9805:9842" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraSerializedEntityPositionMonoView.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1300,41 +1247,6 @@
             <marker date="1592167768640" expanded="true" signature="1616:1735" ph="{...}" />
             <marker date="1592167768640" expanded="true" signature="1769:1945" ph="{...}" />
             <marker date="1592167768640" expanded="true" signature="2003:2354" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <marker date="1585935888330" expanded="false" signature="6:133" ph="..." />
-            <marker date="1585935888330" expanded="true" signature="160:8905" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="216:8903" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="355:590" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="663:969" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="714:812" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="1228:1268" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="1406:1449" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="1600:2188" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="1797:1870" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="2296:2448" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="2555:5587" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="2597:3418" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="4097:4238" ph="/* Vector2[] triangles = new Vector2[(int)(dimensions.Area * 2)]; ... */" />
-            <marker date="1585935888330" expanded="true" signature="4387:4897" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="4448:4887" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="5033:5203" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="5094:5193" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="5629:5668" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="5798:6744" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="6776:7163" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="6806:7148" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="6968:7138" ph="{...}" />
-            <marker date="1585935888330" expanded="true" signature="7169:8077" ph="/* private void UpdateSurroundingHights(TerraVector vector, Vector3[] vertices, TerraWorldChunk chunk) ... */" />
-            <marker date="1585935888330" expanded="true" signature="8086:8342" ph="/* private void UpdateHights(TerraVector vector, Vector3[] vertices,  TerraWorldChunk chunk) ... */" />
-            <marker date="1585935888330" expanded="true" signature="8351:8897" ph="/* private Vector3 GetVertice(TerraWorldChunk chunk, int x, int y) ... */" />
           </folding>
         </state>
       </provider>
@@ -1456,23 +1368,6 @@
             <marker date="1590636224628" expanded="true" signature="1478:1916" ph="{...}" />
             <marker date="1590636224628" expanded="true" signature="1555:1651" ph="{...}" />
             <marker date="1590636224628" expanded="true" signature="1806:1902" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <marker date="1590723939650" expanded="false" signature="6:63" ph="..." />
-            <marker date="1590723939650" expanded="true" signature="91:769" ph="{...}" />
-            <marker date="1590723939650" expanded="true" signature="157:767" ph="{...}" />
-            <marker date="1590723939650" expanded="true" signature="269:319" ph="{...}" />
-            <marker date="1590723939650" expanded="true" signature="374:557" ph="{...}" />
-            <marker date="1590723939650" expanded="true" signature="450:547" ph="{...}" />
-            <marker date="1590723939650" expanded="true" signature="633:653" ph="{...}" />
-            <marker date="1590723939650" expanded="true" signature="741:761" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1751,19 +1646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/Utils/DebugUtils.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <marker date="1592173893245" expanded="true" signature="41:1221" ph="{...}" />
-            <marker date="1592173893245" expanded="true" signature="78:1219" ph="{...}" />
-            <marker date="1592173893245" expanded="true" signature="301:1213" ph="{...}" />
-            <marker date="1592173893245" expanded="true" signature="757:897" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1803,45 +1685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/PathfinderViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <marker date="1590718983162" expanded="true" signature="32:393" ph="{...}" />
-            <marker date="1590718983162" expanded="true" signature="86:107" ph="{...}" />
-            <marker date="1590718983162" expanded="true" signature="194:391" ph="{...}" />
-            <marker date="1590718983162" expanded="true" signature="262:282" ph="{...}" />
-            <marker date="1590718983162" expanded="true" signature="365:385" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding>
-            <marker date="1592174802592" expanded="true" signature="6:139" ph="..." />
-            <marker date="1592174802592" expanded="true" signature="171:2655" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="245:2653" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="315:1215" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="439:508" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="589:1205" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="711:1191" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="842:1173" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="920:1151" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="997:1125" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="1252:2289" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="1646:1837" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="1876:2134" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="1980:2072" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="2185:2279" ph="{...}" />
-            <marker date="1592174802592" expanded="true" signature="2423:2647" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/Gameplay/AI/ComponentReferences/PandeaComponentReference.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1851,6 +1694,13 @@
             <marker date="1590629610292" expanded="true" signature="169:495" ph="{...}" />
             <marker date="1590629610292" expanded="true" signature="420:489" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1865,14 +1715,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/References/TerraEntityPathContainerReference.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/Utils/DebugUtils.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        <state relative-caret-position="315">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding>
-            <marker date="1592175074043" expanded="true" signature="6:68" ph="..." />
-            <marker date="1592175074043" expanded="true" signature="109:238" ph="{...}" />
-            <marker date="1592175074043" expanded="true" signature="215:236" ph="{...}" />
+            <marker date="1592190369043" expanded="true" signature="41:1269" ph="{...}" />
+            <marker date="1592190369043" expanded="true" signature="78:1267" ph="{...}" />
+            <marker date="1592190369043" expanded="true" signature="301:1261" ph="{...}" />
+            <marker date="1592190369043" expanded="true" signature="786:926" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1882,7 +1733,7 @@
         <state relative-caret-position="390">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
-            <marker date="1592176015007" expanded="false" signature="6:106" ph="..." />
+            <marker date="1592176015007" expanded="true" signature="6:125" ph="..." />
             <marker date="1592176015007" expanded="true" signature="163:2475" ph="{...}" />
             <marker date="1592176015007" expanded="true" signature="225:411" ph="{...}" />
             <marker date="1592176015007" expanded="true" signature="263:296" ph="{...}" />
@@ -1899,48 +1750,6 @@
             <marker date="1592176015007" expanded="true" signature="2067:2467" ph="{...}" />
             <marker date="1592176015007" expanded="true" signature="2094:2188" ph="{...}" />
             <marker date="1592176015007" expanded="true" signature="2204:2457" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/ITerraShape.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding>
-            <marker date="1592176119717" expanded="true" signature="7:33" ph="..." />
-            <marker date="1592176119717" expanded="true" signature="76:997" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="156:208" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="247:390" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="451:511" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="577:630" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="696:734" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="773:812" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="876:995" ph="{...}" />
-            <marker date="1592176119717" expanded="true" signature="1027:1071" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="67" />
-          <folding>
-            <marker date="1592175140306" expanded="true" signature="6:255" ph="..." />
-            <marker date="1592175140306" expanded="true" signature="289:4633" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="352:4631" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="811:2578" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="1073:2568" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="1374:1681" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="1530:1663" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="1725:2554" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="2634:2705" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="2750:4622" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="2792:4612" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="3504:3782" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="3941:4207" ph="{...}" />
-            <marker date="1592175140306" expanded="true" signature="4339:4598" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1963,36 +1772,364 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/PlayerMonoViews/PlayerHoldingEntityMonoView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <marker date="1585935888293" expanded="false" signature="6:167" ph="..." />
+            <marker date="1585935888293" expanded="true" signature="194:1386" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="275:1384" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="512:678" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="738:1276" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="912:1266" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="995:1086" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="1156:1252" ph="{...}" />
+            <marker date="1585935888293" expanded="true" signature="1308:1378" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraLookTowardsPathState.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="120">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
-            <marker date="1592176381357" expanded="false" signature="6:269" ph="..." />
-            <marker date="1592176381357" expanded="true" signature="303:925" ph="{...}" />
-            <marker date="1592176381357" expanded="true" signature="370:923" ph="{...}" />
-            <marker date="1592176381357" expanded="true" signature="713:917" ph="{...}" />
+            <marker date="1592195412355" expanded="false" signature="6:269" ph="..." />
+            <marker date="1592195412355" expanded="true" signature="303:988" ph="{...}" />
+            <marker date="1592195412355" expanded="true" signature="370:986" ph="{...}" />
+            <marker date="1592195412355" expanded="true" signature="704:980" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraPathTargetSetter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <marker date="1592191785864" expanded="false" signature="6:255" ph="..." />
+            <marker date="1592191785864" expanded="true" signature="289:2645" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="352:2643" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="751:2518" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="1013:2508" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="1314:1621" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="1470:1603" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="1665:2494" ph="{...}" />
+            <marker date="1592191785864" expanded="true" signature="2574:2626" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/ITerraShape.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding>
+            <marker date="1592176119717" expanded="true" signature="7:33" ph="..." />
+            <marker date="1592176119717" expanded="true" signature="76:997" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="156:208" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="247:390" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="451:511" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="577:630" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="696:734" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="773:812" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="876:995" ph="{...}" />
+            <marker date="1592176119717" expanded="true" signature="1027:1071" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/AI/FSM/TerraEntityPathContainer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="211">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
           <folding>
-            <marker date="1592176808092" expanded="true" signature="6:146" ph="..." />
-            <marker date="1592176808092" expanded="true" signature="180:1860" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="240:1858" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="429:520" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="618:665" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="731:815" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="864:1594" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="916:1514" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="1166:1500" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="1354:1482" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="1649:1724" ph="{...}" />
-            <marker date="1592176808092" expanded="true" signature="1776:1852" ph="/* public TerraVector GetNextLocalVector() ... */" />
+            <marker date="1592196198137" expanded="true" signature="6:165" ph="..." />
+            <marker date="1592196198137" expanded="true" signature="199:3597" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="259:3595" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="514:605" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="735:1561" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="798:850" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="1121:1463" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="1302:1449" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="1627:1712" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="1757:1818" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="1871:1956" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="2000:2075" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="2128:3587" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="2190:3577" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="2898:3172" ph="{...}" />
+            <marker date="1592196198137" expanded="true" signature="3304:3563" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Runtime/AStarPathfinder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="110" column="70" selection-start-line="110" selection-start-column="70" selection-end-line="110" selection-end-column="70" />
+          <folding>
+            <marker date="1527626375000" expanded="true" signature="0:416" ph="/* Copyright 2018 Dane Zeke Liergaard All Rights Reserved. ... */" />
+            <marker date="1527626375000" expanded="false" signature="424:484" ph="..." />
+            <marker date="1527626375000" expanded="true" signature="502:9959" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="506:594" ph="/// Base implementation of an A* pathfinding algorithm. ... " />
+            <marker date="1527626375000" expanded="true" signature="655:9957" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="661:825" ph="/// Minimum range to be considered valid. Useful for ranged attacks that can't ... " />
+            <marker date="1527626375000" expanded="true" signature="857:939" ph="/// The maximum distance a valid cell can be. ... " />
+            <marker date="1527626375000" expanded="true" signature="1111:1254" ph="/// A Dictionary of reachable cells (from most recent call to FindAllInRange) to the paths to those cells. ... " />
+            <marker date="1527626375000" expanded="true" signature="1299:1397" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="1311:1391" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="1402:1580" ph="/// A re-used hash set of the neighbors of a cell. The required overridden ... " />
+            <marker date="1527626375000" expanded="true" signature="1709:2042" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="1785:1844" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="1878:1936" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="1983:2036" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="2048:2303" ph="/// Finds all the nodes in range from start node. ... " />
+            <marker date="1527626375000" expanded="true" signature="2354:3190" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="2519:2914" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="2667:2720" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="2757:2785" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="3030:3158" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="3196:3469" ph="/// Finds the most expedient path from start T to end T via A* pathfinding. ... " />
+            <marker date="1527626375000" expanded="true" signature="3514:4370" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="3777:4073" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="3967:4028" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="4112:4217" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="4267:4326" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="4415:4453" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="4459:4832" ph="/// Override to determine distance between two cells. ... " />
+            <marker date="1527626375000" expanded="true" signature="4901:4952" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="4958:5209" ph="/// Implement this to cause the pathfinder to quit early if a cell meets certain parameters. ... " />
+            <marker date="1527626375000" expanded="true" signature="5255:5282" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="5288:5480" ph="/// The only method that requires implementation. This function must call ... " />
+            <marker date="1527626375000" expanded="true" signature="5537:5732" ph="/// Implement this to do any preparation before searching for paths/ranges. ... " />
+            <marker date="1527626375000" expanded="true" signature="5770:5819" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="5825:6134" ph="/// Implement this to check if a cell is a valid path. If not valid, ... " />
+            <marker date="1527626375000" expanded="true" signature="6182:6208" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="6214:6519" ph="/// Implement this method to perform some action on each node along the path ... " />
+            <marker date="1527626375000" expanded="true" signature="6592:6599" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="6605:6785" ph="/// Implement this to perform some action on each node found in FindAllInRange. ... " />
+            <marker date="1527626375000" expanded="true" signature="6843:6850" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="6917:7214" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="6982:7007" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="7050:7183" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="7292:8759" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="7322:7347" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="7442:7467" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="7475:7590" ph="/* Calculate score based on &quot;distance&quot; between node and origin, and ... */" />
+            <marker date="1527626375000" expanded="true" signature="7683:7754" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="7871:7896" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="8040:8150" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="8312:8417" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="8568:8753" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="8765:8921" ph="/// Returns and closes the open node with the lowest score. ... " />
+            <marker date="1527626375000" expanded="true" signature="8983:9344" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9028:9081" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9148:9245" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9201:9237" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9350:9517" ph="/// Returns the open node with the shortest path from the start node. ... " />
+            <marker date="1527626375000" expanded="true" signature="9575:9953" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9620:9673" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9741:9850" ph="{...}" />
+            <marker date="1527626375000" expanded="true" signature="9805:9842" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/ViewModels/PathfinderViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <marker date="1590718983162" expanded="true" signature="32:393" ph="{...}" />
+            <marker date="1590718983162" expanded="true" signature="86:107" ph="{...}" />
+            <marker date="1590718983162" expanded="true" signature="194:391" ph="{...}" />
+            <marker date="1590718983162" expanded="true" signature="262:282" ph="{...}" />
+            <marker date="1590718983162" expanded="true" signature="365:385" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+          <folding>
+            <marker date="1585935888466" expanded="true" signature="41:1173" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="116:137" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="175:241" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="348:1171" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="559:1165" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="613:1155" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="676:1141" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="900:1122" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraGrassPotentialViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="81" column="28" selection-start-line="81" selection-start-column="28" selection-end-line="81" selection-end-column="28" />
+          <folding>
+            <marker date="1585935888466" expanded="false" signature="6:162" ph="..." />
+            <marker date="1585935888466" expanded="true" signature="190:3519" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="265:286" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="333:382" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="498:3517" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="751:1285" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="833:1051" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="896:1037" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="1197:1275" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="1397:1998" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="1577:1860" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="1718:1846" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="1924:1988" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="2072:2135" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="2221:3511" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="2441:3501" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="2675:3487" ph="{...}" />
+            <marker date="1585935888466" expanded="true" signature="2925:3469" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassWorldMonoView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <marker date="1592197161937" expanded="false" signature="6:95" ph="..." />
+            <marker date="1592197161937" expanded="true" signature="122:1818" ph="{...}" />
+            <marker date="1592197161937" expanded="true" signature="181:1816" ph="{...}" />
+            <marker date="1592197161937" expanded="true" signature="411:748" ph="{...}" />
+            <marker date="1592197161937" expanded="true" signature="820:907" ph="{...}" />
+            <marker date="1592197161937" expanded="true" signature="955:1810" ph="{...}" />
+            <marker date="1592197161937" expanded="true" signature="978:1800" ph="/* foreach (TerraGrassNodeGridPoint node in vm.Grass.AllData()) ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraGrassMonoView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <marker date="1585935888328" expanded="false" signature="6:42" ph="..." />
+            <marker date="1585935888328" expanded="true" signature="69:397" ph="{...}" />
+            <marker date="1585935888328" expanded="true" signature="123:395" ph="{...}" />
+            <marker date="1585935888328" expanded="true" signature="211:389" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PandeaGames/Services/PathfinderService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="34" column="17" selection-start-line="22" selection-start-column="16" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <marker date="1592194413680" expanded="true" signature="6:139" ph="..." />
+            <marker date="1592194413680" expanded="true" signature="171:2655" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="245:2653" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="315:1215" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="439:508" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="589:1205" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="711:1191" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="842:1173" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="920:1151" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="997:1125" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="1252:2289" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="1646:1837" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="1876:2134" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="1980:2072" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="2185:2279" ph="{...}" />
+            <marker date="1592194413680" expanded="true" signature="2423:2647" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/ViewModels/TerraPathfinderViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <marker date="1592196654281" expanded="true" signature="6:77" ph="..." />
+            <marker date="1592196654281" expanded="true" signature="105:1449" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="171:1447" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="283:333" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="388:573" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="464:563" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="655:1237" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="798:1201" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="909:1187" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="979:1169" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="1053:1147" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="1313:1333" ph="{...}" />
+            <marker date="1592196654281" expanded="true" signature="1421:1441" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/Views/ViewDataStreamers/TerraWorldDataStreamer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="73" column="31" lean-forward="true" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
+          <folding>
+            <marker date="1592197969423" expanded="false" signature="6:192" ph="..." />
+            <marker date="1592197969423" expanded="true" signature="233:5198" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="291:5196" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="1140:1404" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="1441:2055" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="2138:2211" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="2251:3204" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="2307:2404" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="2418:3194" ph="/* if (_terraEntitiesViewModel.Player != null) ... */" />
+            <marker date="1592197969423" expanded="true" signature="3272:4686" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="3336:3598" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="3503:3585" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="3637:4082" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="4228:4529" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="4539:4668" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="4745:4921" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="4949:4982" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="5036:5106" ph="{...}" />
+            <marker date="1592197969423" expanded="true" signature="5157:5190" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Terra/MonoViews/TerraTerrainMonoView.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="118" column="75" lean-forward="true" selection-start-line="118" selection-start-column="75" selection-end-line="118" selection-end-column="75" />
+          <folding>
+            <marker date="1585935888330" expanded="false" signature="6:133" ph="..." />
+            <marker date="1585935888330" expanded="true" signature="160:8905" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="216:8903" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="355:590" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="663:969" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="714:812" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="1228:1268" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="1406:1449" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="1600:2188" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="1797:1870" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="2296:2448" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="2555:5587" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="2597:3418" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="4097:4238" ph="/* Vector2[] triangles = new Vector2[(int)(dimensions.Area * 2)]; ... */" />
+            <marker date="1585935888330" expanded="true" signature="4387:4897" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="4448:4887" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="5033:5203" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="5094:5193" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="5629:5668" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="5798:6744" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="6776:7163" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="6806:7148" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="6968:7138" ph="{...}" />
+            <marker date="1585935888330" expanded="true" signature="7169:8077" ph="/* private void UpdateSurroundingHights(TerraVector vector, Vector3[] vertices, TerraWorldChunk chunk) ... */" />
+            <marker date="1585935888330" expanded="true" signature="8086:8342" ph="/* private void UpdateHights(TerraVector vector, Vector3[] vertices,  TerraWorldChunk chunk) ... */" />
+            <marker date="1585935888330" expanded="true" signature="8351:8897" ph="/* private Vector3 GetVertice(TerraWorldChunk chunk, int x, int y) ... */" />
           </folding>
         </state>
       </provider>
