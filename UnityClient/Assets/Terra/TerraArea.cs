@@ -1,13 +1,28 @@
+using System;
 using UnityEngine;
 
 namespace Terra
 {
+    [Serializable]
     public class TerraArea
     {
         public int x;
         public int y;
         public int width;
         public int height;
+
+        public TerraArea()
+        {
+            
+        }
+        
+        public TerraArea(int x, int y, int width, int height)
+        {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+        }
 
         public override string ToString()
         {

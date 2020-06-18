@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using PandeaGames;
 using Terra.SerializedData.Entities;
@@ -10,6 +11,16 @@ namespace Terra.MonoViews
 {
     public class TerraEntitiesMonoView : MonoBehaviour
     {
+        private class EntityViewLoader
+        {
+            private RuntimeTerraEntity m_entity;
+            public Vector3 Position => m_entity.WorldPosition;
+            public EntityViewLoader(RuntimeTerraEntity entity)
+            {
+                m_entity = entity;
+            }
+        }
+        
         private TerraEntityPrefabConfig _terraEntityPrefabConfig;
         private TerraEntitiesViewModel _terraEntitiesViewModel;
         private Dictionary<int, TerraEntityMonoView> _views;
@@ -31,7 +42,7 @@ namespace Terra.MonoViews
             _currentArea = chunk.Area;
             foreach (TerraEntityMonoView entityMonoView in _views.Values)
             {
-                entityMonoView.gameObject.SetActive(_currentArea.Contains(entityMonoView.transform.position, 4));
+                entityMonoView.gameObject.SetActive(_currentArea.Contains(entityMonoView.Entity.Position.Data, 4));
             }
         }
 
@@ -52,7 +63,7 @@ namespace Terra.MonoViews
             GameObject entity = Instantiate(_terraEntityPrefabConfig.GetGameObject(obj), transform);
             entity.GetComponent<TerraEntityMonoView>().Initilize(obj);
             _views.Add(obj.InstanceId, entity.GetComponent<TerraEntityMonoView>());
-            entity.SetActive(_currentArea.Contains(entity.transform.position, 4));
+            entity.SetActive(_currentArea.Contains(obj.Position.Data, 4));
         }
     }
 }

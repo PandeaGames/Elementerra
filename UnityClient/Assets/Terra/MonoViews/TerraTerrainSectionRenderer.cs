@@ -1,46 +1,37 @@
-using System;
+
 using System.Collections.Generic;
-using PandeaGames;
 using PandeaGames.Data;
+using Terra;
+using Terra.MonoViews;
 using Terra.ViewModels;
 using UnityEngine;
 
-namespace Terra.MonoViews
+public class TerraTerrainSectionRenderer
 {
-    public class TerraTerrainMonoView : MonoBehaviour
+    private TerraTerrainGeometryDataModel chunk;
+    [SerializeField]
+    public TerraArea localArea;
+    private Transform parent;
+    
+    public TerraTerrainSectionRenderer(TerraTerrainGeometryDataModel chunk, TerraArea localArea, Transform parent)
     {
-        private TerraTerrainGeometryDataModel _renderingChunk;
+        this.chunk = chunk;
+        this.localArea = localArea;
+        this.parent = parent;
+    }
+    private TerraTerrainGeometryDataModel _renderingChunk;
         private TerraChunksViewModel _vm;
-        public void Start()
-        {
-            _vm = Game.Instance.GetViewModel<TerraChunksViewModel>(0);
-           // _vm.OnChunkAdded += VmOnChunkAdded;
-            Game.Instance.GetViewModel<TerraViewModel>(0).OnGeometryUpdate += GeometryUpdate;
-        }
 
         private void GeometryUpdate(TerraTerrainGeometryDataModel geom)
         {
-            int areaSize = 25;
-
-            for (int x = 0; x < geom.Width; x+=areaSize)
-            {
-                for (int y = 0; y < geom.Height; y+=areaSize)
-                {
-                    TerraTerrainSectionRenderer renderer = new TerraTerrainSectionRenderer(geom, new TerraArea(x, y, areaSize, areaSize), transform);
-                    renderer.RenderGround();
-                }
-            }
-
-            /*
-            
             if (_renderingChunk != null)
             {
-                _renderingChunk.OnDataHasChanged -= OnDataHasChanged;
+                //_renderingChunk.OnDataHasChanged -= OnDataHasChanged;
             }
             _renderingChunk = geom;
-            _renderingChunk.OnDataHasChanged += OnDataHasChanged;
+           // _renderingChunk.OnDataHasChanged += OnDataHasChanged;
             
-            RenderGround(geom);*/
+            RenderGround();
         }
 
         private GameObject _renderingPlane;
@@ -48,14 +39,6 @@ namespace Terra.MonoViews
         [SerializeField] private Vector3 _planeOffset;
         [SerializeField] private string _generatedGameObjectName;
         [SerializeField] private bool _debugView;
-
-        [Serializable]
-        private struct FogLayerConfig
-        {
-            public Color color;
-        }
-
-        [SerializeField] private FogLayerConfig[] _fogConfig;
         
         [SerializeField]
         private float _scale = 1;
@@ -63,7 +46,6 @@ namespace Terra.MonoViews
         {
             get { return _scale; }
         }
-
 
         private Mesh mesh;
         private MeshFilter meshFilter = null;
@@ -94,11 +76,11 @@ namespace Terra.MonoViews
         }
 
         private MeshCollider MeshCollider;
-        private void RenderGround(TerraTerrainGeometryDataModel chunk)
+        public void RenderGround()
         {
             if(_renderingPlane == null)
             {
-                _renderingPlane = Instantiate(new GameObject(string.IsNullOrEmpty(_generatedGameObjectName) ? "Terra Terrain":_generatedGameObjectName), transform);
+                _renderingPlane = GameObject.Instantiate(new GameObject(string.IsNullOrEmpty(_generatedGameObjectName) ? "Terra Terrain":_generatedGameObjectName), this.parent);
                 _renderingPlane.transform.position = _planeOffset;
                 _renderingPlane.layer =LayerMask.NameToLayer(TerraGameResources.Instance.LayerForTerrain);
                 _renderingPlane.AddComponent<MeshRenderer>();
@@ -109,7 +91,6 @@ namespace Terra.MonoViews
                 meshFilter.mesh = new Mesh();
                 Rigidbody rb = _renderingPlane.AddComponent<Rigidbody>();
                 rb.isKinematic = true;
-                
             }
 
             GameObject plane = _renderingPlane;
@@ -119,7 +100,7 @@ namespace Terra.MonoViews
             meshFilter = plane.GetComponent<MeshFilter>();
             mesh = meshFilter.sharedMesh;
             MeshCollider.sharedMesh = meshFilter.sharedMesh;
-            int verticiesLength = (chunk.Width + 1) * (chunk.Height + 1);
+            int verticiesLength = (localArea.width + 1) * (localArea.height + 1);
 
             Vector3[] vertices = new Vector3[verticiesLength];
             Color[] colors = new Color[vertices.Length];
@@ -129,19 +110,40 @@ namespace Terra.MonoViews
             // Vector2[] triangles = new Vector2[(int)(dimensions.Area * 2)];
 
             //for every point, there is 2 triangles, equaling 6 total vertices
-            int[] triangles = new int[(int)((chunk.Width * chunk.Height) * 6)];
+            int[] triangles = new int[(int)((localArea.width * localArea.height) * 6)];
 
             //Create Vertices
-            for (int x = 0; x < chunk.Width; x++)
+            for (int x = 0; x < localArea.width + 1; x++)
             {
-                for (int y = 0; y < chunk.Height; y++)
+                for (int y = 0; y < localArea.height + 1; y++)
                 {
+                    int localX = x + localArea.x;
+                    int localY = y + localArea.y;
                     Color color = GetColor(x, y);
                     
-                    int position = (x * (chunk.Width + 1)) + y;
-                    vertices[position] = chunk[x, y];
+                    int position = (x * (localArea.width + 1)) + y;
+
+                    if (localX >= chunk.Width || localY >= chunk.Height)
+                    {
+                        vertices[position] = chunk[chunk.Width - 1, chunk.Height - 1];
+                    }
+                    else
+                    {
+                        vertices[position] = chunk[localX, localY];
+                    }
+
+                    if (localArea.x == 100 && localArea.y == 95)
+                    {
+                        Debug.Log($"localArea.x == 100 && localArea.y == 95 [{vertices[position]}, x:{x}, y:{y}]");
+                    }
+                    
+                    if (localArea.x == 50 && localArea.y == 95)
+                    {
+                        Debug.Log($"localArea.x == 50 && localArea.y == 95 [{vertices[position]}, x:{x}, y:{y}]");
+                    }
+                    
                     colors[position] = color;
-                    uvs[position] = new Vector2((float)x / (float)chunk.Width, (float)y / (float)chunk.Height);
+                    uvs[position] = new Vector2((float)x / (float)chunk.Width + localArea.x, (float)y / (float)chunk.Height + localArea.y);
                     normals[position] = Vector3.up;
                     grass[position] = 0.5f;
                 }
@@ -150,11 +152,11 @@ namespace Terra.MonoViews
             List<Vector3> vectorTriangles = new List<Vector3>();
 
             //Create Triangles
-            for (int x = 0; x < chunk.Width; x++)
+            for (int x = 0; x < localArea.width; x++)
             {
-                for (int y = 0; y < chunk.Height; y++)
+                for (int y = 0; y < localArea.height; y++)
                 {
-                    SetTriangles(chunk, x, y, triangles, vectorTriangles);
+                    SetTriangles(chunk, localArea, x, y, triangles, vectorTriangles);
                 }
             }
 
@@ -178,12 +180,12 @@ namespace Terra.MonoViews
             return Color.cyan;
         }
 
-        private void SetTriangles(TerraTerrainGeometryDataModel chunk, int x, int y, int[] triangles, List<Vector3> vectorTriangles)
+        private void SetTriangles(TerraTerrainGeometryDataModel chunk, TerraArea area, int x, int y, int[] triangles, List<Vector3> vectorTriangles)
         {
             //we are making 2 triangles per loop. so offset goes up by 6 each time
-            int triangleOffset = (x * chunk.Height + y) * 6;
-            int verticeX = chunk.Width + 1;
-            int verticeY = chunk.Height + 1;
+            int triangleOffset = (x * area.height + y) * 6;
+            int verticeX = area.width + 1;
+            int verticeY = area.height + 1;
                     
             //triangle 1
             triangles[triangleOffset] = x * verticeY + y;
@@ -248,5 +250,5 @@ namespace Terra.MonoViews
                       chunk[x - 1, y].Height) / 9f) * 0.5f,
                 (token.Request.top + y));
         }*/
-    }
+       
 }

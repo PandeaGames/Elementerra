@@ -9,6 +9,7 @@ using Terra.Services;
 using Terra.ViewModels;
 using Terra.Views.ViewDataStreamers;
 using UnityEngine;
+using Vector3 = System.Numerics.Vector3;
 
 namespace Terra.SerializedData.Entities
 {
@@ -140,6 +141,19 @@ namespace Terra.SerializedData.Entities
         public bool HasLabel(string label)
         {
             return EntityTypeData.HasLabel(label);
+        }
+
+        public Vector2 WorldPosition
+        {
+            get
+            {
+                if (EntityTypeData.Component.HasFlag(EntityComponent.GridPosition))
+                {
+                    return new Vector2(GridPosition.Data.x, GridPosition.Data.y);
+                }
+                    
+                return new Vector2(Position.Data.x, Position.Data.z);
+            }
         }
     }
     

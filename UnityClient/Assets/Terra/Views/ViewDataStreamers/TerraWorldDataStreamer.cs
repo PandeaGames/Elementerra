@@ -21,7 +21,7 @@ namespace Terra.Views.ViewDataStreamers
         private RuntimeTerraEntity _playerEntity;
         private float _lastSaveSeconds;
         private Vector3 _lastChunkLoadPosition;
-        private int _chunkSize = 120;
+        private int _chunkSize = 200;
         
         public TerraWorldDataStreamer(
             TerraWorldViewModel terraWorldViewModel, 
@@ -68,13 +68,13 @@ namespace Terra.Views.ViewDataStreamers
                     _db.Save();
                     _lastSaveSeconds = time;
                     _lastChunkLoadPosition = _terraEntitiesViewModel.Player.Position.Data;
-                    _terraChunkService.GetChunk(new TerraArea()
+                    /*_terraChunkService.GetChunk(new TerraArea()
                     {
                         height = _chunkSize, width = _chunkSize, x = (int)_lastChunkLoadPosition.x - _chunkSize / 2, y = (int)_lastChunkLoadPosition.z - _chunkSize / 2
                     }, chunk =>
                     {
                         OnChunkLoaded(chunk);
-                    }, null);
+                    }, null);*/
                 }
             }
         }
@@ -103,7 +103,7 @@ namespace Terra.Views.ViewDataStreamers
            _lastChunkLoadPosition = _playerEntity.Position.Data;
             _terraChunkService.GetChunk(new TerraArea()
             {
-                height = _chunkSize, width = _chunkSize, x = (int)_playerEntity.Position.Data.x - _chunkSize / 2, y = (int)_playerEntity.Position.Data.z - _chunkSize / 2
+                height = _chunkSize, width = _chunkSize, x = (int)0 - _chunkSize / 2, y = (int)0 - _chunkSize / 2
             }, chunk =>
             {
                 OnChunkLoaded(chunk);
