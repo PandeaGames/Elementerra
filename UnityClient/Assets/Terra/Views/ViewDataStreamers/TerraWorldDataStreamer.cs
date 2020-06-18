@@ -75,6 +75,7 @@ namespace Terra.Views.ViewDataStreamers
                     {
                         OnChunkLoaded(chunk);
                     }, null);*/
+
                 }
             }
         }
@@ -103,6 +104,7 @@ namespace Terra.Views.ViewDataStreamers
            _lastChunkLoadPosition = _playerEntity.Position.Data;
             _terraChunkService.GetChunk(new TerraArea()
             {
+                //height = _chunkSize, width = _chunkSize, x = (int)_playerEntity.Position.Data.x - _chunkSize / 2, y = (int)_playerEntity.Position.Data.z - _chunkSize / 2
                 height = _chunkSize, width = _chunkSize, x = (int)0 - _chunkSize / 2, y = (int)0 - _chunkSize / 2
             }, chunk =>
             {

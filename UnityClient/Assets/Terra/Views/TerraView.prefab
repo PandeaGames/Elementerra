@@ -1060,6 +1060,7 @@ GameObject:
   - component: {fileID: 1099633120422726750}
   - component: {fileID: 6497573579060094207}
   - component: {fileID: 392838457040551122}
+  - component: {fileID: 8775556738548609360}
   m_Layer: 0
   m_Name: TerraView
   m_TagString: Untagged
@@ -1148,6 +1149,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugRenderMode: 0
+--- !u!114 &8775556738548609360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663039414491324413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d423d64fbdf4bd2b95e3a5e4040a4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _debugView: 0
 --- !u!114 &1700712011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,6 +1559,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973201519497786387, guid: 3447961027a93fe4a9e1e1e61716fe1f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973201519497786387, guid: 3447961027a93fe4a9e1e1e61716fe1f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3994922243036381878, guid: 3447961027a93fe4a9e1e1e61716fe1f,
         type: 3}

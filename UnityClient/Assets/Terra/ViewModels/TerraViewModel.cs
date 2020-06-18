@@ -19,6 +19,7 @@ namespace Terra.ViewModels
         public TerraGrassViewModel Grass { get; private set; }
         public TerraGrassPotentialViewModel GrassPotential { get; private set; }
         public TerraEntityMonoView PlayerEntity { get; private set; }
+        public TerraPathfinderViewModel TerraPathfinderViewModel { get; private set; }
 
         public TerraViewModel()
         {
@@ -28,6 +29,7 @@ namespace Terra.ViewModels
         public void SetChunk(TerraWorldChunk chunk)
         {
             Chunk = chunk;
+            TerraPathfinderViewModel = new TerraPathfinderViewModel(chunk);
             Geometry = new TerraTerrainGeometryDataModel(chunk);
             GrassPotential = new TerraGrassPotentialViewModel(Geometry, Game.Instance.GetViewModel<TerraEntitiesViewModel>(0), chunk);
             Grass =  new TerraGrassViewModel(Geometry, GrassPotential);

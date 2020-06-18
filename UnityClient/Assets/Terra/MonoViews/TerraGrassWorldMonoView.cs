@@ -29,7 +29,7 @@ namespace Terra.MonoViews
 
         private void Render(TerraViewModel vm)
         {
-           /* foreach (TerraGrassNodeGridPoint node in vm.Grass.AllData())
+            /*foreach (TerraGrassNodeGridPoint node in vm.Grass.AllData())
             {
                 TerraGrassMonoView monoView = null;
                 

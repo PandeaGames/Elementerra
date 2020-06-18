@@ -10,6 +10,16 @@
       <e p="AssetBundleManager.csproj" t="IncludeRecursive" />
       <e p="AssetBundleManagerEditor.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AStarPathfinder" t="Include">
+          <e p="DemoScene" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="BoardBuilder.cs" t="Include" />
+              <e p="CameraController.cs" t="Include" />
+              <e p="DemoPathfinder.cs" t="Include" />
+              <e p="Space.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Content" t="Include">
           <e p="UI" t="Include">
             <e p="Dialogs" t="Include">
@@ -475,6 +485,7 @@
           <e p="LoadedScreenCache.cs" t="Include" />
           <e p="MonoBehaviourSingleton.cs" t="Include" />
           <e p="Runtime" t="Include">
+            <e p="AStarPathfinder.cs" t="Include" />
             <e p="Constants.cs" t="Include" />
             <e p="Controllers" t="Include">
               <e p="Scripts" t="Include">
@@ -563,6 +574,7 @@
               <e p="ServiceEditorTools.cs" t="Include" />
             </e>
             <e p="IService.cs" t="Include" />
+            <e p="PathfinderService.cs" t="Include" />
             <e p="PauseService.cs" t="Include" />
             <e p="ServiceRequest.cs" t="Include" />
           </e>
@@ -605,13 +617,16 @@
           </e>
           <e p="ViewModels" t="Include">
             <e p="AbstractDialogViewModel.cs" t="Include" />
+            <e p="AbstractGridDataModel.cs" t="Include" />
             <e p="AbstractStatefulViewModel.cs" t="Include" />
             <e p="AbstractUserViewModel.cs" t="Include" />
             <e p="AbstractViewModel.cs" t="Include" />
             <e p="CameraViewModel.cs" t="Include" />
             <e p="IListViewModel.cs" t="Include" />
             <e p="IParamaterizedViewModel.cs" t="Include" />
+            <e p="ITerraShape.cs" t="Include" />
             <e p="IViewModel.cs" t="Include" />
+            <e p="PathfinderViewModel.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
             <e p="AbstractUnityView.cs" t="Include" />
@@ -1089,7 +1104,6 @@
               <e p="InventoryTypesSO.cs" t="Include" />
             </e>
           </e>
-          <e p="ITerraShape.cs" t="Include" />
           <e p="ITerraWorld.cs" t="Include" />
           <e p="MonoViews" t="Include">
             <e p="AbstractTerraMonoComponent.cs" t="Include" />
@@ -1100,6 +1114,9 @@
               <e p="FSM" t="Include">
                 <e p="TerraEntityDistanceCondition.cs" t="Include" />
                 <e p="TerraEntityLookTowardsState.cs" t="Include" />
+                <e p="TerraEntityPathContainer.cs" t="Include" />
+                <e p="TerraLookTowardsPathState.cs" t="Include" />
+                <e p="TerraPathTargetSetter.cs" t="Include" />
                 <e p="TerraTimeOfDayCondition.cs" t="Include" />
               </e>
               <e p="HostileAIMonoView.cs" t="Include" />
@@ -1140,6 +1157,7 @@
             <e p="TerraGrassWorldMonoView.cs" t="Include" />
             <e p="TerraSerializableGridPosiionMonoView.cs" t="Include" />
             <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
+            <e p="TerraTerrainDebugMonoView.cs" t="Include" />
             <e p="TerraTerrainMonoView.cs" t="Include" />
             <e p="TerraTerrainSectionRenderer.cs" t="Include" />
             <e p="TimeOfDayMonoViews" t="Include">
@@ -1199,8 +1217,11 @@
           <e p="TerraController.cs" t="Include" />
           <e p="TerraShape.cs" t="Include" />
           <e p="TerraShapeSO.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="DebugUtils.cs" t="Include" />
+            <e p="TerraPlayerPrefs.cs" t="Include" />
+          </e>
           <e p="ViewModels" t="Include">
-            <e p="AbstractGridDataModel.cs" t="Include" />
             <e p="AbstractTerraEntityViewModel.cs" t="Include" />
             <e p="ITerraEntityDataController.cs" t="Include" />
             <e p="ITerraEntityViewModel.cs" t="Include" />
@@ -1211,6 +1232,7 @@
             <e p="TerraEntitiesViewModel.cs" t="Include" />
             <e p="TerraGrassPotentialViewModel.cs" t="Include" />
             <e p="TerraGrassViewModel.cs" t="Include" />
+            <e p="TerraPathfinderViewModel.cs" t="Include" />
             <e p="TerraPlayerControlViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />

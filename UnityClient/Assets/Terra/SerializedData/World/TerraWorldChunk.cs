@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Terra.SerializedData.Entities;
 using Terra.Services;
+using UnityEngine;
 
 namespace Terra.SerializedData.World
 {
@@ -26,6 +28,16 @@ namespace Terra.SerializedData.World
         {
             _db = db;
             _area = area;
+        }
+        
+        public TerraVector WorldToLocal(TerraPosition3D position)
+        {
+            return WorldToLocal(new TerraVector((int)position.x, (int) position.z));
+        }
+        
+        public TerraVector WorldToLocal(Vector3 position)
+        {
+            return WorldToLocal(new TerraVector((int)position.x, (int) position.z));
         }
         
         public TerraVector WorldToLocal(TerraVector vector)

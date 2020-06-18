@@ -1,5 +1,6 @@
 ﻿
 using System;
+using UnityEngine;
 
 
 [Serializable]
@@ -33,6 +34,19 @@ public struct TerraVector
     public static bool operator !=(TerraVector a, TerraVector b)
     {
         return !(a == b);
+    }
+
+    public override string ToString()
+    {
+        return $"{x}:{y}";
+    }
+
+    public static float Distance(TerraVector a, TerraVector b)
+    {
+        float dx = b.x - a.x;
+        float dy = b.y - a.y;
+
+        return Mathf.Sqrt(dy * dy + dx * dx);
     }
 }
 
