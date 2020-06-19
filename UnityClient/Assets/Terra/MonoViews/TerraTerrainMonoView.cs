@@ -10,6 +10,8 @@ namespace Terra.MonoViews
     public class TerraTerrainMonoView : MonoBehaviour
     {
         private TerraTerrainGeometryDataModel _renderingChunk;
+        int areaSize = 25;
+        private List<TerraTerrainSectionRenderer> _renderers = new List<TerraTerrainSectionRenderer>();
         private TerraChunksViewModel _vm;
         public void Start()
         {
@@ -28,10 +30,11 @@ namespace Terra.MonoViews
                 {
                     TerraTerrainSectionRenderer renderer = new TerraTerrainSectionRenderer(geom, new TerraArea(x, y, areaSize, areaSize), transform);
                     renderer.RenderGround();
+                    _renderers.Add(renderer);
                 }
             }
 
-            /*
+            
             
             if (_renderingChunk != null)
             {
@@ -40,7 +43,7 @@ namespace Terra.MonoViews
             _renderingChunk = geom;
             _renderingChunk.OnDataHasChanged += OnDataHasChanged;
             
-            RenderGround(geom);*/
+            //RenderGround(geom);
         }
 
         private GameObject _renderingPlane;
@@ -70,7 +73,55 @@ namespace Terra.MonoViews
 
         private void OnDataHasChanged(IEnumerable<TerraTerrainGeometryDataPoint> data)
         {
-            Color[] colors = meshFilter.sharedMesh.colors;
+            int left = 0, right = 0, top = 0, bottom = 0;
+
+            bool init = false;
+            
+            foreach (TerraTerrainGeometryDataPoint dataPoint in data)
+            {
+                if (!init)
+                {
+                    init = true;
+                    left = dataPoint.Vector.x;
+                    right = dataPoint.Vector.x;
+                    top = dataPoint.Vector.y;
+                    bottom = dataPoint.Vector.y;
+                }
+                else
+                {
+                    if (dataPoint.Vector.x < left)
+                    {
+                        left = dataPoint.Vector.x;
+                    }
+                
+                    if (dataPoint.Vector.x > right)
+                    {
+                        right = dataPoint.Vector.x;
+                    }
+                    
+                    if (dataPoint.Vector.y > top)
+                    {
+                        top = dataPoint.Vector.y;
+                    }
+                
+                    if (dataPoint.Vector.y < bottom)
+                    {
+                        bottom = dataPoint.Vector.y;
+                    }
+                }
+            }
+            
+            TerraArea area = new TerraArea(left, top,(int) MathUtils.Difference(right, left), (int)MathUtils.Difference(top, bottom));
+
+            foreach (TerraTerrainSectionRenderer renderer in _renderers)
+            {
+                if (renderer.localArea.Contains(area))
+                {
+                    renderer.OnDataHasChanged(data);
+                }
+            }
+            
+            /*Color[] colors = meshFilter.sharedMesh.colors;
             Vector3[] vertices = meshFilter.sharedMesh.vertices;
             
             foreach (TerraTerrainGeometryDataPoint dataPoint in data)
@@ -83,7 +134,7 @@ namespace Terra.MonoViews
             meshFilter.sharedMesh.RecalculateNormals();
             meshFilter.sharedMesh.RecalculateBounds();
             meshFilter.sharedMesh.RecalculateTangents();
-            MeshCollider.sharedMesh = meshFilter.sharedMesh;
+            MeshCollider.sharedMesh = meshFilter.sharedMesh;*/
         }
 
         

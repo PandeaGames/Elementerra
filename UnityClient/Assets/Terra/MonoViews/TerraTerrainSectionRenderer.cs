@@ -29,7 +29,7 @@ public class TerraTerrainSectionRenderer
                 //_renderingChunk.OnDataHasChanged -= OnDataHasChanged;
             }
             _renderingChunk = geom;
-           // _renderingChunk.OnDataHasChanged += OnDataHasChanged;
+            //_renderingChunk.OnDataHasChanged += OnDataHasChanged;
             
             RenderGround();
         }
@@ -50,14 +50,15 @@ public class TerraTerrainSectionRenderer
         private Mesh mesh;
         private MeshFilter meshFilter = null;
 
-        private void OnDataHasChanged(IEnumerable<TerraTerrainGeometryDataPoint> data)
+        public void OnDataHasChanged(IEnumerable<TerraTerrainGeometryDataPoint> data)
         {
             Color[] colors = meshFilter.sharedMesh.colors;
             Vector3[] vertices = meshFilter.sharedMesh.vertices;
             
             foreach (TerraTerrainGeometryDataPoint dataPoint in data)
             {
-                UpdateData(dataPoint, colors, vertices);
+                if(localArea.Contains(dataPoint.Vector))
+                    UpdateData(dataPoint, colors, vertices);
             }
 
             meshFilter.sharedMesh.colors = colors;
@@ -71,7 +72,7 @@ public class TerraTerrainSectionRenderer
         
         private void UpdateData(TerraTerrainGeometryDataPoint vector, Color[] colors, Vector3[] vertices)
         {
-            int vertPosition = (vector.Vector.x * (_renderingChunk.Width + 1)) + vector.Vector.y;
+            int vertPosition = ((vector.Vector.x - localArea.x) * (localArea.width + 1)) + (vector.Vector.y - localArea.y);
             vertices[vertPosition] = vector.Data;
         }
 

@@ -1873,7 +1873,7 @@ PrefabInstance:
     - target: {fileID: 2700874171910072507, guid: 330efb0e9eed825408809c121441b8a5,
         type: 3}
       propertyPath: yMinLimit
-      value: 40
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2700874171910072507, guid: 330efb0e9eed825408809c121441b8a5,
         type: 3}
@@ -1899,6 +1899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: cullingLayer.m_Bits
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700874171910072507, guid: 330efb0e9eed825408809c121441b8a5,
+        type: 3}
+      propertyPath: yMaxLimit
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2700874171910072509, guid: 330efb0e9eed825408809c121441b8a5,
         type: 3}
@@ -1932,12 +1937,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 330efb0e9eed825408809c121441b8a5, type: 3}
---- !u!1 &7578674502899553807 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2700874171910072504, guid: 330efb0e9eed825408809c121441b8a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5501062219390615223}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7578674502899553804 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2700874171910072507, guid: 330efb0e9eed825408809c121441b8a5,
@@ -1965,6 +1964,12 @@ MonoBehaviour:
 --- !u!4 &7578674502899553806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5501062219390615223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7578674502899553807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2700874171910072504, guid: 330efb0e9eed825408809c121441b8a5,
     type: 3}
   m_PrefabInstance: {fileID: 5501062219390615223}
   m_PrefabAsset: {fileID: 0}

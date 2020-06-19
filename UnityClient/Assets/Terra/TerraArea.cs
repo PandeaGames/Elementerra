@@ -11,6 +11,12 @@ namespace Terra
         public int width;
         public int height;
 
+        public int Left => x;
+        public int Right => x+width;
+        public int Top => y;
+        public int Bottom => y+height;
+    
+
         public TerraArea()
         {
             
@@ -37,6 +43,15 @@ namespace Terra
         public bool Contains(Vector3 position, float bevel = 0)
         {
             return x + bevel < position.x && x + width - bevel > position.x && y + bevel < position.z && y + height - bevel > position.z;
+        }
+        
+        public bool Contains(TerraArea area)
+        {
+            return (x < area.x + area.width) && (y < area.y + area.height) &&
+                   (area.x < x + width) &&
+                   (area.y < y + height);
+            return Left < area.Right && Right > area.Left &&
+                   Top > area.Bottom && Bottom < area.Top;
         }
     }
 }
