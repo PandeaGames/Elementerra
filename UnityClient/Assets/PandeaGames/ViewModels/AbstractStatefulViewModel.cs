@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PandeaGames.ViewModels
 {
-    public abstract class AbstractStatefulViewModel<T> : AbstractViewModel where T:IConvertible
+    public abstract class AbstractStatefulViewModel<T> : AbstractViewModel where T:struct,IConvertible
     {
         public delegate void ViewModelStateDelegate(T state);
         public delegate void ViewModelStateChangeDelegate(T oldState, T newState);
@@ -17,9 +17,35 @@ namespace PandeaGames.ViewModels
         protected T _currentState;
         protected bool _canChangeState = true;
 
-        public T CurrentState
+        public virtual T CurrentState
         {
             get { return _currentState; }
+        }
+
+        public virtual int CurrentIndex
+        {
+            get
+            {
+                string[] names = Enum.GetNames(typeof(T));
+
+                for (int i = 0; i < names.Length; i++)
+                {
+                    if (names[i] == CurrentState.ToString())
+                    {
+                        return i;
+                    }
+                }
+                
+                return -1;
+            }
+            set
+            {
+                string[] names = Enum.GetNames(typeof(T));
+                string name = names[value];
+                T newValue = default(T);
+                Enum.TryParse(name, out newValue);
+                SetState(newValue);
+            }
         }
 
         protected virtual void Start()
@@ -27,14 +53,14 @@ namespace PandeaGames.ViewModels
             SetState(default(T), true);
         }
 
-        protected void SetState(T state, bool isInitialState)
+        protected virtual void SetState(T state, bool isInitialState)
         {
-            if (_canChangeState && (!state.Equals(_currentState) || isInitialState))
+            if (_canChangeState && (!state.Equals(CurrentState) || isInitialState))
             {
-                T oldState = _currentState;
-                LeaveState(_currentState);
+                T oldState = CurrentState;
+                LeaveState(CurrentState);
                 _currentState = state;
-                StateChange(oldState, _currentState);
+                StateChange(oldState, CurrentState);
                 EnterState(state);
             }
         }

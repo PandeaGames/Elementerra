@@ -19,6 +19,12 @@ namespace Terra.MonoViews.DebugMonoViews
             
             base.Start();
             SetData(data);
+            gameObject.SetActive(false);
+        }
+
+        private void Update()
+        {
+            _itemViewContainer.gameObject.SetActive(_vm.CurrentState == TerraDebugControlViewModel.States.PlaceEntity);
         }
         
         protected override void OnItemSelect(IListItem<TerraEntityTypeData> listItem)

@@ -86,7 +86,7 @@ namespace Terra.MonoViews.DebugMonoViews
                     {
                         case TerraDebugControlViewModel.States.PlaceEntity:
                         {
-                            if (_entityProxy != null)
+                            if (_entityProxy != null && _vm.entityData != null)
                             {
                                 _entityProxy.SetActive(true);
                                 UpdateProxy(_entityProxy);

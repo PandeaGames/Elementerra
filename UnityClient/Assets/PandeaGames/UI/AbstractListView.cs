@@ -6,10 +6,10 @@ using UnityEngine;
 public abstract class AbstractListView<TItemData, TListItemView> : MonoBehaviour, IListView<TItemData> where TListItemView : IListItem<TItemData>
 {
     [SerializeField]
-    private GameObject _listItemViewGO;
+    protected GameObject _listItemViewGO;
     
     [SerializeField]
-    private Transform _itemViewContainer;  
+    protected Transform _itemViewContainer;  
     
     private TItemData[] _data;
     private TListItemView[] _listItemViews;

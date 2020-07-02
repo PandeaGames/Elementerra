@@ -618,6 +618,7 @@
           <e p="ViewModels" t="Include">
             <e p="AbstractDialogViewModel.cs" t="Include" />
             <e p="AbstractGridDataModel.cs" t="Include" />
+            <e p="AbstractSerializedStatefullViewModel.cs" t="Include" />
             <e p="AbstractStatefulViewModel.cs" t="Include" />
             <e p="AbstractUserViewModel.cs" t="Include" />
             <e p="AbstractViewModel.cs" t="Include" />
@@ -1135,6 +1136,10 @@
               <e p="TerraDebugStatefulMonoView.cs" t="Include" />
               <e p="TerraDebugWindowMonoView.cs" t="Include" />
               <e p="TerraPlayerEntityDebugMonoView.cs" t="Include" />
+              <e p="TerraSculptControls.cs" t="Include" />
+              <e p="TerraSculptDisplayMonoView.cs" t="Include" />
+              <e p="TerraSculptViewModel.cs" t="Include" />
+              <e p="ToolsGroup.cs" t="Include" />
             </e>
             <e p="EntityBuildComponentMonoView.cs" t="Include" />
             <e p="InventoryWorldRendererMonoView.cs" t="Include" />
@@ -1166,6 +1171,7 @@
             <e p="Utility" t="Include">
               <e p="TerraEntityColliderMonoView.cs" t="Include" />
               <e p="TerraEntityProxyMonoView.cs" t="Include" />
+              <e p="TerraPointerDataMonoView.cs" t="Include" />
             </e>
           </e>
           <e p="SerializedData" t="Include">
@@ -1234,6 +1240,7 @@
             <e p="TerraGrassViewModel.cs" t="Include" />
             <e p="TerraPathfinderViewModel.cs" t="Include" />
             <e p="TerraPlayerControlViewModel.cs" t="Include" />
+            <e p="TerraPointerViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
             <e p="TerraWorldStateViewModel.cs" t="Include" />
