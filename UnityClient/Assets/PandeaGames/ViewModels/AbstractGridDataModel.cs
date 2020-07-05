@@ -29,6 +29,7 @@ public abstract class AbstractGridDataModel<TData, TGridDataPoint> where TGridDa
 
     public readonly int Width;
     public readonly int Height;
+    protected bool _isBatchingChanges = false;
 
     public AbstractGridDataModel(TData[,] data)
     {
@@ -44,8 +45,8 @@ public abstract class AbstractGridDataModel<TData, TGridDataPoint> where TGridDa
 
     public virtual TData this[TerraVector vector]
     {
-        get { return _data[vector.x, vector.y]; }
-        set { _data[vector.x, vector.y] = value; }
+        get { return this[vector.x, vector.y]; }
+        set { this[vector.x, vector.y] = value; }
     }
     
     public virtual TData this[int x, int y]
@@ -72,6 +73,10 @@ public abstract class AbstractGridDataModel<TData, TGridDataPoint> where TGridDa
 
     protected virtual void DataHasChanged(IEnumerable<TGridDataPoint> data)
     {
+        if (_isBatchingChanges)
+        {
+            return;
+        }
         OnDataHasChanged?.Invoke(data);
     }
 

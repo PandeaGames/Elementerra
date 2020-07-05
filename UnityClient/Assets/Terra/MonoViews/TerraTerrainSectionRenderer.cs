@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using PandeaGames.Data;
 using Terra;
 using Terra.MonoViews;
+using Terra.Utils;
 using Terra.ViewModels;
 using UnityEngine;
 
 public class TerraTerrainSectionRenderer
 {
     private TerraTerrainGeometryDataModel chunk;
-    [SerializeField]
     public TerraArea localArea;
+    public TerraArea localAreaWithBevel;
+    public TerraArea localRenderArea;
     private Transform parent;
     
     public TerraTerrainSectionRenderer(TerraTerrainGeometryDataModel chunk, TerraArea localArea, Transform parent)
     {
         this.chunk = chunk;
         this.localArea = localArea;
+        this.localRenderArea = new TerraArea(localArea.x, localArea.y, localArea.width + 1, localArea.height + 1);
+        this.localAreaWithBevel = new TerraArea(localRenderArea.x-1, localRenderArea.y-1, localRenderArea.width + 1, localRenderArea.height + 1);
         this.parent = parent;
     }
     private TerraTerrainGeometryDataModel _renderingChunk;
@@ -54,25 +58,31 @@ public class TerraTerrainSectionRenderer
         {
             Color[] colors = meshFilter.sharedMesh.colors;
             Vector3[] vertices = meshFilter.sharedMesh.vertices;
-            
+
+            bool hasChanges = false;
             foreach (TerraTerrainGeometryDataPoint dataPoint in data)
             {
-                if(localArea.Contains(dataPoint.Vector))
+                if (localAreaWithBevel.Contains(dataPoint.Vector))
+                {
+                    hasChanges = true;
                     UpdateData(dataPoint, colors, vertices);
+                }  
             }
 
-            meshFilter.sharedMesh.colors = colors;
-            meshFilter.sharedMesh.vertices = vertices;
-            meshFilter.sharedMesh.RecalculateNormals();
-            meshFilter.sharedMesh.RecalculateBounds();
-            meshFilter.sharedMesh.RecalculateTangents();
-            MeshCollider.sharedMesh = meshFilter.sharedMesh;
+            if (hasChanges)
+            {
+                meshFilter.sharedMesh.colors = colors;
+                meshFilter.sharedMesh.vertices = vertices;
+                meshFilter.sharedMesh.RecalculateNormals();
+                meshFilter.sharedMesh.RecalculateBounds();
+                meshFilter.sharedMesh.RecalculateTangents();
+                MeshCollider.sharedMesh = meshFilter.sharedMesh;
+            }
         }
-
         
         private void UpdateData(TerraTerrainGeometryDataPoint vector, Color[] colors, Vector3[] vertices)
         {
-            int vertPosition = ((vector.Vector.x - localArea.x) * (localArea.width + 1)) + (vector.Vector.y - localArea.y);
+            int vertPosition = ((vector.Vector.x - localRenderArea.x) * localRenderArea.width) + (vector.Vector.y - localRenderArea.y);
             vertices[vertPosition] = vector.Data;
         }
 
@@ -86,8 +96,8 @@ public class TerraTerrainSectionRenderer
                 _renderingPlane.layer =LayerMask.NameToLayer(TerraGameResources.Instance.LayerForTerrain);
                 _renderingPlane.AddComponent<MeshRenderer>();
                 _renderingPlane.AddComponent<MeshFilter>();
+                _renderingPlane.AddComponent<TerrainSectionMonoView>().SetData(chunk,localRenderArea, localArea);
                 MeshCollider = _renderingPlane.AddComponent<MeshCollider>();
-                ///_renderingPlane.AddComponent<Rigidbody>();
                 meshFilter = _renderingPlane.GetComponent<MeshFilter>();
                 meshFilter.mesh = new Mesh();
                 Rigidbody rb = _renderingPlane.AddComponent<Rigidbody>();
@@ -111,18 +121,18 @@ public class TerraTerrainSectionRenderer
             // Vector2[] triangles = new Vector2[(int)(dimensions.Area * 2)];
 
             //for every point, there is 2 triangles, equaling 6 total vertices
-            int[] triangles = new int[(int)((localArea.width * localArea.height) * 6)];
+            int[] triangles = new int[(localArea.width * localArea.height) * 6];
 
             //Create Vertices
-            for (int x = 0; x < localArea.width + 1; x++)
+            for (int x = 0; x < localRenderArea.width; x++)
             {
-                for (int y = 0; y < localArea.height + 1; y++)
+                for (int y = 0; y < localRenderArea.height; y++)
                 {
-                    int localX = x + localArea.x;
-                    int localY = y + localArea.y;
+                    int localX = x + localRenderArea.x;
+                    int localY = y + localRenderArea.y;
                     Color color = GetColor(x, y);
                     
-                    int position = (x * (localArea.width + 1)) + y;
+                    int position = (x * localRenderArea.width) + y;
 
                     if (localX >= chunk.Width || localY >= chunk.Height)
                     {
@@ -132,19 +142,9 @@ public class TerraTerrainSectionRenderer
                     {
                         vertices[position] = chunk[localX, localY];
                     }
-
-                    if (localArea.x == 100 && localArea.y == 95)
-                    {
-                        Debug.Log($"localArea.x == 100 && localArea.y == 95 [{vertices[position]}, x:{x}, y:{y}]");
-                    }
-                    
-                    if (localArea.x == 50 && localArea.y == 95)
-                    {
-                        Debug.Log($"localArea.x == 50 && localArea.y == 95 [{vertices[position]}, x:{x}, y:{y}]");
-                    }
                     
                     colors[position] = color;
-                    uvs[position] = new Vector2((float)x / (float)chunk.Width + localArea.x, (float)y / (float)chunk.Height + localArea.y);
+                    uvs[position] = new Vector2(x / (float)chunk.Width + localRenderArea.x, y / (float)chunk.Height + localRenderArea.y);
                     normals[position] = Vector3.up;
                     grass[position] = 0.5f;
                 }
@@ -215,6 +215,20 @@ public class TerraTerrainSectionRenderer
             }
             
         }
+#if UNITY_EDITOR
+        public void OnDrawGizmosSelected()
+        {
+            for (int x = 0; x < localRenderArea.width; x++)
+            {
+                for (int y = 0; y < localRenderArea.height; y++)
+                {
+                    
+                    string text = $"({x}:{y})";
+                    DebugUtils.DrawString(text,new Vector3(localArea.x+x, 0, localArea.y+y), Color.white, 8);
+                }
+            }
+        }
+#endif
 
         /* private void UpdateSurroundingHights(TerraVector vector, Vector3[] vertices, TerraWorldChunk chunk)
         {

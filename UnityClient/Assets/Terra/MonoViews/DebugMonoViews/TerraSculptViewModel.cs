@@ -6,6 +6,8 @@ namespace Terra.MonoViews.DebugMonoViews
 {
     public class TerraSculptViewModel : AbstractSerializedStatefullViewModel<TerraSculptViewModel.SculptMode>
     {
+        public const float MaxFlow = 1;
+        public const float MinFlow = 0.1f;
         public const float MaxSize = 10;
         public const float MinSize = 1;
         public const float MaxStrength = 5;
@@ -21,6 +23,12 @@ namespace Terra.MonoViews.DebugMonoViews
         {
             get { return PlayerPrefs.GetFloat("TerraSculptViewModel_Size", 1); }
             set { PlayerPrefs.SetFloat("TerraSculptViewModel_Size", value); }
+        }
+        
+        public float Flow
+        {
+            get { return PlayerPrefs.GetFloat("TerraSculptViewModel_Flow", 1); }
+            set { PlayerPrefs.SetFloat("TerraSculptViewModel_Flow", value); }
         }
         
         public float Strength

@@ -651,6 +651,34 @@
             </e>
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="QFSW" t="Include">
+            <e p="Master Object Pooler 2" t="Include">
+              <e p="Source" t="Include">
+                <e p="AutoPool.cs" t="Include" />
+                <e p="Demo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="ReleaseOnCollision.cs" t="Include" />
+                    <e p="TriggerSpawner.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Editor" t="Include">
+                  <e p="EditorHelpers.cs" t="Include" />
+                  <e p="MasterObjectPoolerInspector.cs" t="Include" />
+                  <e p="MOPInspectorBase.cs" t="Include" />
+                  <e p="ObjectPoolInspector.cs" t="Include" />
+                  <e p="ObjectPoolPostProcessor.cs" t="Include" />
+                </e>
+                <e p="IPoolable.cs" t="Include" />
+                <e p="MasterObjectPooler.cs" t="Include" />
+                <e p="ObjectPool.cs" t="Include" />
+                <e p="PoolableMonoBehaviour.cs" t="Include" />
+                <e p="PopulateMethod.cs" t="Include" />
+                <e p="Tuples.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Procedural Creations" t="Include">
           <e p="Plane" t="Include">
             <e p="Editor" t="Include">
@@ -1160,6 +1188,7 @@
             <e p="TerraEntityStreamerMonoView.cs" t="Include" />
             <e p="TerraGrassMonoView.cs" t="Include" />
             <e p="TerraGrassWorldMonoView.cs" t="Include" />
+            <e p="TerrainSectionMonoView.cs" t="Include" />
             <e p="TerraSerializableGridPosiionMonoView.cs" t="Include" />
             <e p="TerraSerializedEntityPositionMonoView.cs" t="Include" />
             <e p="TerraTerrainDebugMonoView.cs" t="Include" />
@@ -1509,6 +1538,9 @@
       <e p="PandeaGamesServicesEditor.csproj" t="IncludeRecursive" />
       <e p="PandeaGamesStaticDataEditor.csproj" t="IncludeRecursive" />
       <e p="PandeaGamesWeakReferenceEditor.csproj" t="IncludeRecursive" />
+      <e p="QFSW.MOP2.csproj" t="IncludeRecursive" />
+      <e p="QFSW.MOP2.Demo.csproj" t="IncludeRecursive" />
+      <e p="QFSW.MOP2.Editor.csproj" t="IncludeRecursive" />
       <e p="SharpSerializer.csproj" t="IncludeRecursive" />
       <e p="StompyRobot.SRDebugger.csproj" t="IncludeRecursive" />
       <e p="StompyRobot.SRDebugger.Editor.csproj" t="IncludeRecursive" />

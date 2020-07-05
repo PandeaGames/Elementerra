@@ -56,9 +56,24 @@ namespace Terra.SerializedData.World
             return this[localVector.x, localVector.y];
         }
         
+        public void SetFromWorld(IEnumerable<TerraDataPoint> data)
+        {
+            _isBatchingChanges = true;
+            List<TerraDataPoint> changes = new List<TerraDataPoint>();
+            foreach (TerraDataPoint point in data)
+            {
+                TerraVector localVector = new TerraVector(FindDifference(_area.x, point.Vector.x), FindDifference(_area.y, point.Vector.y));
+                this[localVector] = point.Data;
+                changes.Add(new TerraDataPoint(this[localVector], localVector));
+            }
+
+            _isBatchingChanges = false;
+            DataHasChanged(changes);
+        }
+        
         public void SetFromWorld(TerraVector vector, TerraPoint point)
         {
-            this[FindDifference(_area.x, vector.x), FindDifference(_area.y, vector.y)] = point;
+            SetFromWorld(new []{new TerraDataPoint(point, vector)});
         }
         
         public int FindDifference(int nr1, int nr2)

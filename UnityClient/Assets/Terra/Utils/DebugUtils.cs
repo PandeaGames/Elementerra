@@ -13,8 +13,8 @@ namespace Terra.Utils
             guiStyle.normal.textColor = colour;
 
             var view = UnityEditor.SceneView.currentDrawingSceneView;
-            Vector3 screenPos = view.camera.WorldToScreenPoint(worldPos);
- 
+            Vector3 screenPos = Camera.current.WorldToScreenPoint(worldPos);
+            
             if (screenPos.y < 0 || screenPos.y > Screen.height || screenPos.x < 0 || screenPos.x > Screen.width || screenPos.z < 0)
             {
                 GUI.color = restoreColor;

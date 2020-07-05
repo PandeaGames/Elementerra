@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Terra.SerializedData.World;
+using Terra.Services;
 using UnityEngine;
 
 namespace Terra.ViewModels
@@ -37,10 +38,26 @@ namespace Terra.ViewModels
 
         private void TerraWorldChunkOnDataHasChanged(IEnumerable<TerraDataPoint> data)
         {
+            _isBatchingChanges = true;
+            Dictionary<TerraVector, TerraTerrainGeometryDataPoint> changes = new Dictionary<TerraVector, TerraTerrainGeometryDataPoint>();
             foreach (TerraDataPoint dataPoint in data)
             {
                 UpdateSurroundingHights(dataPoint.Vector, _chunk);
+
+                foreach (TerraTerrainGeometryDataPoint terraTerrainGeometryDataPoint in OnDataChange(dataPoint.Vector))
+                {
+                    if (!changes.ContainsKey(terraTerrainGeometryDataPoint.Vector))
+                    {
+                        changes.Add(
+                            terraTerrainGeometryDataPoint.Vector, 
+                            new TerraTerrainGeometryDataPoint(
+                                terraTerrainGeometryDataPoint.Vector,
+                                this[terraTerrainGeometryDataPoint.Vector]));
+                    }
+                }
             }
+            _isBatchingChanges = false;
+            DataHasChanged(changes.Values);
         }
         
         private void UpdateSurroundingHights(TerraVector vector, TerraWorldChunk chunk)
@@ -52,8 +69,6 @@ namespace Terra.ViewModels
                     this[x, y] = GetVertice(chunk, x, y);
                 }
             }
-            
-            DataHasChanged(OnDataChange(vector));
         }
 
         private IEnumerable<TerraTerrainGeometryDataPoint> OnDataChange(TerraVector vector)
@@ -71,7 +86,7 @@ namespace Terra.ViewModels
         {
             if (x < 1 || x > chunk.Width - 1 || y < 1 || y > chunk.Height - 1)
             {
-                return new Vector3(chunk[x, y].Position.x, chunk[x, y].Height * 0.5f, chunk[x, y].Position.y);
+                return new Vector3(chunk[x, y].Position.x, chunk[x, y].Height * 0.1f, chunk[x, y].Position.y);
             }
             return new Vector3(
                        chunk[x, y].Position.x, 
@@ -83,7 +98,7 @@ namespace Terra.ViewModels
                         chunk[x + 1, y + 1].Height +
                         chunk[x, y + 1].Height +
                         chunk[x - 1, y + 1].Height +
-                        chunk[x - 1, y].Height) / 9f) * 0.5f,
+                        chunk[x - 1, y].Height) / 9f) * 0.1f,
             chunk[x, y].Position.y);
         }
 

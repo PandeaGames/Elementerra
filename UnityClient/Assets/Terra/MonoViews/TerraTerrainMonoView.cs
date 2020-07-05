@@ -115,10 +115,10 @@ namespace Terra.MonoViews
 
             foreach (TerraTerrainSectionRenderer renderer in _renderers)
             {
-                if (renderer.localArea.Contains(area))
-                {
+                //if (renderer.localRenderArea.Contains(area))
+                //{
                     renderer.OnDataHasChanged(data);
-                }
+                //}
             }
             
             /*Color[] colors = meshFilter.sharedMesh.colors;

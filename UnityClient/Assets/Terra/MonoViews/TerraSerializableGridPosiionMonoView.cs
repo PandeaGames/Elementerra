@@ -21,7 +21,8 @@ namespace Terra.MonoViews
         {
             base.Initialize(entity);
             vm = Game.Instance.GetViewModel<TerraViewModel>(0);
-            vm.Geometry.OnDataHasChanged += GeometryOnDataHasChanged;
+            //this is not efficient right now
+            //vm.Geometry.OnDataHasChanged += GeometryOnDataHasChanged;
             
             Random rand = new Random(entity.InstanceId);
             

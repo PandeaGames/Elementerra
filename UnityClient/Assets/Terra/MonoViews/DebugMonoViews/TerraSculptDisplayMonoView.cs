@@ -81,6 +81,10 @@ namespace Terra.MonoViews.DebugMonoViews
             GUILayout.Label("Strength "+_terraSculptViewModel.Strength);
             _terraSculptViewModel.Strength = GUILayout.HorizontalSlider(_terraSculptViewModel.Strength, TerraSculptViewModel.MinStrength,
                 TerraSculptViewModel.MaxStrength);
+            
+            GUILayout.Label("Flow "+_terraSculptViewModel.Flow);
+            _terraSculptViewModel.Flow = GUILayout.HorizontalSlider(_terraSculptViewModel.Flow, TerraSculptViewModel.MinFlow,
+                TerraSculptViewModel.MaxFlow);
         }
     }
 }
