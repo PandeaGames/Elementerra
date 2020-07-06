@@ -4,6 +4,7 @@ using PandeaGames;
 using Terra.ViewModels;
 using UnityEngine;
 using QFSW.MOP2;
+using Terra.Utils;
 
 namespace Terra.MonoViews
 {
@@ -23,6 +24,8 @@ namespace Terra.MonoViews
 
         private int _cacheWidth;
         private int _cacheHeight;
+        
+        private bool _hasInitializedStreaming;
 
         private TerraVector _lastRenderedPlayerPosition;
         
@@ -50,50 +53,103 @@ namespace Terra.MonoViews
             {
                 return;
             }
+            
             TerraVector playerPosition = new TerraVector((int) _terraViewModel.PlayerEntity.Entity.Position.Data.x,
                 (int)_terraViewModel.PlayerEntity.Entity.Position.Data.z);
 
-            bool shouldUpdateGrass = playerPosition != _lastRenderedPlayerPosition;
-
-            if (shouldUpdateGrass)
+            TerraVector localPlayerPosition = _terraViewModel.Chunk.WorldToLocal(playerPosition);
+            
+            if (!_hasInitializedStreaming)
             {
-                UpdateGrass(playerPosition);
+                _lastRenderedPlayerPosition = localPlayerPosition;
+                _hasInitializedStreaming = true;
+                AddGrass(new TerraArea(localPlayerPosition.x - _radius, localPlayerPosition.y + _radius, _radius * 2, _radius * 2));
+            }
+            else
+            {
+                bool shouldUpdateGrass = localPlayerPosition != _lastRenderedPlayerPosition;
+
+                if (shouldUpdateGrass)
+                {
+                    UpdateGrass(localPlayerPosition);
+                }
             }
         }
-
+        
         private void UpdateGrass(TerraVector playerPosition)
         {
-            List<TerraArea> addAreas = new List<TerraArea>();
-            List<TerraArea> removeAreas = new List<TerraArea>();
-
-            int deltaX = playerPosition.x - _lastRenderedPlayerPosition.x;
-            int deltaY = playerPosition.y - _lastRenderedPlayerPosition.y;
-
-            removeAreas.Add(new TerraArea(_lastRenderedPlayerPosition.x - _radius, _lastRenderedPlayerPosition.y + _radius, Math.Max(0, deltaX), _cacheHeight));
-            removeAreas.Add(new TerraArea(_lastRenderedPlayerPosition.x + _radius + deltaX, _lastRenderedPlayerPosition.y + _radius, Math.Max(0, deltaX * -1), _cacheHeight));
-            addAreas.Add(new TerraArea(_lastRenderedPlayerPosition.x - _radius, _lastRenderedPlayerPosition.y + _radius, Math.Max(0, deltaX), _cacheHeight));
-            addAreas.Add(new TerraArea(_lastRenderedPlayerPosition.x + _radius + deltaX, _lastRenderedPlayerPosition.y + _radius, Math.Max(0, deltaX * -1), _cacheHeight));
-
-            /*if (deltaY == 0)
-            {
-                removeAreas.Add(new TerraArea(_lastRenderedPlayerPosition.x - _radius, _lastRenderedPlayerPosition.y - _radius, deltaX, _cacheHeight));
-                addAreas.Add(new TerraArea(playerPosition.x + _radius - deltaX, playerPosition.y - _radius, deltaX, _cacheHeight));
-            }
-            else if(deltaY > 0)
-            {
-                removeAreas.Add(new TerraArea(_lastRenderedPlayerPosition.x - _radius, _lastRenderedPlayerPosition.y - _radius, deltaX, _cacheHeight));
-                addAreas.Add(new TerraArea(playerPosition.x + _radius - deltaX, playerPosition.y - _radius, deltaX, _cacheHeight));
-            }*/
+            List<TerraArea> addAreas = null;
+            List<TerraArea> removeAreas = null;
             
+            TerraAreaUtils.CalculateChangeAreas(
+                from:_lastRenderedPlayerPosition,
+                to:playerPosition, 
+                r:_radius,
+                addAreas:out addAreas,
+                removeAreas:out removeAreas);
             
-            //if()
+            RemoveGrass(removeAreas);
+            AddGrass(addAreas);
             
             _lastRenderedPlayerPosition = playerPosition;
         }
         
-        private void RenderGrass(TerraVector position)
+        private void RemoveGrass(IEnumerable<TerraArea> areas)
         {
-            
+            foreach (TerraArea area in areas)
+            {
+                RemoveGrass(area);
+            }
+        }
+
+        private void RemoveGrass(TerraArea area)
+        {
+            foreach (TerraVector vector in GetVectors(area))
+            {
+                if (_grassCache.TryGetValue(vector, out TerraGrassMonoView grassView))
+                {
+                    _grassCache.Remove(vector);
+                    _objectPool.Release(grassView.gameObject);
+                }
+            }
+        }
+        
+        private void AddGrass(IEnumerable<TerraArea> areas)
+        {
+            foreach (TerraArea area in areas)
+            {
+                AddGrass(area);
+            }
+        }
+        
+        private void AddGrass(TerraArea area)
+        {
+            foreach (TerraVector vector in GetVectors(area))
+            {
+                bool shouldPlaceGrass = _terraViewModel.Grass[vector].Grass != 0;
+                
+                if (shouldPlaceGrass)
+                {
+                    System.Random rand = new System.Random(_terraViewModel.Chunk.LocalToWorld(vector).GetHashCode());
+                    _grassCache.Remove(vector);
+                    TerraGrassMonoView grassView = _objectPool.GetObject(
+                        _terraViewModel.Geometry[vector],
+                        Quaternion.Euler(0,rand.Next(0, 360),0)).GetComponent<TerraGrassMonoView>();
+                    grassView.SetData(_terraViewModel.Grass[vector]);
+                    _grassCache.Add(vector, grassView);
+                }
+            }
+        }
+
+        private IEnumerable<TerraVector> GetVectors(TerraArea area)
+        {
+            for (int x = area.x; x < area.x + area.width; x++)
+            {
+                for (int y = area.y; y > area.y - area.height; y--)
+                {
+                    yield return new TerraVector(x, y);
+                }
+            }
         }
 
         private void Render(TerraViewModel vm)

@@ -1,10 +1,12 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Terra
 {
     [Serializable]
-    public class TerraArea
+    public class TerraArea : IEnumerable<TerraVector>
     {
         public int x;
         public int y;
@@ -15,7 +17,8 @@ namespace Terra
         public int Right => x+width;
         public int Top => y;
         public int Bottom => y+height;
-    
+
+        public int Area => width * height;
 
         public TerraArea()
         {
@@ -30,9 +33,44 @@ namespace Terra
             this.height = height;
         }
 
+        public IEnumerator<TerraVector> GetEnumerator()
+        {
+            for (int x = Left; x < Right; x++)
+            {
+                for (int y = Top; y < Bottom; y++)
+                {
+                    yield return new TerraVector(x, y);
+                }
+            }
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is TerraArea)
+            {
+                return this == (TerraArea)obj;
+            }
+            return base.Equals(obj);
+        }
+
+        public static bool operator ==(TerraArea a, TerraArea b)
+        {
+            return a.x == b.x && a.y == b.y && a.width == b.width && a.height == b.height;
+        }
+
+        public static bool operator !=(TerraArea a, TerraArea b)
+        {
+            return !(a == b);
+        }
+
         public override string ToString()
         {
             return $"[x:{x}, y:{y}, width:{width}, height:{height}]";
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         public bool Contains(TerraVector terraVector, int bevel = 0)

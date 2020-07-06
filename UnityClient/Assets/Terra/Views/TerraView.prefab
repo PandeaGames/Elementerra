@@ -1132,6 +1132,9 @@ MonoBehaviour:
   _layerMaskForMousePosition:
     serializedVersion: 2
     m_Bits: 256
+  _generalClickMask:
+    serializedVersion: 2
+    m_Bits: 0
   _viewModelInstance: 0
   _cameraTag: TerraEditorCam
 --- !u!1 &3932620944152050441
@@ -1314,6 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _grassView: {fileID: 5653374349964563754, guid: db03099ac5786d94285706f2cafaaa09,
     type: 3}
+  _radius: 50
 --- !u!114 &392838457040551122
 MonoBehaviour:
   m_ObjectHideFlags: 0
