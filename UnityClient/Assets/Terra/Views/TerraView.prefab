@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _grassView: {fileID: 5653374349964563754, guid: db03099ac5786d94285706f2cafaaa09,
     type: 3}
-  _radius: 50
+  _radius: 35
 --- !u!114 &392838457040551122
 MonoBehaviour:
   m_ObjectHideFlags: 0

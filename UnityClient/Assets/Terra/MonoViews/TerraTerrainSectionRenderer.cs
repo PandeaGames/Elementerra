@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using PandeaGames;
 using PandeaGames.Data;
@@ -115,31 +116,10 @@ public class TerraTerrainSectionRenderer
             plane.SetActive(false);
             renderer.material = TerraGameResources.Instance.TerrainMaterial;
 
-            if (_soilQualityValueTexture == null)
-            {
-                _soilQualityValueTexture = new Texture2D(localRenderArea.width, localRenderArea.height);
-                _soilQualityValueTexture.name = "soilQuality";
-                for (int x = 0; x < localRenderArea.width; x++)
-                {
-                    for (int y = 0; y < localRenderArea.height; y++)
-                    {
-                        int localX = x + localRenderArea.x;
-                        int localY = y + localRenderArea.y;
-                        float value = 0;
-
-                        if (localX >= 0 && localX < chunk.Width && localY > 0 && localY < chunk.Height)
-                        {
-                            value = _terraViewModel.GrassPotential[localX, localY];
-                        }
-
-                        //value = x / (float)localRenderArea.width;
-                        _soilQualityValueTexture.SetPixel(x, y, new Color(value, value, value));
-                    }
-                }
-                _soilQualityValueTexture.Apply();
-                renderer.material.SetTexture("Texture2D_5426D726", _soilQualityValueTexture);
-            }
-
+            _soilQualityValueTexture = new Texture2D(localRenderArea.width, localRenderArea.height);
+            _soilQualityValueTexture.name = "soilQuality";
+            
+          
             meshFilter = plane.GetComponent<MeshFilter>();
             mesh = meshFilter.sharedMesh;
             MeshCollider.sharedMesh = meshFilter.sharedMesh;
@@ -163,24 +143,34 @@ public class TerraTerrainSectionRenderer
                     int localX = x + localRenderArea.x;
                     int localY = y + localRenderArea.y;
                     Color color = GetColor(x, y);
-                    
+                    float soilQualityValue = 0;
                     int position = (x * localRenderArea.width) + y;
 
                     if (localX >= chunk.Width || localY >= chunk.Height)
                     {
                         vertices[position] = chunk[chunk.Width - 1, chunk.Height - 1];
+                        soilQualityValue = 0;
                     }
                     else
                     {
                         vertices[position] = chunk[localX, localY];
+                        soilQualityValue = _terraViewModel.GrassPotential[Math.Min(localX+1, chunk.Width-1), localY];
                     }
                     
+                    _soilQualityValueTexture.SetPixel(x, y, new Color(
+                        soilQualityValue, 
+                        soilQualityValue,
+                        soilQualityValue));
+                    
                     colors[position] = color;
-                    uvs[position] = new Vector2(x / (float)chunk.Width + localRenderArea.x, y / (float)chunk.Height + localRenderArea.y);
+                    uvs[position] = new Vector2(x / (float)localRenderArea.width, y / (float)localRenderArea.height);
                     normals[position] = Vector3.up;
                     grass[position] = 0.5f;
                 }
             }
+            
+            _soilQualityValueTexture.Apply();
+            renderer.material.SetTexture("Texture2D_5426D726", _soilQualityValueTexture);
 
             List<Vector3> vectorTriangles = new List<Vector3>();
 
