@@ -1274,6 +1274,7 @@
             <e p="TerraPathfinderViewModel.cs" t="Include" />
             <e p="TerraPlayerControlViewModel.cs" t="Include" />
             <e p="TerraPointerViewModel.cs" t="Include" />
+            <e p="TerraSoilQualityViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
             <e p="TerraWorldStateViewModel.cs" t="Include" />

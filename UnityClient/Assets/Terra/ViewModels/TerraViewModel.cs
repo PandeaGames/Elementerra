@@ -20,6 +20,7 @@ namespace Terra.ViewModels
         public TerraGrassPotentialViewModel GrassPotential { get; private set; }
         public TerraEntityMonoView PlayerEntity { get; private set; }
         public TerraPathfinderViewModel TerraPathfinderViewModel { get; private set; }
+        public TerraSoilQualityViewModel TerraSoilQualityViewModel { get; private set; }
 
         public TerraViewModel()
         {
@@ -33,6 +34,7 @@ namespace Terra.ViewModels
             Geometry = new TerraTerrainGeometryDataModel(chunk);
             GrassPotential = new TerraGrassPotentialViewModel(Geometry, Game.Instance.GetViewModel<TerraEntitiesViewModel>(0), chunk);
             Grass =  new TerraGrassViewModel(Geometry, GrassPotential);
+            TerraSoilQualityViewModel = new TerraSoilQualityViewModel(GrassPotential);
             OnGeometryUpdate?.Invoke(Geometry);
         }
                 

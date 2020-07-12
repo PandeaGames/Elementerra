@@ -71,6 +71,14 @@ public abstract class AbstractGridDataModel<TData, TGridDataPoint> where TGridDa
         
     }
 
+    protected IEnumerable<TGridDataPoint> ReportDataChangeForRange<TDataPoint, TData>(IEnumerable<TDataPoint> data) where TDataPoint:GridDataPoint<TData>
+    {
+        foreach (TDataPoint dataPoint in data)
+        {
+            yield return new TGridDataPoint() {Data = this[dataPoint.Vector], Vector = dataPoint.Vector};
+        }
+    }
+
     protected virtual void DataHasChanged(IEnumerable<TGridDataPoint> data)
     {
         if (_isBatchingChanges)

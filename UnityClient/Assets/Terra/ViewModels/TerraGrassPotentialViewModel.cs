@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Terra.SerializedData.Entities;
 using Terra.SerializedData.GameData;
 using Terra.SerializedData.World;
@@ -9,19 +10,23 @@ namespace Terra.ViewModels
 {
     public class TerraGrassPotentialNodeGridPoint : GridDataPoint<float>
     {
-        
-    }
-    
-    public struct TerraGrassPotentialNode
-    {
-        public float GrassPotential;
+        public TerraGrassPotentialNodeGridPoint() : base()
+        {
+        }
+
+        public TerraGrassPotentialNodeGridPoint(TerraVector vector, float value) : base(value, vector)
+        {
+            
+        }
     }
     
     public class TerraGrassPotentialViewModel : AbstractGridDataModel<float, TerraGrassPotentialNodeGridPoint>
     {
         private TerraWorldChunk _chunk;
+        private TerraTerrainGeometryDataModel _terrainModel;
         public TerraGrassPotentialViewModel(TerraTerrainGeometryDataModel terrainModel, TerraEntitiesViewModel entitiesModel, TerraWorldChunk chunk) : base(new float[terrainModel.Height,terrainModel.Width])
         {
+            _terrainModel = terrainModel;
             _chunk = chunk;
             for (int x = 0; x < Width; x++)
             {
@@ -33,10 +38,31 @@ namespace Terra.ViewModels
             }
             
             entitiesModel.OnAddEntity += EntitiesModelOnAddEntity;
+            terrainModel.OnDataHasChanged += TerrainModelOnDataHasChanged;
 
             foreach (RuntimeTerraEntity entity in entitiesModel)
             {
                 EntitiesModelOnAddEntity(entity);
+            }
+        }
+
+        private void TerrainModelOnDataHasChanged(IEnumerable<TerraTerrainGeometryDataPoint> data)
+        {
+            _isBatchingChanges = true;
+            foreach (TerraTerrainGeometryDataPoint dataPoint in data)
+            {
+                ProcessGrassBasedOnGeometry(dataPoint.Vector.x, dataPoint.Vector.y, _terrainModel);
+            }
+
+            _isBatchingChanges = false;
+             DataHasChanged(ReportChange(data));
+        }
+
+        private IEnumerable<TerraGrassPotentialNodeGridPoint> ReportChange(IEnumerable<TerraTerrainGeometryDataPoint> data)
+        {
+            foreach (TerraTerrainGeometryDataPoint dataPoint in data)
+            {
+                yield return new TerraGrassPotentialNodeGridPoint(dataPoint.Vector, this[dataPoint.Vector]);
             }
         }
 

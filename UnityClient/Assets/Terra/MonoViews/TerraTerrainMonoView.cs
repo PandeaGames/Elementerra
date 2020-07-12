@@ -20,6 +20,18 @@ namespace Terra.MonoViews
             Game.Instance.GetViewModel<TerraViewModel>(0).OnGeometryUpdate += GeometryUpdate;
         }
 
+        private void SoilQualityDataChanged(IEnumerable<TerraSoilQualityGridPoint> data)
+        {
+            foreach (TerraTerrainSectionRenderer renderer in _renderers)
+            {
+                //if (renderer.localRenderArea.Contains(area))
+                //{
+                renderer.OnDataHasChanged(data);
+                //}
+            }
+        }
+        
+
         private void GeometryUpdate(TerraTerrainGeometryDataModel geom)
         {
             int areaSize = 25;
@@ -40,8 +52,11 @@ namespace Terra.MonoViews
             {
                 _renderingChunk.OnDataHasChanged -= OnDataHasChanged;
             }
+            
             _renderingChunk = geom;
             _renderingChunk.OnDataHasChanged += OnDataHasChanged;
+            Game.Instance.GetViewModel<TerraViewModel>(0).TerraSoilQualityViewModel.OnDataHasChanged += SoilQualityDataChanged;
+
             
             //RenderGround(geom);
         }

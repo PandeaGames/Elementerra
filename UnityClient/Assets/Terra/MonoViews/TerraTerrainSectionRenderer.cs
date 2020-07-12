@@ -59,6 +59,26 @@ public class TerraTerrainSectionRenderer
         private Mesh mesh;
         private MeshFilter meshFilter = null;
 
+        public void OnDataHasChanged(IEnumerable<TerraSoilQualityGridPoint> data)
+        {
+            bool hasChanges = false;
+            foreach (TerraSoilQualityGridPoint dataPoint in data)
+            {
+                if (localAreaWithBevel.Contains(dataPoint.Vector))
+                {
+                    int x = dataPoint.Vector.x - localRenderArea.x;
+                    int y = dataPoint.Vector.y - localRenderArea.y;
+                    hasChanges = true;
+                    _soilQualityValueTexture.SetPixel(x, y, dataPoint.Data);
+                }  
+            }
+
+            if (hasChanges)
+            {
+                _soilQualityValueTexture.Apply();
+            }
+        }
+
         public void OnDataHasChanged(IEnumerable<TerraTerrainGeometryDataPoint> data)
         {
             Color[] colors = meshFilter.sharedMesh.colors;
@@ -145,22 +165,24 @@ public class TerraTerrainSectionRenderer
                     Color color = GetColor(x, y);
                     float soilQualityValue = 0;
                     int position = (x * localRenderArea.width) + y;
-
+                    Color soilQUalityColor = default(Color);
                     if (localX >= chunk.Width || localY >= chunk.Height)
                     {
                         vertices[position] = chunk[chunk.Width - 1, chunk.Height - 1];
-                        soilQualityValue = 0;
+                        soilQUalityColor = new Color(0, 0, 0);
                     }
                     else
                     {
                         vertices[position] = chunk[localX, localY];
-                        soilQualityValue = _terraViewModel.GrassPotential[Math.Min(localX+1, chunk.Width-1), localY];
+                        //soilQualityValue = _terraViewModel.GrassPotential[Math.Min(localX+1, chunk.Width-1), localY];
+                        soilQUalityColor = _terraViewModel.TerraSoilQualityViewModel[localX, localY];
                     }
                     
-                    _soilQualityValueTexture.SetPixel(x, y, new Color(
+                    /*_soilQualityValueTexture.SetPixel(x, y, new Color(
                         soilQualityValue, 
                         soilQualityValue,
-                        soilQualityValue));
+                        soilQualityValue));*/
+                    _soilQualityValueTexture.SetPixel(x, y, soilQUalityColor);
                     
                     colors[position] = color;
                     uvs[position] = new Vector2(x / (float)localRenderArea.width, y / (float)localRenderArea.height);
