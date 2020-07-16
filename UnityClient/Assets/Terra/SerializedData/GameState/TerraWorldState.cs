@@ -6,6 +6,24 @@ namespace Terra.SerializedData.World
     public struct TerraWorldState : IDBSerializable
     {
         public int Tick;
+        public int WorldFlipped;
+
+        public bool IsWorldFipped
+        {
+            get
+            {
+                return WorldFlipped == 1;
+            }
+            set
+            {
+                WorldFlipped = value ? 1:0;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return Tick;
+        }
     }
     
     public class TerraWorldStateSerializer : IDBSerializer<TerraWorldState>
@@ -23,7 +41,8 @@ namespace Terra.SerializedData.World
             {
                 return new IDBColumn[]
                 {
-                    new IDBColumn() {ColumnName = "tick", DataType = DBDataType.INTEGER}
+                    new IDBColumn() {ColumnName = "tick", DataType = DBDataType.INTEGER},
+                    new IDBColumn() {ColumnName = "WorldFlipped", DataType = DBDataType.INTEGER}
                 };
             }
         }
@@ -52,6 +71,11 @@ namespace Terra.SerializedData.World
                     serializable.Tick = value;
                     break;
                 }
+                case 1:
+                {
+                    serializable.WorldFlipped = value;
+                    break;
+                }
             }
         }
         
@@ -67,6 +91,10 @@ namespace Terra.SerializedData.World
                 case 0:
                 {
                     return serializable.Tick.ToString();
+                }
+                case 1:
+                {
+                    return serializable.WorldFlipped.ToString();
                 }
             }
 

@@ -34,6 +34,11 @@ namespace Terra.MonoViews
             _terraEntityPrefabConfig = _terraEntitiesViewModel.TerraEntityPrefabConfig;
             Game.Instance.GetViewModel<TerraChunksViewModel>(0).OnChunkAdded += OnChunkAdded;
             _currentArea = Game.Instance.GetViewModel<TerraChunksViewModel>(0).CurrentArea;
+
+            foreach (RuntimeTerraEntity entity in _terraEntitiesViewModel)
+            {
+                OnAddEntity(entity);
+            }
         }
 
         private void OnChunkAdded(TerraWorldChunk chunk)

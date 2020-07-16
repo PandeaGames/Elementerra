@@ -39,6 +39,14 @@ namespace Terra.SerializedData.GameData
         public int GrassPotentialReductionRadius => _grassPotentialReductionRadius;
         
         [SerializeField]
+        private bool _isUniverseGateway;
+        public bool IsUniverseGateway => _isUniverseGateway;
+        
+        [SerializeField]
+        private int _universeGatewayRadius;
+        public int UniverseGatewayRadius => _universeGatewayRadius;
+        
+        [SerializeField]
         private AnimationCurve _grassPotentialReductionCurve;
         public AnimationCurve GrassPotentialReductionCurve => _grassPotentialReductionCurve;
         

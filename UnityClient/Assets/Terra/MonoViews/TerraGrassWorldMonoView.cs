@@ -135,7 +135,7 @@ namespace Terra.MonoViews
                     TerraGrassMonoView grassView = _objectPool.GetObject(
                         _terraViewModel.Geometry[vector],
                         Quaternion.Euler(0,rand.Next(0, 360),0)).GetComponent<TerraGrassMonoView>();
-                    grassView.SetData(_terraViewModel.Grass[vector]);
+                    grassView.SetData(vector, _terraViewModel.Grass[vector]);
                     _grassCache.Add(vector, grassView);
                 }
             }

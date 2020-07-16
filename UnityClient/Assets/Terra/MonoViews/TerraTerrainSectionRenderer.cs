@@ -17,16 +17,26 @@ public class TerraTerrainSectionRenderer
     public TerraArea localRenderArea;
     private Transform parent;
     private TerraViewModel _terraViewModel;
+    private TerraWorldStateViewModel _terraWorldStateViewModel;
+    private Renderer _renderer;
     
     public TerraTerrainSectionRenderer(TerraTerrainGeometryDataModel chunk, TerraArea localArea, Transform parent)
     {
+        _terraWorldStateViewModel = Game.Instance.GetViewModel<TerraWorldStateViewModel>(0);
         _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
         this.chunk = chunk;
         this.localArea = localArea;
         this.localRenderArea = new TerraArea(localArea.x, localArea.y, localArea.width + 1, localArea.height + 1);
         this.localAreaWithBevel = new TerraArea(localRenderArea.x-1, localRenderArea.y-1, localRenderArea.width + 1, localRenderArea.height + 1);
         this.parent = parent;
+        _terraWorldStateViewModel.OnWorldFlipChange += TerraWorldStateViewModelOnWorldFlipChange;
     }
+
+    private void TerraWorldStateViewModelOnWorldFlipChange(bool obj)
+    {
+        _renderer.material.SetInt("Boolean_FlipUniverse", _terraWorldStateViewModel.State.WorldFlipped);
+    }
+
     private TerraTerrainGeometryDataModel _renderingChunk;
         private TerraChunksViewModel _vm;
 
@@ -44,6 +54,7 @@ public class TerraTerrainSectionRenderer
 
         private GameObject _renderingPlane;
         private Texture2D _soilQualityValueTexture;
+        private Texture2D _altUniverseValueTexture;
 
         [SerializeField] private Vector3 _planeOffset;
         [SerializeField] private string _generatedGameObjectName;
@@ -132,10 +143,12 @@ public class TerraTerrainSectionRenderer
             
 
             GameObject plane = _renderingPlane;
-            Renderer renderer = plane.GetComponent<Renderer>();
+            _renderer = plane.GetComponent<Renderer>();
             plane.SetActive(false);
-            renderer.material = TerraGameResources.Instance.TerrainMaterial;
-
+            _renderer.material = TerraGameResources.Instance.TerrainMaterial;
+            
+            _altUniverseValueTexture = new Texture2D(localRenderArea.width, localRenderArea.height);
+            
             _soilQualityValueTexture = new Texture2D(localRenderArea.width, localRenderArea.height);
             _soilQualityValueTexture.name = "soilQuality";
             
@@ -166,16 +179,19 @@ public class TerraTerrainSectionRenderer
                     float soilQualityValue = 0;
                     int position = (x * localRenderArea.width) + y;
                     Color soilQUalityColor = default(Color);
+                    float altUniverseValue = 0;
                     if (localX >= chunk.Width || localY >= chunk.Height)
                     {
                         vertices[position] = chunk[chunk.Width - 1, chunk.Height - 1];
                         soilQUalityColor = new Color(0, 0, 0);
+                        altUniverseValue = 0;
                     }
                     else
                     {
                         vertices[position] = chunk[localX, localY];
                         //soilQualityValue = _terraViewModel.GrassPotential[Math.Min(localX+1, chunk.Width-1), localY];
                         soilQUalityColor = _terraViewModel.TerraSoilQualityViewModel[localX, localY];
+                        altUniverseValue = _terraViewModel.TerraAlterVerseViewModel[localX, localY] ? 1 : 0;
                     }
                     
                     /*_soilQualityValueTexture.SetPixel(x, y, new Color(
@@ -183,6 +199,7 @@ public class TerraTerrainSectionRenderer
                         soilQualityValue,
                         soilQualityValue));*/
                     _soilQualityValueTexture.SetPixel(x, y, soilQUalityColor);
+                    _altUniverseValueTexture.SetPixel(x, y, new Color(altUniverseValue, altUniverseValue, altUniverseValue));
                     
                     colors[position] = color;
                     uvs[position] = new Vector2(x / (float)localRenderArea.width, y / (float)localRenderArea.height);
@@ -192,8 +209,10 @@ public class TerraTerrainSectionRenderer
             }
             
             _soilQualityValueTexture.Apply();
-            renderer.material.SetTexture("Texture2D_5426D726", _soilQualityValueTexture);
-
+            _altUniverseValueTexture.Apply();
+            _renderer.material.SetTexture("Texture2D_5426D726", _soilQualityValueTexture);
+            _renderer.material.SetTexture("Texture2D_AlternateUniverse", _altUniverseValueTexture);
+            _renderer.material.SetInt("Boolean_FlipUniverse", _terraWorldStateViewModel.State.WorldFlipped);
             List<Vector3> vectorTriangles = new List<Vector3>();
 
             //Create Triangles

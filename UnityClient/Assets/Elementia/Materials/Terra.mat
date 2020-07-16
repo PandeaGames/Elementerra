@@ -39,6 +39,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 82d99aea411323645b747475714ac331, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_AlternateUniverse:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -187,6 +191,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 4a602adc46c1c264d9070668056e174c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_EAC86501_Out_0:
+        m_Texture: {fileID: 2800000, guid: e45734b4e1140e04ab8269cab3450ed2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_F2FC5089_Out_0:
+        m_Texture: {fileID: 2800000, guid: ea5595e4274e314488e52008ed08c08c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -200,6 +212,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_FlipUniverse: 1
     - _AO: 2.4
     - _AORemapMax: 1
     - _AORemapMin: 0

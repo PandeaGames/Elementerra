@@ -47,9 +47,14 @@ namespace Terra.Views
                 new TerraWorldStateStreamer(),
                 new TerraPlayerStateDataStreamer()
             });
-            
             _terraWorldViewModel.OnWorldSet += TerraWorldViewModelOnWorldSet;
             _terraEntitiesViewModel.OnAddEntity+= TerraEntitiesViewModelOnAddEntity;
+        }
+        
+        public override void LoadAsync(LoadSuccess onLoadSuccess, LoadError onLoadError)
+        {
+            _dataStreamers.Start();
+            base.LoadAsync(onLoadSuccess, onLoadError);
         }
 
         private void TerraEntitiesViewModelOnAddEntity(RuntimeTerraEntity obj)
@@ -63,9 +68,9 @@ namespace Terra.Views
 
         private void TerraWorldViewModelOnWorldSet(TerraWorld world)
         {
-           /* _terraEntitiesViewModel.AddEntity(new RuntimeTerraEntity(
-                new TerraEntity("Player"), world
-            ));*/
+            /* _terraEntitiesViewModel.AddEntity(new RuntimeTerraEntity(
+                 new TerraEntity("Player"), world
+             ));*/
         }
 
         private IEnumerator Update()
@@ -95,7 +100,7 @@ namespace Terra.Views
                 }
             );*/
             
-            TaskProvider.Instance.DelayedAction(() => _dataStreamers.Start());
+            //TaskProvider.Instance.DelayedAction(() => _dataStreamers.Start());
             _updateCoroutine = TaskProvider.Instance.RunTask(Update());
         }
 

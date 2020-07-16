@@ -13,11 +13,18 @@ namespace Terra.MonoViews
         int areaSize = 25;
         private List<TerraTerrainSectionRenderer> _renderers = new List<TerraTerrainSectionRenderer>();
         private TerraChunksViewModel _vm;
+        private TerraViewModel _terraViewModel;
         public void Start()
         {
             _vm = Game.Instance.GetViewModel<TerraChunksViewModel>(0);
            // _vm.OnChunkAdded += VmOnChunkAdded;
-            Game.Instance.GetViewModel<TerraViewModel>(0).OnGeometryUpdate += GeometryUpdate;
+           _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
+           _terraViewModel.OnGeometryUpdate += GeometryUpdate;
+
+           if (_terraViewModel.Geometry != null)
+           {
+               GeometryUpdate(_terraViewModel.Geometry);
+           }
         }
 
         private void SoilQualityDataChanged(IEnumerable<TerraSoilQualityGridPoint> data)

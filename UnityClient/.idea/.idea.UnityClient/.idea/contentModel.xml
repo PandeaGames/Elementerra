@@ -1189,6 +1189,7 @@
             <e p="TerraEntityRandomRotateMonoView.cs" t="Include" />
             <e p="TerraEntityRandomScaleMonoView.cs" t="Include" />
             <e p="TerraEntityStreamerMonoView.cs" t="Include" />
+            <e p="TerraGatewayMonoView.cs" t="Include" />
             <e p="TerraGrassMonoView.cs" t="Include" />
             <e p="TerraGrassWorldMonoView.cs" t="Include" />
             <e p="TerrainSectionMonoView.cs" t="Include" />
@@ -1267,6 +1268,7 @@
             <e p="PlayerAttackTargetViewModel.cs" t="Include" />
             <e p="PlayerEntitySlaveViewModel.cs" t="Include" />
             <e p="PlayerStateViewModel.cs" t="Include" />
+            <e p="TerraAlterVerseViewModel.cs" t="Include" />
             <e p="TerraChunksViewModel.cs" t="Include" />
             <e p="TerraEntitiesViewModel.cs" t="Include" />
             <e p="TerraGrassPotentialViewModel.cs" t="Include" />

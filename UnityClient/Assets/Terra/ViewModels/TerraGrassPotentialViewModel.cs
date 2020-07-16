@@ -24,16 +24,17 @@ namespace Terra.ViewModels
     {
         private TerraWorldChunk _chunk;
         private TerraTerrainGeometryDataModel _terrainModel;
+        private float[,] _cachedReducedGrassPotential;
         public TerraGrassPotentialViewModel(TerraTerrainGeometryDataModel terrainModel, TerraEntitiesViewModel entitiesModel, TerraWorldChunk chunk) : base(new float[terrainModel.Height,terrainModel.Width])
         {
+            _cachedReducedGrassPotential = new float[terrainModel.Height,terrainModel.Width];
             _terrainModel = terrainModel;
             _chunk = chunk;
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
                 {
-                    this[x, y] = 1;
-                    ProcessGrassBasedOnGeometry(x, y, terrainModel);
+                    this[x, y] = CalculateBaseValue(x, y, terrainModel);
                 }
             }
             
@@ -51,7 +52,7 @@ namespace Terra.ViewModels
             _isBatchingChanges = true;
             foreach (TerraTerrainGeometryDataPoint dataPoint in data)
             {
-                ProcessGrassBasedOnGeometry(dataPoint.Vector.x, dataPoint.Vector.y, _terrainModel);
+                this[dataPoint.Vector] = GetFullValue(dataPoint.Vector.x, dataPoint.Vector.y, _cachedReducedGrassPotential[dataPoint.Vector.x, dataPoint.Vector.y]);
             }
 
             _isBatchingChanges = false;
@@ -66,8 +67,10 @@ namespace Terra.ViewModels
             }
         }
 
-        private void ProcessGrassBasedOnGeometry(int xIn, int yIn, TerraTerrainGeometryDataModel terrainModel)
+        private float CalculateBaseValue(int xIn, int yIn, TerraTerrainGeometryDataModel terrainModel)
         {
+            float value = 1;
+
             float variation = 0;
             int r = 1;
             for (int x = Math.Max(0, xIn - r);
@@ -84,16 +87,23 @@ namespace Terra.ViewModels
 
             if (variation > 1 || terrainModel[xIn, yIn].y < 0)
             {
-                this[xIn, yIn] = 0;
+                value = 0;
             }
+            
+            return value;
+        }
+
+        private float GetFullValue(int x, int y,float reducedGrassPotential)
+        {
+            return Mathf.Min(CalculateBaseValue(x, y, _terrainModel), reducedGrassPotential);
         }
 
         private void EntitiesModelOnAddEntity(RuntimeTerraEntity entity)
         {
-            ProcessEntity(entity, _chunk);
+            DataHasChanged(ProcessEntity(entity, _chunk));
         }
 
-        private void ProcessEntity(RuntimeTerraEntity entity, TerraWorldChunk chunk)
+        private IEnumerable<TerraGrassPotentialNodeGridPoint> ProcessEntity(RuntimeTerraEntity entity, TerraWorldChunk chunk)
         {
             TerraEntityTypeData typeData = entity.EntityTypeData;
             TerraVector localVector = chunk.WorldToLocal(entity.GridPosition.Data);
@@ -107,12 +117,15 @@ namespace Terra.ViewModels
                         y < Math.Min(Width, localVector.y + typeData.GrassPotentialReductionRadius);
                         y++)
                     {
+                        TerraVector vector = new TerraVector(x, y);
                         float dx = x - localVector.x;
                         float dy = y - localVector.y;
                         float d = Mathf.Sqrt(dx * dx + dy * dy);
                         float factor = d / (float) typeData.GrassPotentialReductionRadius;
                         float reducedGrassPotential = typeData.GrassPotentialReductionCurve.Evaluate(factor);
-                        this[x, y] = Math.Min(this[x, y], reducedGrassPotential);
+                        _cachedReducedGrassPotential[x, y] = reducedGrassPotential;
+                        this[x, y] = GetFullValue(x, y, reducedGrassPotential);
+                        yield return new TerraGrassPotentialNodeGridPoint(vector, this[vector]);
                         //DataHasChanged();
                     }
                 }

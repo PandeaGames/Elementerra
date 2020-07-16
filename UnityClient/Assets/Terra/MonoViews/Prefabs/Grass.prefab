@@ -233,6 +233,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaler: 0.25
+  _renderer:
+  - {fileID: 639098381525063281}
+  - {fileID: 639098381525063283}
+  - {fileID: 7035507049097927633}
 --- !u!1 &7035507049095988499
 GameObject:
   m_ObjectHideFlags: 0

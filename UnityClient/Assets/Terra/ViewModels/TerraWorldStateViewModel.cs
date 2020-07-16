@@ -9,6 +9,7 @@ namespace Terra.ViewModels
     public class TerraWorldStateViewModel : IViewModel
     {
         public event Action OnStateChange;
+        public event Action<bool> OnWorldFlipChange;
         private TerraWorldState _state;
         public TerraWorldState State
         {
@@ -18,6 +19,20 @@ namespace Terra.ViewModels
 
         private TimeOfDayData _timeOfDayData;
 
+        public bool IsWorldFipped
+        {
+            get
+            {
+                return State.IsWorldFipped;
+            }
+            set 
+            {
+                if(_state.IsWorldFipped == value) return;
+                _state.IsWorldFipped = value; 
+                OnWorldFlipChange?.Invoke(value);
+            }
+        }
+        
         public void SetConfig(TimeOfDayData timeOfDayData)
         {
             _timeOfDayData = timeOfDayData;
