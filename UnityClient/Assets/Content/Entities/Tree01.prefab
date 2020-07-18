@@ -102,6 +102,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: IL3DN_Tree_Birch_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3532067394189528857, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553659888292278471, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553659888292278585, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008737695684025424, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008737695684025434, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008737695684025436, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008737695684025438, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316983385589894763, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316983385589894765, guid: ded7af70b9286904e824a86ca9a76e8f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ded7af70b9286904e824a86ca9a76e8f, type: 3}
 --- !u!1001 &4985350720172053487
@@ -240,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112382212257566431, guid: da65fce18560d2548b92a3051c2b1830,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8023432297634012591, guid: da65fce18560d2548b92a3051c2b1830,
         type: 3}

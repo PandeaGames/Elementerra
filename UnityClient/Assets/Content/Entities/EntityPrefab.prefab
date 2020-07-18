@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6148888271791477003}
   - component: {fileID: 288574462590263378}
   - component: {fileID: 5904188325209134846}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: EntityPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

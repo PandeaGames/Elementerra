@@ -72,6 +72,11 @@ PrefabInstance:
       propertyPath: _range
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 6112382212257566431, guid: da65fce18560d2548b92a3051c2b1830,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da65fce18560d2548b92a3051c2b1830, type: 3}
 --- !u!4 &1967675434811292396 stripped
@@ -91,6 +96,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IL3DN_Tree_Pine_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528435694271650569, guid: 1bf94060ef0e0a949aac362e611da1b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648858703753561849, guid: 1bf94060ef0e0a949aac362e611da1b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120813277390080, guid: 1bf94060ef0e0a949aac362e611da1b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120813277390082, guid: 1bf94060ef0e0a949aac362e611da1b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120813277391612, guid: 1bf94060ef0e0a949aac362e611da1b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6155797137608320160, guid: 1bf94060ef0e0a949aac362e611da1b2,
         type: 3}

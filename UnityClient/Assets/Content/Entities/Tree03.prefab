@@ -65,7 +65,12 @@ PrefabInstance:
     - target: {fileID: 2039461247962608828, guid: da65fce18560d2548b92a3051c2b1830,
         type: 3}
       propertyPath: m_Name
-      value: Tree03 Variant
+      value: Tree03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112382212257566431, guid: da65fce18560d2548b92a3051c2b1830,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da65fce18560d2548b92a3051c2b1830, type: 3}
@@ -141,6 +146,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IL3DN_Tree_Birch_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 172993687134115460, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657216334314641230, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657216334314641264, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657216334314641266, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657216334314641268, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901201430277357184, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901201430277357186, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901201430277357188, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5901201430277357198, guid: 99dc31ac46f4f6845aca2e64e46621eb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99dc31ac46f4f6845aca2e64e46621eb, type: 3}

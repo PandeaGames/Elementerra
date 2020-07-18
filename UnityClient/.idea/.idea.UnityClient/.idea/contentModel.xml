@@ -1182,6 +1182,8 @@
               <e p="TerraPlayerControllerMonoView.cs" t="Include" />
             </e>
             <e p="TerraAreaDisplay.cs" t="Include" />
+            <e p="TerraBetaUniverseTransformMonoView.cs" t="Include" />
+            <e p="TerraCameraMonoView.cs" t="Include" />
             <e p="TerraEntitiesMonoView.cs" t="Include" />
             <e p="TerraEntityHarstableMonoView.cs" t="Include" />
             <e p="TerraEntityLifespanMonoView.cs" t="Include" />

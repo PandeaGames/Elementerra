@@ -67,6 +67,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: IL3DN_Tree_Birch_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4526286235079839813, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847320264580355636, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858639168826992353, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858639168826992355, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858639168826992413, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858639168826992415, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510192403186805396, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510192403186805398, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6510192403186805402, guid: 5f1c3cedb6c289f43ab5c03965557bd8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f1c3cedb6c289f43ab5c03965557bd8, type: 3}
 --- !u!1001 &1859051094420146334
@@ -134,7 +179,12 @@ PrefabInstance:
     - target: {fileID: 2039461247962608828, guid: da65fce18560d2548b92a3051c2b1830,
         type: 3}
       propertyPath: m_Name
-      value: Tree02 Variant
+      value: Tree02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112382212257566431, guid: da65fce18560d2548b92a3051c2b1830,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da65fce18560d2548b92a3051c2b1830, type: 3}

@@ -1,20 +1,19 @@
-using System;
 using PandeaGames;
 using Terra.ViewModels;
 using UnityEngine;
 
 namespace Terra.MonoViews
 {
-    public class PlayerEntityMonoView : MonoBehaviour
+    public class TerraBetaUniverseTransformMonoView : MonoBehaviour
     {
-        private TerraViewModel _terraViewModel;
+        [SerializeField] 
+        private Vector3 _offset;
+        
         private TerraWorldStateViewModel _worldStateViewModel;
         
         private void Start()
         {
             _worldStateViewModel =  Game.Instance.GetViewModel<TerraWorldStateViewModel>(0);
-            _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
-            _terraViewModel.RegisterEntity(GetComponent<TerraEntityMonoView>());
             UpdateDimension(_worldStateViewModel.IsWorldFipped);
             _worldStateViewModel.OnWorldFlipChange += UpdateDimension;
         }
@@ -26,9 +25,8 @@ namespace Terra.MonoViews
 
         private void UpdateDimension(bool isWorldFlipped)
         {
-            gameObject.layer = isWorldFlipped
-                ? LayerMask.NameToLayer("BetaDimension")
-                : LayerMask.NameToLayer("AlphaDimension");
+            Vector3 offset = isWorldFlipped ? _offset : _offset * -1;
+            transform.position = transform.position + offset;
         }
     }
 }

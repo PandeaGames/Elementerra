@@ -177,9 +177,9 @@ public class vThirdPersonCamera : MonoBehaviour
         }
 
         //Check if desired target position is not blocked       
-        if (CullingRayCast(desired_cPos, oldPoints, out hitInfo, distance + 0.2f, cullingLayer, Color.blue))
+        if (CullingRayCast(desired_cPos, oldPoints, out hitInfo, distance + 1.6f, cullingLayer, Color.blue))
         {
-            distance = hitInfo.distance - 0.2f;
+            distance = hitInfo.distance - 1.6f;
             if (distance < defaultDistance)
             {
                 var t = hitInfo.distance;

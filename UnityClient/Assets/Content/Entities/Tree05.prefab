@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: IL3DN_Tree_Pine_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1847765470402659035, guid: e18d5a2b5ddeb1d47bf52e683cce67ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411988597389685396, guid: e18d5a2b5ddeb1d47bf52e683cce67ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411988597389685398, guid: e18d5a2b5ddeb1d47bf52e683cce67ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411988597389685416, guid: e18d5a2b5ddeb1d47bf52e683cce67ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 9061613975822427690, guid: e18d5a2b5ddeb1d47bf52e683cce67ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,6 +86,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174763903221704790, guid: e18d5a2b5ddeb1d47bf52e683cce67ef,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18d5a2b5ddeb1d47bf52e683cce67ef, type: 3}
@@ -134,7 +159,12 @@ PrefabInstance:
     - target: {fileID: 2039461247962608828, guid: da65fce18560d2548b92a3051c2b1830,
         type: 3}
       propertyPath: m_Name
-      value: Tree05 Variant
+      value: Tree05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112382212257566431, guid: da65fce18560d2548b92a3051c2b1830,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da65fce18560d2548b92a3051c2b1830, type: 3}
