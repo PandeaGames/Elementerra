@@ -33,13 +33,33 @@ namespace Terra.MonoViews
         {
             _container = new GameObject($"{nameof(TerraGrassWorldMonoView)} GrassContainer").transform;
             _container.parent = transform;
-            Game.Instance.GetViewModel<TerraViewModel>(0).OnGeometryUpdate += GeometryUpdate;
+            
             _objectPool = ObjectPool.Create(_grassView);
             _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
 
             _cacheWidth = _radius * 2 + 1;
             _cacheHeight = _radius * 2 + 1;
             _grassCache = new Dictionary<TerraVector, TerraGrassMonoView>();
+            
+            _terraViewModel.OnGeometryUpdate += GeometryUpdate;
+            _terraViewModel.Grass.OnDataHasChanged += GrassOnOnDataHasChanged;
+        }
+
+        private void GrassOnOnDataHasChanged(IEnumerable<TerraGrassNodeGridPoint> data)
+        {
+            foreach (TerraGrassNodeGridPoint dataPoint in data)
+            {
+                UpdateGrass(dataPoint.Vector);
+            }
+        }
+
+        private void UpdateGrass(TerraVector vector)
+        {
+            _grassCache.TryGetValue(vector, out TerraGrassMonoView currentGrassView);
+            if (currentGrassView)
+            {
+                currentGrassView.SetData(vector, _terraViewModel.Grass[vector]);
+            }
         }
 
         private void GeometryUpdate(TerraTerrainGeometryDataModel obj)
@@ -76,7 +96,7 @@ namespace Terra.MonoViews
             }
         }
         
-        private void UpdateGrass(TerraVector playerPosition)
+        private void UpdateGrassAreas(TerraVector playerPosition)
         {
             List<TerraArea> addAreas = null;
             List<TerraArea> removeAreas = null;
@@ -114,6 +134,16 @@ namespace Terra.MonoViews
             }
         }
         
+        private void RemoveGrass(TerraVector vector)
+        {
+            if (_grassCache.TryGetValue(vector, out TerraGrassMonoView grassView))
+            {
+                _grassCache.Remove(vector);
+                _objectPool.Release(grassView.gameObject);
+            }
+            
+        }
+        
         private void AddGrass(IEnumerable<TerraArea> areas)
         {
             foreach (TerraArea area in areas)
@@ -130,15 +160,20 @@ namespace Terra.MonoViews
                 
                 if (shouldPlaceGrass)
                 {
-                    System.Random rand = new System.Random(_terraViewModel.Chunk.LocalToWorld(vector).GetHashCode());
-                    _grassCache.Remove(vector);
-                    TerraGrassMonoView grassView = _objectPool.GetObject(
-                        _terraViewModel.Geometry[vector],
-                        Quaternion.Euler(0,rand.Next(0, 360),0)).GetComponent<TerraGrassMonoView>();
-                    grassView.SetData(vector, _terraViewModel.Grass[vector]);
-                    _grassCache.Add(vector, grassView);
+                    AddGrass(vector);
                 }
             }
+        }
+
+        private void AddGrass(TerraVector vector)
+        {   
+            System.Random rand = new System.Random(_terraViewModel.Chunk.LocalToWorld(vector).GetHashCode());
+            _grassCache.Remove(vector);
+            TerraGrassMonoView grassView = _objectPool.GetObject(
+                _terraViewModel.Geometry[vector],
+                Quaternion.Euler(0,rand.Next(0, 360),0)).GetComponent<TerraGrassMonoView>();
+            grassView.SetData(vector, _terraViewModel.Grass[vector]);
+            _grassCache.Add(vector, grassView);
         }
 
         private IEnumerable<TerraVector> GetVectors(TerraArea area)

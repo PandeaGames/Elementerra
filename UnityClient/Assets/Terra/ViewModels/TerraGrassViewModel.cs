@@ -50,6 +50,8 @@ namespace Terra.ViewModels
             {
                 this[dataPoint.Vector] = CalculateNode(dataPoint.Vector, _terraGrassPotentialViewModel);
             }
+
+            DataHasChanged(ReportDataChangeForRange<TerraGrassPotentialNodeGridPoint, float>(data));
         }
     }
 }
