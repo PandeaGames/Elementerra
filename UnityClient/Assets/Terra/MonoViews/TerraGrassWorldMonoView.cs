@@ -91,7 +91,7 @@ namespace Terra.MonoViews
 
                 if (shouldUpdateGrass)
                 {
-                    UpdateGrass(localPlayerPosition);
+                    UpdateGrassAreas(localPlayerPosition);
                 }
             }
         }
@@ -126,11 +126,7 @@ namespace Terra.MonoViews
         {
             foreach (TerraVector vector in GetVectors(area))
             {
-                if (_grassCache.TryGetValue(vector, out TerraGrassMonoView grassView))
-                {
-                    _grassCache.Remove(vector);
-                    _objectPool.Release(grassView.gameObject);
-                }
+                RemoveGrass(vector);
             }
         }
         

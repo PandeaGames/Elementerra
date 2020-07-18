@@ -4,6 +4,7 @@ using System.Data.Common;
 using System.Data.SQLite;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading.Tasks;
 using PandeaGames.Services;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -310,10 +311,15 @@ namespace Terra.Services
             _pendingWriteRequests = new Dictionary<int, TerraDBRequest>();
             _pendingWriteRequestsList = new List<TerraDBRequest>();
             _pendingDeleteRequestsList = new List<TerraDBRequest>();
-            Write(tmpList, tmpDeleteList);
+            Task.Run(() => DoSaveAsync(tmpList, tmpDeleteList));
         }
 
-        private async void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests)
+        private async Task DoSaveAsync(List<TerraDBRequest> tmpList, List<TerraDBRequest> tmpDeleteList)
+        {
+            Write(tmpList, tmpDeleteList, dbPath);
+        }
+
+        private async void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests, string dbPath)
         {
             using (SQLiteConnection connection = new SQLiteConnection(dbPath))
             {
