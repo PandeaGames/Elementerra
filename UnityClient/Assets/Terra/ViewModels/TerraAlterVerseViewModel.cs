@@ -36,7 +36,8 @@ namespace Terra.ViewModels
         private void EntitiesModelOnAddEntity(RuntimeTerraEntity entity)
         {
             List<TerraAlterVerseGridPoint> changes = new List<TerraAlterVerseGridPoint>(ProcessEntity(entity, _chunk));
-            DataHasChanged(changes);
+            if(changes.Count > 0)
+                DataHasChanged(changes);
         }
 
         private IEnumerable<TerraAlterVerseGridPoint> ProcessEntity(RuntimeTerraEntity entity, TerraWorldChunk chunk)

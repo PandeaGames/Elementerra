@@ -1241,6 +1241,7 @@ GameObject:
   - component: {fileID: 6497573579060094207}
   - component: {fileID: 392838457040551122}
   - component: {fileID: 8775556738548609360}
+  - component: {fileID: 2995812529520269198}
   m_Layer: 0
   m_Name: TerraView
   m_TagString: Untagged
@@ -1346,6 +1347,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debugView: 0
+--- !u!114 &2995812529520269198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663039414491324413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896713dd1dc24e5a927cee4eae88837b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5643855848146255860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,18 +2408,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5501062219390615223}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8728934700498644710 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3851937974465073233, guid: 330efb0e9eed825408809c121441b8a5,
+--- !u!4 &7578674502899553806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5,
     type: 3}
   m_PrefabInstance: {fileID: 5501062219390615223}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7578674502899553807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c789670a80b704eba4dfebed94a111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7578674502899553804 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2700874171910072507, guid: 330efb0e9eed825408809c121441b8a5,
@@ -2419,12 +2426,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1bfe72fbc87d04e885296b53e91c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7578674502899553806 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2700874171910072505, guid: 330efb0e9eed825408809c121441b8a5,
+--- !u!114 &8728934700498644710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3851937974465073233, guid: 330efb0e9eed825408809c121441b8a5,
     type: 3}
   m_PrefabInstance: {fileID: 5501062219390615223}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578674502899553807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c789670a80b704eba4dfebed94a111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5586859734757923079
 PrefabInstance:
   m_ObjectHideFlags: 0

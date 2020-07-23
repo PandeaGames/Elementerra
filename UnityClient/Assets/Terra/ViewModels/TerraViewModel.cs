@@ -22,6 +22,7 @@ namespace Terra.ViewModels
         public TerraPathfinderViewModel TerraPathfinderViewModel { get; private set; }
         public TerraSoilQualityViewModel TerraSoilQualityViewModel { get; private set; }
         public TerraAlterVerseViewModel TerraAlterVerseViewModel { get; private set; }
+        public TerraUniversBlobsViewModel TerraUniversBlobsViewModel { get; private set; }
 
         public TerraViewModel()
         {
@@ -38,6 +39,7 @@ namespace Terra.ViewModels
             GrassPotential = new TerraGrassPotentialViewModel(Geometry, entitiesModel, chunk);
             Grass =  new TerraGrassViewModel(Geometry, GrassPotential);
             TerraSoilQualityViewModel = new TerraSoilQualityViewModel(GrassPotential);
+            TerraUniversBlobsViewModel = new TerraUniversBlobsViewModel(TerraAlterVerseViewModel);
             OnGeometryUpdate?.Invoke(Geometry);
         }
                 

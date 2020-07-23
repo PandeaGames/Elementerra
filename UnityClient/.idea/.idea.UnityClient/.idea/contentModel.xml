@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ccove\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_UnityClient.764501748.00" t="ExcludeRecursive" />
-    <e p="D:\Elementerra\UnityClient" t="IncludeRecursive">
+    <e p="C:\Users\ccove\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ccove\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_UnityClient.-488473857.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ccove\Documents\Elementerra\UnityClient" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1098,6 +1099,60 @@
             <e p="SROptions.Test.cs" t="Include" />
           </e>
         </e>
+        <e p="Stylized Grass Shader" t="Include">
+          <e p="_Demo" t="Include">
+            <e p="DemoAssets" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="FreeCamera.cs" t="Include" />
+                <e p="MoveInCircle.cs" t="Include" />
+                <e p="OrbitCamera.cs" t="Include" />
+                <e p="PlayerController.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Changelog.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="DrawGrassBenders.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="AssetInfo.cs" t="Include" />
+              <e p="ColorMapEditor.cs" t="Include" />
+              <e p="ColorMapInspector.cs" t="Include" />
+              <e p="GrassBenderInspector.cs" t="Include" />
+              <e p="GrassColorMapRendererInspector.cs" t="Include" />
+              <e p="ShaderConfigurator.cs" t="Include" />
+              <e p="StylizedGrassEditor.cs" t="Include" />
+              <e p="StylizedGrassGUI.cs" t="Include" />
+              <e p="StylizedGrassRendererInspector.cs" t="Include" />
+              <e p="StylizedGrassShaderGUI.cs" t="Include" />
+            </e>
+            <e p="GrassBender.cs" t="Include" />
+            <e p="GrassBenderBase.cs" t="Include" />
+            <e p="GrassColorMap.cs" t="Include" />
+            <e p="GrassColorMapRenderer.cs" t="Include" />
+            <e p="StylizedGrassRenderer.cs" t="Include" />
+            <e p="StylizedGrassShaderController.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="DepthPass.hlsl" t="Include" />
+            <e p="Libraries" t="Include">
+              <e p="Bending.hlsl" t="Include" />
+              <e p="Color.hlsl" t="Include" />
+              <e p="Lighting.hlsl" t="Include" />
+              <e p="StylizedGrassCommon.hlsl" t="Include" />
+              <e p="StylizedGrassInput.hlsl" t="Include" />
+              <e p="VS_InstancedIndirect.cginc" t="Include" />
+              <e p="Wind.hlsl" t="Include" />
+            </e>
+            <e p="LightingPass.hlsl" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="GrassBendMesh.shader" t="Include" />
+              <e p="GrassBendRenderer.shader" t="Include" />
+              <e p="GrassBendTrail.shader" t="Include" />
+            </e>
+            <e p="ShadowPass.hlsl" t="Include" />
+            <e p="StylizedGrassShader.shader" t="Include" />
+          </e>
+        </e>
         <e p="Terra" t="Include">
           <e p="AreaHighlighting" t="Include">
             <e p="AreaHighlightingMonoView.cs" t="Include" />
@@ -1110,6 +1165,7 @@
             <e p="TerraCheatWindow.cs" t="Include" />
             <e p="Tests" t="Include">
               <e p="ObjectStreamingTests.cs" t="Include" />
+              <e p="TerraUniverseBlobsTests.cs" t="Include" />
             </e>
           </e>
           <e p="Inventory" t="Include">
@@ -1182,6 +1238,7 @@
             </e>
             <e p="TerraAreaDisplay.cs" t="Include" />
             <e p="TerraBetaUniverseTransformMonoView.cs" t="Include" />
+            <e p="TerraBlobRendererMonoView.cs" t="Include" />
             <e p="TerraCameraMonoView.cs" t="Include" />
             <e p="TerraEntitiesMonoView.cs" t="Include" />
             <e p="TerraEntityHarstableMonoView.cs" t="Include" />
@@ -1260,6 +1317,7 @@
           <e p="Utils" t="Include">
             <e p="DebugUtils.cs" t="Include" />
             <e p="TerraAreaUtils.cs" t="Include" />
+            <e p="TerraBlobUtil.cs" t="Include" />
             <e p="TerraPlayerPrefs.cs" t="Include" />
           </e>
           <e p="ViewModels" t="Include">
@@ -1279,6 +1337,7 @@
             <e p="TerraPointerViewModel.cs" t="Include" />
             <e p="TerraSoilQualityViewModel.cs" t="Include" />
             <e p="TerraTerrainGeometryDataModel.cs" t="Include" />
+            <e p="TerraUniversBlobsViewModel.cs" t="Include" />
             <e p="TerraViewModel.cs" t="Include" />
             <e p="TerraWorldStateViewModel.cs" t="Include" />
             <e p="TerraWorldViewModel.cs" t="Include" />
@@ -1539,7 +1598,6 @@
       <e p="Invector3rdPersonCharacterControllerEditor.csproj" t="IncludeRecursive" />
       <e p="Invector3rdPersonGenericEditor.csproj" t="IncludeRecursive" />
       <e p="InvectorCharacterCreatorEditor.csproj" t="IncludeRecursive" />
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="PandeaGames.csproj" t="IncludeRecursive" />
@@ -1555,9 +1613,9 @@
       <e p="StompyRobot.SRDebugger.Editor.csproj" t="IncludeRecursive" />
       <e p="StompyRobot.SRF.csproj" t="IncludeRecursive" />
       <e p="StompyRobot.SRF.Editor.csproj" t="IncludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="StylizedGrass.Runtime.csproj" t="IncludeRecursive" />
+      <e p="StylizedGrass_Editor.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="Terra.csproj" t="IncludeRecursive" />
       <e p="TerraEditor.csproj" t="IncludeRecursive" />
       <e p="UnityClient.sln" t="IncludeFlat" />

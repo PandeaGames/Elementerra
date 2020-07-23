@@ -26,6 +26,10 @@ public abstract class AbstractGridDataModel<TData, TGridDataPoint> where TGridDa
     public event DataHasChangedDelegate OnDataHasChanged;
     
     protected TData[,] _data {private set; get; }
+    public TData[,] Data
+    {
+        get => _data;
+    }
 
     public readonly int Width;
     public readonly int Height;

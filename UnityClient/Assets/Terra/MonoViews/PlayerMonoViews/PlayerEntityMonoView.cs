@@ -24,6 +24,12 @@ namespace Terra.MonoViews
             _worldStateViewModel.OnWorldFlipChange -= UpdateDimension;
         }
 
+        private void Update()
+        {
+            TerraVector vector = _terraViewModel.Chunk.WorldToLocal(transform.position);
+            _worldStateViewModel.IsWorldFipped = _terraViewModel.TerraAlterVerseViewModel[vector];
+        }
+
         private void UpdateDimension(bool isWorldFlipped)
         {
             gameObject.layer = isWorldFlipped
