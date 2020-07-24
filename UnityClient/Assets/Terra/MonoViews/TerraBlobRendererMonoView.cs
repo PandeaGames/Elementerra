@@ -12,19 +12,26 @@ namespace Terra.MonoViews
     {
         private TerraUniversBlobsViewModel _vm;
         private TerraViewModel _terraViewModel;
+        private GameObject _root;
+        
+        [SerializeField]
+        private Material _material;
         private IEnumerator Start()
         {
+            _root = new GameObject("TerraBlobRendererMonoView");
+            _root.transform.parent = transform.parent;
             _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
             _vm = _terraViewModel.TerraUniversBlobsViewModel;
             yield return new WaitForSeconds(5);
             List<TerraBlob> blobs = new List<TerraBlob>(_vm.Blobs);
+            RenderBlobs(blobs);
         }
 
         public void OnDrawGizmos()
-        {    
-            Vector3 from = Vector3.negativeInfinity;
+        {
             foreach (TerraBlob blob in _vm.Blobs)
             {
+                Vector3 from = Vector3.negativeInfinity;
                 foreach (TerraVector vertice in blob.Vertices)
                 {
                     if (from == Vector3.negativeInfinity)
@@ -35,13 +42,21 @@ namespace Terra.MonoViews
                     Gizmos.DrawLine(from, _terraViewModel.Geometry[vertice]);
                     from = _terraViewModel.Geometry[vertice];
                 }
-                
             }
         }
 
         private void Update()
         {
             
+        }
+
+        private void RenderBlobs(List<TerraBlob> blobs)
+        {
+            foreach (TerraBlob blob in blobs)
+            {
+                TerraBlobRenderer renderer = new TerraBlobRenderer();
+                renderer.Render(blob, _root.transform, _material);
+            }
         }
     }
 }

@@ -22,8 +22,10 @@ namespace Terra.ViewModels
     public class TerraAlterVerseViewModel : AbstractGridDataModel<bool, TerraAlterVerseGridPoint>
     {
         private TerraWorldChunk _chunk;
+        private TerraEntitiesViewModel _entitiesModel;
         public TerraAlterVerseViewModel(TerraEntitiesViewModel entitiesModel, TerraWorldChunk chunk) : base(new bool[chunk.Height,chunk.Width])
         {
+            _entitiesModel = entitiesModel;
             _chunk = chunk;
             entitiesModel.OnAddEntity += EntitiesModelOnAddEntity;
 
@@ -54,15 +56,32 @@ namespace Terra.ViewModels
                     y++)
                 {
                     TerraVector vector = new TerraVector(x, y);
-                    float dx = x - localVector.x;
-                    float dy = y - localVector.y;
-                    float d = Mathf.Sqrt(dx * dx + dy * dy);
-                    this[vector] = d < typeData.UniverseGatewayRadius;
+                    this[vector] = IsWithinRadiusOfAnyEntity(x, y);
                     //if within radius, true. otherwise, false
                     yield return new TerraAlterVerseGridPoint(vector, this[vector]);
                 }
             }
             
+        }
+
+        private bool IsWithinRadiusOfAnyEntity(int x, int y)
+        {
+            foreach (RuntimeTerraEntity entity in _entitiesModel)
+            {
+                TerraVector localVector = _chunk.WorldToLocal(entity.GridPosition.Data);
+                TerraEntityTypeData typeData = entity.EntityTypeData;
+                if (!typeData.IsUniverseGateway) continue;
+                float dx = x - localVector.x;
+                float dy = y - localVector.y;
+                float d = Mathf.Sqrt(dx * dx + dy * dy);
+
+                if (d < typeData.UniverseGatewayRadius)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

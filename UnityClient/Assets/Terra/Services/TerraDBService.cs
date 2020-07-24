@@ -311,70 +311,79 @@ namespace Terra.Services
             _pendingWriteRequests = new Dictionary<int, TerraDBRequest>();
             _pendingWriteRequestsList = new List<TerraDBRequest>();
             _pendingDeleteRequestsList = new List<TerraDBRequest>();
-            Task.Run(() => DoSaveAsync(tmpList, tmpDeleteList));
+            string dbPath = this.dbPath;
+            Task.Run(() => DoSaveAsync(tmpList, tmpDeleteList, dbPath));
         }
 
-        private async Task DoSaveAsync(List<TerraDBRequest> tmpList, List<TerraDBRequest> tmpDeleteList)
+        private void DoSaveAsync(List<TerraDBRequest> tmpList, List<TerraDBRequest> tmpDeleteList, string dbPath)
         {
             Write(tmpList, tmpDeleteList, dbPath);
         }
 
-        private async void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests, string dbPath)
+        private void Write(IEnumerable<TerraDBRequest> writeRequests, IEnumerable<TerraDBRequest> deleteRequests, string dbPath)
         {
-            using (SQLiteConnection connection = new SQLiteConnection(dbPath))
+            try
             {
-                connection.Open();
-                var cmd = new SQLiteCommand(connection);
-                SQLiteTransaction transaction = connection.BeginTransaction();
-                cmd.Transaction = transaction;
-
-                foreach (TerraDBRequest request in writeRequests)
+                using (SQLiteConnection connection = new SQLiteConnection(dbPath))
                 {
-                    try
+                    connection.Open();
+                    var cmd = new SQLiteCommand(connection);
+                    SQLiteTransaction transaction = connection.BeginTransaction();
+                    cmd.Transaction = transaction;
+    
+                    foreach (TerraDBRequest request in writeRequests)
                     {
-                        for (int i = 0; i < request.Values.Length; i++)
+                        try
                         {
-                            switch (request.Values[i].DataType)
+                            for (int i = 0; i < request.Values.Length; i++)
                             {
-                                case DBDataType.TEXT:
+                                switch (request.Values[i].DataType)
                                 {
-                                    cmd.Parameters.AddWithValue($"@{ request.Values[i].Column}", request.Values[i].Value);
-                                    break;
-                                }
-                                case DBDataType.INTEGER:
-                                {
-                                    cmd.Parameters.AddWithValue($"@{ request.Values[i].Column}", int.Parse(request.Values[i].Value));
-                                    break;
-                                }
-                                case DBDataType.NUMERIC:
-                                {
-                                    cmd.Parameters.AddWithValue($"@{ request.Values[i].Column}",float.Parse( request.Values[i].Value));
-                                    break;
+                                    case DBDataType.TEXT:
+                                    {
+                                        cmd.Parameters.AddWithValue($"@{ request.Values[i].Column}", request.Values[i].Value);
+                                        break;
+                                    }
+                                    case DBDataType.INTEGER:
+                                    {
+                                        cmd.Parameters.AddWithValue($"@{ request.Values[i].Column}", int.Parse(request.Values[i].Value));
+                                        break;
+                                    }
+                                    case DBDataType.NUMERIC:
+                                    {
+                                        cmd.Parameters.AddWithValue($"@{ request.Values[i].Column}",float.Parse( request.Values[i].Value));
+                                        break;
+                                    }
                                 }
                             }
+    
+                            cmd.CommandText = request.CommandText;
+                        
+                            cmd.ExecuteNonQuery();
                         }
-
-                        cmd.CommandText = request.CommandText;
+                        catch (Exception e)
+                        {
+                            throw new Exception(request.CommandText, innerException:e);
+                        }
+                       
+                    }
                     
+                    transaction.Commit();
+                    transaction = connection.BeginTransaction();
+    
+                    foreach (TerraDBRequest request in deleteRequests)
+                    {
+                        cmd.CommandText = request.CommandText;
                         cmd.ExecuteNonQuery();
                     }
-                    catch (Exception e)
-                    {
-                        throw new Exception(request.CommandText, innerException:e);
-                    }
-                   
+                    
+                    transaction.Commit();
                 }
-                
-                transaction.Commit();
-                transaction = connection.BeginTransaction();
-
-                foreach (TerraDBRequest request in deleteRequests)
-                {
-                    cmd.CommandText = request.CommandText;
-                    cmd.ExecuteNonQuery();
-                }
-                
-                transaction.Commit();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
         }
 
