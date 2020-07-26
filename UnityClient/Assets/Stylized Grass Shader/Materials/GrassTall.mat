@@ -113,10 +113,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.3529412, g: 0.44313726, b: 0.17254902, a: 1}
+    - _BaseColor: {r: 0.43287435, g: 0.5471698, b: 0.21422213, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FadeParams: {r: 325, g: 500, b: 1, a: 0}
-    - _HueVariation: {r: 1, g: 0.63, b: 0, a: 0.15}
+    - _FadeParams: {r: 10.185181, g: 46.296303, b: 1, a: 0}
+    - _HueVariation: {r: 0.34117648, g: 0.43137255, b: 0.16862746, a: 0.18431373}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
