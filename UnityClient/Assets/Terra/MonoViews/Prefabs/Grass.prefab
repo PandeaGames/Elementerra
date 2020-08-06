@@ -48,6 +48,8 @@ MonoBehaviour:
   _renderer:
   - {fileID: 9193937163548554908}
   - {fileID: 4154455062266218154}
+  primaryMaterial: {fileID: 2100000, guid: 083de6f14cd658749a51f88992865733, type: 2}
+  secondaryMaterial: {fileID: 2100000, guid: 4417776c7eb7e534892fa91468aa775e, type: 2}
 --- !u!1001 &8685681144491563876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,6 +75,11 @@ PrefabInstance:
     - target: {fileID: 4696737801340313032, guid: 1a5d752a180f8824c93296f440c23fa0,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696737801340313038, guid: 1a5d752a180f8824c93296f440c23fa0,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7527757087965635428, guid: 1a5d752a180f8824c93296f440c23fa0,

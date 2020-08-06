@@ -17,6 +17,8 @@ MonoBehaviour:
   - {fileID: 413988754721376462}
   - {fileID: 2596992789472464352}
   - {fileID: 8662402451836214556}
+  primaryMaterial: {fileID: 2100000, guid: dca391aeac4c2b249ad85e37db958c77, type: 2}
+  secondaryMaterial: {fileID: 2100000, guid: 4417776c7eb7e534892fa91468aa775e, type: 2}
 --- !u!1001 &5820819909308576071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,6 +100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3914
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950066647583452251, guid: 11fc03d456eca31468f034e0c5492f39,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3958793126709022077, guid: 11fc03d456eca31468f034e0c5492f39,
         type: 3}
@@ -187,6 +194,11 @@ PrefabInstance:
     - target: {fileID: 7695846177758354817, guid: 11fc03d456eca31468f034e0c5492f39,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416642697587735719, guid: 11fc03d456eca31468f034e0c5492f39,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

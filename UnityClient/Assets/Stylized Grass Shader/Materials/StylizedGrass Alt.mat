@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7047161769720665574
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -20,9 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GrassTall
+  m_Name: StylizedGrass Alt
   m_Shader: {fileID: 4800000, guid: d7dd1c3f4cba1d441a7d295a168bac0d, type: 3}
-  m_ShaderKeywords: _ADVANCED_LIGHTING _ENVIRONMENTREFLECTIONS_OFF
+  m_ShaderKeywords: _ADVANCED_LIGHTING _ENVIRONMENTREFLECTIONS_OFF _RECEIVESHADOWS_OFF
+    _RECEIVE_SHADOWS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -33,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: c1e4e86e9e93c3d4aa7b438386aba029, type: 3}
+        m_Texture: {fileID: 2800000, guid: baac77a69801b814db973a5b99aa0733, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -44,8 +32,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ExtraTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c1e4e86e9e93c3d4aa7b438386aba029, type: 3}
+        m_Texture: {fileID: 2800000, guid: baac77a69801b814db973a5b99aa0733, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -60,8 +52,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _TranslucencyMap:
+    - _SubsurfaceTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 2800000, guid: 8ae7a19dd7c05ad4c904853b127a609f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WindMap:
@@ -73,50 +69,80 @@ Material:
     - _AlphaClip: 0
     - _AlphaToCoverage: 0
     - _BendFlattenStrength: 1
+    - _BendInfluence: 1
     - _BendMode: 0
     - _BendPushStrength: 1
+    - _BillboardKwToggle: 0
+    - _BillboardShadowFade: 0.5
     - _Blend: 0
     - _BumpScale: 1
     - _ColorMapHeight: 1
     - _ColorMapStrength: 0
     - _Cull: 0
     - _Cutoff: 0.5
-    - _Darkening: 0.1
+    - _Darkening: 0.487
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _HueVariationKwToggle: 0
     - _Metallic: 0
-    - _OcclusionStrength: 0
+    - _NormalMapKwToggle: 0
+    - _OcclusionStrength: 0.695
     - _PerspectiveCorrection: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecularAmount: 0.1
+    - _SpecularAmount: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _SubsurfaceIndirect: 0.25
+    - _SubsurfaceKwToggle: 0
     - _Surface: 0
-    - _Translucency: 0.2
-    - _VertexDarkening: 0.1
+    - _Translucency: 1
+    - _TwoSided: 0
+    - _VertexDarkening: 0.702
     - _WindAmbientStrength: 0.2
-    - _WindGustFreq: 4
-    - _WindGustStrength: 0.31
-    - _WindGustTint: 0.025
+    - _WindFlutter: 0.559
+    - _WindGustFreq: 2.71
+    - _WindGustSpeed: 5
+    - _WindGustStrength: 0.23
+    - _WindGustTint: 0
     - _WindObjectRand: 1
+    - _WindQuality: 0
+    - _WindRandSpeed: 1
     - _WindRandStrength: 1
-    - _WindSpeed: 3.2
-    - _WindStrength: 0.492
-    - _WindSwinging: 0.15
-    - _WindVertexRand: 0
+    - _WindSpeed: 3.44
+    - _WindStr: 0.067
+    - _WindStrength: 0.128
+    - _WindStrengths: 1
+    - _WindSwinging: 0.184
+    - _WindVertexRand: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.43287435, g: 0.5471698, b: 0.21422213, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FadeParams: {r: 64.81481, g: 111.11111, b: 1, a: 0}
-    - _HueVariation: {r: 0.34117648, g: 0.43137255, b: 0.16862746, a: 0.18431373}
+    - _FadeParams: {r: 12.962963, g: 17.592594, b: 1, a: 0}
+    - _HueVariation: {r: 0.7058824, g: 0.8745098, b: 0.94509804, a: 0.11372549}
+    - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 1, a: 0}
+    - _WindSpeed: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &5473917896841254419
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1

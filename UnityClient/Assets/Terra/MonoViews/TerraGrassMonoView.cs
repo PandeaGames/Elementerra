@@ -12,6 +12,9 @@ namespace Terra.MonoViews
         private TerraViewModel _terraViewModel;
         private TerraWorldStateViewModel _terraWorldStateViewModel;
 
+        public Material primaryMaterial;
+        public Material secondaryMaterial;
+
         private void Start()
         {
             _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
@@ -24,9 +27,12 @@ namespace Terra.MonoViews
 
             foreach (Renderer renderer in _renderer)
             {
-                renderer.gameObject.layer = _terraViewModel.TerraAlterVerseViewModel[vector]
+                renderer.material = _terraViewModel.TerraAlterVerseViewModel[vector]
+                    ? secondaryMaterial
+                    : primaryMaterial;
+                /*renderer.gameObject.layer = _terraViewModel.TerraAlterVerseViewModel[vector]
                     ? LayerMask.NameToLayer("BetaDimension")
-                    : LayerMask.NameToLayer("AlphaDimension");
+                    : LayerMask.NameToLayer("AlphaDimension");*/
             }
             gameObject.SetActive(dataNode.Grass > 0);
             transform.localScale = new Vector3(

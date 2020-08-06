@@ -28,6 +28,10 @@ public class PlayerControllerModifierMonoView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_controller == null)
+        {
+            return;
+        }
         _controller.freeSpeed.walkByDefault = _playerStateViewModel.IsHoldingItem;
         _controller.freeSpeed.walkSpeed = _playerStateViewModel.IsHoldingItem ? _walkSpeed * _walkSpeedModifier : _walkSpeed;
         _controller.freeSpeed.runningSpeed = _playerStateViewModel.IsHoldingItem ? _runSpeed * _runSpeedModifier : _runSpeed;

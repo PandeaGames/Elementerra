@@ -102,6 +102,16 @@
         </e>
         <e p="ElementiaPlayer.cs" t="Include" />
         <e p="ElementiaPlayerCamera.cs" t="Include" />
+        <e p="First person controller" t="Include">
+          <e p="Components" t="Include">
+            <e p="Crouch.cs" t="Include" />
+            <e p="GroundCheck.cs" t="Include" />
+            <e p="Jump.cs" t="Include" />
+            <e p="Zoom.cs" t="Include" />
+          </e>
+          <e p="FirstPersonLook.cs" t="Include" />
+          <e p="FirstPersonMovement.cs" t="Include" />
+        </e>
         <e p="FreeFlyCamera" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -707,37 +717,6 @@
             <e p="SlowMoButton.cs" t="Include" />
           </e>
         </e>
-        <e p="ScreenSpaceFluids" t="Include">
-          <e p="_SSF_ReadMe.txt" t="Include" />
-          <e p="Common" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="ExtendedFlycam.cs" t="Include" />
-              <e p="TurnOnDepthBuffer.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Resources" t="Include">
-            <e p="Shaders" t="Include">
-              <e p="SSF_BlurDepth.shader" t="Include" />
-              <e p="SSF_ComposeFluid.shader" t="Include" />
-              <e p="SSF_DepthShader.shader" t="Include" />
-              <e p="SSF_SpherePointsShader.shader" t="Include" />
-            </e>
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="SSF_ComposeFluid.cs" t="Include" />
-            <e p="SSF_FluidRenderer.cs" t="Include" />
-            <e p="SSF_ParticlesRenderer.cs" t="Include" />
-          </e>
-          <e p="Standard Assets" t="Include">
-            <e p="Effects" t="Include">
-              <e p="ImageEffects" t="Include">
-                <e p="Scripts" t="Include">
-                  <e p="ImageEffectBase.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Standard Assets" t="Include">
           <e p="2D" t="Include">
             <e p="Scripts" t="Include">
@@ -1238,6 +1217,7 @@
             </e>
             <e p="TerraAreaDisplay.cs" t="Include" />
             <e p="TerraBetaUniverseTransformMonoView.cs" t="Include" />
+            <e p="TerraBetaWorldModifier.cs" t="Include" />
             <e p="TerraBlobRenderer.cs" t="Include" />
             <e p="TerraBlobRendererMonoView.cs" t="Include" />
             <e p="TerraCameraMonoView.cs" t="Include" />

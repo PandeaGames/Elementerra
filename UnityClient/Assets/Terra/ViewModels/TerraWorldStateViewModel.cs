@@ -23,10 +23,13 @@ namespace Terra.ViewModels
         {
             get
             {
+                return false;
                 return State.IsWorldFipped;
             }
             set 
             {
+                return;
+                
                 if(_state.IsWorldFipped == value) return;
                 _state.IsWorldFipped = value; 
                 OnWorldFlipChange?.Invoke(value);

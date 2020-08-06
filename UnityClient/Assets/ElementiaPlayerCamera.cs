@@ -10,8 +10,13 @@ public class ElementiaPlayerCamera : MonoBehaviour
     void Start()
     {
         vThirdPersonCamera camera = FindObjectOfType<vThirdPersonCamera>();
+        FirstPersonLook FirstPersonLook = FindObjectOfType<FirstPersonLook>();
 
         camera.target = transform;
+        if (FirstPersonLook != null)
+        {
+            FirstPersonLook.character = transform;
+        }
     }
 
     // Update is called once per frame
