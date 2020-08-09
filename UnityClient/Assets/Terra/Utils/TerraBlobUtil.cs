@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Terra.Utils
@@ -9,6 +10,52 @@ namespace Terra.Utils
         public IEnumerable<TerraVector> Vertices;
         public int VertexCount;
         public int Area;
+
+        public IEnumerable<TerraVector> MeshVertices
+        {
+            get
+            {
+                HashSet<int> walked = new HashSet<int>();
+                TerraVector current = Vertices.First();
+
+                List<TerraVector> walkNewVertices = new List<TerraVector>();
+                walkNewVertices.AddRange(FindNewVertices(current, walked));
+
+                while (walkNewVertices.Count > 0)
+                {
+                    yield return current;
+                    current = walkNewVertices[0];
+                    walkNewVertices.RemoveAt(0);
+
+                    foreach (TerraVector newVector in FindNewVertices(current, walked))
+                    {
+                        walked.Add(newVector.GetHashCode());
+                        walkNewVertices.Add(newVector);
+                    }
+                }
+            }
+        }
+    
+        private IEnumerable<TerraVector> FindNewVertices(TerraVector vector, HashSet<int> walked)
+        {
+            for (int x = Math.Max(0, vector.x - 1); x < vector.x + 2; x++)
+            {
+                for (int y = Math.Max(0, vector.y - 1); y < vector.y + 2; y++)
+                {
+                    if (x == vector.x && y == vector.y)
+                    {
+                        continue;
+                    }
+
+                    TerraVector vertice = new TerraVector(x, y);
+
+                    if (!walked.Contains(vertice.GetHashCode()) && vertice.IsInPolygon(Vertices))
+                    {
+                        yield return vertice;
+                    }
+                }
+            }
+        }
     }
     
     public class TerraBlobUtil

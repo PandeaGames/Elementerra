@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -48,9 +50,37 @@ public struct TerraVector
 
         return Mathf.Sqrt(dy * dy + dx * dx);
     }
+    
+    
 }
 
 public interface ITerraShape
 {
     TerraVector[] TerraVectors { get; }
+}
+
+public static class TerraVectorExtensions
+{
+    //https://stackoverflow.com/questions/4243042/c-sharp-point-in-polygon
+    public static bool IsInPolygon(this TerraVector point, IEnumerable<TerraVector> polygon)
+    {
+        bool result = false;
+        var a = polygon.Last();
+        foreach (var b in polygon)
+        {
+            if ((b.x == point.x) && (b.y == point.y))
+                return true;
+
+            if ((b.y == a.y) && (point.y == a.y) && (a.x <= point.x) && (point.x <= b.x))
+                return true;
+
+            if ((b.y < point.y) && (a.y >= point.y) || (a.y < point.y) && (b.y >= point.y))
+            {
+                if (b.x + (point.y - b.y) / (a.y - b.y) * (a.x - b.x) <= point.x)
+                    result = !result;
+            }
+            a = b;
+        }
+        return result;
+    }
 }
