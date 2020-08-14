@@ -32,6 +32,16 @@ public struct TerraVector
     {
         return a.x == b.x && a.y == b.y;
     }
+    
+    public static TerraVector operator -(TerraVector a, TerraVector b)
+    {
+        return new TerraVector(a.x - b.x, a.y - b.y);
+    }
+    
+    public static TerraVector operator +(TerraVector a, TerraVector b)
+    {
+        return new TerraVector(a.x + b.x, a.y + b.y);
+    }
 
     public static bool operator !=(TerraVector a, TerraVector b)
     {
@@ -41,6 +51,11 @@ public struct TerraVector
     public override string ToString()
     {
         return $"{x}:{y}";
+    }
+
+    public TerraVector Abs()
+    {
+        return new TerraVector(Math.Abs(x), Math.Abs(y));
     }
 
     public static float Distance(TerraVector a, TerraVector b)

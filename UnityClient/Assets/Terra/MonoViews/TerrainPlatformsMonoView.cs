@@ -39,10 +39,10 @@ namespace Terra.MonoViews
         {
             foreach (TerraTerrainBlobRenderer renderer in _renderers)
             {
-                foreach (TerraVector localVector in renderer.Vertices)
+                /*foreach (TerraVector localVector in renderer.Vertices)
                 {
                     Gizmos.DrawSphere(_vm.Geometry[localVector], 0.2f);
-                }
+                }*/
             }
         }
     }
