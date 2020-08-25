@@ -13,10 +13,36 @@ namespace Terra.MonoViews.DebugMonoViews
         public const float MaxStrength = 5;
         public const float MinStrength = 1;
         
+        public enum PaintType
+        {
+            Height = 0, 
+            Erosion = 1
+        }
+        
         public enum SculptMode
         {
             Push = 0, 
             Pull = 1
+        }
+
+        private SerializedStatefullViewModel<PaintType> _selectedPaintType = new SerializedStatefullViewModel<PaintType>();
+
+        public PaintType SelectedPaintType
+        {
+            get
+            {
+                return _selectedPaintType.CurrentState;
+            }
+            set { _selectedPaintType.SetState(value); }
+        }
+        
+        public int SelectedPaintTypeIndex
+        {
+            get
+            {
+                return _selectedPaintType.CurrentIndex;
+            }
+            set { _selectedPaintType.CurrentIndex = value; }
         }
         
         public float Size

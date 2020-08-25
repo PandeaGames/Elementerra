@@ -104,13 +104,30 @@ namespace Terra.MonoViews.DebugMonoViews
                         int modifiedStrength =  (int) Math.Ceiling(_terraSculptViewModel.Strength * mod);
                         TerraVector vector = new TerraVector(x, y);
                         TerraPoint point = _terraViewModel.Chunk.GetFromWorld(vector);
-                        point.Height += modifiedStrength * directionMod;
+                        Paint(_terraSculptViewModel.SelectedPaintType, modifiedStrength * directionMod, ref point);
                         changes.Add(new TerraDataPoint(point, vector));
                     }
                 }
             }
             
             _terraViewModel.Chunk.SetFromWorld(changes);
+        }
+
+        private void Paint(TerraSculptViewModel.PaintType paintType, int value, ref TerraPoint point)
+        {
+            switch (paintType)
+            {
+                case TerraSculptViewModel.PaintType.Erosion:
+                {
+                    point.Erosion += value;
+                    break;
+                }
+                case TerraSculptViewModel.PaintType.Height:
+                {
+                    point.Height += value;
+                    break;
+                }
+            }
         }
     }
 }

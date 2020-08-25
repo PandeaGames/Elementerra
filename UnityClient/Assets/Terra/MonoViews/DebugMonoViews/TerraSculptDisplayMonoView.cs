@@ -14,11 +14,13 @@ namespace Terra.MonoViews.DebugMonoViews
 
         private string[] _options;
         private string[] _sculptOptions;
+        private string[] _paintOptions;
         private Vector2 _entitiesScrollArea;
         
         private void Start()
         {
             _sculptOptions = Enum.GetNames(typeof(TerraSculptViewModel.SculptMode));
+            _paintOptions = Enum.GetNames(typeof(TerraSculptViewModel.PaintType));
             _options = Enum.GetNames(typeof(TerraDebugControlViewModel.States));
             _controlViewModel = Game.Instance.GetViewModel<TerraDebugControlViewModel>(0);
             _terraSculptViewModel = Game.Instance.GetViewModel<TerraSculptViewModel>(0);
@@ -74,6 +76,7 @@ namespace Terra.MonoViews.DebugMonoViews
         private void OnSculptGUI()
         {
             _terraSculptViewModel.CurrentIndex =  GUILayout.Toolbar(_terraSculptViewModel.CurrentIndex,_sculptOptions);
+            _terraSculptViewModel.SelectedPaintTypeIndex =  GUILayout.Toolbar(_terraSculptViewModel.SelectedPaintTypeIndex,_paintOptions);
             GUILayout.Label("Size "+_terraSculptViewModel.Size);
             _terraSculptViewModel.Size = GUILayout.HorizontalSlider(_terraSculptViewModel.Size, TerraSculptViewModel.MinSize,
                 TerraSculptViewModel.MaxSize);

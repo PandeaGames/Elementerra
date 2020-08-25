@@ -29,11 +29,14 @@ namespace Terra.ViewModels
         {
             _cachedReducedGrassPotential = new float[terrainModel.Height,terrainModel.Width];
             _terrainModel = terrainModel;
+            
             _chunk = chunk;
+            _chunk.OnDataHasChanged += ChunkOnDataHasChanged;
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
                 {
+                    _cachedReducedGrassPotential[x, y] = 1;
                     this[x, y] = CalculateBaseValue(x, y, terrainModel);
                 }
             }
@@ -45,6 +48,18 @@ namespace Terra.ViewModels
             {
                 EntitiesModelOnAddEntity(entity);
             }
+        }
+
+        private void ChunkOnDataHasChanged(IEnumerable<TerraDataPoint> data)
+        {
+            _isBatchingChanges = true;
+            foreach (TerraDataPoint dataPoint in data)
+            {
+                this[dataPoint.Vector] = GetFullValue(dataPoint.Vector.x, dataPoint.Vector.y, _cachedReducedGrassPotential[dataPoint.Vector.x, dataPoint.Vector.y]);
+            }
+
+            _isBatchingChanges = false;
+            DataHasChanged(ReportDataChangeForRange<TerraDataPoint, TerraPoint>(data));
         }
 
         private void TerrainModelOnDataHasChanged(IEnumerable<TerraTerrainGeometryDataPoint> data)
@@ -69,7 +84,7 @@ namespace Terra.ViewModels
 
         private float CalculateBaseValue(int xIn, int yIn, TerraTerrainGeometryDataModel terrainModel)
         {
-            float value = 1;
+            float value = Math.Max(0, (float)1 - (float) _chunk[xIn, yIn].Erosion / 50);
 
             float variation = 0;
             int r = 1;

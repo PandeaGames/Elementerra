@@ -25,14 +25,15 @@ namespace Terra.ViewModels
         private TerraEntitiesViewModel _entitiesModel;
         public TerraAlterVerseViewModel(TerraEntitiesViewModel entitiesModel, TerraWorldChunk chunk) : base(new bool[chunk.Height,chunk.Width])
         {
-            _entitiesModel = entitiesModel;
+            //disable for time being.
+            /*_entitiesModel = entitiesModel;
             _chunk = chunk;
             entitiesModel.OnAddEntity += EntitiesModelOnAddEntity;
 
             foreach (RuntimeTerraEntity entity in entitiesModel)
             {
                 EntitiesModelOnAddEntity(entity);
-            }
+            }*/
         }
         
         private void EntitiesModelOnAddEntity(RuntimeTerraEntity entity)

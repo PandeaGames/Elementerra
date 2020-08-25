@@ -25,7 +25,8 @@ namespace Terra.Services
                     new IDBColumn() {ColumnName = "x", DataType = DBDataType.INTEGER},
                     new IDBColumn() {ColumnName = "y", DataType = DBDataType.INTEGER},
                     new IDBColumn() {ColumnName = "height", DataType = DBDataType.INTEGER},
-                    new IDBColumn() {ColumnName = "soil", DataType = DBDataType.INTEGER}
+                    new IDBColumn() {ColumnName = "soil", DataType = DBDataType.INTEGER},
+                    new IDBColumn() {ColumnName = "erosion", DataType = DBDataType.INTEGER}
                 };
             }
         }
@@ -73,6 +74,11 @@ namespace Terra.Services
                     serializable.Soil = value;
                     break;
                 }
+                case 5:
+                {
+                    serializable.Erosion = value;
+                    break;
+                }
             }
         }
 
@@ -104,6 +110,10 @@ namespace Terra.Services
                 case 4:
                 {
                     return serializable.Soil.ToString();
+                }
+                case 5:
+                {
+                    return serializable.Erosion.ToString();
                 }
             }
             
@@ -155,6 +165,7 @@ namespace Terra.Services
         public TerraVector Position;
         public int Height;
         public int Soil;
+        public int Erosion;
 
         public override int GetHashCode()
         {
