@@ -87,7 +87,7 @@ namespace Terra.ViewModels
             float value = Math.Max(0, (float)1 - (float) _chunk[xIn, yIn].Erosion / 50);
 
             float variation = 0;
-            int r = 1;
+            int r = 2;
             for (int x = Math.Max(0, xIn - r);
                 x < Math.Min(Width, xIn + r);
                 x++)

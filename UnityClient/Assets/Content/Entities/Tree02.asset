@@ -15,8 +15,13 @@ MonoBehaviour:
   _data:
     component: 16
     _entityId: Tree02
+    _totalHealth: 0
+    _plantableEntityId: 
+    _spawnableEntityId: 
     _debugImage: {fileID: 21300000, guid: b90f8ef5811d4b84f803b70940a1c812, type: 3}
-    _grassPotentialReductionRadius: 14
+    _grassPotentialReductionRadius: 2
+    _isUniverseGateway: 0
+    _universeGatewayRadius: 0
     _grassPotentialReductionCurve:
       serializedVersion: 2
       m_Curve:
@@ -50,3 +55,15 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    _ripeTimeSeconds: 0
+    _lifespanSeconds: 0
+    _entityToSpawnAfterDeath: {fileID: 0}
+    _inventoryItemDataSO: {fileID: 0}
+    _labels: []
+    _aggroLabel: 
+    _attackRange: 0
+    _attackDamage: 0
+    _isSlavable: 0
+    _numberOfLevels: 0
+    _entityToSpawnAfterUpgraded: {fileID: 0}
+    _inventory: {fileID: 0}

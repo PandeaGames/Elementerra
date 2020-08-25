@@ -18,12 +18,25 @@ namespace Terra.MonoViews
         [SerializeField] 
         private int _radius = 10;
 
+        [Serializable]
+        public struct GrassRenderConfig
+        {
+            [SerializeField] 
+            public GameObject grassView;
+
+            [SerializeField]
+            public float threshold;
+            
+            [NonSerialized]
+            public ObjectPool objectPool;
+        }
+
+        [SerializeField] 
+        private List<GrassRenderConfig> _config;
+
         private Transform _container;
         private ObjectPool _objectPool;
         private TerraViewModel _terraViewModel;
-
-        private int _cacheWidth;
-        private int _cacheHeight;
         
         private bool _hasInitializedStreaming;
 
@@ -36,9 +49,6 @@ namespace Terra.MonoViews
             
             _objectPool = ObjectPool.Create(_grassView);
             _terraViewModel = Game.Instance.GetViewModel<TerraViewModel>(0);
-
-            _cacheWidth = _radius * 2 + 1;
-            _cacheHeight = _radius * 2 + 1;
             _grassCache = new Dictionary<TerraVector, TerraGrassMonoView>();
             
             _terraViewModel.OnGeometryUpdate += GeometryUpdate;

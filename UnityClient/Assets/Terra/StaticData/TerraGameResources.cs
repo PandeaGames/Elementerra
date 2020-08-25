@@ -34,6 +34,12 @@ namespace PandeaGames.Data
             get => _terrainMaterial;
         }
         
+        [SerializeField] private AnimationCurve _soilQualityCurve;
+        public AnimationCurve SoilQualityCurve
+        {
+            get => _soilQualityCurve;
+        }
+        
         [SerializeField] private GameObject _terraDebugWindow;
         public GameObject TerraDebugWindow
         {

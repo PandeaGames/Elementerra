@@ -29,6 +29,10 @@ namespace Terra.MonoViews
 
         public void OnDrawGizmos()
         {
+            if (_vm == null)
+            {
+                return;
+            }
             foreach (TerraBlob blob in _vm.Blobs)
             {
                 Vector3 from = Vector3.negativeInfinity;

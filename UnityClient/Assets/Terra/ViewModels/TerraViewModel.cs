@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Numerics;
 using PandeaGames;
+using PandeaGames.Data;
 using PandeaGames.ViewModels;
 using Terra.MonoViews;
 using Terra.SerializedData.Entities;
@@ -38,7 +39,7 @@ namespace Terra.ViewModels
             Geometry = new TerraTerrainGeometryDataModel(chunk);
             GrassPotential = new TerraGrassPotentialViewModel(Geometry, entitiesModel, chunk);
             Grass =  new TerraGrassViewModel(Geometry, GrassPotential);
-            TerraSoilQualityViewModel = new TerraSoilQualityViewModel(GrassPotential);
+            TerraSoilQualityViewModel = new TerraSoilQualityViewModel(GrassPotential, TerraGameResources.Instance.SoilQualityCurve);
             TerraUniversBlobsViewModel = new TerraUniversBlobsViewModel(TerraAlterVerseViewModel);
             OnGeometryUpdate?.Invoke(Geometry);
         }

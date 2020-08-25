@@ -12,8 +12,13 @@ namespace Terra.ViewModels
     public class TerraSoilQualityViewModel : AbstractGridDataModel<Color, TerraSoilQualityGridPoint>
     {
         private TerraGrassPotentialViewModel _grassPotentialViewModel;
-        public TerraSoilQualityViewModel(TerraGrassPotentialViewModel grassPotentialViewModel) : base((uint)grassPotentialViewModel.Width, (uint)grassPotentialViewModel.Height)
+        private AnimationCurve _curve;
+        public TerraSoilQualityViewModel(
+            TerraGrassPotentialViewModel grassPotentialViewModel,
+            AnimationCurve curve
+            ) : base((uint)grassPotentialViewModel.Width, (uint)grassPotentialViewModel.Height)
         {
+            _curve = curve;
             _grassPotentialViewModel = grassPotentialViewModel;
             _grassPotentialViewModel.OnDataHasChanged += UpdateData;
             UpdateData(_grassPotentialViewModel.AllData());
@@ -33,7 +38,7 @@ namespace Terra.ViewModels
         {
             float soilQualityValue = 0;
 
-            soilQualityValue = dataPoint.Data;
+            soilQualityValue = _curve.Evaluate(dataPoint.Data);
                     
             return new Color(
                 soilQualityValue, 

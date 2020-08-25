@@ -127,7 +127,10 @@ public class TerraTerrainSectionRenderer
         {
             if(_renderingPlane == null)
             {
-                _renderingPlane = GameObject.Instantiate(new GameObject(string.IsNullOrEmpty(_generatedGameObjectName) ? "Terra Terrain":_generatedGameObjectName), this.parent);
+                _renderingPlane = new GameObject(string.IsNullOrEmpty(_generatedGameObjectName)
+                    ? "Terra Terrain"
+                    : _generatedGameObjectName);
+                _renderingPlane.transform.parent = parent;
                 _renderingPlane.transform.position = _planeOffset;
                 _renderingPlane.layer =LayerMask.NameToLayer(TerraGameResources.Instance.LayerForTerrain);
                 _renderingPlane.AddComponent<MeshRenderer>();
